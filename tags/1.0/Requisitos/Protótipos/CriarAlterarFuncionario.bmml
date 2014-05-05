@@ -1,0 +1,114 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1060" measuredH="685" mockupW="1017" mockupH="673">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="43" y="12" w="1017" h="673" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MissM%0Ahttp%3A//www.missm.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TabBar" x="77" y="236" w="958" h="391" measuredW="346" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>CriarAlterarCliente%26bm%3BCriarAlterarCliente.bmml%26bm%3BCriarAlterarCliente.bmml%26bm%3BCriarAlterarCliente.bmml%2CCriarAlterarFuncionario%26bm%3BCriarAlterarFuncionario.bmml%26bm%3BCriarAlterarFuncionario.bmml%26bm%3BCriarAlterarFuncionario.bmml%2CCadastrarTiposEvento%26bm%3BCadastrarTiposEvento.bmml%26bm%3BCadastrarTiposEvento.bmml%26bm%3BCadastrarTiposEvento.bmml%2CCadastrarProduto%26bm%3BCadastrarProduto.bmml%26bm%3BCadastrarProduto.bmml%26bm%3BCadastrarProduto.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2254%2C224%2C108%2C251%22%20href%3D%22CriarAlterarCliente.bmml%22%20alt%3D%22CriarAlterarCliente%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22108%2C224%2C188%2C251%22%20href%3D%22CriarAlterarFuncionario.bmml%22%20alt%3D%22CriarAlterarFuncionario%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22188%2C224%2C296%2C251%22%20href%3D%22CadastrarTiposEvento.bmml%22%20alt%3D%22CadastrarTiposEvento%22%20id%3D%221%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22296%2C224%2C354%2C251%22%20href%3D%22CadastrarProduto.bmml%22%20alt%3D%22CadastrarProduto%22%20id%3D%221%22/%3E</map>
+        <selectedIndex>1</selectedIndex>
+        <tabVPosition>top</tabVPosition>
+        <text>Cliente%2C%20Funcion%E1rio%2C%20Tipos%20de%20Evento%2C%20Produto</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="840" y="120" w="-1" h="-1" measuredW="155" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>missm.estudio@gmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="792" y="93" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>./assets/icon_user.png%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="1010" y="121" w="-1" h="-1" measuredW="25" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Tela%20Inicial%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22967%2C109%2C992%2C128%22%20href%3D%22Tela%2520Inicial.bmml%22%20alt%3D%22Tela%20Inicial%22%20id%3D%224%22/%3E</map>
+        <text>Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="90" y="350" w="934" h="212" measuredW="476" measuredH="181" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <borderStyle>square</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>false</hLines>
+        <rowHeight>40</rowHeight>
+        <text>Lista%20Cliente%2C%20CPF%2C%20E-mail%2C%20Editar%20%0AJos%E9%20Diogo%20Santana%2C%20036.345.765-67%2C%20diogosantana@gmail.com%0AMilene%20Menezes%2C%20036.432.722-02%2C%20milene@gmail.com%0AT%E2nia%20de%20Jesus%2C%20016.345.765-11%2C%20tania@gmail.com%0AM%E1guino%20Leite%2C%20016.345.765-67%2C%20mleite@gmail.com</text>
+        <verticalScrollbar>true</verticalScrollbar>
+        <vLines>true</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Icon" x="90" y="577" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>CadastroFuncionario%26bm%3BCadastroFuncionario.bmml%26bm%3BCadastroFuncionario.bmml%26bm%3BCadastroFuncionario.bmml</href>
+        <icon>SquaredPlusIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2247%2C565%2C71%2C589%22%20href%3D%22CadastroFuncionario.bmml%22%20alt%3D%22CadastroFuncionario%22%20id%3D%228%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="962" y="501" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Icon" x="962" y="458" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Icon" x="962" y="417" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Icon" x="962" y="376" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Icon" x="923" y="501" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Icon" x="923" y="458" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Icon" x="923" y="417" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Icon" x="923" y="376" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>AtualizarFuncionario%26bm%3BAtualizarFuncionario.bmml%26bm%3BAtualizarFuncionario.bmml%26bm%3BAtualizarFuncionario.bmml</href>
+        <icon>PencilIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22880%2C364%2C904%2C388%22%20href%3D%22AtualizarFuncionario.bmml%22%20alt%3D%22AtualizarFuncionario%22%20id%3D%2220%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::SearchBox" x="165" y="294" w="179" h="-1" measuredW="120" measuredH="25" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20aqui%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="98" y="296" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pesquisar</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::ButtonBar" x="58" y="159" w="992" h="65" measuredW="608" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>AgendaAtividades%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%2CCriarAlterarCliente%26bm%3BCriarAlterarCliente.bmml%26bm%3BCriarAlterarCliente.bmml%26bm%3BCriarAlterarCliente.bmml%2CEscolherFotos%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%2CRelatorio%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml%2COr%E7amento%26bm%3BOr%E7amento.bmml%26bm%3BOr%E7amento.bmml%26bm%3BOr%E7amento.bmml%2CContrato%26bm%3BContrato.bmml%26bm%3BContrato.bmml%26bm%3BContrato.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2215%2C147%2C267%2C212%22%20href%3D%22AgendaAtividades.bmml%22%20alt%3D%22AgendaAtividades%22%20id%3D%2227%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22267%2C147%2C405%2C212%22%20href%3D%22CriarAlterarCliente.bmml%22%20alt%3D%22CriarAlterarCliente%22%20id%3D%2227%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22405%2C147%2C631%2C212%22%20href%3D%22EscolherFotos.bmml%22%20alt%3D%22EscolherFotos%22%20id%3D%2227%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22631%2C147%2C733%2C212%22%20href%3D%22Relatorio.bmml%22%20alt%3D%22Relatorio%22%20id%3D%2227%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22733%2C147%2C881%2C212%22%20href%3D%22Or%25C3%25A7amento.bmml%22%20alt%3D%22Or%E7amento%22%20id%3D%2227%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22881%2C147%2C1003%2C212%22%20href%3D%22Contrato.bmml%22%20alt%3D%22Contrato%22%20id%3D%2227%22/%3E</map>
+        <selectedIndex>1</selectedIndex>
+        <text>Agenda%20de%20Atividades%2C%20Cadastrar%2C%20Fotos/Diagrama%E7%E3o%2C%20%20Listar%2C%20Or%E7amento%2C%20Contrato</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
