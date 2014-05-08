@@ -8,6 +8,18 @@
 - casos de uso que manipulam banco sempre devem ter fluxo de exceção (ex: csu11, csu12, csu13)
 - referenciar dicionário de dados nos casos de uso
 - padronizar template para escrita dos casos de uso
+a
+sda
+sda
+da
+d
+da
+d
+as
+da
+d
+as
+d
 
 Diagrama de classes
 
