@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="missmfotografiaModelStoreContainer" CdmEntityContainer="missmfotografiaEntities">
+    <EntitySetMapping Name="tb_agenda">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_agenda">
+        <MappingFragment StoreEntitySet="tb_agenda">
+          <ScalarProperty Name="idAgenda" ColumnName="idAgenda" />
+          <ScalarProperty Name="nomeAtividade" ColumnName="nomeAtividade" />
+          <ScalarProperty Name="descricaoAtividade" ColumnName="descricaoAtividade" />
+          <ScalarProperty Name="dataAtividade" ColumnName="dataAtividade" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_conta_bancaria">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_conta_bancaria">
+        <MappingFragment StoreEntitySet="tb_conta_bancaria">
+          <ScalarProperty Name="idContaBancaria" ColumnName="idContaBancaria" />
+          <ScalarProperty Name="tipoConta" ColumnName="tipoConta" />
+          <ScalarProperty Name="banco" ColumnName="banco" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numeroConta" ColumnName="numeroConta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_contas_receber">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_contas_receber">
+        <MappingFragment StoreEntitySet="tb_contas_receber">
+          <ScalarProperty Name="idContasReceber" ColumnName="idContasReceber" />
+          <ScalarProperty Name="statusPagamento" ColumnName="statusPagamento" />
+          <ScalarProperty Name="tipoPagamento" ColumnName="tipoPagamento" />
+          <ScalarProperty Name="valorReceber" ColumnName="valorReceber" />
+          <ScalarProperty Name="dataVencimento" ColumnName="dataVencimento" />
+          <ScalarProperty Name="dataPagamento" ColumnName="dataPagamento" />
+          <ScalarProperty Name="valorPago" ColumnName="valorPago" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_evento">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_evento">
+        <MappingFragment StoreEntitySet="tb_evento">
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+          <ScalarProperty Name="dataEvento" ColumnName="dataEvento" />
+          <ScalarProperty Name="tipoEvento" ColumnName="tipoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_foto">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_foto">
+        <MappingFragment StoreEntitySet="tb_foto">
+          <ScalarProperty Name="idFoto" ColumnName="idFoto" />
+          <ScalarProperty Name="imagem" ColumnName="imagem" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido">
+        <MappingFragment StoreEntitySet="tb_pedido">
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="nomePedido" ColumnName="nomePedido" />
+          <ScalarProperty Name="dataCriacao" ColumnName="dataCriacao" />
+          <ScalarProperty Name="valorPedido" ColumnName="valorPedido" />
+          <ScalarProperty Name="statusPedido" ColumnName="statusPedido" />
+          <ScalarProperty Name="dataEmissao" ColumnName="dataEmissao" />
+          <ScalarProperty Name="statusContrato" ColumnName="statusContrato" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pessoa">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pessoa">
+        <MappingFragment StoreEntitySet="tb_pessoa">
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="nomePessoa" ColumnName="nomePessoa" />
+          <ScalarProperty Name="cpfPessoa" ColumnName="cpfPessoa" />
+          <ScalarProperty Name="sexoPessoa" ColumnName="sexoPessoa" />
+          <ScalarProperty Name="dataNascimentoPessoa" ColumnName="dataNascimentoPessoa" />
+          <ScalarProperty Name="telefonePessoa" ColumnName="telefonePessoa" />
+          <ScalarProperty Name="emailPessoa" ColumnName="emailPessoa" />
+          <ScalarProperty Name="senhaPessoa" ColumnName="senhaPessoa" />
+          <ScalarProperty Name="rua" ColumnName="rua" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipoPessoa" ColumnName="tipoPessoa" />
+          <ScalarProperty Name="idContaBancaria" ColumnName="idContaBancaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_produto">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_produto">
+        <MappingFragment StoreEntitySet="tb_produto">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="nomeProduto" ColumnName="nomeProduto" />
+          <ScalarProperty Name="numeroDePaginas" ColumnName="numeroDePaginas" />
+          <ScalarProperty Name="formato" ColumnName="formato" />
+          <ScalarProperty Name="numeroDeImagens" ColumnName="numeroDeImagens" />
+          <ScalarProperty Name="valorDoProduto" ColumnName="valorDoProduto" />
+          <ScalarProperty Name="valorImagemAdicional" ColumnName="valorImagemAdicional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_servico">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_servico">
+        <MappingFragment StoreEntitySet="tb_servico">
+          <ScalarProperty Name="idServico" ColumnName="idServico" />
+          <ScalarProperty Name="tipoServico" ColumnName="tipoServico" />
+          <ScalarProperty Name="parceiro" ColumnName="parceiro" />
+          <ScalarProperty Name="telefoneParceiro" ColumnName="telefoneParceiro" />
+          <ScalarProperty Name="valorServico" ColumnName="valorServico" />
+          <ScalarProperty Name="valorCobradoAoCliente" ColumnName="valorCobradoAoCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_evento">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_tipo_evento">
+        <MappingFragment StoreEntitySet="tb_tipo_evento">
+          <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
+          <ScalarProperty Name="nomeTipoEvento" ColumnName="nomeTipoEvento" />
+          <ScalarProperty Name="categoriaTipoEvento" ColumnName="categoriaTipoEvento" />
+          <ScalarProperty Name="totalConvidados" ColumnName="totalConvidados" />
+          <ScalarProperty Name="valorTipoEvento" ColumnName="valorTipoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tb_evento_tb_tipo_evento" TypeName="missmfotografiaModel.tb_evento_tb_tipo_evento" StoreEntitySet="tb_evento_tb_tipo_evento">
+      <EndProperty Name="tb_evento">
+        <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+      </EndProperty>
+      <EndProperty Name="tb_tipo_evento">
+        <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_pedido_tb_evento" TypeName="missmfotografiaModel.tb_pedido_tb_evento" StoreEntitySet="tb_pedido_tb_evento">
+      <EndProperty Name="tb_evento">
+        <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+      </EndProperty>
+      <EndProperty Name="tb_pedido">
+        <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_pedido_tb_servico" TypeName="missmfotografiaModel.tb_pedido_tb_servico" StoreEntitySet="tb_pedido_tb_servico">
+      <EndProperty Name="tb_pedido">
+        <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+      </EndProperty>
+      <EndProperty Name="tb_servico">
+        <ScalarProperty Name="idServico" ColumnName="idServico" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_pessoa_tb_agenda" TypeName="missmfotografiaModel.tb_pessoa_tb_agenda" StoreEntitySet="tb_pessoa_tb_agenda">
+      <EndProperty Name="tb_pessoa">
+        <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+      </EndProperty>
+      <EndProperty Name="tb_agenda">
+        <ScalarProperty Name="idAgenda" ColumnName="idAgenda" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_produto_tb_pedido" TypeName="missmfotografiaModel.tb_produto_tb_pedido" StoreEntitySet="tb_produto_tb_pedido">
+      <EndProperty Name="tb_produto">
+        <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+      </EndProperty>
+      <EndProperty Name="tb_pedido">
+        <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
