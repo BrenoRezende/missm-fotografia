@@ -25,11 +25,11 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.NomeProduto) %>
+            <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.NomeProduto) %>
-            <%: Html.ValidationMessageFor(model => model.NomeProduto) %>
+            <%: Html.EditorFor(model => model.Nome) %>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
         <div class="editor-label">

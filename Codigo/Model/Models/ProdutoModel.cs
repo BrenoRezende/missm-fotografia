@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Model.Models
 {
@@ -10,29 +11,27 @@ namespace Model.Models
     public class ProdutoModel
     {
         [Required]
-        [Display(Name = "Código")]
+        [DisplayName("Código")] 
         public int IdProduto { get; set; }
 
         [Required]
-        [Display(Name = "Nome")]
         [StringLength(50)]
-        public string NomeProduto { get; set; }
+        public string Nome { get; set; }
 
-        [Display(Name = "Número de Páginas")]
+        [DisplayName("Número de Páginas")]
         public int? NumeroDePaginas { get; set; }
 
-        [Display(Name = "Formato")]
         [StringLength(50)]
         public string Formato { get; set; }
 
-        [Display(Name = "Número de Imagens")]
+        [DisplayName("Número de Imagens")]
         public int? NumeroDeImagens { get; set; }
 
         [Required]
-        [Display(Name = "Valor do Produto")]
+        [DisplayName("Valor do Produto")]
         public decimal ValorDoProduto { get; set; }
 
-        [Display(Name = "Valor por Imagem Adicional")]
+        [DisplayName("Valor por Imagem Adicional")]
         public decimal? ValorImagemAdicional { get; set; }
     }
 }
