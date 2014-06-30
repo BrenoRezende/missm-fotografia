@@ -18,7 +18,7 @@
 
     <div class="display-label">NomeProduto</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.NomeProduto) %>
+        <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
     <div class="display-label">NumeroDePaginas</div>

@@ -88,7 +88,7 @@ namespace Service
                         select new ProdutoModel
                         {
                             IdProduto = produto.idProduto,
-                            NomeProduto = produto.nomeProduto,
+                            Nome = produto.nomeProduto,
                             NumeroDePaginas = produto.numeroDePaginas,
                             Formato = produto.formato,
                             NumeroDeImagens = produto.numeroDeImagens,
@@ -127,7 +127,7 @@ namespace Service
         /// <returns>ProdutoModel</returns>
         public IEnumerable<ProdutoModel> ObterPorNome(string nome)
         {
-            IEnumerable<ProdutoModel> produtos = GetQuery().Where(produtoModel => produtoModel.NomeProduto.StartsWith(nome));
+            IEnumerable<ProdutoModel> produtos = GetQuery().Where(produtoModel => produtoModel.Nome.StartsWith(nome));
             return produtos;
         }
 
@@ -139,7 +139,7 @@ namespace Service
         private void Atribuir(ProdutoModel produtoModel, tb_produto produtoE)
         {
             produtoE.idProduto = produtoModel.IdProduto;
-            produtoE.nomeProduto = produtoModel.NomeProduto;
+            produtoE.nomeProduto = produtoModel.Nome;
             produtoE.numeroDePaginas = produtoModel.NumeroDePaginas;
             produtoE.formato = produtoModel.Formato;
             produtoE.numeroDeImagens = produtoModel.NumeroDeImagens;

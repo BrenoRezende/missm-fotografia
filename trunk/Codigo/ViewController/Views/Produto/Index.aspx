@@ -43,7 +43,7 @@
             <%: Html.DisplayFor(modelItem => item.IdProduto) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.NomeProduto) %>
+            <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NumeroDePaginas) %>
