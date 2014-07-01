@@ -32,6 +32,6 @@ namespace Model.Models
         public decimal ValorDoProduto { get; set; }
 
         [DisplayName("Valor por Imagem Adicional")]
-        public decimal? ValorImagemAdicional { get; set; }
+        public decimal ValorImagemAdicional { get; set; }
     }
 }

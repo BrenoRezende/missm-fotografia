@@ -12,6 +12,22 @@ C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\Vie
 C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\ViewController.Tests\bin\Debug\Data.dll
 C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\ViewController.Tests\bin\Debug\Service.pdb
 C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\ViewController.Tests\bin\Debug\Data.pdb
+<<<<<<< .mine
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll.config
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\ViewController.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Model.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Service.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Data.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\ViewController.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Model.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Service.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\bin\Debug\Data.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.csprojResolveAssemblyReference.cache
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.pdb
+=======
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll.config
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.pdb
@@ -26,3 +42,4 @@ D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Data.pdb
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.csprojResolveAssemblyReference.cache
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.pdb
+>>>>>>> .r98
