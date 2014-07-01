@@ -19,13 +19,13 @@ namespace Model.Models
         public string Nome { get; set; }
 
         [DisplayName("Número de Páginas")]
-        public int? NumeroDePaginas { get; set; }
+        public int NumeroDePaginas { get; set; }
 
         [StringLength(50)]
         public string Formato { get; set; }
 
         [DisplayName("Número de Imagens")]
-        public int? NumeroDeImagens { get; set; }
+        public int NumeroDeImagens { get; set; }
 
         [Required]
         [DisplayName("Valor do Produto")]
