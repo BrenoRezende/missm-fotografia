@@ -24,3 +24,16 @@ D:\Projetos\MissMFotografia\trunk\Codigo\ViewController\bin\Data.pdb
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController\obj\Debug\ViewController.csprojResolveAssemblyReference.cache
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController\obj\Debug\ViewController.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\ViewController\obj\Debug\ViewController.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\ViewController.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\ViewController.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\EntityFramework.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Model.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Service.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Data.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Model.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Service.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\EntityFramework.xml
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\bin\Data.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\obj\Debug\ViewController.csprojResolveAssemblyReference.cache
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\obj\Debug\ViewController.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\ViewController\obj\Debug\ViewController.pdb
