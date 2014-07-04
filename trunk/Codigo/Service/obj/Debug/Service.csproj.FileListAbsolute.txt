@@ -7,6 +7,17 @@ c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Ser
 c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Service\obj\Debug\Service.dll
 c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Service\obj\Debug\Service.pdb
+<<<<<<< .mine
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Service.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Service.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Data.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Model.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Data.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\bin\Debug\Model.pdb
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\obj\Debug\Service.dll
+D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Service\obj\Debug\Service.pdb
+=======
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\bin\Debug\Service.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\bin\Debug\Service.pdb
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\bin\Debug\Data.dll
@@ -16,3 +27,4 @@ D:\Projetos\MissMFotografia\trunk\Codigo\Service\bin\Debug\Model.pdb
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\obj\Debug\Service.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\Service\obj\Debug\Service.pdb
+>>>>>>> .r103
