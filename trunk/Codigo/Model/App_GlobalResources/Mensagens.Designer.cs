@@ -97,6 +97,15 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Total de Convidados.
+        /// </summary>
+        public static string total_convidados {
+            get {
+                return ResourceManager.GetString("total_convidados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Valor por Imagem Adicional.
         /// </summary>
         public static string valor_imagem {
