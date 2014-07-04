@@ -13,6 +13,7 @@ namespace Model.Models
     {
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagens))]
         public int IdProduto { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
@@ -20,21 +21,21 @@ namespace Model.Models
         [StringLength(50)]
         public string Nome { get; set; }
 
-        [DisplayName("Número de Páginas")]
+        [Display(Name = "num_paginas", ResourceType = typeof(Mensagens))]
         public int? NumeroDePaginas { get; set; }
 
         [StringLength(50)]
         public string Formato { get; set; }
 
-        [DisplayName("Número de Imagens")]
+        [Display(Name = "num_imagens", ResourceType = typeof(Mensagens))]
         public int? NumeroDeImagens { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
-        [DisplayName("Valor do Produto")]
+        [Display(Name = "valor_produto", ResourceType = typeof(Mensagens))]
         public decimal ValorDoProduto { get; set; }
 
-        [DisplayName("Valor por Imagem Adicional")]
+        [Display(Name = "valor_imagem", ResourceType = typeof(Mensagens))]
         public decimal? ValorImagemAdicional { get; set; }
     }
 }
