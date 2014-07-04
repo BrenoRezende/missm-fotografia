@@ -1,0 +1,6 @@
+c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Model\bin\Debug\Model.dll
+c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Model\bin\Debug\Model.pdb
+c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Model\obj\Debug\Model.dll
+c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Model\obj\Debug\Model.pdb
+C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\Model\bin\Debug\Model.dll.config
+C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
