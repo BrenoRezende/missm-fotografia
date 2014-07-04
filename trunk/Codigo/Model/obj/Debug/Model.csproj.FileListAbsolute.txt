@@ -13,12 +13,16 @@ D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Model\obj\Debug\Mode
 D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Model\obj\Debug\Model.pdb
 =======
 D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.dll
-D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
-D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
 D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.dll.config
 D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.dll
 D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.pdb
 D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.pdb
+<<<<<<< .mine
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+=======
 >>>>>>> .r103
 D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
 D:\UFS\Engenharia de Software II\Projeto Final MissM\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+>>>>>>> .r104
