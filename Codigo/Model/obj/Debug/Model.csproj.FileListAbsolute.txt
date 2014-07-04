@@ -4,3 +4,10 @@ c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Mod
 c:\users\breno rezende\documents\visual studio 2010\Projects\MissMFotografia\Model\obj\Debug\Model.pdb
 C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\Model\bin\Debug\Model.dll.config
 C:\Users\Breno Rezende\Documents\Visual Studio 2010\Projects\MissMFotografia\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.dll.config
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\bin\Debug\Model.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\Model\obj\Debug\Model.pdb
