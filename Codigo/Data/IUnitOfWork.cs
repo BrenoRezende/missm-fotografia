@@ -8,5 +8,6 @@ namespace Data
     {
         void Commit(bool shared);
         IRepositorioGenerico<tb_produto> RepositorioProduto { get; }
+        IRepositorioGenerico<tb_tipo_evento> RepositorioTipoEvento { get; }
     }
 }
