@@ -9,10 +9,6 @@ using Data;
 namespace Service
 {
 
-    /// <summary>
-    /// Gerencia todas as regras de negócio da entidade Produto
-    /// </summary>
-   
     public class GerenciadorProduto
     {
         private IUnitOfWork unitOfWork;

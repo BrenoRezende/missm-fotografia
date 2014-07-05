@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="GerenciadorServico.cs" />
+    <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="GerenciadorTipoEvento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,6 +57,9 @@
       <Project>{DFD71717-0871-4511-BB3F-B1FF810A9E39}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
