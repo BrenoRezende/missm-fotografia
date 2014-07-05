@@ -17,6 +17,7 @@ namespace Data
         private missmfotografiaEntities _context;
         private IRepositorioGenerico<tb_produto> _repProduto;
         private IRepositorioGenerico<tb_servico> _repServico;
+        private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
 
         public UnitOfWork()
         {
@@ -54,6 +55,22 @@ namespace Data
                 }
 
                 return _repServico;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de TipoEvento
+        /// </summary>
+        public IRepositorioGenerico<tb_tipo_evento> RepositorioTipoEvento
+        {
+            get
+            {
+                if (_repTipoEvento == null)
+                {
+                    _repTipoEvento = new RepositorioGenerico<tb_tipo_evento>(_context);
+                }
+
+                return _repTipoEvento;
             }
         }
 
