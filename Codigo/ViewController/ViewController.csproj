@@ -116,6 +116,11 @@
     <Content Include="Views\Produto\Details.aspx" />
     <Content Include="Views\Produto\Edit.aspx" />
     <Content Include="Views\Produto\Index.aspx" />
+    <Content Include="Views\Servico\Create.aspx" />
+    <Content Include="Views\Servico\Delete.aspx" />
+    <Content Include="Views\Servico\Details.aspx" />
+    <Content Include="Views\Servico\Edit.aspx" />
+    <Content Include="Views\Servico\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Servico\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
