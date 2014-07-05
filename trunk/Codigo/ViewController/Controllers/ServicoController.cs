@@ -1,24 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Model.Models;
+using Service;
+using Microsoft.Reporting.WebForms;
 
 namespace ViewController.Controllers
 {
     public class ServicoController : Controller
     {
     
-        private GerenciadorServico gProduto;
+        private GerenciadorServico gServico;
 
         public ServicoController()
         {
             gServico = new GerenciadorServico();
         }
 
+        // GET: /Produto/
         public ActionResult Index()
         {
-            return View();
+            return View(gServico.ObterTodos());
         }
 
         //
@@ -26,7 +32,8 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            ServicoModel servicoModel = gServico.Obter(id);
+            return View(servicoModel);
         }
 
         //
@@ -41,44 +48,40 @@ namespace ViewController.Controllers
         // POST: /Servico/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ServicoModel servicoModel)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                gServico.Inserir(servicoModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+                return View(servicoModel);
         }
+        
         
         //
         // GET: /Servico/Edit/5
  
         public ActionResult Edit(int id)
         {
-            return View();
+            ServicoModel servicoModel = gServico.Obter(id);
+            return View(servicoModel);
         }
 
         //
         // POST: /Servico/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ServicoModel servicoModel)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add update logic here
- 
+                gServico.Editar(servicoModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            
+            return View(servicoModel);
+            
         }
 
         //
@@ -86,25 +89,24 @@ namespace ViewController.Controllers
  
         public ActionResult Delete(int id)
         {
-            return View();
+            ServicoModel servicoModel = gServico.Obter(id);
+            return View(servicoModel);
         }
 
         //
         // POST: /Servico/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            gServico.Remover(id);
+            return RedirectToAction("Index");
+         
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
     }
 }
