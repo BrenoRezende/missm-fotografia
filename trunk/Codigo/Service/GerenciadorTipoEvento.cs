@@ -24,7 +24,7 @@ namespace Service
         
         public GerenciadorTipoEvento()
         {
-            this.unitOfWork = new UnitOfWork;
+            this.unitOfWork = new UnitOfWork();
             shared = false;
         }
 
