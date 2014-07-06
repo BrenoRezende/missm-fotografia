@@ -61,9 +61,9 @@
             <%: Html.DisplayFor(modelItem => item.ValorImagemAdicional) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdProduto }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.IdProduto }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.IdProduto}) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.IdProduto }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdProduto }) %> |
+            <%: Html.ActionLink("Remover", "Delete", new { id=item.IdProduto}) %>
         </td>
     </tr>
 <% } %>

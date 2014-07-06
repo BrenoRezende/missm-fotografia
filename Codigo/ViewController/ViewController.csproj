@@ -67,6 +67,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\ServicoController.cs" />
+    <Compile Include="Controllers\TipoEventoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -121,6 +122,11 @@
     <Content Include="Views\Servico\Details.aspx" />
     <Content Include="Views\Servico\Edit.aspx" />
     <Content Include="Views\Servico\Index.aspx" />
+    <Content Include="Views\TipoEvento\Create.aspx" />
+    <Content Include="Views\TipoEvento\Delete.aspx" />
+    <Content Include="Views\TipoEvento\Details.aspx" />
+    <Content Include="Views\TipoEvento\Edit.aspx" />
+    <Content Include="Views\TipoEvento\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

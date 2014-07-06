@@ -14,13 +14,10 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>ProdutoModel</legend>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdProduto) %>
-        </div>
+        <legend>Produto</legend>
+      
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdProduto) %>
+            <%: Html.HiddenFor(model => model.IdProduto) %>
             <%: Html.ValidationMessageFor(model => model.IdProduto) %>
         </div>
 

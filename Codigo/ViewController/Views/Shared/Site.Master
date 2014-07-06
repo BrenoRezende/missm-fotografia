@@ -22,7 +22,8 @@
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>
-                    <li><%: Html.ActionLink("Servico", "Index", "Servico")%></li>
+                    <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>
+                    <li><%: Html.ActionLink("Tipos de Evento", "Index", "TipoEvento")%></li>
                 </ul>
             </nav>
         </header>

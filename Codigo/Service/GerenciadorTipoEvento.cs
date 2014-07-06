@@ -13,7 +13,7 @@ namespace Service
     /// Gerencia todas as regras de negócio da entidade TipoEvento
     /// </summary>
     
-    class GerenciadorTipoEvento
+    public class GerenciadorTipoEvento
     {
         private IUnitOfWork unitOfWork;
         private bool shared;

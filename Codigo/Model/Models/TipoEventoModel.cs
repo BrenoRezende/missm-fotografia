@@ -24,12 +24,7 @@ namespace Model.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
-        [StringLength(50)]
-        public string Categoria { get; set; }
-
-        [Required(ErrorMessageResourceType = typeof(Mensagens),
-            ErrorMessageResourceName = "erro_requerido")]
-        [Display(Name = "tota_convidados", ResourceType = typeof(Mensagens))]
+        [Display(Name = "total_convidados", ResourceType = typeof(Mensagens))]
         public int TotalConvidados { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
