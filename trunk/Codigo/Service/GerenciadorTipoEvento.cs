@@ -88,7 +88,6 @@ namespace Service
                         {
                             IdTipoEvento = tipoEvento.idTipoEvento,
                             Nome = tipoEvento.nomeTipoEvento,
-                            Categoria = tipoEvento.categoriaTipoEvento,
                             TotalConvidados = tipoEvento.totalConvidados,
                             Valor = tipoEvento.valorTipoEvento
                         };
@@ -136,7 +135,6 @@ namespace Service
         {
             tipoEventoE.idTipoEvento = tipoEventoModel.IdTipoEvento;
             tipoEventoE.nomeTipoEvento = tipoEventoModel.Nome;
-            tipoEventoE.categoriaTipoEvento = tipoEventoModel.Categoria;
             tipoEventoE.totalConvidados = tipoEventoModel.TotalConvidados;
             tipoEventoE.valorTipoEvento = tipoEventoModel.Valor;
         }
