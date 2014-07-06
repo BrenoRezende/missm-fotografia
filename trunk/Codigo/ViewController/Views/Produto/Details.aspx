@@ -9,39 +9,39 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>ProdutoModel</legend>
+    <legend>Produto</legend>
 
-    <div class="display-label">IdProduto</div>
+    <div class="display-label"><b>Código</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdProduto) %>
     </div>
 
-    <div class="display-label">Nome</div>
+    <div class="display-label"><b>Nome</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
-    <div class="display-label">NumeroDePaginas</div>
+    <div class="display-label"><b>Numero de Páginas</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NumeroDePaginas) %>
     </div>
 
-    <div class="display-label">Formato</div>
+    <div class="display-label"><b>Formato</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Formato) %>
     </div>
 
-    <div class="display-label">NumeroDeImagens</div>
+    <div class="display-label"><b>Numero de Imagens</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NumeroDeImagens) %>
     </div>
 
-    <div class="display-label">ValorDoProduto</div>
+    <div class="display-label"><b>Valor do Produto</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ValorDoProduto) %>
     </div>
 
-    <div class="display-label">ValorImagemAdicional</div>
+    <div class="display-label"><b>Valor por Imagem Adicional</b></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ValorImagemAdicional) %>
     </div>
