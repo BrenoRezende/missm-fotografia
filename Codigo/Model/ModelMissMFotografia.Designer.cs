@@ -1106,13 +1106,13 @@ namespace Model
         /// </summary>
         /// <param name="idEvento">Initial value of the idEvento property.</param>
         /// <param name="dataEvento">Initial value of the dataEvento property.</param>
-        /// <param name="tipoEvento">Initial value of the tipoEvento property.</param>
-        public static tb_evento Createtb_evento(global::System.Int32 idEvento, global::System.DateTime dataEvento, global::System.String tipoEvento)
+        /// <param name="nomeEvento">Initial value of the nomeEvento property.</param>
+        public static tb_evento Createtb_evento(global::System.Int32 idEvento, global::System.DateTime dataEvento, global::System.String nomeEvento)
         {
             tb_evento tb_evento = new tb_evento();
             tb_evento.idEvento = idEvento;
             tb_evento.dataEvento = dataEvento;
-            tb_evento.tipoEvento = tipoEvento;
+            tb_evento.nomeEvento = nomeEvento;
             return tb_evento;
         }
 
@@ -1176,24 +1176,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String tipoEvento
+        public global::System.String nomeEvento
         {
             get
             {
-                return _tipoEvento;
+                return _nomeEvento;
             }
             set
             {
-                OntipoEventoChanging(value);
-                ReportPropertyChanging("tipoEvento");
-                _tipoEvento = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("tipoEvento");
-                OntipoEventoChanged();
+                OnnomeEventoChanging(value);
+                ReportPropertyChanging("nomeEvento");
+                _nomeEvento = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("nomeEvento");
+                OnnomeEventoChanged();
             }
         }
-        private global::System.String _tipoEvento;
-        partial void OntipoEventoChanging(global::System.String value);
-        partial void OntipoEventoChanged();
+        private global::System.String _nomeEvento;
+        partial void OnnomeEventoChanging(global::System.String value);
+        partial void OnnomeEventoChanged();
 
         #endregion
 
@@ -2904,15 +2904,13 @@ namespace Model
         /// </summary>
         /// <param name="idTipoEvento">Initial value of the idTipoEvento property.</param>
         /// <param name="nomeTipoEvento">Initial value of the nomeTipoEvento property.</param>
-        /// <param name="categoriaTipoEvento">Initial value of the categoriaTipoEvento property.</param>
         /// <param name="totalConvidados">Initial value of the totalConvidados property.</param>
         /// <param name="valorTipoEvento">Initial value of the valorTipoEvento property.</param>
-        public static tb_tipo_evento Createtb_tipo_evento(global::System.Int32 idTipoEvento, global::System.String nomeTipoEvento, global::System.String categoriaTipoEvento, global::System.Int32 totalConvidados, global::System.Decimal valorTipoEvento)
+        public static tb_tipo_evento Createtb_tipo_evento(global::System.Int32 idTipoEvento, global::System.String nomeTipoEvento, global::System.Int32 totalConvidados, global::System.Decimal valorTipoEvento)
         {
             tb_tipo_evento tb_tipo_evento = new tb_tipo_evento();
             tb_tipo_evento.idTipoEvento = idTipoEvento;
             tb_tipo_evento.nomeTipoEvento = nomeTipoEvento;
-            tb_tipo_evento.categoriaTipoEvento = categoriaTipoEvento;
             tb_tipo_evento.totalConvidados = totalConvidados;
             tb_tipo_evento.valorTipoEvento = valorTipoEvento;
             return tb_tipo_evento;
@@ -2972,30 +2970,6 @@ namespace Model
         private global::System.String _nomeTipoEvento;
         partial void OnnomeTipoEventoChanging(global::System.String value);
         partial void OnnomeTipoEventoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String categoriaTipoEvento
-        {
-            get
-            {
-                return _categoriaTipoEvento;
-            }
-            set
-            {
-                OncategoriaTipoEventoChanging(value);
-                ReportPropertyChanging("categoriaTipoEvento");
-                _categoriaTipoEvento = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("categoriaTipoEvento");
-                OncategoriaTipoEventoChanged();
-            }
-        }
-        private global::System.String _categoriaTipoEvento;
-        partial void OncategoriaTipoEventoChanging(global::System.String value);
-        partial void OncategoriaTipoEventoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="missmfotografiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="missmfotografiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="missmfotografiaModelStoreContainer">
           <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.Store.tb_agenda" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_conta_bancaria" EntityType="missmfotografiaModel.Store.tb_conta_bancaria" store:Type="Tables" Schema="missmfotografia" />
@@ -94,7 +94,7 @@
           <Key>
             <PropertyRef Name="idAgenda" />
           </Key>
-          <Property Name="idAgenda" Type="int" Nullable="false" />
+          <Property Name="idAgenda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeAtividade" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="descricaoAtividade" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="dataAtividade" Type="datetime" Nullable="false" />
@@ -104,7 +104,7 @@
           <Key>
             <PropertyRef Name="idContaBancaria" />
           </Key>
-          <Property Name="idContaBancaria" Type="int" Nullable="false" />
+          <Property Name="idContaBancaria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="tipoConta" Type="int" Nullable="false" />
           <Property Name="banco" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="agencia" Type="varchar" Nullable="false" MaxLength="10" />
@@ -114,13 +114,13 @@
           <Key>
             <PropertyRef Name="idContasReceber" />
           </Key>
-          <Property Name="idContasReceber" Type="int" Nullable="false" />
+          <Property Name="idContasReceber" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="statusPagamento" Type="char" Nullable="false" MaxLength="1" />
           <Property Name="tipoPagamento" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="valorReceber" Type="float" Nullable="false" />
           <Property Name="dataVencimento" Type="date" Nullable="false" />
-          <Property Name="dataPagamento" Type="date" Nullable="false" />
-          <Property Name="valorPago" Type="float" Nullable="false" />
+          <Property Name="dataPagamento" Type="date" />
+          <Property Name="valorPago" Type="float" />
           <Property Name="idPessoa" Type="int" Nullable="false" />
           <Property Name="idPedido" Type="int" Nullable="false" />
         </EntityType>
@@ -128,9 +128,9 @@
           <Key>
             <PropertyRef Name="idEvento" />
           </Key>
-          <Property Name="idEvento" Type="int" Nullable="false" />
+          <Property Name="idEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nomeEvento" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="dataEvento" Type="datetime" Nullable="false" />
-          <Property Name="tipoEvento" Type="varchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="tb_evento_tb_tipo_evento">
           <Key>
@@ -144,7 +144,7 @@
           <Key>
             <PropertyRef Name="idFoto" />
           </Key>
-          <Property Name="idFoto" Type="int" Nullable="false" />
+          <Property Name="idFoto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="imagem" Type="longblob" Nullable="false" />
           <Property Name="descricao" Type="varchar" MaxLength="200" />
           <Property Name="idPessoa" Type="int" Nullable="false" />
@@ -154,7 +154,7 @@
           <Key>
             <PropertyRef Name="idPedido" />
           </Key>
-          <Property Name="idPedido" Type="int" Nullable="false" />
+          <Property Name="idPedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomePedido" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="dataCriacao" Type="date" Nullable="false" />
           <Property Name="valorPedido" Type="decimal" Nullable="false" />
@@ -183,7 +183,7 @@
           <Key>
             <PropertyRef Name="idPessoa" />
           </Key>
-          <Property Name="idPessoa" Type="int" Nullable="false" />
+          <Property Name="idPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomePessoa" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="cpfPessoa" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="sexoPessoa" Type="char" Nullable="false" MaxLength="1" />
@@ -211,7 +211,7 @@
           <Key>
             <PropertyRef Name="idProduto" />
           </Key>
-          <Property Name="idProduto" Type="int" Nullable="false" />
+          <Property Name="idProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeProduto" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="numeroDePaginas" Type="int" />
           <Property Name="formato" Type="varchar" MaxLength="50" />
@@ -231,7 +231,7 @@
           <Key>
             <PropertyRef Name="idServico" />
           </Key>
-          <Property Name="idServico" Type="int" Nullable="false" />
+          <Property Name="idServico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="tipoServico" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="parceiro" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="telefoneParceiro" Type="varchar" Nullable="false" MaxLength="12" />
@@ -242,9 +242,8 @@
           <Key>
             <PropertyRef Name="idTipoEvento" />
           </Key>
-          <Property Name="idTipoEvento" Type="int" Nullable="false" />
+          <Property Name="idTipoEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeTipoEvento" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="categoriaTipoEvento" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="totalConvidados" Type="int" Nullable="false" />
           <Property Name="valorTipoEvento" Type="decimal" Nullable="false" />
         </EntityType>
@@ -452,8 +451,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="missmfotografiaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -562,11 +560,11 @@
           </Key>
           <Property Name="idEvento" Type="Int32" Nullable="false" />
           <Property Name="dataEvento" Type="DateTime" Nullable="false" />
-          <Property Name="tipoEvento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="tb_agenda" Relationship="missmfotografiaModel.C8" FromRole="tb_evento" ToRole="tb_agenda" />
           <NavigationProperty Name="tb_foto" Relationship="missmfotografiaModel.C9" FromRole="tb_evento" ToRole="tb_foto" />
           <NavigationProperty Name="tb_tipo_evento" Relationship="missmfotografiaModel.tb_evento_tb_tipo_evento" FromRole="tb_evento" ToRole="tb_tipo_evento" />
           <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.tb_pedido_tb_evento" FromRole="tb_evento" ToRole="tb_pedido" />
+          <Property Type="String" Name="nomeEvento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_foto">
           <Key>
@@ -654,7 +652,6 @@
           </Key>
           <Property Name="idTipoEvento" Type="Int32" Nullable="false" />
           <Property Name="nomeTipoEvento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="categoriaTipoEvento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="totalConvidados" Type="Int32" Nullable="false" />
           <Property Name="valorTipoEvento" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.tb_evento_tb_tipo_evento" FromRole="tb_tipo_evento" ToRole="tb_evento" />
@@ -809,9 +806,9 @@
           <EntitySetMapping Name="tb_evento">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_evento">
               <MappingFragment StoreEntitySet="tb_evento">
+                <ScalarProperty Name="nomeEvento" ColumnName="nomeEvento" />
                 <ScalarProperty Name="idEvento" ColumnName="idEvento" />
                 <ScalarProperty Name="dataEvento" ColumnName="dataEvento" />
-                <ScalarProperty Name="tipoEvento" ColumnName="tipoEvento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -891,7 +888,6 @@
               <MappingFragment StoreEntitySet="tb_tipo_evento">
                 <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
                 <ScalarProperty Name="nomeTipoEvento" ColumnName="nomeTipoEvento" />
-                <ScalarProperty Name="categoriaTipoEvento" ColumnName="categoriaTipoEvento" />
                 <ScalarProperty Name="totalConvidados" ColumnName="totalConvidados" />
                 <ScalarProperty Name="valorTipoEvento" ColumnName="valorTipoEvento" />
               </MappingFragment>
@@ -961,19 +957,19 @@
         <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="5.25" PointY="8.625" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_conta_bancaria" Width="1.5" PointX="0.75" PointY="8.75" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_contas_receber" Width="1.5" PointX="8.25" PointY="8.25" Height="3.1340950520833335" IsExpanded="true" />
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_evento" Width="1.5" PointX="3" PointY="3.625" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_evento" Width="1.5" PointX="3" PointY="3.625" Height="2.3648893229166665" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_foto" Width="1.5" PointX="5.25" PointY="4.625" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido" Width="1.5" PointX="5.25" PointY="12.125" Height="3.5186979166666674" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_pessoa" Width="1.5" PointX="3" PointY="7.375" Height="4.8648079427083317" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_produto" Width="1.5" PointX="3" PointY="13.5" Height="2.5571907552083335" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_servico" Width="1.5" PointX="7.5" PointY="12.625" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_tipo_evento" Width="1.5" PointX="5.25" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_tipo_evento" Width="1.5" PointX="5.25" PointY="0.75" Height="1.9802864583333339" IsExpanded="true" />
         <AssociationConnector Association="missmfotografiaModel.C8" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.96450370753205" />
-          <ConnectorPoint PointX="4.875" PointY="6.33950370753205" />
-          <ConnectorPoint PointX="4.875" PointY="9.8074446614583337" />
-          <ConnectorPoint PointX="4.885416666666667" PointY="9.8074446614583337" />
-          <ConnectorPoint PointX="5.052083333333333" PointY="9.8074446614583337" />
+          <ConnectorPoint PointX="4.5" PointY="5.933349861378205" />
+          <ConnectorPoint PointX="4.90625" PointY="6.339599861378205" />
+          <ConnectorPoint PointX="4.90625" PointY="9.8074446614583337" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="9.8074446614583337" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="9.8074446614583337" />
           <ConnectorPoint PointX="5.25" PointY="9.8074446614583337" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C1" ManuallyRouted="false">
@@ -987,39 +983,39 @@
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C5" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="11.2182421875" />
-          <ConnectorPoint PointX="4.885416666666667" PointY="11.2182421875" />
-          <ConnectorPoint PointX="5.052083333333333" PointY="11.2182421875" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="11.2182421875" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="11.2182421875" />
           <ConnectorPoint PointX="8.25" PointY="11.2182421875" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C9" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.276192161458332" />
-          <ConnectorPoint PointX="5.25" PointY="5.276192161458332" />
+          <ConnectorPoint PointX="4.5" PointY="5.2321456708512111" />
+          <ConnectorPoint PointX="5.25" PointY="5.2321456708512111" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C2" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="7.4373066923076925" />
-          <ConnectorPoint PointX="4.81607443490112" PointY="7.1212322574065725" />
-          <ConnectorPoint PointX="5.0276755650988791" PointY="6.9096311272088151" />
+          <ConnectorPoint PointX="4.84732443490112" PointY="7.0899822574065725" />
+          <ConnectorPoint PointX="5.0589255650988791" PointY="6.8783811272088151" />
           <ConnectorPoint PointX="5.0625" PointY="6.8748066923076934" />
           <ConnectorPoint PointX="5.0625" PointY="7.1773893229166656" />
           <ConnectorPoint PointX="5.25" PointY="6.9898893229166656" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C4" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="12.239807942708332" />
-          <ConnectorPoint PointX="4.875" PointY="12.614807942708332" />
-          <ConnectorPoint PointX="4.875" PointY="11.748847153846153" />
+          <ConnectorPoint PointX="4.9098244349011217" PointY="12.614807942708332" />
           <ConnectorPoint PointX="4.9098244349011217" PointY="11.783671588747273" />
-          <ConnectorPoint PointX="5.0276755650988791" PointY="11.901522718945031" />
+          <ConnectorPoint PointX="4.9410744349011217" PointY="11.814921588747273" />
+          <ConnectorPoint PointX="5.0589255650988791" PointY="11.932772718945033" />
           <ConnectorPoint PointX="5.2511528461538459" PointY="12.125" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.tb_evento_tb_tipo_evento" ManuallyRouted="false">
           <ConnectorPoint PointX="3.75" PointY="3.625" />
-          <ConnectorPoint PointX="3.75" PointY="1.8362939453124998" />
-          <ConnectorPoint PointX="5.25" PointY="1.8362939453124998" />
+          <ConnectorPoint PointX="3.75" PointY="1.7401432291666672" />
+          <ConnectorPoint PointX="5.25" PointY="1.7401432291666672" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.tb_pedido_tb_evento" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.9829652459935883" />
-          <ConnectorPoint PointX="4.96875" PointY="6.4517152459935883" />
-          <ConnectorPoint PointX="4.96875" PointY="13.884348958333334" />
+          <ConnectorPoint PointX="4.4757692307692309" PointY="5.9898893229166665" />
+          <ConnectorPoint PointX="5" PointY="6.5141200921474356" />
+          <ConnectorPoint PointX="5" PointY="13.884348958333334" />
           <ConnectorPoint PointX="5.25" PointY="13.884348958333334" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.tb_pedido_tb_servico" ManuallyRouted="false">
@@ -1028,8 +1024,8 @@
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.tb_pessoa_tb_agenda" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="9.1537223307291669" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="9.1537223307291651" />
-          <ConnectorPoint PointX="5.052083333333333" PointY="9.1537223307291669" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="9.1537223307291651" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="9.1537223307291669" />
           <ConnectorPoint PointX="5.25" PointY="9.1537223307291669" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.tb_produto_tb_pedido" ManuallyRouted="false">
