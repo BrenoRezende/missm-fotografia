@@ -14,25 +14,25 @@
 <table>
     <tr>
         <th>
-            IdProduto
+            Código
         </th>
         <th>
             Nome
         </th>
         <th>
-            NumeroDePaginas
+            Numero de Páginas
         </th>
         <th>
             Formato
         </th>
         <th>
-            NumeroDeImagens
+            Numero de Imagens
         </th>
         <th>
-            ValorDoProduto
+            Valor do Produto
         </th>
         <th>
-            ValorImagemAdicional
+            Valor por Imagem Adicional
         </th>
         <th></th>
     </tr>

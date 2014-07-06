@@ -17,14 +17,6 @@
         <legend>ProdutoModel</legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdProduto) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdProduto) %>
-            <%: Html.ValidationMessageFor(model => model.IdProduto) %>
-        </div>
-
-        <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
