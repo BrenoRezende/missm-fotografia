@@ -120,6 +120,12 @@
   <data name="codigo" xml:space="preserve">
     <value>Código</value>
   </data>
+  <data name="data_criacao" xml:space="preserve">
+    <value>Data de Criação</value>
+  </data>
+  <data name="data_emissao" xml:space="preserve">
+    <value>Data de Emissão</value>
+  </data>
   <data name="erro_requerido" xml:space="preserve">
     <value>O {0} é um campo requerido.</value>
   </data>
@@ -128,6 +134,12 @@
   </data>
   <data name="num_paginas" xml:space="preserve">
     <value>Número de Páginas</value>
+  </data>
+  <data name="status_contrato" xml:space="preserve">
+    <value>Status do Contrato</value>
+  </data>
+  <data name="status_pedido" xml:space="preserve">
+    <value>Status do Pedido</value>
   </data>
   <data name="telefone_parceiro" xml:space="preserve">
     <value>Telef. do Parceiro</value>

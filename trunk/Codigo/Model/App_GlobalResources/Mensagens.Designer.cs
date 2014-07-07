@@ -70,6 +70,24 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data de Criação.
+        /// </summary>
+        public static string data_criacao {
+            get {
+                return ResourceManager.GetString("data_criacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data de Emissão.
+        /// </summary>
+        public static string data_emissao {
+            get {
+                return ResourceManager.GetString("data_emissao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O {0} é um campo requerido..
         /// </summary>
         public static string erro_requerido {
@@ -93,6 +111,51 @@ namespace Model.App_GlobalResources {
         public static string num_paginas {
             get {
                 return ResourceManager.GetString("num_paginas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O {0} é um campo requerido..
+        /// </summary>
+        public static string erro_requerido {
+            get {
+                return ResourceManager.GetString("erro_requerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número de Imagens.
+        /// </summary>
+        public static string num_imagens {
+            get {
+                return ResourceManager.GetString("num_imagens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número de Páginas.
+        /// </summary>
+        public static string num_paginas {
+            get {
+                return ResourceManager.GetString("num_paginas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status do Contrato.
+        /// </summary>
+        public static string status_contrato {
+            get {
+                return ResourceManager.GetString("status_contrato", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status do Pedido.
+        /// </summary>
+        public static string status_pedido {
+            get {
+                return ResourceManager.GetString("status_pedido", resourceCulture);
             }
         }
         

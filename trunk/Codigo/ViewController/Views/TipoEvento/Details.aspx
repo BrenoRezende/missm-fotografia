@@ -1,17 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.TipoEventoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Details
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
-
 <fieldset>
-    <legend>TipoEventoModel</legend>
+    <legend>Tipo de Evento</legend>
 
-    <div class="display-label">IdTipoEvento</div>
+    <div class="display-label">Código</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdTipoEvento) %>
     </div>
@@ -32,8 +30,8 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new { id=Model.IdTipoEvento }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdTipoEvento }) %> |
+    <%: Html.ActionLink("Voltar", "Index") %>
 </p>
 
 </asp:Content>
