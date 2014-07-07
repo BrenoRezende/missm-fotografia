@@ -16,7 +16,10 @@
     <fieldset>
         <legend>Editar Serviço</legend>
 
-
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.IdServico) %>
+            <%: Html.ValidationMessageFor(model => model.IdServico) %>
+        </div>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoServico) %>
