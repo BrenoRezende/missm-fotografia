@@ -18,6 +18,7 @@ namespace Data
         private IRepositorioGenerico<tb_produto> _repProduto;
         private IRepositorioGenerico<tb_servico> _repServico;
         private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
+        private IRepositorioGenerico<tb_pedido> _repPedido;
 
         public UnitOfWork()
         {
@@ -71,6 +72,22 @@ namespace Data
                 }
 
                 return _repTipoEvento;
+            }
+        }
+
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Pedido
+        /// </sumary>
+        public IRepositorioGenerico<tb_pedido> RepositorioPedido
+        {
+            get
+            {
+                if (_repPedido == null)
+                {
+                    _repPedido = new RepositorioGenerico<tb_pedido>(_context);
+                }
+
+                return _repPedido;
             }
         }
 
