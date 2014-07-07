@@ -58,6 +58,7 @@
       <DependentUpon>ModelMissMFotografia.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\PedidoModel.cs" />
     <Compile Include="Models\ProdutoModel.cs" />
     <Compile Include="Models\ServicoModel.cs" />
     <Compile Include="Models\TipoEventoModel.cs" />

@@ -1,15 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.TipoEventoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Cadastrar Novo Tipo de Evento", "Create") %>
 </p>
 <table>
     <tr>
@@ -43,9 +42,9 @@
             <%: Html.DisplayFor(modelItem => item.Valor) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdTipoEvento }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.IdTipoEvento })%> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.IdTipoEvento })%>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.IdTipoEvento }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdTipoEvento })%> |
+            <%: Html.ActionLink("Remover", "Delete", new { id=item.IdTipoEvento })%>
         </td>
     </tr>
 <% } %>

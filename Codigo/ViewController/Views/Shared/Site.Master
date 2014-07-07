@@ -12,16 +12,14 @@
     <div class="page">
         <header>
             <div id="title">
-                <h1>MissM Fotografia</h1>
+                <img src="../../Content/logo.png" alt="MissM|Fotografia"/>
             </div>
-            <br />
+            <br /><br /><br />
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div>
             <nav>
                 <ul id="menu">
-                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>
                     <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>
                     <li><%: Html.ActionLink("Tipos de Evento", "Index", "TipoEvento")%></li>
