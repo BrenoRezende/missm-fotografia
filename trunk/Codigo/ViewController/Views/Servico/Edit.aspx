@@ -16,13 +16,7 @@
     <fieldset>
         <legend>ServicoModel</legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdServico) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdServico) %>
-            <%: Html.ValidationMessageFor(model => model.IdServico) %>
-        </div>
+
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoServico) %>
