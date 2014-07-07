@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>ServicoModel</legend>
+        <legend>Cadastrar Serviço</legend>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoServico) %>
@@ -57,13 +57,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Cadastrar" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>
