@@ -8,95 +8,90 @@ using System.Web.Mvc;
 using Model.Models;
 using Service;
 using Microsoft.Reporting.WebForms;
-
 namespace ViewController.Controllers
 {
-    public class ServicoController : Controller
+    public class PessoaController : Controller
     {
-    
-        private GerenciadorServico gServico;
+        private GerenciadorPessoa gPessoa;
 
-        public ServicoController()
+        public PessoaController()
         {
-            gServico = new GerenciadorServico();
+            gPessoa = new GerenciadorPessoa();
         }
 
         // GET: /Produto/
         public ActionResult Index()
         {
-            return View(gServico.ObterTodos());
+            return View(gPessoa.ObterTodos());
         }
 
         //
-        // GET: /Servico/Details/5
+        // GET: /Pessoa/Details/5
 
         public ActionResult Details(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
-            return View(servicoModel);
+            PessoaModel pessoaModel = gPessoa.Obter(id);
+            return View(pessoaModel);
         }
 
         //
-        // GET: /Servico/Create
+        // GET: /Pessoa/Create
 
         public ActionResult Create()
         {
             return View();
         } 
 
-
+        
         [HttpPost]
-        public ActionResult Create(ServicoModel servicoModel)
+        public ActionResult Create(PessoaModel pessoaModel)
         {
-            if(ModelState.IsValid)
-            {
-                gServico.Inserir(servicoModel);
-                return RedirectToAction("Index");
-            }
-                return View(servicoModel);
+           if(ModelState.IsValid)
+           {
+               gPessoa.Inserir(pessoaModel);
+               return RedirectToAction("Index");
+           }
+           return View(pessoaModel);
+           
         }
         
-        
         //
-        // GET: /Servico/Edit/5
+        // GET: /Pessoa/Edit/5
  
         public ActionResult Edit(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
-            return View(servicoModel);
+            PessoaModel pessoaModel = gPessoa.Obter(id);
+            return View(pessoaModel);
         }
 
 
         [HttpPost]
-        public ActionResult Edit(ServicoModel servicoModel)
+        public ActionResult Edit(PessoaModel pessoaModel)
         {
             if(ModelState.IsValid)
             {
-                gServico.Editar(servicoModel);
+                gPessoa.Editar(pessoaModel);
                 return RedirectToAction("Index");
             }
-            
-            return View(servicoModel);
+                return View(pessoaModel);
             
         }
 
         //
-        // GET: /Servico/Delete/5
+        // GET: /Pessoa/Delete/5
  
         public ActionResult Delete(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
-            return View(servicoModel);
+            PessoaModel pessoaModel = gPessoa.Obter(id);
+            return View(pessoaModel);
         }
 
- 
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gServico.Remover(id);
+            gPessoa.Remover(id);
             return RedirectToAction("Index");
-         
         }
 
         protected override void Dispose(bool disposing)

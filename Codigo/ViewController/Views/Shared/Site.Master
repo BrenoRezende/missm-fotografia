@@ -19,8 +19,9 @@
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div>
             <nav>
-                <ul id="menu">
+                <ul id="menu">                    
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>
+                    <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
                     <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>
                     <li><%: Html.ActionLink("Tipos de Evento", "Index", "TipoEvento")%></li>
                 </ul>
