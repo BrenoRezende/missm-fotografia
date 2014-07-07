@@ -134,6 +134,7 @@ namespace Service
         /// <param name="pedidoE">Entity mapeada da base de dados</param>
         private void Atribuir(PedidoModel pedidoModel, tb_pedido pedidoE)
         {
+            //TODO: ligação com as outras tabelas
             pedidoE.idPedido = pedidoModel.IdPedido;
             pedidoE.nomePedido = pedidoModel.Nome;
             pedidoE.dataCriacao = pedidoModel.DataCriacao;
