@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>ServicoModel</legend>
+        <legend>Editar Serviço</legend>
 
 
 
@@ -59,13 +59,13 @@
         </div>
 
          <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Salvar Alterações" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>

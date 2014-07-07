@@ -6,12 +6,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
 
-
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza de que deseja exluir esse serviço?</h3>
 <fieldset>
-    <legend>ServicoModel</legend>
+    <legend>Serviço</legend>
 
     <div class="display-label">IdServico</div>
     <div class="display-field">
@@ -46,8 +44,8 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <input type="submit" value="Remover" /> |
+        <%: Html.ActionLink("Voltar", "Index") %>
     </p>
 <% } %>
 

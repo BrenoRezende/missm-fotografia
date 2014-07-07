@@ -6,10 +6,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Cadastrar Novo Serviço", "Create") %>
 </p>
 <table>
     <tr>
@@ -56,9 +55,9 @@
         </td>
         
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdServico }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.IdServico }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.IdServico}) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.IdServico }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdServico }) %> |
+            <%: Html.ActionLink("Remover", "Delete", new { id=item.IdServico}) %>
         </td>
     </tr>
 <% } %>
