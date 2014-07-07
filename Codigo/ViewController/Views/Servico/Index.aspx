@@ -14,7 +14,7 @@
 <table>
     <tr>
         <th>
-            IdServiço
+            Código
         </th>
         <th>
             Tipo de Serviço

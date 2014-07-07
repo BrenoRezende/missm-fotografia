@@ -11,7 +11,7 @@
 <fieldset>
     <legend>ServicoModel</legend>
 
-   <div class="display-label">IdServico</div>
+   <div class="display-label">Código</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdServico) %>
     </div>
