@@ -185,7 +185,7 @@
           </Key>
           <Property Name="idPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomePessoa" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="cpfPessoa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="cpfPessoa" Type="varchar" Nullable="false" MaxLength="11" />
           <Property Name="sexoPessoa" Type="char" Nullable="false" MaxLength="1" />
           <Property Name="dataNascimentoPessoa" Type="date" Nullable="false" />
           <Property Name="telefonePessoa" Type="varchar" MaxLength="12" />
@@ -602,7 +602,7 @@
           </Key>
           <Property Name="idPessoa" Type="Int32" Nullable="false" />
           <Property Name="nomePessoa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="cpfPessoa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="cpfPessoa" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
           <Property Name="sexoPessoa" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
           <Property Name="dataNascimentoPessoa" Type="DateTime" Nullable="false" />
           <Property Name="telefonePessoa" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
