@@ -129,13 +129,25 @@
   <data name="num_paginas" xml:space="preserve">
     <value>Número de Páginas</value>
   </data>
+  <data name="telefone_parceiro" xml:space="preserve">
+    <value>Telef. do Parceiro</value>
+  </data>
+  <data name="tipo_servico" xml:space="preserve">
+    <value>Tipo de Serviço</value>
+  </data>
   <data name="total_convidados" xml:space="preserve">
     <value>Total de Convidados</value>
+  </data>
+  <data name="valor_cobrado_ao_cliente" xml:space="preserve">
+    <value>Valor Cobrado ao Cliente</value>
   </data>
   <data name="valor_imagem" xml:space="preserve">
     <value>Valor por Imagem Adicional</value>
   </data>
   <data name="valor_produto" xml:space="preserve">
     <value>Valor do Produto</value>
+  </data>
+  <data name="valor_servico" xml:space="preserve">
+    <value>Valor do Serviço</value>
   </data>
 </root>
