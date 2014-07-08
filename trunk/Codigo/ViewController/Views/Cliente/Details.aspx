@@ -74,10 +74,6 @@
         <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
-    <div class="display-label">Tipo Pessoa</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Tipo) %>
-    </div>
 </fieldset>
 <p>
     <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdCliente }) %> |
