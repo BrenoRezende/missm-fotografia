@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GerenciadorPedido.cs" />
-    <Compile Include="GerenciadorCliente.cs" />
     <Compile Include="GerenciadorServico.cs" />
     <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="GerenciadorTipoEvento.cs" />
