@@ -116,6 +116,18 @@ namespace Service
         }
 
         /// <summary>
+        /// Obtém um serviço pelo nome
+        /// </summary>
+        /// <param name="nome">Nome do serviço que será buscado base de dados</param>
+        /// <returns>ServicoModel</returns>
+        public IEnumerable<ServicoModel> ObterPorNome(string nome)
+        {
+            IEnumerable<ServicoModel> servicos = GetQuery().Where(servicoModel => servicoModel.TipoServico.StartsWith(nome));
+            return servicos;
+        }
+
+
+        /// <summary>
         /// Atribui dados do ServicoModel para o Servico Entity
         /// </summary>
         /// <param name="servicoModel">Objeto do modelo</param>
