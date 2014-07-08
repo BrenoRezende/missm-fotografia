@@ -15,6 +15,6 @@ namespace Data
 
         IRepositorioGenerico<tb_pedido> RepositorioPedido { get; }
 
-        IRepositorioGenerico<tb_pessoa> RepositorioPessoa { get; }
+        IRepositorioGenerico<tb_pessoa> RepositorioCliente { get; }
     }
 }
