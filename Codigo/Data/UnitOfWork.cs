@@ -76,37 +76,7 @@ namespace Data
             }
         }
 
-        /// <sumary>
-        /// Repositório para manipular dados persistidos de Pedido
-        /// </sumary>
-        public IRepositorioGenerico<tb_pedido> RepositorioPedido
-        {
-            get
-            {
-                if (_repPedido == null)
-                {
-                    _repPedido = new RepositorioGenerico<tb_pedido>(_context);
-                }
-
-                return _repPedido;
-            }
-        }
-
-        /// <sumary>
-        /// Repositório para manipular dados persistidos de Pedido
-        /// </sumary>
-        public IRepositorioGenerico<tb_pessoa> RepositorioCliente
-        {
-            get
-            {
-                if (_repCliente == null)
-                {
-                    _repCliente = new RepositorioGenerico<tb_pessoa>(_context);
-                }
-
-                return _repCliente;
-            }
-        }
+       
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
         /// quando o contexto não for compartilhado
