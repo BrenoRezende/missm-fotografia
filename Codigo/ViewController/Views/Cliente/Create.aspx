@@ -68,7 +68,7 @@
             <%: Html.LabelFor(model => model.Senha) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Senha) %>
+            <%: Html.PasswordFor(model => model.Senha) %>
             <%: Html.ValidationMessageFor(model => model.Senha) %>
         </div>
 
@@ -112,14 +112,7 @@
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Tipo) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Tipo) %>
-            <%: Html.ValidationMessageFor(model => model.Tipo) %>
-        </div>
-        <p>
+       <p>
             <input type="submit" value="Cadastrar" />
         </p>
     </fieldset>

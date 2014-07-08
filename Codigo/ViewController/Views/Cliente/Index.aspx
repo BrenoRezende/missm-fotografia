@@ -42,7 +42,10 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Email) %>
-        </td>        
+        </td>   
+        <td></td>     
+        <td></td>
+        <td></td>
         <td>
             <%: Html.ActionLink("Editar", "Edit", new { id=item.IdCliente }) %> |
             <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdCliente }) %> |
