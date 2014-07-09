@@ -43,6 +43,22 @@ namespace Data
                 return _repProduto;
             }
         }
+
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Cliente
+        /// </sumary>
+        public IRepositorioGenerico<tb_pessoa> RepositorioCliente
+        {
+            get
+            {
+                if (_repCliente == null)
+                {
+                    _repCliente = new RepositorioGenerico<tb_pessoa>(_context);
+                }
+
+                return _repCliente;
+            }
+        }
         
         /// <summary>
         /// Repositório para manipular dados persistidos de Servico
@@ -76,7 +92,27 @@ namespace Data
             }
         }
 
+<<<<<<< .mine
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Pedido
+        /// </sumary>
+        public IRepositorioGenerico<tb_pedido> RepositorioPedido
+        {
+            get
+            {
+                if (_repPedido == null)
+                {
+                    _repPedido = new RepositorioGenerico<tb_pedido>(_context);
+                }
+
+                return _repPedido;
+            }
+        }
+
+
+=======
        
+>>>>>>> .r167
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
         /// quando o contexto não for compartilhado
