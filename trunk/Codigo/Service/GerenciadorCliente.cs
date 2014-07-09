@@ -104,10 +104,10 @@ namespace Service
         }
 
         /// <summary>
-        /// Obtém um Cleite
+        /// Obtém um Cliente
         /// </summary>
         /// <param name="idCliente">Identificador do cliente na base de dados</param>
-        /// <returns>ProdutoModel</returns>
+        /// <returns>ClienteModel</returns>
         public ClienteModel Obter(int idCliente)
         {
             IEnumerable<ClienteModel> clientes = GetQuery().Where(clienteModel => clienteModel.IdCliente.Equals(idCliente));
@@ -155,7 +155,7 @@ namespace Service
             clienteE.bairro = clienteModel.Bairro;
             clienteE.cidade = clienteModel.Cidade;
             clienteE.estado = clienteModel.Estado;
-            clienteE.tipoPessoa = clienteModel.TipoPessoa;
+            clienteE.tipoPessoa = "C";
         }
     }
 }
