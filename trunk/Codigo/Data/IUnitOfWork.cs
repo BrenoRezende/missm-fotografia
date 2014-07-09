@@ -12,5 +12,7 @@ namespace Data
         IRepositorioGenerico<tb_servico> RepositorioServico { get; }
 
         IRepositorioGenerico<tb_tipo_evento> RepositorioTipoEvento { get; }
+
+        IRepositorioGenerico<tb_pessoa> RepositorioCliente { get; }
     }
 }

@@ -20,6 +20,7 @@ namespace Data
         private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
         private IRepositorioGenerico<tb_pedido> _repPedido;
         private IRepositorioGenerico<tb_pessoa> _repCliente;
+        
 
         public UnitOfWork()
         {
@@ -92,7 +93,7 @@ namespace Data
             }
         }
 
-<<<<<<< .mine
+
         /// <sumary>
         /// Repositório para manipular dados persistidos de Pedido
         /// </sumary>
@@ -110,9 +111,7 @@ namespace Data
         }
 
 
-=======
-       
->>>>>>> .r167
+
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
         /// quando o contexto não for compartilhado
