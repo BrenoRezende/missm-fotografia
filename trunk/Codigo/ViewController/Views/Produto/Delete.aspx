@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.ProdutoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-
+Remover Produto
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-
+<h2>Remover Produto</h2>
 <h3>Tem certeza que deseja remover esse produto?</h3>
 <fieldset>
-    <legend>Remover Produto</legend>
+    <legend>Dados do Produto</legend>
 
     <div class="display-label">Código</div>
     <div class="display-field">

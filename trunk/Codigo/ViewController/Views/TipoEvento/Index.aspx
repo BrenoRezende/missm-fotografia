@@ -1,15 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.TipoEventoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-
+    Tipo de Evento
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<h2>Tipos de Evento</h2>
 
-
-<p>
-    <%: Html.ActionLink("Cadastrar Novo Tipo de Evento", "Create") %>
-</p>
 <table>
     <tr>
         <th>
@@ -48,7 +45,8 @@
         </td>
     </tr>
 <% } %>
-
 </table>
-
+<p>
+    <%: Html.ActionLink("Cadastrar Novo Tipo de Evento", "Create") %>
+</p>
 </asp:Content>

@@ -20,9 +20,11 @@
             </div>
             <nav>
                 <ul id="menu">
+                    <li><%: Html.ActionLink("Página Inicial", "Index", "Home")%></li>                    
                     <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>                    
                     <li><%: Html.ActionLink("Cliente", "Index", "Cliente")%></li>
                     <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>
+                    <li><%: Html.ActionLink("Pedido", "Index", "Pedido")%></li>  
                     <li><%: Html.ActionLink("Tipos de Evento", "Index", "TipoEvento")%></li>
                 </ul>
             </nav>

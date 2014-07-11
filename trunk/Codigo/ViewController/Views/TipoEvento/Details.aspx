@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.TipoEventoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-
+Tipo de Evento
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<h2>Detalhes do Tipo de Evento</h2>
 <fieldset>
-    <legend>Tipo de Evento</legend>
+    <legend>Dados do Tipo de Evento</legend>
 
     <div class="display-label">Código</div>
     <div class="display-field">

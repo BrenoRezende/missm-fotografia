@@ -1,15 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.ServicoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    Lista de Serviços
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-
-<p>
-    <%: Html.ActionLink("Cadastrar Novo Serviço", "Create") %>
-</p>
+<h2>Lista de Serviços </h2>
 <table>
     <tr>
         <th>
@@ -63,5 +59,8 @@
 <% } %>
 
 </table>
+<p>
+    <%: Html.ActionLink("Cadastrar Novo Serviço", "Create") %>
+</p>
 
 </asp:Content>

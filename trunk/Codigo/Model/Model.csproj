@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ClienteModel.cs" />
+    <Compile Include="Models\PedidoModel.cs" />
     <Compile Include="Models\ProdutoModel.cs" />
     <Compile Include="Models\ServicoModel.cs" />
     <Compile Include="Models\TipoEventoModel.cs" />
