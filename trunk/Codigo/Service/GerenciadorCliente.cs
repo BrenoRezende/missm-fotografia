@@ -97,7 +97,7 @@ namespace Service
                             Bairro = cliente.bairro,
                             Cidade = cliente.cidade,
                             Estado = cliente.estado,
-                            TipoPessoa = cliente.tipoPessoa
+
 
                         };
             return query;
@@ -155,7 +155,7 @@ namespace Service
             clienteE.bairro = clienteModel.Bairro;
             clienteE.cidade = clienteModel.Cidade;
             clienteE.estado = clienteModel.Estado;
-            clienteE.tipoPessoa = "C";
+
         }
     }
 }
