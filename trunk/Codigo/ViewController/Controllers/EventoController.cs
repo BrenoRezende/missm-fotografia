@@ -45,7 +45,8 @@ namespace ViewController.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.IdTipoEvento = new SelectList(this.gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome");
+            var tipoEventoLista = ObterTodosParaExibicao(this.gTipoEvento);
+            ViewBag.IdTipoEvento = new SelectList(tipoEventoLista, "Id", "NomeExibido");
             return View();
         }
 
@@ -69,7 +70,9 @@ namespace ViewController.Controllers
         public ActionResult Edit(int id)
         {
             EventoModel eventoModel = this.gEvento.Obter(id);
-            ViewBag.IdTipoEvento = new SelectList(this.gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome", eventoModel.IdTipoEvento);
+            var tipoEventoLista = ObterTodosParaExibicao(this.gTipoEvento);
+
+            ViewBag.IdTipoEvento = new SelectList(tipoEventoLista, "Id", "NomeExibido", eventoModel.IdTipoEvento);
             return View(eventoModel);
         }
 
@@ -104,6 +107,26 @@ namespace ViewController.Controllers
         {
             this.gEvento.Remover(id);
             return RedirectToAction("Index");
+        }
+
+        /// <summary>
+        /// Obter todos os tipos de evento cadastrados, personalizados para exibicao
+        /// </summary>
+        /// <param name="gTipoEvento"></param>
+        /// <returns>Lista com dados personalizados para exibicao</returns>
+        public List<object> ObterTodosParaExibicao(GerenciadorTipoEvento gTipoEvento)
+        {
+            var tipoEventos = gTipoEvento.ObterTodos();
+            List<object> tipoEventoLista = new List<object>();
+
+            foreach (var tp in tipoEventos)
+                tipoEventoLista.Add(new
+                {
+                    Id = tp.IdTipoEvento,
+                    NomeExibido = tp.IdTipoEvento + " - " + tp.Nome
+                });
+
+            return tipoEventoLista;
         }
 
         protected override void Dispose(bool disposing)

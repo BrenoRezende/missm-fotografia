@@ -102,7 +102,6 @@ namespace Service
         }
 
 
-
         /// <summary>
         /// Obtém um Evento
         /// </summary>
