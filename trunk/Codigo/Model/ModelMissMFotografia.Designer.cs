@@ -2164,7 +2164,8 @@ namespace Model
         /// <param name="bairro">Initial value of the bairro property.</param>
         /// <param name="cidade">Initial value of the cidade property.</param>
         /// <param name="estado">Initial value of the estado property.</param>
-        public static tb_pessoa Createtb_pessoa(global::System.Int32 idPessoa, global::System.String nomePessoa, global::System.String cpfPessoa, global::System.String sexoPessoa, global::System.DateTime dataNascimentoPessoa, global::System.String senhaPessoa, global::System.String rua, global::System.Int32 numero, global::System.String bairro, global::System.String cidade, global::System.String estado)
+        /// <param name="tipoPessoa">Initial value of the tipoPessoa property.</param>
+        public static tb_pessoa Createtb_pessoa(global::System.Int32 idPessoa, global::System.String nomePessoa, global::System.String cpfPessoa, global::System.String sexoPessoa, global::System.DateTime dataNascimentoPessoa, global::System.String senhaPessoa, global::System.String rua, global::System.Int32 numero, global::System.String bairro, global::System.String cidade, global::System.String estado, global::System.String tipoPessoa)
         {
             tb_pessoa tb_pessoa = new tb_pessoa();
             tb_pessoa.idPessoa = idPessoa;
@@ -2178,6 +2179,7 @@ namespace Model
             tb_pessoa.bairro = bairro;
             tb_pessoa.cidade = cidade;
             tb_pessoa.estado = estado;
+            tb_pessoa.tipoPessoa = tipoPessoa;
             return tb_pessoa;
         }
 
@@ -2499,6 +2501,30 @@ namespace Model
         private global::System.String _estado;
         partial void OnestadoChanging(global::System.String value);
         partial void OnestadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String tipoPessoa
+        {
+            get
+            {
+                return _tipoPessoa;
+            }
+            set
+            {
+                OntipoPessoaChanging(value);
+                ReportPropertyChanging("tipoPessoa");
+                _tipoPessoa = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("tipoPessoa");
+                OntipoPessoaChanged();
+            }
+        }
+        private global::System.String _tipoPessoa;
+        partial void OntipoPessoaChanging(global::System.String value);
+        partial void OntipoPessoaChanged();
 
         #endregion
 

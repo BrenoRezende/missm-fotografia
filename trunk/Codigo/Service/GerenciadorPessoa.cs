@@ -44,6 +44,7 @@ namespace Service
 
         public int Inserir(PessoaModel pessoaModel)
         {
+            pessoaModel.TipoPessoa = "C";
             tb_pessoa pessoaE = new tb_pessoa();
             Atribuir(pessoaModel, pessoaE);
             this.unitOfWork.RepositorioPessoa.Inserir(pessoaE);
@@ -81,7 +82,8 @@ namespace Service
         private IQueryable<PessoaModel> GetQuery()
         {
             IQueryable<tb_pessoa> tb_pessoa = this.unitOfWork.RepositorioPessoa.GetQueryable();
-            var query = from pessoa in tb_pessoa
+            var query = from pessoa in tb_pessoa 
+                        where pessoa.tipoPessoa.Equals("C")                       
                         select new PessoaModel
                         {
                             IdPessoa = pessoa.idPessoa,
@@ -96,7 +98,8 @@ namespace Service
                             Numero = pessoa.numero,
                             Bairro = pessoa.bairro,
                             Cidade = pessoa.cidade,
-                            Estado = pessoa.estado
+                            Estado = pessoa.estado,
+                            TipoPessoa = pessoa.tipoPessoa
                         };
             return query;
         }
@@ -153,6 +156,7 @@ namespace Service
             pessoaE.bairro = pessoaModel.Bairro;
             pessoaE.cidade = pessoaModel.Cidade;
             pessoaE.estado = pessoaModel.Estado;
+            pessoaE.tipoPessoa = pessoaModel.TipoPessoa;
         }
     }
 }

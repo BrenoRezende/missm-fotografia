@@ -46,6 +46,7 @@ namespace Service
         /// <returns>Chave identificante na base</returns>
         public int Inserir(FuncionarioModel funcionarioModel)
         {
+            funcionarioModel.TipoPessoa = "F";
             int idFuncionario = gPessoa.Inserir(funcionarioModel);
             tb_funcionario funcionarioE = new tb_funcionario();
 
@@ -81,7 +82,7 @@ namespace Service
 
 
         /// <summary>
-        /// Consulta padrão para retornar dados do evento como model
+        /// Consulta padrão para retornar dados do funcionario como model
         /// </summary>
         /// <returns></returns>
         private IQueryable<FuncionarioModel> GetQuery()
@@ -91,7 +92,8 @@ namespace Service
 
             var query = from funcionario in tb_funcionario 
                         join pessoa in tb_pessoa
-                        on funcionario.idFuncionario equals pessoa.idPessoa
+                        on funcionario.idFuncionario equals pessoa.idPessoa 
+                        where pessoa.tipoPessoa.Equals("F")
                         select new FuncionarioModel
                         {
                            
@@ -113,7 +115,8 @@ namespace Service
                             Numero = funcionario.tb_pessoa.numero,
                             Bairro = funcionario.tb_pessoa.bairro,
                             Cidade = funcionario.tb_pessoa.cidade,
-                            Estado = funcionario.tb_pessoa.estado
+                            Estado = funcionario.tb_pessoa.estado,
+                            TipoPessoa = funcionario.tb_pessoa.tipoPessoa
 
                         };
             return query;

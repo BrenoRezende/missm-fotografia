@@ -7,7 +7,6 @@
     <Schema Namespace="missmfotografiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="missmfotografiaModelStoreContainer">
           <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.Store.tb_agenda" store:Type="Tables" Schema="missmfotografia" />
-          <EntitySet Name="tb_cliente" EntityType="missmfotografiaModel.Store.tb_cliente" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_contas_receber" EntityType="missmfotografiaModel.Store.tb_contas_receber" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_evento" EntityType="missmfotografiaModel.Store.tb_evento" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_foto" EntityType="missmfotografiaModel.Store.tb_foto" store:Type="Tables" Schema="missmfotografia" />
@@ -21,14 +20,6 @@
           <EntitySet Name="tb_produto_tb_pedido" EntityType="missmfotografiaModel.Store.tb_produto_tb_pedido" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_servico" EntityType="missmfotografiaModel.Store.tb_servico" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_tipo_evento" EntityType="missmfotografiaModel.Store.tb_tipo_evento" store:Type="Tables" Schema="missmfotografia" />
-          <AssociationSet Name="1" Association="missmfotografiaModel.Store.1">
-            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
-            <End Role="tb_cliente" EntitySet="tb_cliente" />
-          </AssociationSet>
-          <AssociationSet Name="10" Association="missmfotografiaModel.Store.10">
-            <End Role="tb_evento" EntitySet="tb_evento" />
-            <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
-          </AssociationSet>
           <AssociationSet Name="11" Association="missmfotografiaModel.Store.11">
             <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
             <End Role="tb_evento" EntitySet="tb_evento" />
@@ -81,14 +72,6 @@
             <End Role="tb_agenda" EntitySet="tb_agenda" />
             <End Role="tb_pessoa_tb_agenda" EntitySet="tb_pessoa_tb_agenda" />
           </AssociationSet>
-          <AssociationSet Name="8" Association="missmfotografiaModel.Store.8">
-            <End Role="tb_evento" EntitySet="tb_evento" />
-            <End Role="tb_agenda" EntitySet="tb_agenda" />
-          </AssociationSet>
-          <AssociationSet Name="9" Association="missmfotografiaModel.Store.9">
-            <End Role="tb_evento" EntitySet="tb_evento" />
-            <End Role="tb_foto" EntitySet="tb_foto" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="tb_agenda">
           <Key>
@@ -99,14 +82,6 @@
           <Property Name="descricaoAtividade" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="dataAtividade" Type="datetime" Nullable="false" />
           <Property Name="idEvento" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tb_cliente">
-          <Key>
-            <PropertyRef Name="idCliente" />
-            <PropertyRef Name="idPessoa" />
-          </Key>
-          <Property Name="idCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="idPessoa" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_contas_receber">
           <Key>
@@ -122,9 +97,15 @@
           <Property Name="idPessoa" Type="int" Nullable="false" />
           <Property Name="idPedido" Type="int" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6035: The relationship '10' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      warning 6035: The relationship '8' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      warning 6035: The relationship '9' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      -->
         <EntityType Name="tb_evento">
           <Key>
             <PropertyRef Name="idEvento" />
+            <PropertyRef Name="idTipoEvento" />
           </Key>
           <Property Name="idEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeEvento" Type="varchar" Nullable="false" MaxLength="50" />
@@ -144,7 +125,6 @@
         <EntityType Name="tb_funcionario">
           <Key>
             <PropertyRef Name="idFuncionario" />
-            <PropertyRef Name="idPessoa" />
           </Key>
           <Property Name="idFuncionario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="tipoConta" Type="int" Nullable="false" />
@@ -199,6 +179,7 @@
           <Property Name="bairro" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="cidade" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="estado" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tipoPessoa" Type="varchar" Nullable="false" MaxLength="1" />
         </EntityType>
         <EntityType Name="tb_pessoa_tb_agenda">
           <Key>
@@ -248,30 +229,6 @@
           <Property Name="totalConvidados" Type="int" Nullable="false" />
           <Property Name="valorTipoEvento" Type="decimal" Nullable="false" />
         </EntityType>
-        <Association Name="1">
-          <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
-          <End Role="tb_cliente" Type="missmfotografiaModel.Store.tb_cliente" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_pessoa">
-              <PropertyRef Name="idPessoa" />
-            </Principal>
-            <Dependent Role="tb_cliente">
-              <PropertyRef Name="idPessoa" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="10">
-          <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
-          <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Principal>
-            <Dependent Role="tb_pedido_tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="11">
           <End Role="tb_tipo_evento" Type="missmfotografiaModel.Store.tb_tipo_evento" Multiplicity="1" />
           <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="*" />
@@ -425,30 +382,6 @@
             </Principal>
             <Dependent Role="tb_pessoa_tb_agenda">
               <PropertyRef Name="idAgenda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="8">
-          <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
-          <End Role="tb_agenda" Type="missmfotografiaModel.Store.tb_agenda" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Principal>
-            <Dependent Role="tb_agenda">
-              <PropertyRef Name="idEvento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="9">
-          <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
-          <End Role="tb_foto" Type="missmfotografiaModel.Store.tb_foto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Principal>
-            <Dependent Role="tb_foto">
-              <PropertyRef Name="idEvento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -615,6 +548,7 @@
           <NavigationProperty Name="tb_agenda" Relationship="missmfotografiaModel.tb_pessoa_tb_agenda" FromRole="tb_pessoa" ToRole="tb_agenda" />
           <NavigationProperty Name="tb_cliente" Relationship="missmfotografiaModel.C11" FromRole="tb_pessoa" ToRole="tb_cliente" />
           <NavigationProperty Name="tb_funcionario" Relationship="missmfotografiaModel.C13" FromRole="tb_pessoa" ToRole="tb_funcionario" />
+          <Property Type="String" Name="tipoPessoa" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_produto">
           <Key>
@@ -867,6 +801,7 @@
           <EntitySetMapping Name="tb_pessoa">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_pessoa">
               <MappingFragment StoreEntitySet="tb_pessoa">
+                <ScalarProperty Name="tipoPessoa" ColumnName="tipoPessoa" />
                 <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
                 <ScalarProperty Name="nomePessoa" ColumnName="nomePessoa" />
                 <ScalarProperty Name="cpfPessoa" ColumnName="cpfPessoa" />
@@ -950,14 +885,6 @@
               <ScalarProperty Name="idPedido" ColumnName="idPedido" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="tb_cliente">
-            <EntityTypeMapping TypeName="missmfotografiaModel.tb_cliente">
-              <MappingFragment StoreEntitySet="tb_cliente">
-                <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tb_funcionario">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_funcionario">
               <MappingFragment StoreEntitySet="tb_funcionario">

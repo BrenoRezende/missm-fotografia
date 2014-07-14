@@ -81,5 +81,10 @@ namespace Model.Models
             ErrorMessageResourceName = "erro_requerido")]
         [StringLength(50)]
         public string Estado { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagens),
+            ErrorMessageResourceName = "erro_requerido")]
+        [StringLength(1)]
+        public string TipoPessoa { get; set; }
     }
 }
