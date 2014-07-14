@@ -12,7 +12,7 @@ namespace ViewController.Controllers
     public class AccountController : Controller
     {
 
-        //
+
         // GET: /Account/LogOn
 
         public ActionResult LogOn()
@@ -20,7 +20,7 @@ namespace ViewController.Controllers
             return View();
         }
 
-        //
+
         // POST: /Account/LogOn
 
         [HttpPost]
@@ -43,7 +43,7 @@ namespace ViewController.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    ModelState.AddModelError(string.Empty, "The user name or password provided is incorrect.");
                 }
             }
 
@@ -51,7 +51,7 @@ namespace ViewController.Controllers
             return View(model);
         }
 
-        //
+
         // GET: /Account/LogOff
 
         public ActionResult LogOff()
@@ -61,7 +61,7 @@ namespace ViewController.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //
+
         // GET: /Account/Register
 
         public ActionResult Register()
@@ -69,7 +69,7 @@ namespace ViewController.Controllers
             return View();
         }
 
-        //
+
         // POST: /Account/Register
 
         [HttpPost]
@@ -88,7 +88,7 @@ namespace ViewController.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
+                    ModelState.AddModelError(string.Empty, ErrorCodeToString(createStatus));
                 }
             }
 
@@ -96,7 +96,7 @@ namespace ViewController.Controllers
             return View(model);
         }
 
-        //
+
         // GET: /Account/ChangePassword
 
         [Authorize]
@@ -105,7 +105,7 @@ namespace ViewController.Controllers
             return View();
         }
 
-        //
+
         // POST: /Account/ChangePassword
 
         [Authorize]
@@ -134,7 +134,7 @@ namespace ViewController.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
+                    ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
                 }
             }
 
@@ -142,7 +142,7 @@ namespace ViewController.Controllers
             return View(model);
         }
 
-        //
+
         // GET: /Account/ChangePasswordSuccess
 
         public ActionResult ChangePasswordSuccess()

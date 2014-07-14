@@ -17,11 +17,11 @@ namespace Service
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
         /// </summary>
-         
+
         public GerenciadorCliente()
         {
             this.unitOfWork = new UnitOfWork();
-            shared = false;
+            this.shared = false;
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Service
         internal GerenciadorCliente(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            shared = true;
+            this.shared = true;
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace Service
         {
             tb_pessoa clienteE = new tb_pessoa();
             Atribuir(clienteModel, clienteE);
-            unitOfWork.RepositorioCliente.Inserir(clienteE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioCliente.Inserir(clienteE);
+            this.unitOfWork.Commit(this.shared);
             return clienteE.idPessoa;
         }
 
@@ -59,8 +59,8 @@ namespace Service
         {
             tb_pessoa clienteE = new tb_pessoa();
             Atribuir(clienteModel, clienteE);
-            unitOfWork.RepositorioCliente.Editar(clienteE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioCliente.Editar(clienteE);
+            this.unitOfWork.Commit(this.shared);
         }
 
         /// <summary>
@@ -69,8 +69,8 @@ namespace Service
         /// <param name="idCliente"></param>
         public void Remover(int idCliente)
         {
-            unitOfWork.RepositorioCliente.Remover(cliente => cliente.idPessoa.Equals(idCliente));
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioCliente.Remover(cliente => cliente.idPessoa.Equals(idCliente));
+            this.unitOfWork.Commit(this.shared);
         }
 
 
@@ -80,7 +80,7 @@ namespace Service
         /// <returns></returns>
         private IQueryable<ClienteModel> GetQuery()
         {
-            IQueryable<tb_pessoa> tb_cliente = unitOfWork.RepositorioCliente.GetQueryable();
+            IQueryable<tb_pessoa> tb_cliente = this.unitOfWork.RepositorioCliente.GetQueryable();
             var query = from cliente in tb_cliente
                         select new ClienteModel
                         {
@@ -110,7 +110,7 @@ namespace Service
         /// <returns>ClienteModel</returns>
         public ClienteModel Obter(int idCliente)
         {
-            IEnumerable<ClienteModel> clientes = GetQuery().Where(clienteModel => clienteModel.IdCliente.Equals(idCliente));
+            IEnumerable<ClienteModel> clientes = this.GetQuery().Where(clienteModel => clienteModel.IdCliente.Equals(idCliente));
 
             return clientes.ElementAtOrDefault(0);
         }
@@ -122,7 +122,7 @@ namespace Service
         /// <returns>ClienteModel</returns>
         public IEnumerable<ClienteModel> ObterPorNome(string nome)
         {
-            IEnumerable<ClienteModel> clientes = GetQuery().Where(clienteModel => clienteModel.Nome.StartsWith(nome));
+            IEnumerable<ClienteModel> clientes = this.GetQuery().Where(clienteModel => clienteModel.Nome.StartsWith(nome));
             return clientes;
         }
 
@@ -132,7 +132,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<ClienteModel> ObterTodos()
         {
-            return GetQuery();
+            return this.GetQuery();
         }
 
         /// <summary>

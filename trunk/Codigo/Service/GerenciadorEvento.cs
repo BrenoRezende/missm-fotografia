@@ -21,19 +21,19 @@ namespace Service
         public GerenciadorEvento()
         {
             this.unitOfWork = new UnitOfWork();
-            shared = false;
+            this.shared = false;
         }
 
         /// <summary>
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="unitOfWork"></param>
+        /// <param name="this.unitOfWork"></param>
 
         internal GerenciadorEvento(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            shared = true;
+            this.shared = true;
         }
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace Service
         {
             tb_evento eventoE = new tb_evento();
             Atribuir(eventoModel, eventoE);
-            unitOfWork.RepositorioEvento.Inserir(eventoE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioEvento.Inserir(eventoE);
+            this.unitOfWork.Commit(this.shared);
             return eventoE.idEvento;
         }
 
@@ -58,8 +58,8 @@ namespace Service
         {
             tb_evento eventoE = new tb_evento();
             Atribuir(eventoModel, eventoE);
-            unitOfWork.RepositorioEvento.Editar(eventoE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioEvento.Editar(eventoE);
+            this.unitOfWork.Commit(this.shared);
         }
 
         /// <summary>
@@ -68,8 +68,8 @@ namespace Service
         /// <param name="idEvento"></param>
         public void Remover(int idEvento)
         {
-            unitOfWork.RepositorioEvento.Remover(evento => evento.idEvento.Equals(idEvento));
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioEvento.Remover(evento => evento.idEvento.Equals(idEvento));
+            this.unitOfWork.Commit(this.shared);
         }
 
 
@@ -79,7 +79,7 @@ namespace Service
         /// <returns></returns>
         private IQueryable<EventoModel> GetQuery()
         {
-            IQueryable<tb_evento> tb_evento = unitOfWork.RepositorioEvento.GetQueryable();
+            IQueryable<tb_evento> tb_evento = this.unitOfWork.RepositorioEvento.GetQueryable();
             var query = from evento in tb_evento
                         select new EventoModel
                         {
@@ -98,7 +98,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<EventoModel> ObterTodos()
         {
-            return GetQuery();
+            return this.GetQuery();
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<EventoModel> ObterTodosPorTipoEvento(int idTipoEvento)
         {
-            return GetQuery().Where(evento => evento.IdTipoEvento.Equals(idTipoEvento));
+            return this.GetQuery().Where(evento => evento.IdTipoEvento.Equals(idTipoEvento));
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Service
         /// <returns>EventoModel</returns>
         public EventoModel Obter(int idEvento)
         {
-            IEnumerable<EventoModel> eventos = GetQuery().Where(eventoModel => eventoModel.IdEvento.Equals(idEvento));
+            IEnumerable<EventoModel> eventos = this.GetQuery().Where(eventoModel => eventoModel.IdEvento.Equals(idEvento));
 
             return eventos.ElementAtOrDefault(0);
         }
@@ -129,7 +129,7 @@ namespace Service
         /// <returns>EventoModel</returns>
         public IEnumerable<EventoModel> ObterPorNome(string nome)
         {
-            IEnumerable<EventoModel> eventos = GetQuery().Where(eventoModel => eventoModel.Nome.StartsWith(nome));
+            IEnumerable<EventoModel> eventos = this.GetQuery().Where(eventoModel => eventoModel.Nome.StartsWith(nome));
             return eventos;
         }
 

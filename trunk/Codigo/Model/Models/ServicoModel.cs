@@ -36,12 +36,12 @@ namespace Model.Models
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
         [Display(Name = "valor_servico", ResourceType = typeof(Mensagens))]
-        public decimal ValorServico  { get; set; }
+        public decimal ValorServico { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
         [Display(Name = "valor_cobrado_ao_cliente", ResourceType = typeof(Mensagens))]
         public decimal ValorCobradoAoCliente { get; set; }
-      
-   }
+
+    }
 }

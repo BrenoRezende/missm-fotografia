@@ -20,36 +20,36 @@ namespace ViewController.Controllers
 
         public EventoController()
         {
-            gEvento = new GerenciadorEvento();
-            gTipoEvento = new GerenciadorTipoEvento();
+            this.gEvento = new GerenciadorEvento();
+            this.gTipoEvento = new GerenciadorTipoEvento();
         }
 
         // GET: /Evento/
 
         public ActionResult Index()
         {
-            return View(gEvento.ObterTodos());
+            return View(this.gEvento.ObterTodos());
         }
 
-        //
+
         // GET: /Evento/Details/5
 
         public ActionResult Details(int id)
         {
-            EventoModel eventoModel = gEvento.Obter(id);
+            EventoModel eventoModel = this.gEvento.Obter(id);
             return View(eventoModel);
         }
 
-        //
+
         // GET: /Evento/Create
 
         public ActionResult Create()
         {
-            ViewBag.IdTipoEvento = new SelectList(gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome");
+            ViewBag.IdTipoEvento = new SelectList(this.gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome");
             return View();
         }
 
-        //
+
         // POST: /Evento/Create
 
         [HttpPost]
@@ -57,23 +57,23 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                gEvento.Inserir(eventoModel);
+                this.gEvento.Inserir(eventoModel);
                 return RedirectToAction("Index");
             }
             return View(eventoModel);
         }
 
-        //
+
         // GET: /Evento/Edit/5
 
         public ActionResult Edit(int id)
         {
-            EventoModel eventoModel = gEvento.Obter(id);
-            ViewBag.IdTipoEvento = new SelectList(gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome", eventoModel.IdTipoEvento);
+            EventoModel eventoModel = this.gEvento.Obter(id);
+            ViewBag.IdTipoEvento = new SelectList(this.gTipoEvento.ObterTodos(), "IdTipoEvento", "Nome", eventoModel.IdTipoEvento);
             return View(eventoModel);
         }
 
-        //
+
         // POST: /Evento/Edit/5
 
         [HttpPost]
@@ -81,28 +81,28 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                gEvento.Editar(eventoModel);
+                this.gEvento.Editar(eventoModel);
                 return RedirectToAction("Index");
             }
             return View(eventoModel);
         }
 
-        //
+
         // GET: /Evento/Delete/5
 
         public ActionResult Delete(int id)
         {
-            EventoModel eventoModel = gEvento.Obter(id);
+            EventoModel eventoModel = this.gEvento.Obter(id);
             return View(eventoModel);
         }
 
-        //
+
         // POST: /Evento/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gEvento.Remover(id);
+            this.gEvento.Remover(id);
             return RedirectToAction("Index");
         }
 

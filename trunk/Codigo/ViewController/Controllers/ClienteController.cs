@@ -18,27 +18,27 @@ namespace ViewController.Controllers
 
         public ClienteController()
         {
-            gCliente = new GerenciadorCliente();
+            this.gCliente = new GerenciadorCliente();
         }
         
-        //
+
         // GET: /Cliente/
 
         public ActionResult Index()
         {
-            return View(gCliente.ObterTodos());
+            return View(this.gCliente.ObterTodos());
         }
 
-        //
+
         // GET: /Cliente/Details/5
 
         public ActionResult Details(int id)
         {
-            ClienteModel clienteModel = gCliente.Obter(id);
+            ClienteModel clienteModel = this.gCliente.Obter(id);
             return View(clienteModel);
         }
 
-        //
+
         // GET: /Cliente/Create
 
         public ActionResult Create()
@@ -52,18 +52,18 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                gCliente.Inserir(clienteModel);
+                this.gCliente.Inserir(clienteModel);
                 return RedirectToAction("Index");
             }
             return View(clienteModel);
         }
         
-        //
+
         // GET: /Cliente/Edit/5
  
         public ActionResult Edit(int id)
         {
-            ClienteModel clienteModel = gCliente.Obter(id);
+            ClienteModel clienteModel = this.gCliente.Obter(id);
             return View(clienteModel);
         }
 
@@ -74,18 +74,18 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                gCliente.Editar(clienteModel);
+                this.gCliente.Editar(clienteModel);
                 return RedirectToAction("Index");
             }
             return View(clienteModel);
         }
 
-        //
+
         // GET: /Cliente/Delete/5
  
         public ActionResult Delete(int id)
         {
-            ClienteModel clienteModel = gCliente.Obter(id);
+            ClienteModel clienteModel = this.gCliente.Obter(id);
             return View(clienteModel);
         }
 
@@ -93,7 +93,7 @@ namespace ViewController.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gCliente.Remover(id);
+            this.gCliente.Remover(id);
             return RedirectToAction("Index");
         }
 

@@ -21,19 +21,19 @@ namespace Service
         public GerenciadorPedido()
         {
             this.unitOfWork = new UnitOfWork();
-            shared = false;
+            this.shared = false;
         }
 
         /// <summary>
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="unitOfWork"></param>
+        /// <param name="this.unitOfWork"></param>
 
         internal GerenciadorPedido(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            shared = true;
+            this.shared = true;
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace Service
         {
             tb_pedido pedidoE = new tb_pedido();
             Atribuir(pedidoModel, pedidoE);
-            unitOfWork.RepositorioPedido.Inserir(pedidoE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioPedido.Inserir(pedidoE);
+            this.unitOfWork.Commit(this.shared);
             return pedidoE.idPedido;
         }
 
@@ -59,8 +59,8 @@ namespace Service
         {
             tb_pedido pedidoE = new tb_pedido();
             Atribuir(pedidoModel, pedidoE);
-            unitOfWork.RepositorioPedido.Editar(pedidoE);
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioPedido.Editar(pedidoE);
+            this.unitOfWork.Commit(this.shared);
         }
 
         /// <summary>
@@ -69,8 +69,8 @@ namespace Service
         /// <param name="idPedido"></param>
         public void Remover(int idPedido)
         {
-            unitOfWork.RepositorioPedido.Remover(pedido => pedido.idPedido.Equals(idPedido));
-            unitOfWork.Commit(shared);
+            this.unitOfWork.RepositorioPedido.Remover(pedido => pedido.idPedido.Equals(idPedido));
+            this.unitOfWork.Commit(this.shared);
         }
 
 
@@ -80,7 +80,7 @@ namespace Service
         /// <returns></returns>
         private IQueryable<PedidoModel> GetQuery()
         {
-            IQueryable<tb_pedido> tb_pedido = unitOfWork.RepositorioPedido.GetQueryable();
+            IQueryable<tb_pedido> tb_pedido = this.unitOfWork.RepositorioPedido.GetQueryable();
             var query = from pedido in tb_pedido
                         select new PedidoModel
                         {
@@ -103,7 +103,7 @@ namespace Service
         /// <returns>PedidoModel</returns>
         public PedidoModel Obter(int idPedido)
         {
-            IEnumerable<PedidoModel> pedidos = GetQuery().Where(pedidoModel => pedidoModel.IdPedido.Equals(idPedido));
+            IEnumerable<PedidoModel> pedidos = this.GetQuery().Where(pedidoModel => pedidoModel.IdPedido.Equals(idPedido));
 
             return pedidos.ElementAtOrDefault(0);
         }
@@ -115,7 +115,7 @@ namespace Service
         /// <returns>PedidoModel</returns>
         public IEnumerable<PedidoModel> ObterPorNome(string nomeCliente)
         {
-            IEnumerable<PedidoModel> pedidos = GetQuery().Where(pedidoModel => pedidoModel.NomePessoa.StartsWith(nomeCliente));
+            IEnumerable<PedidoModel> pedidos = this.GetQuery().Where(pedidoModel => pedidoModel.NomePessoa.StartsWith(nomeCliente));
             return pedidos;
         }
 
@@ -125,7 +125,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<PedidoModel> ObterTodos()
         {
-            return GetQuery();
+            return this.GetQuery();
         }
 
         /// <summary>

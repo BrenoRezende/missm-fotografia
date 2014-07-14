@@ -13,56 +13,56 @@ namespace ViewController.Controllers
 {
     public class ServicoController : Controller
     {
-    
+
         private GerenciadorServico gServico;
 
         public ServicoController()
         {
-            gServico = new GerenciadorServico();
+            this.gServico = new GerenciadorServico();
         }
 
         // GET: /Produto/
         public ActionResult Index()
         {
-            return View(gServico.ObterTodos());
+            return View(this.gServico.ObterTodos());
         }
 
-        //
+
         // GET: /Servico/Details/5
 
         public ActionResult Details(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
+            ServicoModel servicoModel = this.gServico.Obter(id);
             return View(servicoModel);
         }
 
-        //
+
         // GET: /Servico/Create
 
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
 
         [HttpPost]
         public ActionResult Create(ServicoModel servicoModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                gServico.Inserir(servicoModel);
+                this.gServico.Inserir(servicoModel);
                 return RedirectToAction("Index");
             }
-                return View(servicoModel);
+            return View(servicoModel);
         }
-        
-        
-        //
+
+
+
         // GET: /Servico/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
+            ServicoModel servicoModel = this.gServico.Obter(id);
             return View(servicoModel);
         }
 
@@ -70,33 +70,33 @@ namespace ViewController.Controllers
         [HttpPost]
         public ActionResult Edit(ServicoModel servicoModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                gServico.Editar(servicoModel);
+                this.gServico.Editar(servicoModel);
                 return RedirectToAction("Index");
             }
-            
+
             return View(servicoModel);
-            
+
         }
 
-        //
+
         // GET: /Servico/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
-            ServicoModel servicoModel = gServico.Obter(id);
+            ServicoModel servicoModel = this.gServico.Obter(id);
             return View(servicoModel);
         }
 
- 
+
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gServico.Remover(id);
+            this.gServico.Remover(id);
             return RedirectToAction("Index");
-         
+
         }
 
         protected override void Dispose(bool disposing)
