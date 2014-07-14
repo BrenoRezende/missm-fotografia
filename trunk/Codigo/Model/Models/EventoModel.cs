@@ -25,6 +25,7 @@ namespace Model.Models
         public DateTime Data { get; set; }
 
         public int IdTipoEvento { get; set; }
+
         public string NomeTipoEvento { get; set; }
     }
 }
