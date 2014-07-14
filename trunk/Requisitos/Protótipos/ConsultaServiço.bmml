@@ -1,0 +1,86 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1060" measuredH="737" mockupW="1017" mockupH="725">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="43" y="12" w="1017" h="725" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MissM%0Ahttp%3A//www.missm.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="840" y="120" w="-1" h="-1" measuredW="155" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>missm.estudio@gmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="759" y="106" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>./assets/icon_user.png%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="1010" y="121" w="-1" h="-1" measuredW="25" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Tela%20Inicial%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22967%2C109%2C992%2C128%22%20href%3D%22Tela%2520Inicial.bmml%22%20alt%3D%22Tela%20Inicial%22%20id%3D%224%22/%3E</map>
+        <text>Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="92" y="645" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>CadastrarServi%E7o%26bm%3BCadastrarServi%E7o.bmml%26bm%3BCadastrarServi%E7o.bmml%26bm%3BCadastrarServi%E7o.bmml</href>
+        <icon>SquaredPlusIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2249%2C633%2C73%2C657%22%20href%3D%22CadastrarServi%25C3%25A7o.bmml%22%20alt%3D%22CadastrarServi%E7o%22%20id%3D%2211%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::SearchBox" x="165" y="294" w="179" h="-1" measuredW="120" measuredH="25" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20aqui%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Label" x="98" y="296" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pesquisar</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Canvas" x="68" y="269" w="977" h="424" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::ButtonBar" x="55" y="169" w="992" h="65" measuredW="711" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>AgendaAtividades%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%2CConsultarCliente%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%2CEscolherFotos%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%2CcriarOrcamento%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%2CConsultaProduto%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%2CEventos%26bm%3BEventos.bmml%26bm%3BEventos.bmml%26bm%3BEventos.bmml%2CConsultaServi%E7o%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%2CConsultarFuncionario%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%2CRelatorio%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2212%2C157%2C109%2C222%22%20href%3D%22AgendaAtividades.bmml%22%20alt%3D%22AgendaAtividades%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22109%2C157%2C210%2C222%22%20href%3D%22ConsultarCliente.bmml%22%20alt%3D%22ConsultarCliente%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C157%2C295%2C222%22%20href%3D%22EscolherFotos.bmml%22%20alt%3D%22EscolherFotos%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22295%2C157%2C431%2C222%22%20href%3D%22criarOrcamento.bmml%22%20alt%3D%22criarOrcamento%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22431%2C157%2C538%2C222%22%20href%3D%22ConsultaProduto.bmml%22%20alt%3D%22ConsultaProduto%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22538%2C157%2C639%2C222%22%20href%3D%22Eventos.bmml%22%20alt%3D%22Eventos%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22639%2C157%2C745%2C222%22%20href%3D%22ConsultaServi%25C3%25A7o.bmml%22%20alt%3D%22ConsultaServi%E7o%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22745%2C157%2C883%2C222%22%20href%3D%22ConsultarFuncionario.bmml%22%20alt%3D%22ConsultarFuncionario%22%20id%3D%2238%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22883%2C157%2C1000%2C222%22%20href%3D%22Relatorio.bmml%22%20alt%3D%22Relatorio%22%20id%3D%2238%22/%3E</map>
+        <selectedIndex>6</selectedIndex>
+        <text>Agenda%2C%20Clientes%2C%20%20Fotos%2C%20Or%E7amentos%2C%20Produtos%2C%20Eventos%2C%20Servi%E7os%2C%20Funcion%E1rios%2C%20Relat%F3rios</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::DataGrid" x="92" y="353" w="928" h="274" measuredW="594" measuredH="261" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <borderStyle>square</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>false</hLines>
+        <rowHeight>40</rowHeight>
+        <text>Tipos%20de%20Servi%E7os%2C%20%20Parceiros%2C%20Contatos%2C%20Valor%20do%20Servi%E7o%2C%20Valor%20Cobrado%20ao%20Cliente%0AMaquiagem%2C%20Daniel%20Souza%2C%209923-4554%2C%20R%24%2080.00%2C%20R%24%20120.00%0APenteado%2C%20Daniel%20Souza%2C%209923-4554%2C%20R%24%2080.00%2C%20R%24%20120.00%0AFilmagem%2C%20M%E1rio%20Menezees%2C%209945-9988%2CR%24%202500.00%2C%20R%24%203000.00%0ASerimonialista%2C%20Silvana%20Santos%2C%208112-4433%2C%20R%24%201200.00%2C%20%20R%24%201450.00%0A%20%0A%20</text>
+        <verticalScrollbar>true</verticalScrollbar>
+        <vLines>true</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Icon" x="957" y="504" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Icon" x="957" y="461" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Icon" x="957" y="420" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>PencilIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Icon" x="957" y="379" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>EditarServi%E7o%26bm%3BEditarServi%E7o.bmml%26bm%3BEditarServi%E7o.bmml%26bm%3BEditarServi%E7o.bmml</href>
+        <icon>PencilIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22914%2C367%2C938%2C391%22%20href%3D%22EditarServi%25C3%25A7o.bmml%22%20alt%3D%22EditarServi%E7o%22%20id%3D%2250%22/%3E</map>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
