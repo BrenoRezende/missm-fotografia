@@ -58,9 +58,10 @@
       <DependentUpon>ModelMissMFotografia.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\ClienteModel.cs" />
     <Compile Include="Models\EventoModel.cs" />
+    <Compile Include="Models\FuncionarioModel.cs" />
     <Compile Include="Models\PedidoModel.cs" />
+    <Compile Include="Models\PessoaModel.cs" />
     <Compile Include="Models\ProdutoModel.cs" />
     <Compile Include="Models\ServicoModel.cs" />
     <Compile Include="Models\TipoEventoModel.cs" />
@@ -74,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="Properties\DataSources\missmfotografiaEntities.datasource" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App_GlobalResources\Mensagens.resx">
