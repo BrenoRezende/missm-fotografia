@@ -20,7 +20,9 @@ namespace Data
         private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
         private IRepositorioGenerico<tb_evento> _repEvento;
         private IRepositorioGenerico<tb_pedido> _repPedido;
-        private IRepositorioGenerico<tb_pessoa> _repCliente;
+        private IRepositorioGenerico<tb_pessoa> _repPessoa;
+        private IRepositorioGenerico<tb_funcionario> _repFuncionario;
+
         
 
 
@@ -48,21 +50,36 @@ namespace Data
         }
 
         /// <sumary>
-        /// Repositório para manipular dados persistidos de Cliente
+        /// Repositório para manipular dados persistidos de pessoa
         /// </sumary>
-        public IRepositorioGenerico<tb_pessoa> RepositorioCliente
+        public IRepositorioGenerico<tb_pessoa> RepositorioPessoa
         {
             get
             {
-                if (_repCliente == null)
+                if (_repPessoa == null)
                 {
-                    _repCliente = new RepositorioGenerico<tb_pessoa>(_context);
+                    _repPessoa = new RepositorioGenerico<tb_pessoa>(_context);
                 }
 
-                return _repCliente;
+                return _repPessoa;
             }
         }
-        
+
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Funcionario
+        /// </sumary>
+        public IRepositorioGenerico<tb_funcionario> RepositorioFuncionario
+        {
+            get
+            {
+                if (_repFuncionario == null)
+                {
+                    _repFuncionario = new RepositorioGenerico<tb_funcionario>(_context);
+                }
+
+                return _repFuncionario;
+            }
+        }
         /// <summary>
         /// Repositório para manipular dados persistidos de Servico
         /// </summary>
