@@ -17,7 +17,7 @@ namespace ViewController.Controllers
 
         public FuncionarioController()
         {
-            gFuncionario = new GerenciadorFuncionario();
+            this.gFuncionario = new GerenciadorFuncionario();
         }
 
         //
@@ -25,7 +25,7 @@ namespace ViewController.Controllers
 
         public ActionResult Index()
         {
-            return View(gFuncionario.ObterTodos());
+            return View(this.gFuncionario.ObterTodos());
         }
 
         //
@@ -33,7 +33,7 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
-            FuncionarioModel funcionarioModel = gFuncionario.Obter(id);
+            FuncionarioModel funcionarioModel = this.gFuncionario.Obter(id);
             return View(funcionarioModel);
         }
 
@@ -41,7 +41,7 @@ namespace ViewController.Controllers
         // GET: /Funcionario/Create
 
         public ActionResult Create()
-        {
+        {            
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace ViewController.Controllers
 
         public ActionResult Edit(int id)
         {
-            FuncionarioModel funcionarioModel = gFuncionario.Obter(id);
+            FuncionarioModel funcionarioModel = this.gFuncionario.Obter(id);            
             return View(funcionarioModel);
         }
 
@@ -76,7 +76,7 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                gFuncionario.Editar(funcionarioModel);
+                this.gFuncionario.Editar(funcionarioModel);
                 return RedirectToAction("Index");
             }
             return View(funcionarioModel);
@@ -87,7 +87,7 @@ namespace ViewController.Controllers
 
         public ActionResult Delete(int id)
         {
-            FuncionarioModel funcionarioModel = gFuncionario.Obter(id);
+            FuncionarioModel funcionarioModel = this.gFuncionario.Obter(id);
             return View(funcionarioModel);
         }
 
@@ -97,7 +97,7 @@ namespace ViewController.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gFuncionario.Remover(id);
+            this.gFuncionario.Remover(id);
             return RedirectToAction("Index");
         }
 
