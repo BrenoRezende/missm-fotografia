@@ -101,14 +101,7 @@ namespace Service
             return this.GetQuery();
         }
 
-        /// <summary>
-        /// Obter todos as entidades cadastradas em Tipo Evento
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<EventoModel> ObterTodosPorTipoEvento(int idTipoEvento)
-        {
-            return this.GetQuery().Where(evento => evento.IdTipoEvento.Equals(idTipoEvento));
-        }
+
 
         /// <summary>
         /// Obtém um Evento
