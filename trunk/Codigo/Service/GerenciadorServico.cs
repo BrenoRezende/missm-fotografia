@@ -20,19 +20,19 @@ namespace Service
         public GerenciadorServico()
         {
             this.unitOfWork = new UnitOfWork();
-            this.shared = false;
+            shared = false;
         }
 
         /// <summary>
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="this.unitOfWork"></param>
+        /// <param name="unitOfWork"></param>
 
         internal GerenciadorServico(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            this.shared = true;
+            shared = true;
         }
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace Service
         {
             tb_servico servicoE = new tb_servico();
             Atribuir(servicoModel, servicoE);
-            this.unitOfWork.RepositorioServico.Inserir(servicoE);
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioServico.Inserir(servicoE);
+            unitOfWork.Commit(shared);
             return servicoE.idServico;
         }
 
@@ -59,8 +59,8 @@ namespace Service
         {
             tb_servico servicoE = new tb_servico();
             Atribuir(servicoModel, servicoE);
-            this.unitOfWork.RepositorioServico.Editar(servicoE);
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioServico.Editar(servicoE);
+            unitOfWork.Commit(shared);
         }
 
         /// <summary>
@@ -69,8 +69,8 @@ namespace Service
         /// <param name="idServico"></param>
         public void Remover(int idServico)
         {
-            this.unitOfWork.RepositorioServico.Remover(servico => servico.idServico.Equals(idServico));
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioServico.Remover(servico => servico.idServico.Equals(idServico));
+            unitOfWork.Commit(shared);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Service
 
         private IQueryable<ServicoModel> GetQuery()
         {
-            IQueryable<tb_servico> tb_servico = this.unitOfWork.RepositorioServico.GetQueryable();
+            IQueryable<tb_servico> tb_servico = unitOfWork.RepositorioServico.GetQueryable();
             var query = from servico in tb_servico
                         select new ServicoModel
                         {
@@ -100,7 +100,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<ServicoModel> ObterTodos()
         {
-            return this.GetQuery();
+            return GetQuery();
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Service
         /// <returns>ServicoModel</returns>
         public ServicoModel Obter(int idServico)
         {
-            IEnumerable<ServicoModel> servicos = this.GetQuery().Where(servicoModel => servicoModel.IdServico.Equals(idServico));
+            IEnumerable<ServicoModel> servicos = GetQuery().Where(servicoModel => servicoModel.IdServico.Equals(idServico));
 
             return servicos.ElementAtOrDefault(0);
         }
@@ -122,7 +122,7 @@ namespace Service
         /// <returns>ServicoModel</returns>
         public IEnumerable<ServicoModel> ObterPorNome(string nome)
         {
-            IEnumerable<ServicoModel> servicos = this.GetQuery().Where(servicoModel => servicoModel.TipoServico.StartsWith(nome));
+            IEnumerable<ServicoModel> servicos = GetQuery().Where(servicoModel => servicoModel.TipoServico.StartsWith(nome));
             return servicos;
         }
 

@@ -18,26 +18,26 @@ namespace ViewController.Controllers
 
         public ProdutoController()
         {
-            this.gProduto = new GerenciadorProduto();
+            gProduto = new GerenciadorProduto();
         }
 
         // GET: /Produto/
 
         public ActionResult Index()
         {
-            return View(this.gProduto.ObterTodos());
+            return View(gProduto.ObterTodos());
         }
 
-
+        //
         // GET: /Produto/Details/5
 
         public ActionResult Details(int id)
         {
-            ProdutoModel produtoModel = this.gProduto.Obter(id);
+            ProdutoModel produtoModel = gProduto.Obter(id);
             return View(produtoModel);
         }
 
-
+        //
         // GET: /Produto/Create
 
         public ActionResult Create()
@@ -45,7 +45,7 @@ namespace ViewController.Controllers
             return View();
         } 
 
-
+        //
         // POST: /Produto/Create
 
         [HttpPost]
@@ -53,22 +53,22 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.gProduto.Inserir(produtoModel);
+                gProduto.Inserir(produtoModel);
                 return RedirectToAction("Index");
             }
             return View(produtoModel);
         }
         
-
+        //
         // GET: /Produto/Edit/5
  
         public ActionResult Edit(int id)
         {
-            ProdutoModel produtoModel = this.gProduto.Obter(id);
+            ProdutoModel produtoModel = gProduto.Obter(id);
             return View(produtoModel);
         }
 
-
+        //
         // POST: /Produto/Edit/5
 
         [HttpPost]
@@ -76,28 +76,28 @@ namespace ViewController.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.gProduto.Editar(produtoModel);
+                gProduto.Editar(produtoModel);
                 return RedirectToAction("Index");
             }
                 return View(produtoModel);
         }
 
-
+        //
         // GET: /Produto/Delete/5
  
         public ActionResult Delete(int id)
         {
-            ProdutoModel produtoModel = this.gProduto.Obter(id);
+            ProdutoModel produtoModel = gProduto.Obter(id);
             return View(produtoModel);
         }
 
-
+        //
         // POST: /Produto/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            this.gProduto.Remover(id);
+            gProduto.Remover(id);
             return RedirectToAction("Index");
         }
 

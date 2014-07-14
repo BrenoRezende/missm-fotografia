@@ -18,13 +18,8 @@ namespace Data
         private IRepositorioGenerico<tb_produto> _repProduto;
         private IRepositorioGenerico<tb_servico> _repServico;
         private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
-        private IRepositorioGenerico<tb_evento> _repEvento;
         private IRepositorioGenerico<tb_pedido> _repPedido;
-        private IRepositorioGenerico<tb_pessoa> _repPessoa;
-        private IRepositorioGenerico<tb_funcionario> _repFuncionario;
-
-        
-
+        private IRepositorioGenerico<tb_pessoa> _repCliente;
 
         public UnitOfWork()
         {
@@ -48,38 +43,7 @@ namespace Data
                 return _repProduto;
             }
         }
-
-        /// <sumary>
-        /// Repositório para manipular dados persistidos de pessoa
-        /// </sumary>
-        public IRepositorioGenerico<tb_pessoa> RepositorioPessoa
-        {
-            get
-            {
-                if (_repPessoa == null)
-                {
-                    _repPessoa = new RepositorioGenerico<tb_pessoa>(_context);
-                }
-
-                return _repPessoa;
-            }
-        }
-
-        /// <sumary>
-        /// Repositório para manipular dados persistidos de Funcionario
-        /// </sumary>
-        public IRepositorioGenerico<tb_funcionario> RepositorioFuncionario
-        {
-            get
-            {
-                if (_repFuncionario == null)
-                {
-                    _repFuncionario = new RepositorioGenerico<tb_funcionario>(_context);
-                }
-
-                return _repFuncionario;
-            }
-        }
+        
         /// <summary>
         /// Repositório para manipular dados persistidos de Servico
         /// </summary>
@@ -112,40 +76,7 @@ namespace Data
             }
         }
 
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de Evento
-        /// </summary>
-        public IRepositorioGenerico<tb_evento> RepositorioEvento
-        {
-            get 
-            {
-                if (_repEvento == null)
-                {
-                    _repEvento = new RepositorioGenerico<tb_evento>(_context);
-                }
-                return _repEvento;
-            }
-        }
-
-        /// <sumary>
-        /// Repositório para manipular dados persistidos de Pedido
-        /// </sumary>
-        public IRepositorioGenerico<tb_pedido> RepositorioPedido
-        {
-            get
-            {
-                if (_repPedido == null)
-                {
-                    _repPedido = new RepositorioGenerico<tb_pedido>(_context);
-                }
-
-                return _repPedido;
-            }
-        }
-
-
-
+       
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
         /// quando o contexto não for compartilhado

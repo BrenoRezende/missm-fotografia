@@ -64,11 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FuncionarioController.cs" />
-    <Compile Include="Controllers\PessoaController.cs" />
-    <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\ServicoController.cs" />
     <Compile Include="Controllers\TipoEventoController.cs" />
@@ -116,22 +112,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
-    <Content Include="Views\Funcionario\Create.aspx" />
-    <Content Include="Views\Funcionario\Delete.aspx" />
-    <Content Include="Views\Funcionario\Details.aspx" />
-    <Content Include="Views\Funcionario\Edit.aspx" />
-    <Content Include="Views\Funcionario\Index.aspx" />
-    <Content Include="Views\Pessoa\Create.aspx" />
-    <Content Include="Views\Pessoa\Delete.aspx" />
-    <Content Include="Views\Pessoa\Details.aspx" />
-    <Content Include="Views\Pessoa\Edit.aspx" />
-    <Content Include="Views\Pessoa\Index.aspx" />
-    <Content Include="Views\Evento\Create.aspx" />
-    <Content Include="Views\Evento\Delete.aspx" />
-    <Content Include="Views\Evento\Details.aspx" />
-    <Content Include="Views\Evento\Edit.aspx" />
-    <Content Include="Views\Evento\Index.aspx" />
-    <Content Include="Views\Pedido\Index.aspx" />
     <Content Include="Views\Produto\Create.aspx" />
     <Content Include="Views\Produto\Delete.aspx" />
     <Content Include="Views\Produto\Details.aspx" />
@@ -209,7 +189,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52276</DevelopmentServerPort>
+          <DevelopmentServerPort>2219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

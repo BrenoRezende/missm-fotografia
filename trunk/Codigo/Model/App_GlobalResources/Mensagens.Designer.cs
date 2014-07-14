@@ -61,11 +61,38 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bairro.
+        /// </summary>
+        public static string bairro {
+            get {
+                return ResourceManager.GetString("bairro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cidade.
+        /// </summary>
+        public static string cidade {
+            get {
+                return ResourceManager.GetString("cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código.
         /// </summary>
         public static string codigo {
             get {
                 return ResourceManager.GetString("codigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CPF.
+        /// </summary>
+        public static string cpf {
+            get {
+                return ResourceManager.GetString("cpf", resourceCulture);
             }
         }
         
@@ -97,6 +124,15 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-Mail para a Autenticação no Sistema.
+        /// </summary>
+        public static string email {
+            get {
+                return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O {0} é um campo requerido..
         /// </summary>
         public static string erro_requerido {
@@ -106,11 +142,20 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nome.
+        ///   Looks up a localized string similar to Estado.
         /// </summary>
-        public static string nome {
+        public static string estado {
             get {
-                return ResourceManager.GetString("nome", resourceCulture);
+                return ResourceManager.GetString("estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome .
+        /// </summary>
+        public static string nome_pessoa {
+            get {
+                return ResourceManager.GetString("nome_pessoa", resourceCulture);
             }
         }
         
@@ -133,6 +178,42 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Número da Casa.
+        /// </summary>
+        public static string numero {
+            get {
+                return ResourceManager.GetString("numero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rua ou Avenida.
+        /// </summary>
+        public static string rua {
+            get {
+                return ResourceManager.GetString("rua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha para a Autenticação no Sistema.
+        /// </summary>
+        public static string senha {
+            get {
+                return ResourceManager.GetString("senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexo.
+        /// </summary>
+        public static string sexo {
+            get {
+                return ResourceManager.GetString("sexo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status do Contrato.
         /// </summary>
         public static string status_contrato {
@@ -151,6 +232,15 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Telefone.
+        /// </summary>
+        public static string telefone {
+            get {
+                return ResourceManager.GetString("telefone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Telefone do Parceiro.
         /// </summary>
         public static string telefone_parceiro {
@@ -160,7 +250,7 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Tipo Pessoa.
         /// </summary>
         public static string tipo_pessoa {
             get {

@@ -21,19 +21,19 @@ namespace Service
         public GerenciadorProduto()
         {
             this.unitOfWork = new UnitOfWork();
-            this.shared = false;
+            shared = false;
         }
 
         /// <summary>
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="this.unitOfWork"></param>
+        /// <param name="unitOfWork"></param>
         
         internal GerenciadorProduto(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            this.shared = true;
+            shared = true;
         }
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace Service
         {
             tb_produto produtoE = new tb_produto();
             Atribuir(produtoModel, produtoE);
-            this.unitOfWork.RepositorioProduto.Inserir(produtoE);
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioProduto.Inserir(produtoE);
+            unitOfWork.Commit(shared);
             return produtoE.idProduto;
         }
 
@@ -58,8 +58,8 @@ namespace Service
         {
             tb_produto produtoE = new tb_produto();
             Atribuir(produtoModel, produtoE);
-            this.unitOfWork.RepositorioProduto.Editar(produtoE);
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioProduto.Editar(produtoE);
+            unitOfWork.Commit(shared);
         }
 
         /// <summary>
@@ -68,8 +68,8 @@ namespace Service
         /// <param name="idProduto"></param>
         public void Remover(int idProduto)
         {
-            this.unitOfWork.RepositorioProduto.Remover(produto => produto.idProduto.Equals(idProduto));
-            this.unitOfWork.Commit(this.shared);
+            unitOfWork.RepositorioProduto.Remover(produto => produto.idProduto.Equals(idProduto));
+            unitOfWork.Commit(shared);
         }
 
 
@@ -79,7 +79,7 @@ namespace Service
         /// <returns></returns>
         private IQueryable<ProdutoModel> GetQuery()
         {
-            IQueryable<tb_produto> tb_produto = this.unitOfWork.RepositorioProduto.GetQueryable();
+            IQueryable<tb_produto> tb_produto = unitOfWork.RepositorioProduto.GetQueryable();
             var query = from produto in tb_produto
                         select new ProdutoModel
                         {
@@ -101,7 +101,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<ProdutoModel> ObterTodos()
         {
-            return this.GetQuery();
+            return GetQuery();
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Service
         /// <returns>ProdutoModel</returns>
         public ProdutoModel Obter(int idProduto)
         {
-            IEnumerable<ProdutoModel> produtos = this.GetQuery().Where(produtoModel => produtoModel.IdProduto.Equals(idProduto));
+            IEnumerable<ProdutoModel> produtos = GetQuery().Where(produtoModel => produtoModel.IdProduto.Equals(idProduto));
 
             return produtos.ElementAtOrDefault(0);
         }
@@ -123,7 +123,7 @@ namespace Service
         /// <returns>ProdutoModel</returns>
         public IEnumerable<ProdutoModel> ObterPorNome(string nome)
         {
-            IEnumerable<ProdutoModel> produtos = this.GetQuery().Where(produtoModel => produtoModel.Nome.StartsWith(nome));
+            IEnumerable<ProdutoModel> produtos = GetQuery().Where(produtoModel => produtoModel.Nome.StartsWith(nome));
             return produtos;
         }
 

@@ -17,27 +17,27 @@ namespace ViewController.Controllers
 
         public PedidoController()
         {
-            this.gPedido = new GerenciadorPedido();
+            gPedido = new GerenciadorPedido();
         }
         
-
+        //
         // GET: /Pedido/
 
         public ActionResult Index()
         {
-            return View(this.gPedido.ObterTodos());
+            return View(gPedido.ObterTodos());
         }
 
-
+        //
         // GET: /Pedido/Details/5
 
         public ActionResult Details(int id)
         {
-            PedidoModel pedidoModel = this.gPedido.Obter(id);
+            PedidoModel pedidoModel = gPedido.Obter(id);
             return View(pedidoModel);
         }
 
-
+        //
         // GET: /Pedido/Create
 
         public ActionResult Create()
@@ -45,7 +45,7 @@ namespace ViewController.Controllers
             return View();
         } 
 
-
+        //
         // POST: /Pedido/Create
 
         [HttpPost]
@@ -63,7 +63,7 @@ namespace ViewController.Controllers
             }
         }
         
-
+        //
         // GET: /Pedido/Edit/5
  
         public ActionResult Edit(int id)
@@ -71,7 +71,7 @@ namespace ViewController.Controllers
             return View();
         }
 
-
+        //
         // POST: /Pedido/Edit/5
 
         [HttpPost]
@@ -89,7 +89,7 @@ namespace ViewController.Controllers
             }
         }
 
-
+        //
         // GET: /Pedido/Delete/5
  
         public ActionResult Delete(int id)
@@ -97,7 +97,7 @@ namespace ViewController.Controllers
             return View();
         }
 
-
+        //
         // POST: /Pedido/Delete/5
 
         [HttpPost]

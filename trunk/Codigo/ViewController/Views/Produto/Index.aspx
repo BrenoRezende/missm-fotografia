@@ -1,12 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.ProdutoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-Lista de Produtos 
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Lista de Produtos </h2>
+<p>
+    <%: Html.ActionLink("Cadastrar Novo Produto", "Create") %>
+</p>
 <table>
     <tr>
         <th>
@@ -65,7 +67,5 @@ Lista de Produtos
 <% } %>
 
 </table>
-<p>
-    <%: Html.ActionLink("Cadastrar Novo Produto", "Create") %>
-</p>
+
 </asp:Content>

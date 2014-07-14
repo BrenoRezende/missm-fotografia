@@ -1,17 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.ServicoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Remover Serviço
+    Delete
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Remover Serviço</h2>
+
 <h3>Tem certeza de que deseja exluir esse serviço?</h3>
 <fieldset>
-    <legend>Dados do Serviço</legend>
+    <legend>Serviço</legend>
 
-    <div class="display-label">Código</div>
+    <div class="display-label">IdServico</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdServico) %>
     </div>
