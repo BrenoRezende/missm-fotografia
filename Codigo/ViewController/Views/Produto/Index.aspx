@@ -6,7 +6,8 @@ Lista de Produtos
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Lista de Produtos </h2>
+<h2>Lista de Produtos</h2>
+
 <table>
     <tr>
         <th>

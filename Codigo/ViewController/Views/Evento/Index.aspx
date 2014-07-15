@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.EventoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+Lista de Eventos
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<p>
-    <%: Html.ActionLink("Create New", "Create") %>
-</p>
+<h2>Lista de Eventos </h2>
+
 <table>
     <tr>
         <th>
@@ -17,7 +17,7 @@
             Data
         </th>
         <th>
-            NomeTipoEvento
+            Tipo do Evento
         </th>
         <th></th>
     </tr>
@@ -34,13 +34,15 @@
             <%: Html.DisplayFor(modelItem => item.NomeTipoEvento) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id = item.IdEvento })%> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.IdEvento }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id = item.IdEvento })%>
+            <%: Html.ActionLink("Editar", "Edit", new { id = item.IdEvento })%> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdEvento }) %> |
+            <%: Html.ActionLink("Remover", "Delete", new { id = item.IdEvento })%>
         </td>
     </tr>
 <% } %>
 
 </table>
-
+<p>
+    <%: Html.ActionLink("Cadastrar Novo Evento", "Create") %>
+</p>
 </asp:Content>

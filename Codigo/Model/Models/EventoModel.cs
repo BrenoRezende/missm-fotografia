@@ -22,8 +22,10 @@ namespace Model.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
+        [DataType(DataType.Date)]
         public DateTime Data { get; set; }
 
+        [Display(Name = "tipoEvento", ResourceType = typeof(Mensagens))]
         public int IdTipoEvento { get; set; }
 
         public string NomeTipoEvento { get; set; }
