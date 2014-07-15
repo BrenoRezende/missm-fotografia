@@ -82,8 +82,7 @@ namespace Service
         private IQueryable<PessoaModel> GetQuery()
         {
             IQueryable<tb_pessoa> tb_pessoa = this.unitOfWork.RepositorioPessoa.GetQueryable();
-            var query = from pessoa in tb_pessoa 
-                        where pessoa.tipoPessoa.Equals("C")                       
+            var query = from pessoa in tb_pessoa  where pessoa.tipoPessoa.Equals("C")                                             
                         select new PessoaModel
                         {
                             IdPessoa = pessoa.idPessoa,
@@ -156,7 +155,7 @@ namespace Service
             pessoaE.bairro = pessoaModel.Bairro;
             pessoaE.cidade = pessoaModel.Cidade;
             pessoaE.estado = pessoaModel.Estado;
-            pessoaE.tipoPessoa = pessoaModel.TipoPessoa;
+            pessoaE.tipoPessoa = pessoaModel.TipoPessoa ;
         }
     }
 }

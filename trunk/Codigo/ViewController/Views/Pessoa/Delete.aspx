@@ -75,6 +75,11 @@
         <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
+    <div class="display-label">Tipo Pessoa</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.TipoPessoa) %>
+    </div>
+
 
 </fieldset>
 <% using (Html.BeginForm()) { %>

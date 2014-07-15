@@ -76,6 +76,11 @@
         <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
+    <div class="display-label">Tipo Pessoa</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.TipoPessoa) %>
+    </div>
+
     <div class="display-label">Tipo de Conta</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TipoConta) %>
