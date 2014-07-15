@@ -22,7 +22,7 @@ namespace Model.Models
           ErrorMessageResourceName = "erro_requerido")]
         [Display(Name = "codigo", ResourceType = typeof(Mensagens))]
         public int IdFuncionario { get; set; }
-
+                
         [Required(ErrorMessageResourceType = typeof(Mensagens),
           ErrorMessageResourceName = "erro_requerido")]
         public int TipoConta { get; set; }
@@ -42,6 +42,7 @@ namespace Model.Models
         [StringLength(10)]
         public string NumeroConta { get; set; }
 
-          
+        
+  
     }
 }
