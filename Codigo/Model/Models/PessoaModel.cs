@@ -8,14 +8,6 @@ using Model.App_GlobalResources;
 
 namespace Model.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-
-    /// <summary>
-    /// TODO: Update summary.
-    /// </summary>
     public class PessoaModel
     {
         [Required(ErrorMessageResourceType = typeof(Mensagens),
@@ -41,7 +33,7 @@ namespace Model.Models
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
         [Display(Name = "data_nascimento", ResourceType = typeof(Mensagens))]
-        public DateTime DataNascimento { get; set; }
+        public DateTime? DataNascimento { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
@@ -82,8 +74,6 @@ namespace Model.Models
         [StringLength(50)]
         public string Estado { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Mensagens),
-            ErrorMessageResourceName = "erro_requerido")]
         [StringLength(1)]
         public string TipoPessoa { get; set; }
     }

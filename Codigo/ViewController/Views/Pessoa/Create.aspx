@@ -116,6 +116,9 @@
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
 
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.TipoPessoa) %>            
+        </div>
         <p>
             <input type="submit" value="Cadastrar" />
         </p>

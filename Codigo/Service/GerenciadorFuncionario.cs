@@ -46,9 +46,10 @@ namespace Service
         /// <returns>Chave identificante na base</returns>
         public int Inserir(FuncionarioModel funcionarioModel)
         {
+            funcionarioModel.IdFuncionario = funcionarioModel.IdPessoa;
             funcionarioModel.TipoPessoa = "F";
-            int idFuncionario = gPessoa.Inserir(funcionarioModel);
-            tb_funcionario funcionarioE = new tb_funcionario();
+
+            tb_funcionario funcionarioE = new tb_funcionario();            
 
             Atribuir(funcionarioModel, funcionarioE);
             this.unitOfWork.RepositorioFuncionario.Inserir(funcionarioE);
@@ -77,6 +78,7 @@ namespace Service
         public void Remover(int idFuncionario)
         {
             this.unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.idFuncionario.Equals(idFuncionario));
+            this.unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.idPessoa.Equals(idFuncionario));
             this.unitOfWork.Commit(this.shared);
         }
 
@@ -92,8 +94,7 @@ namespace Service
 
             var query = from funcionario in tb_funcionario 
                         join pessoa in tb_pessoa
-                        on funcionario.idFuncionario equals pessoa.idPessoa 
-                        where pessoa.tipoPessoa.Equals("F")
+                        on funcionario.idFuncionario equals pessoa.idPessoa  
                         select new FuncionarioModel
                         {
                            
