@@ -46,7 +46,6 @@
     <Compile Include="GerenciadorFuncionario.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorEvento.cs" />
-    <Compile Include="GerenciadorPedido.cs" />
     <Compile Include="GerenciadorServico.cs" />
     <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="GerenciadorTipoEvento.cs" />
