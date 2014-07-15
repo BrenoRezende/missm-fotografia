@@ -29,7 +29,7 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
+        <input type="submit" value="Remover" /> |
         <%: Html.ActionLink("Voltar", "Index") %>
     </p>
 <% } %>

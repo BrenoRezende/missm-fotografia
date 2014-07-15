@@ -46,7 +46,7 @@ Editar Evento
             <%: Html.ValidationMessageFor(model => model.IdTipoEvento) %>
         </div>
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Salvar Alterações" />
         </p>
     </fieldset>
 <% } %>
