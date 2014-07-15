@@ -46,15 +46,31 @@ namespace Service
         /// <returns>Chave identificante na base</returns>
         public int Inserir(FuncionarioModel funcionarioModel)
         {
-            funcionarioModel.IdFuncionario = funcionarioModel.IdPessoa;
+            
             funcionarioModel.TipoPessoa = "F";
 
-            tb_funcionario funcionarioE = new tb_funcionario();            
+            tb_funcionario funcionarioE = new tb_funcionario();
+            
+            funcionarioModel.IdPessoa = new GerenciadorPessoa().Inserir(new PessoaModel() {
+                IdPessoa = funcionarioModel.IdPessoa,
+                Nome = funcionarioModel.Nome,
+                Cpf = funcionarioModel.Cpf,
+                Sexo = funcionarioModel.Sexo,
+                DataNascimento = funcionarioModel.DataNascimento,
+                Telefone = funcionarioModel.Telefone,
+                Email = funcionarioModel.Email,
+                Senha = funcionarioModel.Senha,
+                Rua = funcionarioModel.Rua,
+                Numero = funcionarioModel.Numero,
+                Bairro = funcionarioModel.Bairro,
+                Cidade = funcionarioModel.Cidade,
+                Estado = funcionarioModel.Estado
+            });
+            
 
             Atribuir(funcionarioModel, funcionarioE);
             this.unitOfWork.RepositorioFuncionario.Inserir(funcionarioE);
             this.unitOfWork.Commit(this.shared);
-
             return funcionarioE.idFuncionario;
         }
 
@@ -92,9 +108,11 @@ namespace Service
             IQueryable<tb_funcionario> tb_funcionario = this.unitOfWork.RepositorioFuncionario.GetQueryable();
             IQueryable<tb_pessoa> tb_pessoa = this.unitOfWork.RepositorioPessoa.GetQueryable();
 
+            
+
             var query = from funcionario in tb_funcionario 
                         join pessoa in tb_pessoa
-                        on funcionario.idFuncionario equals pessoa.idPessoa  
+                        on funcionario.idPessoa equals pessoa.idPessoa  
                         select new FuncionarioModel
                         {
                            
@@ -167,6 +185,7 @@ namespace Service
             funcionarioE.banco = funcionarioModel.Banco;
             funcionarioE.agencia = funcionarioModel.Agencia;
             funcionarioE.numeroConta = funcionarioModel.NumeroConta;
+            funcionarioE.idPessoa = funcionarioModel.IdPessoa;
             
         }
     }
