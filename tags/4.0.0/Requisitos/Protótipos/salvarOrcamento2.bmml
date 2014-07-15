@@ -1,0 +1,109 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1080" measuredH="802" mockupW="1017" mockupH="698">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="63" y="104" w="1017" h="698" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MissM%0Ahttp%3A//www.missm.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="860" y="212" w="-1" h="-1" measuredW="155" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>missm.estudio@gmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="780" y="198" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>./assets/icon_user.png%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="1030" y="213" w="-1" h="-1" measuredW="25" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Tela%20Inicial%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22967%2C109%2C992%2C128%22%20href%3D%22Tela%2520Inicial.bmml%22%20alt%3D%22Tela%20Inicial%22%20id%3D%223%22/%3E</map>
+        <text>Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::SearchBox" x="250" y="348" w="179" h="-1" measuredW="170" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nome%20ou%20CPF%20do%20Cliente</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="127" y="350" w="-1" h="-1" measuredW="108" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pesquisar%20Cliente%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::DataGrid" x="104" y="395" w="934" h="274" measuredW="516" measuredH="461" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <borderStyle>square</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>false</hLines>
+        <rowHeight>40</rowHeight>
+        <selectedIndex>0</selectedIndex>
+        <text>Lista%20de%20Clientes%2C%20%20%20%20%20%20%20%20%20%20%20%20CPF%20%20%20%20%20%20%20%20%20%20%20%20%20%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20E-Mail%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0AAntonia%20Conselheiro%2C%20016.345.765-67%2C%20conselheiro@gmail.com%0ABreno%20de%20Souza%20%2C036.432.722-02%2C%20breno@gmail.com%20%0ABruna%20Ferraz%2C016.315.765-22%2C%20bruninha@gmail.com%0ABruno%20de%20Oliveira%20Costa%2C%20016.345.765-88%2C%20bruno@gmail.com%0ACleverton%20Santos%20Costa%2C%20016.345.765-12%2C%20santos@gmail.com%0ADiego%20da%20Silva%20Santos%2C036.222.765-67%2C%20diego@gmail.com%0A%20%0A%20%0A%20%0A%20%0A%20</text>
+        <verticalScrollbar>true</verticalScrollbar>
+        <vLines>true</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Button" x="473" y="704" w="-1" h="-1" measuredW="131" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Salvar%20Or%E7amento</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Button" x="619" y="704" w="-1" h="-1" measuredW="77" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>AtualizarOrcamento%26bm%3BAtualizarOrcamento.bmml%26bm%3BAtualizarOrcamento.bmml%26bm%3BAtualizarOrcamento.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22556%2C600%2C633%2C627%22%20href%3D%22AtualizarOrcamento.bmml%22%20alt%3D%22AtualizarOrcamento%22%20id%3D%2220%22/%3E</map>
+        <text>Cancelar</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::ButtonBar" x="75" y="251" w="992" h="65" measuredW="711" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>AgendaAtividades%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%2CConsultarCliente%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%2CEscolherFotos%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%2CcriarOrcamento%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%2CConsultaProduto%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%2CEventos%26bm%3BEventos.bmml%26bm%3BEventos.bmml%26bm%3BEventos.bmml%2CConsultaServi%E7o%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%2CConsultarFuncionario%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%2CRelatorio%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2212%2C147%2C109%2C212%22%20href%3D%22AgendaAtividades.bmml%22%20alt%3D%22AgendaAtividades%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22109%2C147%2C210%2C212%22%20href%3D%22ConsultarCliente.bmml%22%20alt%3D%22ConsultarCliente%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C147%2C295%2C212%22%20href%3D%22EscolherFotos.bmml%22%20alt%3D%22EscolherFotos%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22295%2C147%2C431%2C212%22%20href%3D%22criarOrcamento.bmml%22%20alt%3D%22criarOrcamento%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22431%2C147%2C538%2C212%22%20href%3D%22ConsultaProduto.bmml%22%20alt%3D%22ConsultaProduto%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22538%2C147%2C639%2C212%22%20href%3D%22Eventos.bmml%22%20alt%3D%22Eventos%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22639%2C147%2C745%2C212%22%20href%3D%22ConsultaServi%25C3%25A7o.bmml%22%20alt%3D%22ConsultaServi%E7o%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22745%2C147%2C883%2C212%22%20href%3D%22ConsultarFuncionario.bmml%22%20alt%3D%22ConsultarFuncionario%22%20id%3D%2223%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22883%2C147%2C1000%2C212%22%20href%3D%22Relatorio.bmml%22%20alt%3D%22Relatorio%22%20id%3D%2223%22/%3E</map>
+        <selectedIndex>3</selectedIndex>
+        <text>Agenda%2C%20Clientes%2C%20%20Fotos%2C%20Or%E7amentos%2C%20Produtos%2C%20Eventos%2C%20Servi%E7os%2C%20Funcion%E1rios%2C%20Relat%F3rios</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Canvas" x="78" y="329" w="989" h="435" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Button" x="941" y="347" w="-1" h="-1" measuredW="97" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>CadastroCliente%26bm%3BCadastroCliente.bmml%26bm%3BCadastroCliente.bmml%26bm%3BCadastroCliente.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22878%2C243%2C975%2C270%22%20href%3D%22CadastroCliente.bmml%22%20alt%3D%22CadastroCliente%22%20id%3D%2225%22/%3E</map>
+        <text>Novo%20Cliente</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Button" x="343" y="704" w="-1" h="-1" measuredW="110" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gerar%20Contrato</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Canvas" x="365" y="422" w="385" h="197" measuredW="100" measuredH="70" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="381" y="488" w="-1" h="-1" measuredW="131" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nome%20do%20Or%E7amento*%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::TextInput" x="527" y="485" w="179" h="-1" measuredW="79" measuredH="26" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Button" x="483" y="546" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Salvar</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Button" x="555" y="546" w="-1" h="-1" measuredW="77" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancelar</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Button" x="704" y="425" w="-1" h="-1" measuredW="46" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Csmall</icon>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
