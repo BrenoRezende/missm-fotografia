@@ -34,7 +34,7 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdFuncionario) %>
+            <%: Html.DisplayFor(modelItem => item.IdPessoa) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
@@ -46,7 +46,7 @@
             <%: Html.DisplayFor(modelItem => item.Email) %>
         </td>
         <td>
-            
+            <%: Html.DisplayFor(modelItem => item.Telefone) %> 
         </td>
         <td>
             

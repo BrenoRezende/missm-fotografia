@@ -44,12 +44,12 @@ namespace Service
 
         public int Inserir(PessoaModel pessoaModel)
         {
-            pessoaModel.TipoPessoa = "C";
-            tb_pessoa pessoaE = new tb_pessoa();
-            Atribuir(pessoaModel, pessoaE);
-            this.unitOfWork.RepositorioPessoa.Inserir(pessoaE);
-            this.unitOfWork.Commit(this.shared);
-            return pessoaE.idPessoa;
+                tb_pessoa pessoaE = new tb_pessoa();
+                AtribuirCliente(pessoaModel, pessoaE);
+                this.unitOfWork.RepositorioPessoa.Inserir(pessoaE);
+                this.unitOfWork.Commit(this.shared);
+                return pessoaE.idPessoa;  
+                       
         }
 
         /// <summary>
@@ -59,7 +59,29 @@ namespace Service
         public void Editar(PessoaModel pessoaModel)
         {
             tb_pessoa pessoaE = new tb_pessoa();
-            Atribuir(pessoaModel, pessoaE);
+            AtribuirCliente(pessoaModel, pessoaE);
+            this.unitOfWork.RepositorioPessoa.Editar(pessoaE);
+            this.unitOfWork.Commit(this.shared);
+        }
+
+        public int InserirFuncionario(PessoaModel pessoaModel)
+        {
+            tb_pessoa pessoaE = new tb_pessoa();
+            AtribuirFuncionario(pessoaModel, pessoaE);
+            this.unitOfWork.RepositorioPessoa.Inserir(pessoaE);
+            this.unitOfWork.Commit(this.shared);
+            return pessoaE.idPessoa;
+
+        }
+
+        /// <summary>
+        /// Altera dados na base de dados
+        /// </summary>
+        /// <param name="pessoaModel"></param>
+        public void EditarFuncionario(PessoaModel pessoaModel)
+        {
+            tb_pessoa pessoaE = new tb_pessoa();
+            AtribuirFuncionario(pessoaModel, pessoaE);
             this.unitOfWork.RepositorioPessoa.Editar(pessoaE);
             this.unitOfWork.Commit(this.shared);
         }
@@ -140,7 +162,7 @@ namespace Service
         /// </summary>
         /// <param name="pessoaModel">Objeto do modelo</param>
         /// <param name="pessoaE">Entity mapeada da base de dados</param>
-        private void Atribuir(PessoaModel pessoaModel, tb_pessoa pessoaE)
+        private void AtribuirCliente(PessoaModel pessoaModel, tb_pessoa pessoaE)
         {
             pessoaE.idPessoa = pessoaModel.IdPessoa;
             pessoaE.nomePessoa = pessoaModel.Nome;
@@ -155,7 +177,30 @@ namespace Service
             pessoaE.bairro = pessoaModel.Bairro;
             pessoaE.cidade = pessoaModel.Cidade;
             pessoaE.estado = pessoaModel.Estado;
-            pessoaE.tipoPessoa = pessoaModel.TipoPessoa ;
+            pessoaE.tipoPessoa = "C" ;
+        }
+
+        /// <summary>
+        /// Atribui dados de PessoaModel para Pessoa Entity
+        /// </summary>
+        /// <param name="pessoaModel">Objeto do modelo</param>
+        /// <param name="pessoaE">Entity mapeada da base de dados</param>
+        private void AtribuirFuncionario(PessoaModel pessoaModel, tb_pessoa pessoaE)
+        {
+            pessoaE.idPessoa = pessoaModel.IdPessoa;
+            pessoaE.nomePessoa = pessoaModel.Nome;
+            pessoaE.cpfPessoa = pessoaModel.Cpf;
+            pessoaE.sexoPessoa = pessoaModel.Sexo;
+            pessoaE.dataNascimentoPessoa = pessoaModel.DataNascimento;
+            pessoaE.telefonePessoa = pessoaModel.Telefone;
+            pessoaE.emailPessoa = pessoaModel.Email;
+            pessoaE.senhaPessoa = pessoaModel.Senha;
+            pessoaE.rua = pessoaModel.Rua;
+            pessoaE.numero = pessoaModel.Numero;
+            pessoaE.bairro = pessoaModel.Bairro;
+            pessoaE.cidade = pessoaModel.Cidade;
+            pessoaE.estado = pessoaModel.Estado;
+            pessoaE.tipoPessoa = "F";
         }
     }
 }
