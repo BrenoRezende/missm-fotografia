@@ -120,14 +120,9 @@
             <%: Html.EditorFor(model => model.Estado) %>
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
-
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.TipoPessoa) %>
-        </div>
+                
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.TipoPessoa) %>
-            <%: Html.ValidationMessageFor(model => model.TipoPessoa) %>
+            <%: Html.HiddenFor(model => model.TipoPessoa) %>        
         </div>
 
         <p>

@@ -45,13 +45,8 @@ namespace Service
         /// <param name="funcionarioModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
         public int Inserir(FuncionarioModel funcionarioModel)
-        {
-            
-            funcionarioModel.TipoPessoa = "F";
-
-            tb_funcionario funcionarioE = new tb_funcionario();
-            
-            funcionarioModel.IdPessoa = new GerenciadorPessoa().Inserir(new PessoaModel() {
+        {                   
+            funcionarioModel.IdPessoa = new GerenciadorPessoa().InserirFuncionario(new PessoaModel() {
                 IdPessoa = funcionarioModel.IdPessoa,
                 Nome = funcionarioModel.Nome,
                 Cpf = funcionarioModel.Cpf,
@@ -64,9 +59,11 @@ namespace Service
                 Numero = funcionarioModel.Numero,
                 Bairro = funcionarioModel.Bairro,
                 Cidade = funcionarioModel.Cidade,
-                Estado = funcionarioModel.Estado
+                Estado = funcionarioModel.Estado,
+                TipoPessoa = funcionarioModel.TipoPessoa
             });
-            
+
+            tb_funcionario funcionarioE = new tb_funcionario();
 
             Atribuir(funcionarioModel, funcionarioE);
             this.unitOfWork.RepositorioFuncionario.Inserir(funcionarioE);
@@ -80,21 +77,22 @@ namespace Service
         /// <param name="funcionarioModel"></param>
         public void Editar(FuncionarioModel funcionarioModel)
         {
-            gPessoa.Editar(funcionarioModel);
-            tb_funcionario funcionarioE = new tb_funcionario();
+            
+            tb_funcionario funcionarioE = new tb_funcionario();            
             Atribuir(funcionarioModel, funcionarioE);
             this.unitOfWork.RepositorioFuncionario.Editar(funcionarioE);
+            tb_pessoa pessoaE = new tb_pessoa();
+            gPessoa.EditarFuncionario(funcionarioModel);
             this.unitOfWork.Commit(this.shared);
         }
 
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="idFuncionario"></param>
-        public void Remover(int idFuncionario)
-        {
-            this.unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.idFuncionario.Equals(idFuncionario));
-            this.unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.idPessoa.Equals(idFuncionario));
+        /// <param name="idPessoa da tabela tb_funcionario"></param>
+        public void Remover(int idFuncionario)        {            
+            this.unitOfWork.RepositorioFuncionario.Remover(funcionario => funcionario.idPessoa.Equals(idFuncionario));
+            this.unitOfWork.RepositorioPessoa.Remover(funcionario => funcionario.idPessoa.Equals(idFuncionario));
             this.unitOfWork.Commit(this.shared);
         }
 
@@ -157,7 +155,7 @@ namespace Service
         /// <returns>FuncionarioModel</returns>
         public FuncionarioModel Obter(int idFuncionario)
         {
-            IEnumerable<FuncionarioModel> funcionarios = this.GetQuery().Where(funcionarioModels => funcionarioModels.IdFuncionario.Equals(idFuncionario));
+            IEnumerable<FuncionarioModel> funcionarios = this.GetQuery().Where(funcionarioModels => funcionarioModels.IdPessoa.Equals(idFuncionario));
 
             return funcionarios.ElementAtOrDefault(0);
         }
@@ -180,7 +178,7 @@ namespace Service
         /// <param name="funcionarioE">Entity mapeada da base de dados</param>
         private void Atribuir(FuncionarioModel funcionarioModel, tb_funcionario funcionarioE)
         {            
-            funcionarioE.idFuncionario = funcionarioModel.IdFuncionario;
+            funcionarioE.idFuncionario = funcionarioModel.IdPessoa;
             funcionarioE.tipoConta = funcionarioModel.TipoConta;
             funcionarioE.banco = funcionarioModel.Banco;
             funcionarioE.agencia = funcionarioModel.Agencia;
