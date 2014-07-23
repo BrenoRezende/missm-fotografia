@@ -11,7 +11,17 @@ namespace Model.Models
 
     public class PedidoProdutoModel
     {
-        public PedidoModel Pedido { get; set; }
-        public IList<ProdutoModel> Produto { get; set; } 
+        public int idPedidoProduto { get; set; }
+
+        public int idPedido { get; set; }
+
+        public int idProduto { get; set; }
+
+        public decimal valorProduto { get; set; }
+
+        public decimal valorImagemAdicional { get; set; }
+
+        public int quantidade { get; set; }
+        
     }
 }

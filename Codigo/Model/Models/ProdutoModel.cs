@@ -22,13 +22,13 @@ namespace Model.Models
         public string Nome { get; set; }
 
         [Display(Name = "num_paginas", ResourceType = typeof(Mensagens))]
-        public int? NumeroDePaginas { get; set; }
+        public int NumeroDePaginas { get; set; }
 
         [StringLength(50)]
         public string Formato { get; set; }
 
         [Display(Name = "num_imagens", ResourceType = typeof(Mensagens))]
-        public int? NumeroDeImagens { get; set; }
+        public int NumeroDeImagens { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
@@ -36,6 +36,6 @@ namespace Model.Models
         public decimal ValorDoProduto { get; set; }
 
         [Display(Name = "valor_imagem", ResourceType = typeof(Mensagens))]
-        public decimal? ValorImagemAdicional { get; set; }
+        public decimal ValorImagemAdicional { get; set; }
     }
 }
