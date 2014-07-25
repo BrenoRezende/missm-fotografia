@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GerenciadorFuncionario.cs" />
+    <Compile Include="GerenciadorPedido.cs" />
+    <Compile Include="GerenciadorPedidoEvento.cs" />
+    <Compile Include="GerenciadorPedidoProduto.cs" />
+    <Compile Include="GerenciadorPedidoServico.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorEvento.cs" />
     <Compile Include="GerenciadorServico.cs" />
