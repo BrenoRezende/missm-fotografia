@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -120,6 +121,7 @@
     <Content Include="Views\Funcionario\Details.aspx" />
     <Content Include="Views\Funcionario\Edit.aspx" />
     <Content Include="Views\Funcionario\Index.aspx" />
+    <Content Include="Views\Pedido\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />
