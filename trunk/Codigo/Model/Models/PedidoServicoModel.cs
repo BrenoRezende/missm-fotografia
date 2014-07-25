@@ -9,24 +9,23 @@ using Model.App_GlobalResources;
 namespace Model.Models
 {
 
-    public class PedidoProdutoModel
+    public class PedidoServicoModel
     {
-        public int IdPedidoProduto { get; set; }
+        public int IdPedidoServico { get; set; }
 
         public int IdPedido { get; set; }
         public string NomeCliente { get; set; }
-
         public string StatusPedido { get; set; }
         public DateTime DataCriacao { get; set; }
-        
-        public int IdProduto { get; set; }
-        public string NomeProduto { get; set; }
-        public int? NumeroDePaginas { get; set; }
-        public decimal ValorProduto { get; set; }
-        public string Formato { get; set; }
-        public int? NumeroDeImagens { get; set; }
 
-        public int Quantidade { get; set; }
+        public int IdServico { get; set; }
+        public string NomeServico { get; set; }
+        public string NomeParceiro { get; set; }
+        public string TelefoneParceiro { get; set; }
+        public decimal ValorServico { get; set; }
+        public decimal ValorCobradoAoCliente { get; set; }
         
+        public int Quantidade { get; set; }
+
     }
 }
