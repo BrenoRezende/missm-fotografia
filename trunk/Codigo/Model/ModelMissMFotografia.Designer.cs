@@ -19,18 +19,21 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C8", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C20", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C5", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C11", "tb_tipo_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_tipo_evento), "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_evento), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C9", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_funcionario), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C4", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "tb_pedido_tb_evento", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_evento), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido))]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "tb_pedido_tb_servico", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido), "tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_servico))]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "tb_pessoa_tb_agenda", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pessoa), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda))]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "tb_produto_tb_pedido", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_produto), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido))]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C20", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C4", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C18", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C19", "tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_servico), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C15", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C8", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C10", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C11", "tb_tipo_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_tipo_evento), "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_evento), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C9", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C3", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
 
 #endregion
 
@@ -117,22 +120,6 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_evento> tb_evento
-        {
-            get
-            {
-                if ((_tb_evento == null))
-                {
-                    _tb_evento = base.CreateObjectSet<tb_evento>("tb_evento");
-                }
-                return _tb_evento;
-            }
-        }
-        private ObjectSet<tb_evento> _tb_evento;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_foto> tb_foto
         {
             get
@@ -165,6 +152,22 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<tb_pessoa> tb_pessoa
+        {
+            get
+            {
+                if ((_tb_pessoa == null))
+                {
+                    _tb_pessoa = base.CreateObjectSet<tb_pessoa>("tb_pessoa");
+                }
+                return _tb_pessoa;
+            }
+        }
+        private ObjectSet<tb_pessoa> _tb_pessoa;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<tb_pedido> tb_pedido
         {
             get
@@ -181,18 +184,50 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_pessoa> tb_pessoa
+        public ObjectSet<tb_pedido_tb_servico> tb_pedido_tb_servico
         {
             get
             {
-                if ((_tb_pessoa == null))
+                if ((_tb_pedido_tb_servico == null))
                 {
-                    _tb_pessoa = base.CreateObjectSet<tb_pessoa>("tb_pessoa");
+                    _tb_pedido_tb_servico = base.CreateObjectSet<tb_pedido_tb_servico>("tb_pedido_tb_servico");
                 }
-                return _tb_pessoa;
+                return _tb_pedido_tb_servico;
             }
         }
-        private ObjectSet<tb_pessoa> _tb_pessoa;
+        private ObjectSet<tb_pedido_tb_servico> _tb_pedido_tb_servico;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_servico> tb_servico
+        {
+            get
+            {
+                if ((_tb_servico == null))
+                {
+                    _tb_servico = base.CreateObjectSet<tb_servico>("tb_servico");
+                }
+                return _tb_servico;
+            }
+        }
+        private ObjectSet<tb_servico> _tb_servico;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_pedido_tb_produto> tb_pedido_tb_produto
+        {
+            get
+            {
+                if ((_tb_pedido_tb_produto == null))
+                {
+                    _tb_pedido_tb_produto = base.CreateObjectSet<tb_pedido_tb_produto>("tb_pedido_tb_produto");
+                }
+                return _tb_pedido_tb_produto;
+            }
+        }
+        private ObjectSet<tb_pedido_tb_produto> _tb_pedido_tb_produto;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -213,18 +248,34 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_servico> tb_servico
+        public ObjectSet<tb_evento> tb_evento
         {
             get
             {
-                if ((_tb_servico == null))
+                if ((_tb_evento == null))
                 {
-                    _tb_servico = base.CreateObjectSet<tb_servico>("tb_servico");
+                    _tb_evento = base.CreateObjectSet<tb_evento>("tb_evento");
                 }
-                return _tb_servico;
+                return _tb_evento;
             }
         }
-        private ObjectSet<tb_servico> _tb_servico;
+        private ObjectSet<tb_evento> _tb_evento;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_pedido_tb_evento> tb_pedido_tb_evento
+        {
+            get
+            {
+                if ((_tb_pedido_tb_evento == null))
+                {
+                    _tb_pedido_tb_evento = base.CreateObjectSet<tb_pedido_tb_evento>("tb_pedido_tb_evento");
+                }
+                return _tb_pedido_tb_evento;
+            }
+        }
+        private ObjectSet<tb_pedido_tb_evento> _tb_pedido_tb_evento;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -263,14 +314,6 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_evento EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_evento(tb_evento tb_evento)
-        {
-            base.AddObject("tb_evento", tb_evento);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the tb_foto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_foto(tb_foto tb_foto)
@@ -287,6 +330,14 @@ namespace Model
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the tb_pessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_pessoa(tb_pessoa tb_pessoa)
+        {
+            base.AddObject("tb_pessoa", tb_pessoa);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the tb_pedido EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_pedido(tb_pedido tb_pedido)
@@ -295,11 +346,27 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_pessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the tb_pedido_tb_servico EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotb_pessoa(tb_pessoa tb_pessoa)
+        public void AddTotb_pedido_tb_servico(tb_pedido_tb_servico tb_pedido_tb_servico)
         {
-            base.AddObject("tb_pessoa", tb_pessoa);
+            base.AddObject("tb_pedido_tb_servico", tb_pedido_tb_servico);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_servico EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_servico(tb_servico tb_servico)
+        {
+            base.AddObject("tb_servico", tb_servico);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_pedido_tb_produto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_pedido_tb_produto(tb_pedido_tb_produto tb_pedido_tb_produto)
+        {
+            base.AddObject("tb_pedido_tb_produto", tb_pedido_tb_produto);
         }
     
         /// <summary>
@@ -311,11 +378,19 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_servico EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the tb_evento EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotb_servico(tb_servico tb_servico)
+        public void AddTotb_evento(tb_evento tb_evento)
         {
-            base.AddObject("tb_servico", tb_servico);
+            base.AddObject("tb_evento", tb_evento);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_pedido_tb_evento EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_pedido_tb_evento(tb_pedido_tb_evento tb_pedido_tb_evento)
+        {
+            base.AddObject("tb_pedido_tb_evento", tb_pedido_tb_evento);
         }
     
         /// <summary>
@@ -501,6 +576,28 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pessoa_tb_agenda", "tb_pessoa")]
+        public EntityCollection<tb_pessoa> tb_pessoa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pessoa>("missmfotografiaModel.tb_pessoa_tb_agenda", "tb_pessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pessoa>("missmfotografiaModel.tb_pessoa_tb_agenda", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C8", "tb_evento")]
         public tb_evento tb_evento
         {
@@ -529,28 +626,6 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_evento>("missmfotografiaModel.C8", "tb_evento", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pessoa_tb_agenda", "tb_pessoa")]
-        public EntityCollection<tb_pessoa> tb_pessoa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pessoa>("missmfotografiaModel.tb_pessoa_tb_agenda", "tb_pessoa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pessoa>("missmfotografiaModel.tb_pessoa_tb_agenda", "tb_pessoa", value);
                 }
             }
         }
@@ -826,44 +901,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C20", "tb_pedido")]
-        public tb_pedido tb_pedido
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_pedido> tb_pedidoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C5", "tb_pessoa")]
         public tb_pessoa tb_pessoa
         {
@@ -895,6 +932,44 @@ namespace Model
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C20", "tb_pedido")]
+        public tb_pedido tb_pedido
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pedido> tb_pedidoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pedido>("missmfotografiaModel.C20", "tb_pedido", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -914,16 +989,16 @@ namespace Model
         /// Create a new tb_evento object.
         /// </summary>
         /// <param name="idEvento">Initial value of the idEvento property.</param>
+        /// <param name="idTipoEvento">Initial value of the idTipoEvento property.</param>
         /// <param name="nomeEvento">Initial value of the nomeEvento property.</param>
         /// <param name="dataEvento">Initial value of the dataEvento property.</param>
-        /// <param name="idTipoEvento">Initial value of the idTipoEvento property.</param>
-        public static tb_evento Createtb_evento(global::System.Int32 idEvento, global::System.String nomeEvento, global::System.DateTime dataEvento, global::System.Int32 idTipoEvento)
+        public static tb_evento Createtb_evento(global::System.Int32 idEvento, global::System.Int32 idTipoEvento, global::System.String nomeEvento, global::System.DateTime dataEvento)
         {
             tb_evento tb_evento = new tb_evento();
             tb_evento.idEvento = idEvento;
+            tb_evento.idTipoEvento = idTipoEvento;
             tb_evento.nomeEvento = nomeEvento;
             tb_evento.dataEvento = dataEvento;
-            tb_evento.idTipoEvento = idTipoEvento;
             return tb_evento;
         }
 
@@ -957,6 +1032,30 @@ namespace Model
         private global::System.Int32 _idEvento;
         partial void OnidEventoChanging(global::System.Int32 value);
         partial void OnidEventoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idTipoEvento
+        {
+            get
+            {
+                return _idTipoEvento;
+            }
+            set
+            {
+                OnidTipoEventoChanging(value);
+                ReportPropertyChanging("idTipoEvento");
+                _idTipoEvento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idTipoEvento");
+                OnidTipoEventoChanged();
+            }
+        }
+        private global::System.Int32 _idTipoEvento;
+        partial void OnidTipoEventoChanging(global::System.Int32 value);
+        partial void OnidTipoEventoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1005,30 +1104,6 @@ namespace Model
         private global::System.DateTime _dataEvento;
         partial void OndataEventoChanging(global::System.DateTime value);
         partial void OndataEventoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idTipoEvento
-        {
-            get
-            {
-                return _idTipoEvento;
-            }
-            set
-            {
-                OnidTipoEventoChanging(value);
-                ReportPropertyChanging("idTipoEvento");
-                _idTipoEvento = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idTipoEvento");
-                OnidTipoEventoChanged();
-            }
-        }
-        private global::System.Int32 _idTipoEvento;
-        partial void OnidTipoEventoChanging(global::System.Int32 value);
-        partial void OnidTipoEventoChanged();
 
         #endregion
 
@@ -1053,6 +1128,28 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_agenda>("missmfotografiaModel.C8", "tb_agenda", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C10", "tb_pedido_tb_evento")]
+        public EntityCollection<tb_pedido_tb_evento> tb_pedido_tb_evento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_evento>("missmfotografiaModel.C10", "tb_pedido_tb_evento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_evento>("missmfotografiaModel.C10", "tb_pedido_tb_evento", value);
                 }
             }
         }
@@ -1113,28 +1210,6 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_foto>("missmfotografiaModel.C9", "tb_foto", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pedido_tb_evento", "tb_pedido")]
-        public EntityCollection<tb_pedido> tb_pedido
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido>("missmfotografiaModel.tb_pedido_tb_evento", "tb_pedido");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.tb_pedido_tb_evento", "tb_pedido", value);
                 }
             }
         }
@@ -1308,44 +1383,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C9", "tb_evento")]
-        public tb_evento tb_evento
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_evento> tb_eventoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C2", "tb_pessoa")]
         public tb_pessoa tb_pessoa
         {
@@ -1374,6 +1411,44 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("missmfotografiaModel.C2", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C9", "tb_evento")]
+        public tb_evento tb_evento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_evento> tb_eventoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_evento>("missmfotografiaModel.C9", "tb_evento", value);
                 }
             }
         }
@@ -1625,24 +1700,24 @@ namespace Model
         /// Create a new tb_pedido object.
         /// </summary>
         /// <param name="idPedido">Initial value of the idPedido property.</param>
+        /// <param name="idPessoa">Initial value of the idPessoa property.</param>
         /// <param name="nomePedido">Initial value of the nomePedido property.</param>
         /// <param name="dataCriacao">Initial value of the dataCriacao property.</param>
         /// <param name="valorPedido">Initial value of the valorPedido property.</param>
         /// <param name="statusPedido">Initial value of the statusPedido property.</param>
         /// <param name="dataEmissao">Initial value of the dataEmissao property.</param>
         /// <param name="statusContrato">Initial value of the statusContrato property.</param>
-        /// <param name="idPessoa">Initial value of the idPessoa property.</param>
-        public static tb_pedido Createtb_pedido(global::System.Int32 idPedido, global::System.String nomePedido, global::System.DateTime dataCriacao, global::System.Decimal valorPedido, global::System.String statusPedido, global::System.DateTime dataEmissao, global::System.String statusContrato, global::System.Int32 idPessoa)
+        public static tb_pedido Createtb_pedido(global::System.Int32 idPedido, global::System.Int32 idPessoa, global::System.String nomePedido, global::System.DateTime dataCriacao, global::System.Decimal valorPedido, global::System.String statusPedido, global::System.DateTime dataEmissao, global::System.String statusContrato)
         {
             tb_pedido tb_pedido = new tb_pedido();
             tb_pedido.idPedido = idPedido;
+            tb_pedido.idPessoa = idPessoa;
             tb_pedido.nomePedido = nomePedido;
             tb_pedido.dataCriacao = dataCriacao;
             tb_pedido.valorPedido = valorPedido;
             tb_pedido.statusPedido = statusPedido;
             tb_pedido.dataEmissao = dataEmissao;
             tb_pedido.statusContrato = statusContrato;
-            tb_pedido.idPessoa = idPessoa;
             return tb_pedido;
         }
 
@@ -1676,6 +1751,30 @@ namespace Model
         private global::System.Int32 _idPedido;
         partial void OnidPedidoChanging(global::System.Int32 value);
         partial void OnidPedidoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPessoa
+        {
+            get
+            {
+                return _idPessoa;
+            }
+            set
+            {
+                OnidPessoaChanging(value);
+                ReportPropertyChanging("idPessoa");
+                _idPessoa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idPessoa");
+                OnidPessoaChanged();
+            }
+        }
+        private global::System.Int32 _idPessoa;
+        partial void OnidPessoaChanging(global::System.Int32 value);
+        partial void OnidPessoaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1820,30 +1919,6 @@ namespace Model
         private global::System.String _statusContrato;
         partial void OnstatusContratoChanging(global::System.String value);
         partial void OnstatusContratoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idPessoa
-        {
-            get
-            {
-                return _idPessoa;
-            }
-            set
-            {
-                OnidPessoaChanging(value);
-                ReportPropertyChanging("idPessoa");
-                _idPessoa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idPessoa");
-                OnidPessoaChanged();
-            }
-        }
-        private global::System.Int32 _idPessoa;
-        partial void OnidPessoaChanging(global::System.Int32 value);
-        partial void OnidPessoaChanged();
 
         #endregion
 
@@ -1916,18 +1991,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pedido_tb_evento", "tb_evento")]
-        public EntityCollection<tb_evento> tb_evento
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C18", "tb_pedido_tb_servico")]
+        public EntityCollection<tb_pedido_tb_servico> tb_pedido_tb_servico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_evento>("missmfotografiaModel.tb_pedido_tb_evento", "tb_evento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_servico>("missmfotografiaModel.C18", "tb_pedido_tb_servico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_evento>("missmfotografiaModel.tb_pedido_tb_evento", "tb_evento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_servico>("missmfotografiaModel.C18", "tb_pedido_tb_servico", value);
                 }
             }
         }
@@ -1938,18 +2013,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pedido_tb_servico", "tb_servico")]
-        public EntityCollection<tb_servico> tb_servico
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C15", "tb_pedido_tb_produto")]
+        public EntityCollection<tb_pedido_tb_produto> tb_pedido_tb_produto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_servico>("missmfotografiaModel.tb_pedido_tb_servico", "tb_servico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_servico>("missmfotografiaModel.tb_pedido_tb_servico", "tb_servico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto", value);
                 }
             }
         }
@@ -1960,18 +2035,791 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_produto_tb_pedido", "tb_produto")]
-        public EntityCollection<tb_produto> tb_produto
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C3", "tb_pedido_tb_evento")]
+        public EntityCollection<tb_pedido_tb_evento> tb_pedido_tb_evento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_produto>("missmfotografiaModel.tb_produto_tb_pedido", "tb_produto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_evento>("missmfotografiaModel.C3", "tb_pedido_tb_evento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_produto>("missmfotografiaModel.tb_produto_tb_pedido", "tb_produto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_evento>("missmfotografiaModel.C3", "tb_pedido_tb_evento", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="missmfotografiaModel", Name="tb_pedido_tb_evento")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_pedido_tb_evento : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_pedido_tb_evento object.
+        /// </summary>
+        /// <param name="idPedidoEvento">Initial value of the idPedidoEvento property.</param>
+        /// <param name="idPedido">Initial value of the idPedido property.</param>
+        /// <param name="idEvento">Initial value of the idEvento property.</param>
+        /// <param name="quantidade">Initial value of the quantidade property.</param>
+        public static tb_pedido_tb_evento Createtb_pedido_tb_evento(global::System.Int32 idPedidoEvento, global::System.Int32 idPedido, global::System.Int32 idEvento, global::System.Int32 quantidade)
+        {
+            tb_pedido_tb_evento tb_pedido_tb_evento = new tb_pedido_tb_evento();
+            tb_pedido_tb_evento.idPedidoEvento = idPedidoEvento;
+            tb_pedido_tb_evento.idPedido = idPedido;
+            tb_pedido_tb_evento.idEvento = idEvento;
+            tb_pedido_tb_evento.quantidade = quantidade;
+            return tb_pedido_tb_evento;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedidoEvento
+        {
+            get
+            {
+                return _idPedidoEvento;
+            }
+            set
+            {
+                if (_idPedidoEvento != value)
+                {
+                    OnidPedidoEventoChanging(value);
+                    ReportPropertyChanging("idPedidoEvento");
+                    _idPedidoEvento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idPedidoEvento");
+                    OnidPedidoEventoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _idPedidoEvento;
+        partial void OnidPedidoEventoChanging(global::System.Int32 value);
+        partial void OnidPedidoEventoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedido
+        {
+            get
+            {
+                return _idPedido;
+            }
+            set
+            {
+                OnidPedidoChanging(value);
+                ReportPropertyChanging("idPedido");
+                _idPedido = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idPedido");
+                OnidPedidoChanged();
+            }
+        }
+        private global::System.Int32 _idPedido;
+        partial void OnidPedidoChanging(global::System.Int32 value);
+        partial void OnidPedidoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idEvento
+        {
+            get
+            {
+                return _idEvento;
+            }
+            set
+            {
+                OnidEventoChanging(value);
+                ReportPropertyChanging("idEvento");
+                _idEvento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idEvento");
+                OnidEventoChanged();
+            }
+        }
+        private global::System.Int32 _idEvento;
+        partial void OnidEventoChanging(global::System.Int32 value);
+        partial void OnidEventoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 quantidade
+        {
+            get
+            {
+                return _quantidade;
+            }
+            set
+            {
+                OnquantidadeChanging(value);
+                ReportPropertyChanging("quantidade");
+                _quantidade = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("quantidade");
+                OnquantidadeChanged();
+            }
+        }
+        private global::System.Int32 _quantidade;
+        partial void OnquantidadeChanging(global::System.Int32 value);
+        partial void OnquantidadeChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C10", "tb_evento")]
+        public tb_evento tb_evento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C10", "tb_evento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C10", "tb_evento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_evento> tb_eventoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_evento>("missmfotografiaModel.C10", "tb_evento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_evento>("missmfotografiaModel.C10", "tb_evento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C3", "tb_pedido")]
+        public tb_pedido tb_pedido
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C3", "tb_pedido").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C3", "tb_pedido").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pedido> tb_pedidoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C3", "tb_pedido");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pedido>("missmfotografiaModel.C3", "tb_pedido", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="missmfotografiaModel", Name="tb_pedido_tb_produto")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_pedido_tb_produto : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_pedido_tb_produto object.
+        /// </summary>
+        /// <param name="idPedidoProduto">Initial value of the idPedidoProduto property.</param>
+        /// <param name="idProduto">Initial value of the idProduto property.</param>
+        /// <param name="idPedido">Initial value of the idPedido property.</param>
+        /// <param name="valorProduto">Initial value of the valorProduto property.</param>
+        /// <param name="quantidade">Initial value of the quantidade property.</param>
+        public static tb_pedido_tb_produto Createtb_pedido_tb_produto(global::System.Int32 idPedidoProduto, global::System.Int32 idProduto, global::System.Int32 idPedido, global::System.Decimal valorProduto, global::System.Int32 quantidade)
+        {
+            tb_pedido_tb_produto tb_pedido_tb_produto = new tb_pedido_tb_produto();
+            tb_pedido_tb_produto.idPedidoProduto = idPedidoProduto;
+            tb_pedido_tb_produto.idProduto = idProduto;
+            tb_pedido_tb_produto.idPedido = idPedido;
+            tb_pedido_tb_produto.valorProduto = valorProduto;
+            tb_pedido_tb_produto.quantidade = quantidade;
+            return tb_pedido_tb_produto;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedidoProduto
+        {
+            get
+            {
+                return _idPedidoProduto;
+            }
+            set
+            {
+                if (_idPedidoProduto != value)
+                {
+                    OnidPedidoProdutoChanging(value);
+                    ReportPropertyChanging("idPedidoProduto");
+                    _idPedidoProduto = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idPedidoProduto");
+                    OnidPedidoProdutoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _idPedidoProduto;
+        partial void OnidPedidoProdutoChanging(global::System.Int32 value);
+        partial void OnidPedidoProdutoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idProduto
+        {
+            get
+            {
+                return _idProduto;
+            }
+            set
+            {
+                OnidProdutoChanging(value);
+                ReportPropertyChanging("idProduto");
+                _idProduto = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idProduto");
+                OnidProdutoChanged();
+            }
+        }
+        private global::System.Int32 _idProduto;
+        partial void OnidProdutoChanging(global::System.Int32 value);
+        partial void OnidProdutoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedido
+        {
+            get
+            {
+                return _idPedido;
+            }
+            set
+            {
+                OnidPedidoChanging(value);
+                ReportPropertyChanging("idPedido");
+                _idPedido = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idPedido");
+                OnidPedidoChanged();
+            }
+        }
+        private global::System.Int32 _idPedido;
+        partial void OnidPedidoChanging(global::System.Int32 value);
+        partial void OnidPedidoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal valorProduto
+        {
+            get
+            {
+                return _valorProduto;
+            }
+            set
+            {
+                OnvalorProdutoChanging(value);
+                ReportPropertyChanging("valorProduto");
+                _valorProduto = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("valorProduto");
+                OnvalorProdutoChanged();
+            }
+        }
+        private global::System.Decimal _valorProduto;
+        partial void OnvalorProdutoChanging(global::System.Decimal value);
+        partial void OnvalorProdutoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> numeroDeImagens
+        {
+            get
+            {
+                return _numeroDeImagens;
+            }
+            set
+            {
+                OnnumeroDeImagensChanging(value);
+                ReportPropertyChanging("numeroDeImagens");
+                _numeroDeImagens = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("numeroDeImagens");
+                OnnumeroDeImagensChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _numeroDeImagens;
+        partial void OnnumeroDeImagensChanging(Nullable<global::System.Int32> value);
+        partial void OnnumeroDeImagensChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 quantidade
+        {
+            get
+            {
+                return _quantidade;
+            }
+            set
+            {
+                OnquantidadeChanging(value);
+                ReportPropertyChanging("quantidade");
+                _quantidade = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("quantidade");
+                OnquantidadeChanged();
+            }
+        }
+        private global::System.Int32 _quantidade;
+        partial void OnquantidadeChanging(global::System.Int32 value);
+        partial void OnquantidadeChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C15", "tb_pedido")]
+        public tb_pedido tb_pedido
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C15", "tb_pedido").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C15", "tb_pedido").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pedido> tb_pedidoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C15", "tb_pedido");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pedido>("missmfotografiaModel.C15", "tb_pedido", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C14", "tb_produto")]
+        public tb_produto tb_produto
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_produto>("missmfotografiaModel.C14", "tb_produto").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_produto>("missmfotografiaModel.C14", "tb_produto").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_produto> tb_produtoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_produto>("missmfotografiaModel.C14", "tb_produto");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_produto>("missmfotografiaModel.C14", "tb_produto", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="missmfotografiaModel", Name="tb_pedido_tb_servico")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_pedido_tb_servico : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_pedido_tb_servico object.
+        /// </summary>
+        /// <param name="idPedidoServico">Initial value of the idPedidoServico property.</param>
+        /// <param name="idPedido">Initial value of the idPedido property.</param>
+        /// <param name="idServico">Initial value of the idServico property.</param>
+        /// <param name="valorServico">Initial value of the valorServico property.</param>
+        /// <param name="valorCobradoAoCliente">Initial value of the valorCobradoAoCliente property.</param>
+        /// <param name="nomePrceiro">Initial value of the nomePrceiro property.</param>
+        /// <param name="quantidade">Initial value of the quantidade property.</param>
+        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Decimal valorServico, global::System.Decimal valorCobradoAoCliente, global::System.String nomePrceiro, global::System.Int32 quantidade)
+        {
+            tb_pedido_tb_servico tb_pedido_tb_servico = new tb_pedido_tb_servico();
+            tb_pedido_tb_servico.idPedidoServico = idPedidoServico;
+            tb_pedido_tb_servico.idPedido = idPedido;
+            tb_pedido_tb_servico.idServico = idServico;
+            tb_pedido_tb_servico.valorServico = valorServico;
+            tb_pedido_tb_servico.valorCobradoAoCliente = valorCobradoAoCliente;
+            tb_pedido_tb_servico.nomePrceiro = nomePrceiro;
+            tb_pedido_tb_servico.quantidade = quantidade;
+            return tb_pedido_tb_servico;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedidoServico
+        {
+            get
+            {
+                return _idPedidoServico;
+            }
+            set
+            {
+                if (_idPedidoServico != value)
+                {
+                    OnidPedidoServicoChanging(value);
+                    ReportPropertyChanging("idPedidoServico");
+                    _idPedidoServico = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idPedidoServico");
+                    OnidPedidoServicoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _idPedidoServico;
+        partial void OnidPedidoServicoChanging(global::System.Int32 value);
+        partial void OnidPedidoServicoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPedido
+        {
+            get
+            {
+                return _idPedido;
+            }
+            set
+            {
+                OnidPedidoChanging(value);
+                ReportPropertyChanging("idPedido");
+                _idPedido = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idPedido");
+                OnidPedidoChanged();
+            }
+        }
+        private global::System.Int32 _idPedido;
+        partial void OnidPedidoChanging(global::System.Int32 value);
+        partial void OnidPedidoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idServico
+        {
+            get
+            {
+                return _idServico;
+            }
+            set
+            {
+                OnidServicoChanging(value);
+                ReportPropertyChanging("idServico");
+                _idServico = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idServico");
+                OnidServicoChanged();
+            }
+        }
+        private global::System.Int32 _idServico;
+        partial void OnidServicoChanging(global::System.Int32 value);
+        partial void OnidServicoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal valorServico
+        {
+            get
+            {
+                return _valorServico;
+            }
+            set
+            {
+                OnvalorServicoChanging(value);
+                ReportPropertyChanging("valorServico");
+                _valorServico = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("valorServico");
+                OnvalorServicoChanged();
+            }
+        }
+        private global::System.Decimal _valorServico;
+        partial void OnvalorServicoChanging(global::System.Decimal value);
+        partial void OnvalorServicoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal valorCobradoAoCliente
+        {
+            get
+            {
+                return _valorCobradoAoCliente;
+            }
+            set
+            {
+                OnvalorCobradoAoClienteChanging(value);
+                ReportPropertyChanging("valorCobradoAoCliente");
+                _valorCobradoAoCliente = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("valorCobradoAoCliente");
+                OnvalorCobradoAoClienteChanged();
+            }
+        }
+        private global::System.Decimal _valorCobradoAoCliente;
+        partial void OnvalorCobradoAoClienteChanging(global::System.Decimal value);
+        partial void OnvalorCobradoAoClienteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String nomePrceiro
+        {
+            get
+            {
+                return _nomePrceiro;
+            }
+            set
+            {
+                OnnomePrceiroChanging(value);
+                ReportPropertyChanging("nomePrceiro");
+                _nomePrceiro = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("nomePrceiro");
+                OnnomePrceiroChanged();
+            }
+        }
+        private global::System.String _nomePrceiro;
+        partial void OnnomePrceiroChanging(global::System.String value);
+        partial void OnnomePrceiroChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 quantidade
+        {
+            get
+            {
+                return _quantidade;
+            }
+            set
+            {
+                OnquantidadeChanging(value);
+                ReportPropertyChanging("quantidade");
+                _quantidade = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("quantidade");
+                OnquantidadeChanged();
+            }
+        }
+        private global::System.Int32 _quantidade;
+        partial void OnquantidadeChanging(global::System.Int32 value);
+        partial void OnquantidadeChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C18", "tb_pedido")]
+        public tb_pedido tb_pedido
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C18", "tb_pedido").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C18", "tb_pedido").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pedido> tb_pedidoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pedido>("missmfotografiaModel.C18", "tb_pedido");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pedido>("missmfotografiaModel.C18", "tb_pedido", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C19", "tb_servico")]
+        public tb_servico tb_servico
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_servico>("missmfotografiaModel.C19", "tb_servico").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_servico>("missmfotografiaModel.C19", "tb_servico").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_servico> tb_servicoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_servico>("missmfotografiaModel.C19", "tb_servico");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_servico>("missmfotografiaModel.C19", "tb_servico", value);
                 }
             }
         }
@@ -2443,28 +3291,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C4", "tb_pedido")]
-        public EntityCollection<tb_pedido> tb_pedido
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido>("missmfotografiaModel.C4", "tb_pedido");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.C4", "tb_pedido", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pessoa_tb_agenda", "tb_agenda")]
         public EntityCollection<tb_agenda> tb_agenda
         {
@@ -2477,6 +3303,28 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_agenda>("missmfotografiaModel.tb_pessoa_tb_agenda", "tb_agenda", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C4", "tb_pedido")]
+        public EntityCollection<tb_pedido> tb_pedido
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido>("missmfotografiaModel.C4", "tb_pedido");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.C4", "tb_pedido", value);
                 }
             }
         }
@@ -2500,12 +3348,14 @@ namespace Model
         /// </summary>
         /// <param name="idProduto">Initial value of the idProduto property.</param>
         /// <param name="nomeProduto">Initial value of the nomeProduto property.</param>
+        /// <param name="formato">Initial value of the formato property.</param>
         /// <param name="valorDoProduto">Initial value of the valorDoProduto property.</param>
-        public static tb_produto Createtb_produto(global::System.Int32 idProduto, global::System.String nomeProduto, global::System.Decimal valorDoProduto)
+        public static tb_produto Createtb_produto(global::System.Int32 idProduto, global::System.String nomeProduto, global::System.String formato, global::System.Decimal valorDoProduto)
         {
             tb_produto tb_produto = new tb_produto();
             tb_produto.idProduto = idProduto;
             tb_produto.nomeProduto = nomeProduto;
+            tb_produto.formato = formato;
             tb_produto.valorDoProduto = valorDoProduto;
             return tb_produto;
         }
@@ -2592,7 +3442,7 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String formato
         {
@@ -2604,7 +3454,7 @@ namespace Model
             {
                 OnformatoChanging(value);
                 ReportPropertyChanging("formato");
-                _formato = StructuralObject.SetValidValue(value, true);
+                _formato = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("formato");
                 OnformatoChanged();
             }
@@ -2660,30 +3510,6 @@ namespace Model
         private global::System.Decimal _valorDoProduto;
         partial void OnvalorDoProdutoChanging(global::System.Decimal value);
         partial void OnvalorDoProdutoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> valorImagemAdicional
-        {
-            get
-            {
-                return _valorImagemAdicional;
-            }
-            set
-            {
-                OnvalorImagemAdicionalChanging(value);
-                ReportPropertyChanging("valorImagemAdicional");
-                _valorImagemAdicional = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("valorImagemAdicional");
-                OnvalorImagemAdicionalChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _valorImagemAdicional;
-        partial void OnvalorImagemAdicionalChanging(Nullable<global::System.Decimal> value);
-        partial void OnvalorImagemAdicionalChanged();
 
         #endregion
 
@@ -2696,18 +3522,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_produto_tb_pedido", "tb_pedido")]
-        public EntityCollection<tb_pedido> tb_pedido
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C14", "tb_pedido_tb_produto")]
+        public EntityCollection<tb_pedido_tb_produto> tb_pedido_tb_produto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido>("missmfotografiaModel.tb_produto_tb_pedido", "tb_pedido");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C14", "tb_pedido_tb_produto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.tb_produto_tb_pedido", "tb_pedido", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C14", "tb_pedido_tb_produto", value);
                 }
             }
         }
@@ -2730,17 +3556,17 @@ namespace Model
         /// Create a new tb_servico object.
         /// </summary>
         /// <param name="idServico">Initial value of the idServico property.</param>
-        /// <param name="tipoServico">Initial value of the tipoServico property.</param>
-        /// <param name="parceiro">Initial value of the parceiro property.</param>
+        /// <param name="nomeServico">Initial value of the nomeServico property.</param>
+        /// <param name="nomeParceiro">Initial value of the nomeParceiro property.</param>
         /// <param name="telefoneParceiro">Initial value of the telefoneParceiro property.</param>
         /// <param name="valorServico">Initial value of the valorServico property.</param>
         /// <param name="valorCobradoAoCliente">Initial value of the valorCobradoAoCliente property.</param>
-        public static tb_servico Createtb_servico(global::System.Int32 idServico, global::System.String tipoServico, global::System.String parceiro, global::System.String telefoneParceiro, global::System.Decimal valorServico, global::System.Decimal valorCobradoAoCliente)
+        public static tb_servico Createtb_servico(global::System.Int32 idServico, global::System.String nomeServico, global::System.String nomeParceiro, global::System.String telefoneParceiro, global::System.Decimal valorServico, global::System.Decimal valorCobradoAoCliente)
         {
             tb_servico tb_servico = new tb_servico();
             tb_servico.idServico = idServico;
-            tb_servico.tipoServico = tipoServico;
-            tb_servico.parceiro = parceiro;
+            tb_servico.nomeServico = nomeServico;
+            tb_servico.nomeParceiro = nomeParceiro;
             tb_servico.telefoneParceiro = telefoneParceiro;
             tb_servico.valorServico = valorServico;
             tb_servico.valorCobradoAoCliente = valorCobradoAoCliente;
@@ -2783,48 +3609,48 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String tipoServico
+        public global::System.String nomeServico
         {
             get
             {
-                return _tipoServico;
+                return _nomeServico;
             }
             set
             {
-                OntipoServicoChanging(value);
-                ReportPropertyChanging("tipoServico");
-                _tipoServico = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("tipoServico");
-                OntipoServicoChanged();
+                OnnomeServicoChanging(value);
+                ReportPropertyChanging("nomeServico");
+                _nomeServico = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("nomeServico");
+                OnnomeServicoChanged();
             }
         }
-        private global::System.String _tipoServico;
-        partial void OntipoServicoChanging(global::System.String value);
-        partial void OntipoServicoChanged();
+        private global::System.String _nomeServico;
+        partial void OnnomeServicoChanging(global::System.String value);
+        partial void OnnomeServicoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String parceiro
+        public global::System.String nomeParceiro
         {
             get
             {
-                return _parceiro;
+                return _nomeParceiro;
             }
             set
             {
-                OnparceiroChanging(value);
-                ReportPropertyChanging("parceiro");
-                _parceiro = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("parceiro");
-                OnparceiroChanged();
+                OnnomeParceiroChanging(value);
+                ReportPropertyChanging("nomeParceiro");
+                _nomeParceiro = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("nomeParceiro");
+                OnnomeParceiroChanged();
             }
         }
-        private global::System.String _parceiro;
-        partial void OnparceiroChanging(global::System.String value);
-        partial void OnparceiroChanged();
+        private global::System.String _nomeParceiro;
+        partial void OnnomeParceiroChanging(global::System.String value);
+        partial void OnnomeParceiroChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2909,18 +3735,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "tb_pedido_tb_servico", "tb_pedido")]
-        public EntityCollection<tb_pedido> tb_pedido
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C19", "tb_pedido_tb_servico")]
+        public EntityCollection<tb_pedido_tb_servico> tb_pedido_tb_servico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido>("missmfotografiaModel.tb_pedido_tb_servico", "tb_pedido");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_servico>("missmfotografiaModel.C19", "tb_pedido_tb_servico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.tb_pedido_tb_servico", "tb_pedido", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_servico>("missmfotografiaModel.C19", "tb_pedido_tb_servico", value);
                 }
             }
         }
