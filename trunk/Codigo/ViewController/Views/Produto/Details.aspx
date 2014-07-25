@@ -39,10 +39,6 @@ Detalhes do Produto
         <%: Html.DisplayFor(model => model.ValorDoProduto) %>
     </div>
 
-    <div class="display-label">Valor por Imagem Adicional</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.ValorImagemAdicional) %>
-    </div>
 </fieldset>
 <p>
     <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdProduto }) %> |
