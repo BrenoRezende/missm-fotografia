@@ -56,14 +56,6 @@
             <%: Html.ValidationMessageFor(model => model.ValorDoProduto) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.ValorImagemAdicional) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.ValorImagemAdicional) %>
-            <%: Html.ValidationMessageFor(model => model.ValorImagemAdicional) %>
-        </div>
-
         <p>
             <input type="submit" value="Cadastrar" />
         </p>

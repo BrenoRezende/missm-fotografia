@@ -28,9 +28,7 @@ Lista de Produtos
         <th>
             Valor do Produto
         </th>
-        <th>
-            Valor por Imagem Adicional
-        </th>
+
         <th></th>
     </tr>
 
@@ -54,9 +52,7 @@ Lista de Produtos
         <td>
             <%: Html.DisplayFor(modelItem => item.ValorDoProduto) %>
         </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.ValorImagemAdicional) %>
-        </td>
+
         <td>
             <%: Html.ActionLink("Editar", "Edit", new { id=item.IdProduto }) %> |
             <%: Html.ActionLink("Detalhes", "Details", new { id=item.IdProduto }) %> |

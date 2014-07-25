@@ -41,10 +41,6 @@ Remover Produto
         <%: Html.DisplayFor(model => model.ValorDoProduto) %>
     </div>
 
-    <div class="display-label">ValorImagemAdicional</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.ValorImagemAdicional) %>
-    </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
