@@ -20,5 +20,11 @@ namespace Data
         IRepositorioGenerico<tb_funcionario> RepositorioFuncionario { get; }
 
         IRepositorioGenerico<tb_pedido> RepositorioPedido { get; }
+
+        IRepositorioGenerico<tb_pedido_tb_produto> RepositorioPedidoProduto { get; }
+
+        IRepositorioGenerico<tb_pedido_tb_servico> RepositorioPedidoServico { get; }
+
+        IRepositorioGenerico<tb_pedido_tb_evento> RepositorioPedidoEvento { get; }  
     }
 }
