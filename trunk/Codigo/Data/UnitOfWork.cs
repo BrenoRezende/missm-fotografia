@@ -18,14 +18,14 @@ namespace Data
         private IRepositorioGenerico<tb_produto> _repProduto;
         private IRepositorioGenerico<tb_servico> _repServico;
         private IRepositorioGenerico<tb_tipo_evento> _repTipoEvento;
-        private IRepositorioGenerico<tb_evento> _repEvento;
-        private IRepositorioGenerico<tb_pedido> _repPedido;
+        private IRepositorioGenerico<tb_evento> _repEvento;        
         private IRepositorioGenerico<tb_pessoa> _repPessoa;
         private IRepositorioGenerico<tb_funcionario> _repFuncionario;
-
+        private IRepositorioGenerico<tb_pedido> _repPedido;
+        private IRepositorioGenerico<tb_pedido_tb_produto> _repPedidoProduto;
+        private IRepositorioGenerico<tb_pedido_tb_servico> _repPedidoServico;
+        private IRepositorioGenerico<tb_pedido_tb_evento> _repPedidoEvento;
         
-
-
         public UnitOfWork()
         {
             _context = new Model.missmfotografiaEntities();
@@ -144,7 +144,50 @@ namespace Data
             }
         }
 
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Pedido
+        /// </sumary>
+        public IRepositorioGenerico<tb_pedido_tb_produto> RepositorioPedidoProduto
+        {
+            get
+            {
+                if (_repPedidoProduto == null)
+                {
+                    _repPedidoProduto = new RepositorioGenerico<tb_pedido_tb_produto>(_context);
+                }
+                return _repPedidoProduto;
+            }
+        }
 
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Pedido
+        /// </sumary>
+        public IRepositorioGenerico<tb_pedido_tb_servico> RepositorioPedidoServico
+        {
+            get
+            {
+                if (_repPedidoServico == null)
+                {
+                    _repPedidoServico = new RepositorioGenerico<tb_pedido_tb_servico>(_context);
+                }
+                return _repPedidoServico;
+            }
+        }
+
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Pedido
+        /// </sumary>
+        public IRepositorioGenerico<tb_pedido_tb_evento> RepositorioPedidoEvento
+        {
+            get
+            {
+                if (_repPedidoEvento == null)
+                {
+                    _repPedidoEvento = new RepositorioGenerico<tb_pedido_tb_evento>(_context);
+                }
+                return _repPedidoEvento;
+            }
+        }
 
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto
