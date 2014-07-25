@@ -88,12 +88,12 @@ namespace Service
                             NumeroDePaginas = produto.numeroDePaginas,
                             Formato = produto.formato,
                             NumeroDeImagens = produto.numeroDeImagens,
-                            ValorDoProduto = produto.valorDoProduto,
-                            ValorImagemAdicional = produto.valorImagemAdicional
-
+                            ValorDoProduto = produto.valorDoProduto                            
                         };
             return query;
         }
+
+        
 
         /// <summary>
         /// Obter todos as entidades cadastradas
@@ -139,8 +139,7 @@ namespace Service
             produtoE.numeroDePaginas = produtoModel.NumeroDePaginas;
             produtoE.formato = produtoModel.Formato;
             produtoE.numeroDeImagens = produtoModel.NumeroDeImagens;
-            produtoE.valorDoProduto = produtoModel.ValorDoProduto;
-            produtoE.valorImagemAdicional = produtoModel.ValorImagemAdicional;
+            produtoE.valorDoProduto = produtoModel.ValorDoProduto;            
         }
     }
 }
