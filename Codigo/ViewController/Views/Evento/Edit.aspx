@@ -25,26 +25,30 @@ Editar Evento
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Data) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Data) %>
             <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.IdTipoEvento) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.DropDownListFor(model => model.IdTipoEvento, ViewBag.IdTipoEvento as SelectList) %>
             <%: Html.ValidationMessageFor(model => model.IdTipoEvento) %>
         </div>
+        <p></p>
         <p>
             <input type="submit" value="Salvar Alterações" />
         </p>
@@ -52,7 +56,7 @@ Editar Evento
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>

@@ -12,20 +12,24 @@ Detalhes do Evento
     <legend>Dados do Evento</legend>
 
     <div class="display-label">Nome</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
-
+    <p></p>
     <div class="display-label">Data</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Data) %>
     </div>
-
+    <p></p>
     <div class="display-label">Tipo do Evento</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdTipoEvento) %>
         <%: Html.DisplayFor(model => model.NomeTipoEvento) %>
     </div>
+    <p></p>
 </fieldset>
 <p>
     <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdEvento}) %> |

@@ -12,34 +12,41 @@ Remover Produto
     <legend>Dados do Produto</legend>
 
     <div class="display-label">Código</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdProduto) %>
     </div>
-
+    <p></p>
     <div class="display-label">Nome</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
-
+    <p></p>
     <div class="display-label">NumeroDePaginas</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NumeroDePaginas) %>
     </div>
-
+    <p></p>
     <div class="display-label">Formato</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Formato) %>
     </div>
-
+    <p></p>
     <div class="display-label">NumeroDeImagens</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NumeroDeImagens) %>
     </div>
-
+    <p></p>
     <div class="display-label">ValorDoProduto</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ValorDoProduto) %>
     </div>
+    <p></p>
 
 </fieldset>
 <% using (Html.BeginForm()) { %>

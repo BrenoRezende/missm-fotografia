@@ -13,24 +13,29 @@ Remover Tipo de Evento
     <legend>Dados do Tipo de Evento</legend>
 
     <div class="display-label">Código</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdTipoEvento) %>
     </div>
-
+    <p></p>
     <div class="display-label">Nome</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
-
+    <p></p>
     <div class="display-label">TotalConvidados</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TotalConvidados) %>
     </div>
-
+    <p></p>
     <div class="display-label">Valor</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Valor) %>
     </div>
+    <p></p>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
