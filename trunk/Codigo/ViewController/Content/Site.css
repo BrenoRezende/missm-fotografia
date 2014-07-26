@@ -103,7 +103,7 @@ header h1, #header h1 {
 #main {
     padding: 30px 30px 15px 30px;
     background-color: #fff;
-    border-radius: 0 4px 0 0;
+    border-radius: 4px 0 0 0;
     -webkit-border-radius: 4px 0 0 0;
     -moz-border-radius: 4px 0 0 0;
 }
@@ -129,7 +129,7 @@ ul#menu {
     padding: 0 0 2px;
     position: relative;
     margin: 0;
-    text-align: left;
+    text-align: right;
 }
 
 ul#menu li {
@@ -217,7 +217,6 @@ input[type="submit"] {
 table {
     border: solid 1px #e8eef4;
     border-collapse: collapse;
-    text-align: center;
 }
 
 table td {
@@ -305,20 +304,13 @@ div#title {
 .display-label, 
 .editor-label {
     margin: 1em 0 0 0;
-    width: 1205px;
-    height: 4px;
 }
 
 .display-field, 
 .editor-field {
     margin: 0.5em 0 0 0;
-    width: 1205px;
-    height: 17px;
 }
 
-.display-label{
-    font-weight:bold;
-}
 .text-box {
     width: 30em;
 }
