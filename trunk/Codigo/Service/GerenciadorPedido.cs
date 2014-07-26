@@ -93,9 +93,7 @@ namespace Service
                             NomePessoa = pedido.tb_pessoa.nomePessoa
                         };
             return query;
-        }
-
-        ProdutoModel produtoModel;
+        }       
         
 
         /// <summary>

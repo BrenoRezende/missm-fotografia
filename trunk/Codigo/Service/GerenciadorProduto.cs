@@ -101,7 +101,7 @@ namespace Service
         /// <returns></returns>
         public IEnumerable<ProdutoModel> ObterTodos()
         {
-            return this.GetQuery();
+            return GetQuery();
         }
 
         /// <summary>
