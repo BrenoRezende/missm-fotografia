@@ -28,12 +28,12 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C18", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C19", "tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_servico), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C15", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C8", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C10", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C11", "tb_tipo_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_tipo_evento), "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_evento), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C9", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C3", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 
 #endregion
 
@@ -232,22 +232,6 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_produto> tb_produto
-        {
-            get
-            {
-                if ((_tb_produto == null))
-                {
-                    _tb_produto = base.CreateObjectSet<tb_produto>("tb_produto");
-                }
-                return _tb_produto;
-            }
-        }
-        private ObjectSet<tb_produto> _tb_produto;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_evento> tb_evento
         {
             get
@@ -292,6 +276,22 @@ namespace Model
             }
         }
         private ObjectSet<tb_tipo_evento> _tb_tipo_evento;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_produto> tb_produto
+        {
+            get
+            {
+                if ((_tb_produto == null))
+                {
+                    _tb_produto = base.CreateObjectSet<tb_produto>("tb_produto");
+                }
+                return _tb_produto;
+            }
+        }
+        private ObjectSet<tb_produto> _tb_produto;
 
         #endregion
 
@@ -370,14 +370,6 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_produto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_produto(tb_produto tb_produto)
-        {
-            base.AddObject("tb_produto", tb_produto);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the tb_evento EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_evento(tb_evento tb_evento)
@@ -399,6 +391,14 @@ namespace Model
         public void AddTotb_tipo_evento(tb_tipo_evento tb_tipo_evento)
         {
             base.AddObject("tb_tipo_evento", tb_tipo_evento);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_produto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_produto(tb_produto tb_produto)
+        {
+            base.AddObject("tb_produto", tb_produto);
         }
 
         #endregion
