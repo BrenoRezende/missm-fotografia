@@ -22,19 +22,19 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.TipoServico) %>
+            <%: Html.LabelFor(model => model.NomeServico)%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.TipoServico) %>
-            <%: Html.ValidationMessageFor(model => model.TipoServico) %>
+            <%: Html.EditorFor(model => model.NomeServico)%>
+            <%: Html.ValidationMessageFor(model => model.NomeServico)%>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Parceiro) %>
+            <%: Html.LabelFor(model => model.NomeParceiro)%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Parceiro) %>
-            <%: Html.ValidationMessageFor(model => model.Parceiro) %>
+            <%: Html.EditorFor(model => model.NomeParceiro)%>
+            <%: Html.ValidationMessageFor(model => model.NomeParceiro)%>
         </div>
 
         <div class="editor-label">

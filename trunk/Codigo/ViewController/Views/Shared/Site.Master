@@ -12,7 +12,7 @@
     <div class="page">
         <header>
             <div id="title">
-                <img src="../../Content/logo.png" alt="MissM|Fotografia"/>
+                <img src="../../Content/logo.png" alt="MissM|Fotografia" style="width: 352px"/>
             </div>
             <br /><br /><br />
             <div id="logindisplay">
@@ -20,12 +20,13 @@
             </div>
             <nav>
                 <ul id="menu">
-                    <li><%: Html.ActionLink("Página Inicial", "Index", "Home")%></li>                    
-                    <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>                    
+                    <li><%: Html.ActionLink("Página Inicial", "Index", "Home")%></li>
+                                        
                     <li><%: Html.ActionLink("Cliente", "Index", "Pessoa")%></li>
                     <li><%: Html.ActionLink("Funcionário", "Index", "Funcionario")%></li>
-                    <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>
-                    <li><%: Html.ActionLink("Pedido", "Index", "Pedido")%></li>  
+                    <li><%: Html.ActionLink("Pedido", "Index", "Pedido")%></li>
+                    <li><%: Html.ActionLink("Produto", "Index", "Produto")%></li>                                       
+                    <li><%: Html.ActionLink("Serviço", "Index", "Servico")%></li>                      
                     <li><%: Html.ActionLink("Eventos", "Index", "Evento")%></li>
                     <li><%: Html.ActionLink("Tipos de Evento", "Index", "TipoEvento")%></li>
                 </ul>
@@ -34,6 +35,7 @@
         <section id="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             <footer>
+
             </footer>
         </section>
     </div>

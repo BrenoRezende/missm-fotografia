@@ -18,12 +18,12 @@
 
     <div class="display-label">Tipo de Serviço</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.TipoServico) %>
+        <%: Html.DisplayFor(model => model.NomeServico)%>
     </div>
 
     <div class="display-label">Parceiro</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Parceiro) %>
+        <%: Html.DisplayFor(model => model.NomeParceiro)%>
     </div>
 
     <div class="display-label">Telefone do Parceiro</div>

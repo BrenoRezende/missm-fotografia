@@ -1,60 +1,41 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master"Inherits="System.Web.Mvc.ViewPage<Model.Models.PedidoModel>" %>
-<%@ Import Namespace="ClienteWeb.Helpers"%>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master"Inherits="System.Web.Mvc.ViewPage<Model.Models.PedidoModel>" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    Criar Orçamento
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+    <form id="form1" runat="server">
+<h2>Criar Orçamento</h2>
 
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/DropDownCascades.js") %>" type="text/javascript"></script>
-<script type="text/javascript" src="../../Scripts/jquery.simple-dtpicker.js"></script>
-<script src="../../Scripts/CustomValidation.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    var actionUrl = '<%= Url.Action("AdicionarItem", "Venda", new { id = "idProduto" } ) %>';
-    </script>
 
 <% using (Html.BeginForm()) { %>
-    <%: Html.ValidationSummary(true) %>
+    
     <fieldset>
-        <legend>VendaModel</legend>
-        <input id="AddItem" type="button" value="Inserir" class="button dark" onclick="parent.href='
-        <%: Url.Action("AdicionarItem", "Venda", new { id = "idProduto" }) %>'" />
-
-        <div class="editor-label">
-            <%: Html.Label("Produto") %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("Produto", ViewBag.Produtos as SelectList, new { id = "Produto" })%>
-        </div>
-
+        <legend>Lista de Produtos</legend>
         
-    <table id='tabelaItems'>
-        <tr>
-            <th>
-                Nome
-            </th>
-            <th>
-                Quantidade
-            </th>
-            <th>
-                Valor
-            </th>
-            <th>
-                
-            </th>
-        </tr>
-    </table>
-        <p>
-            <input type="submit" value="Create" class="button dark" />
-            <input type="button" value="Voltar" class="button dark" onclick="location.href='<%: Url.Action("ListarEmpresas", "Cliente") %>'" />
-        </p>
+        <div class="editor-label">
+            <%: Html.Label("Nome do Produto           Formato         Número de úmero de Imagens          Valor do Produto")%>            
+        </div>
+        <div class="editor-label">
+            
+            
+            <%: Html.ListBox("Produtos", ViewBag.Produtos as SelectList)%>            
+            
+            <asp:GridView ID="GridView1" runat="server" 
+                onselectedindexchanged="GridView1_SelectedIndexChanged">
+            </asp:GridView>
+            
+        </div>
+
+
     </fieldset>
 <% } %>
+
+
+    </form>
 
 
 </asp:Content>

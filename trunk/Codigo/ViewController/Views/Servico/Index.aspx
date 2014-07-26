@@ -35,10 +35,10 @@
             <%: Html.DisplayFor(modelItem => item.IdServico) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.TipoServico) %>
+            <%: Html.DisplayFor(modelItem => item.NomeServico)%>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Parceiro) %>
+            <%: Html.DisplayFor(modelItem => item.NomeParceiro)%>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.TelefoneParceiro) %>
