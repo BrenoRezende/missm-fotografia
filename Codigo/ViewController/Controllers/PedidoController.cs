@@ -7,6 +7,7 @@ using Service;
 using Model.Models;
 using System.IO;
 using Microsoft.Reporting.WebForms;
+using System.Web.Helpers;
 
 namespace ViewController.Controllers
 {
@@ -42,7 +43,9 @@ namespace ViewController.Controllers
 
         public ActionResult Index()
         {
-            return View(gPedido.ObterTodos());
+            var tipoPedidoLista = ObterTodosParaExibicao(gProduto);
+            ViewBag.Produtos = new SelectList(tipoPedidoLista, "Id", "NomeExibido");            
+            return View();
         }
 
         //
@@ -129,6 +132,27 @@ namespace ViewController.Controllers
             {
                 return View();
             }
+        }
+
+        /// <summary>
+        /// Obter todos os produtos cadastrados, personalizados para exibicao
+        /// </summary>
+        /// <param name="gProduto"></param>
+        /// <returns>Lista com dados personalizados para exibicao</returns>
+        public List<object> ObterTodosParaExibicao(GerenciadorProduto gPro)
+        {
+            var tipoProduto = gPro.ObterTodos();
+            List<object> tipoProdutoLista = new List<object>();
+
+            foreach (var tp in tipoProduto)
+                tipoProdutoLista.Add(new
+                {
+                    Id = tp.IdProduto,
+                    NomeExibido = tp.Nome + "    |    " + tp.NumeroDePaginas + "     |   " + tp.Formato + "    |    " +
+                    tp.NumeroDeImagens + "    |    " + tp.ValorDoProduto 
+                });
+
+            return tipoProdutoLista;
         }
     }
 }
