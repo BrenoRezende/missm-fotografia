@@ -19,43 +19,48 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.NomeServico) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.NomeServico) %>
             <%: Html.ValidationMessageFor(model => model.NomeServico) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.NomeParceiro)%>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.NomeParceiro)%>
             <%: Html.ValidationMessageFor(model => model.NomeParceiro)%>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TelefoneParceiro) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.TelefoneParceiro) %>
             <%: Html.ValidationMessageFor(model => model.TelefoneParceiro) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.ValorServico) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.ValorServico) %>
             <%: Html.ValidationMessageFor(model => model.ValorServico) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.ValorCobradoAoCliente) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.ValorCobradoAoCliente) %>
             <%: Html.ValidationMessageFor(model => model.ValorCobradoAoCliente) %>
         </div>
-
+        <p></p>
         <p>
             <input type="submit" value="Cadastrar" />
         </p>

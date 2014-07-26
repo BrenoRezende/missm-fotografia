@@ -19,43 +19,48 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.NumeroDePaginas) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.NumeroDePaginas) %>
             <%: Html.ValidationMessageFor(model => model.NumeroDePaginas) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Formato) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Formato) %>
             <%: Html.ValidationMessageFor(model => model.Formato) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.NumeroDeImagens) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.NumeroDeImagens) %>
             <%: Html.ValidationMessageFor(model => model.NumeroDeImagens) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.ValorDoProduto) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.ValorDoProduto) %>
             <%: Html.ValidationMessageFor(model => model.ValorDoProduto) %>
         </div>
-
+        <p></p>
         <p>
             <input type="submit" value="Cadastrar" />
         </p>

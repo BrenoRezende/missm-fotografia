@@ -25,27 +25,30 @@ Editar Tipo de Evento
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TotalConvidados) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.TotalConvidados) %>
             <%: Html.ValidationMessageFor(model => model.TotalConvidados) %>
         </div>
-
+        <p></p>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Valor) %>
         </div>
+        <p></p>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Valor) %>
             <%: Html.ValidationMessageFor(model => model.Valor) %>
         </div>
-
+        <p></p>
         <p>
             <input type="submit" value="Salvar Alterações" />
         </p>

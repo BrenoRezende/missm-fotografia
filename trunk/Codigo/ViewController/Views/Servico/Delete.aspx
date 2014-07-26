@@ -12,31 +12,37 @@
     <legend>Dados do Serviço</legend>
 
     <div class="display-label">Código</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdServico) %>
     </div>
-
+    <p></p>
     <div class="display-label">Tipo de Serviço</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NomeServico)%>
     </div>
-
+    <p></p>
     <div class="display-label">Parceiro</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NomeParceiro)%>
     </div>
-
+    <p></p>
     <div class="display-label">Telefone do Parceiro</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneParceiro) %>
     </div>
-
+    <p></p>
     <div class="display-label">Valor do Serviço</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ValorServico) %>
     </div>
-
+    <p></p>
     <div class="display-label">Valor Cobrado ao Cliente</div>
+    <p></p>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ValorCobradoAoCliente) %>
     </div>
