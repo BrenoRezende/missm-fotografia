@@ -85,8 +85,8 @@ namespace Service
                         select new ServicoModel
                         {
                             IdServico = servico.idServico,
-                            TipoServico = servico.tipoServico,
-                            Parceiro = servico.parceiro,
+                            NomeServico = servico.nomeServico,
+                            NomeParceiro = servico.nomeParceiro,
                             TelefoneParceiro = servico.telefoneParceiro,
                             ValorServico = servico.valorServico,
                             ValorCobradoAoCliente = servico.valorCobradoAoCliente
@@ -122,7 +122,7 @@ namespace Service
         /// <returns>ServicoModel</returns>
         public IEnumerable<ServicoModel> ObterPorNome(string nome)
         {
-            IEnumerable<ServicoModel> servicos = this.GetQuery().Where(servicoModel => servicoModel.TipoServico.StartsWith(nome));
+            IEnumerable<ServicoModel> servicos = this.GetQuery().Where(servicoModel => servicoModel.NomeServico.StartsWith(nome));
             return servicos;
         }
 
@@ -135,8 +135,8 @@ namespace Service
         private void Atribuir(ServicoModel servicoModel, tb_servico servicoE)
         {
             servicoE.idServico = servicoModel.IdServico;
-            servicoE.tipoServico = servicoModel.TipoServico;
-            servicoE.parceiro = servicoModel.Parceiro;
+            servicoE.nomeServico = servicoModel.NomeServico;
+            servicoE.nomeParceiro = servicoModel.NomeParceiro;
             servicoE.telefoneParceiro = servicoModel.TelefoneParceiro;
             servicoE.valorServico = servicoModel.ValorServico;
             servicoE.valorCobradoAoCliente = servicoModel.ValorCobradoAoCliente;
