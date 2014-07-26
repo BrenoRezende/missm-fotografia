@@ -20,12 +20,12 @@ namespace Model.Models
             ErrorMessageResourceName = "erro_requerido")]
         [Display(Name = "tipo_servico", ResourceType = typeof(Mensagens))]
         [StringLength(50)]
-        public string TipoServico { get; set; }
+        public string NomeServico { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
         [StringLength(50)]
-        public string Parceiro { get; set; }
+        public string NomeParceiro { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
