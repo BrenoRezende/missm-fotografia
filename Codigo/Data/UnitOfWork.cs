@@ -21,7 +21,7 @@ namespace Data
         private IRepositorioGenerico<tb_evento> _repEvento;        
         private IRepositorioGenerico<tb_pessoa> _repPessoa;
         private IRepositorioGenerico<tb_funcionario> _repFuncionario;
-        private IRepositorioGenerico<tb_pedido> _repPedido;
+        private IRepositorioGenerico<tb_pedido> _repPedido;        
         private IRepositorioGenerico<tb_pedido_tb_produto> _repPedidoProduto;
         private IRepositorioGenerico<tb_pedido_tb_servico> _repPedidoServico;
         private IRepositorioGenerico<tb_pedido_tb_evento> _repPedidoEvento;
