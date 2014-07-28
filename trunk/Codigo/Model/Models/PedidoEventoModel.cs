@@ -11,17 +11,8 @@ namespace Model.Models
     public class PedidoEventoModel
     {
         public int IdPedidoEvento { get; set; }
-
-        public int IdPedido { get; set; }
-        public string NomeCliente { get; set; }
-        public string StatusPedido { get; set; }
-        public DateTime DataCriacao { get; set; }
-
+        public int IdPedido { get; set; }  
         public int IdEvento { get; set; }
-        public string NomeTipoEvento { get; set; }
-        public int TotalConvidados { get; set; }
-        public decimal ValorTipoEvento { get; set; }
-
         public int Quantidade { get; set; }
     }
 }
