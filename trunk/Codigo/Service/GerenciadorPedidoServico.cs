@@ -65,19 +65,8 @@ namespace Service
                         select new PedidoServicoModel
                         {
                             IdPedidoServico = pedidoServico.idPedidoServico,
-
-                            IdPedido = pedidoServico.idPedido,
-                            NomeCliente = pedidoServico.tb_pedido.tb_pessoa.nomePessoa,
-                            StatusPedido = pedidoServico.tb_pedido.statusPedido,
-                            DataCriacao = pedidoServico.tb_pedido.dataCriacao,
-
-                            IdServico = pedidoServico.idServico,
-                            NomeServico = pedidoServico.tb_servico.nomeServico,
-                            NomeParceiro = pedidoServico.nomePrceiro,
-                            TelefoneParceiro = pedidoServico.tb_servico.telefoneParceiro,
-                            ValorServico = pedidoServico.valorServico,
-                            ValorCobradoAoCliente = pedidoServico.valorCobradoAoCliente,
-                                                     
+                            IdPedido = pedidoServico.idPedido,  
+                            IdServico = pedidoServico.idServico,                           
                             Quantidade = pedidoServico.quantidade
                         };
             return query;
@@ -98,10 +87,7 @@ namespace Service
         {
             pedidoServicoE.idPedidoServico = pedidoServicoModel.IdPedidoServico;
             pedidoServicoE.idServico = pedidoServicoModel.IdServico;
-            pedidoServicoE.idPedido = pedidoServicoModel.IdPedido;
-            pedidoServicoE.valorServico = pedidoServicoModel.ValorServico;
-            pedidoServicoE.valorCobradoAoCliente = pedidoServicoModel.ValorCobradoAoCliente;
-            pedidoServicoE.nomePrceiro = pedidoServicoModel.NomeParceiro;
+            pedidoServicoE.idPedido = pedidoServicoModel.IdPedido;            
             pedidoServicoE.quantidade = pedidoServicoModel.Quantidade;
         }
     }

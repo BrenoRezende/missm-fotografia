@@ -54,6 +54,7 @@
     <Compile Include="GerenciadorServico.cs" />
     <Compile Include="GerenciadorProduto.cs" />
     <Compile Include="GerenciadorTipoEvento.cs" />
+    <Compile Include="GerenciadorOrcamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
