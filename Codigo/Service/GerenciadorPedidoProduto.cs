@@ -64,20 +64,9 @@ namespace Service
                         orderby (pedidoProduto.tb_produto.nomeProduto)
                         select new PedidoProdutoModel
                         {
-                            IdPedidoProduto = pedidoProduto.idPedidoProduto,
-                            
-                            IdPedido = pedidoProduto.idPedido,
-                            NomeCliente = pedidoProduto.tb_pedido.tb_pessoa.nomePessoa,
-                            StatusPedido = pedidoProduto.tb_pedido.statusPedido,
-                            DataCriacao = pedidoProduto.tb_pedido.dataCriacao,
-                            
-                            IdProduto = pedidoProduto.idProduto,    
-                            NomeProduto = pedidoProduto.tb_produto.nomeProduto,
-                            NumeroDePaginas = pedidoProduto.tb_produto.numeroDePaginas,
-                            ValorProduto = pedidoProduto.valorProduto,
-                            Formato = pedidoProduto.tb_produto.formato,
-                            NumeroDeImagens = pedidoProduto.numeroDeImagens, 
-                            
+                            IdPedidoProduto = pedidoProduto.idPedidoProduto,                            
+                            IdPedido = pedidoProduto.idPedido,                                      
+                            IdProduto = pedidoProduto.idProduto,                               
                             Quantidade = pedidoProduto.quantidade
                         };
             return query;
@@ -98,9 +87,7 @@ namespace Service
         {
             pedidoProdutoE.idPedidoProduto = pedidoProdutoModel.IdPedidoProduto;
             pedidoProdutoE.idProduto = pedidoProdutoModel.IdProduto;
-            pedidoProdutoE.idPedido = pedidoProdutoModel.IdPedido;
-            pedidoProdutoE.valorProduto = pedidoProdutoModel.ValorProduto;
-            pedidoProdutoE.numeroDeImagens = pedidoProdutoModel.NumeroDeImagens;
+            pedidoProdutoE.idPedido = pedidoProdutoModel.IdPedido;    
             pedidoProdutoE.quantidade = pedidoProdutoModel.Quantidade;  
         }
     }

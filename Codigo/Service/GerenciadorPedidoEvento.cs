@@ -64,17 +64,8 @@ namespace Service
                         select new PedidoEventoModel
                         {
                             IdPedidoEvento = pedidoEvento.idPedidoEvento,
-
-                            IdPedido = pedidoEvento.idPedido,
-                            NomeCliente = pedidoEvento.tb_pedido.tb_pessoa.nomePessoa,
-                            StatusPedido = pedidoEvento.tb_pedido.statusPedido,
-                            DataCriacao = pedidoEvento.tb_pedido.dataCriacao,
-
-                            IdEvento = pedidoEvento.idEvento,
-                            NomeTipoEvento = pedidoEvento.tb_evento.tb_tipo_evento.nomeTipoEvento,
-                            TotalConvidados = pedidoEvento.tb_evento.tb_tipo_evento.totalConvidados,
-                            ValorTipoEvento = pedidoEvento.tb_evento.tb_tipo_evento.valorTipoEvento,
-                            
+                            IdPedido = pedidoEvento.idPedido,                
+                            IdEvento = pedidoEvento.idEvento,                           
                             Quantidade = pedidoEvento.quantidade
                         };
             return query;
