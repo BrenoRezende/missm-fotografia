@@ -17,10 +17,10 @@ Lista de Produtos
             Nome
         </th>
         <th>
-            Numero de Páginas
+            Formato
         </th>
         <th>
-            Formato
+            Numero de Páginas
         </th>
         <th>
             Numero de Imagens
@@ -41,17 +41,16 @@ Lista de Produtos
             <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.NumeroDePaginas) %>
+            <%: Html.DisplayFor(modelItem => item.Formato) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Formato) %>
+            <%: Html.DisplayFor(modelItem => item.NumeroDePaginas) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NumeroDeImagens) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.ValorDoProduto) %>
-        </td>
+            <%: Html.DisplayFor(modelItem => item.ValorDoProduto) %>        </td>
 
         <td>
             <%: Html.ActionLink("Editar", "Edit", new { id=item.IdProduto }) %> |
