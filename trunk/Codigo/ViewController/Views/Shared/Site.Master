@@ -21,8 +21,8 @@
             <nav>
                 <ul id="menu">
                     <li><%: Html.ActionLink("Página Inicial", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("Criar Orçamento", "Index", "Pedido")%></li>
-                                        
+                    <li><%: Html.ActionLink("Pedido", "Index", "Pedido")%></li>
+                    <li><%: Html.ActionLink("Orçamento", "Index", "Orcamento")%></li>
                     <li><%: Html.ActionLink("Cliente", "Index", "Pessoa")%></li>
                     <li><%: Html.ActionLink("Funcionário", "Index", "Funcionario")%></li>
                     
