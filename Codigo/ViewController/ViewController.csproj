@@ -67,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Enumerable.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="Controllers\OrcamentoController.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
@@ -124,6 +126,7 @@
     <Content Include="Views\Funcionario\Details.aspx" />
     <Content Include="Views\Funcionario\Edit.aspx" />
     <Content Include="Views\Funcionario\Index.aspx" />
+    <Content Include="Views\Orcamento\Index.aspx" />
     <Content Include="Views\Pedido\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
