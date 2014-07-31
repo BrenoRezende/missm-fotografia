@@ -514,7 +514,7 @@
           </Key>
           <Property Name="idAgenda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nomeAtividade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="descricaoAtividade" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="descricaoAtividade" Type="String" Nullable="true" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="dataAtividade" Type="DateTime" Nullable="false" />
           <Property Name="idEvento" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C8" FromRole="tb_agenda" ToRole="tb_evento" />
@@ -1045,7 +1045,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="ModelMissMFotografia" ZoomLevel="93">
+      <Diagram Name="ModelMissMFotografia" ZoomLevel="75">
         <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="5.5" PointY="2.625" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_contas_receber" Width="2" PointX="5.5" PointY="7" Height="3.1340950520833335" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_foto" Width="1.5" PointX="8.25" PointY="2.625" Height="2.3648893229166656" IsExpanded="true" />

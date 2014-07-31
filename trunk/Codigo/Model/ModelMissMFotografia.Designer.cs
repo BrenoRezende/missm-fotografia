@@ -424,15 +424,13 @@ namespace Model
         /// </summary>
         /// <param name="idAgenda">Initial value of the idAgenda property.</param>
         /// <param name="nomeAtividade">Initial value of the nomeAtividade property.</param>
-        /// <param name="descricaoAtividade">Initial value of the descricaoAtividade property.</param>
         /// <param name="dataAtividade">Initial value of the dataAtividade property.</param>
         /// <param name="idEvento">Initial value of the idEvento property.</param>
-        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.String descricaoAtividade, global::System.DateTime dataAtividade, global::System.Int32 idEvento)
+        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.DateTime dataAtividade, global::System.Int32 idEvento)
         {
             tb_agenda tb_agenda = new tb_agenda();
             tb_agenda.idAgenda = idAgenda;
             tb_agenda.nomeAtividade = nomeAtividade;
-            tb_agenda.descricaoAtividade = descricaoAtividade;
             tb_agenda.dataAtividade = dataAtividade;
             tb_agenda.idEvento = idEvento;
             return tb_agenda;
@@ -496,7 +494,7 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String descricaoAtividade
         {
@@ -508,7 +506,7 @@ namespace Model
             {
                 OndescricaoAtividadeChanging(value);
                 ReportPropertyChanging("descricaoAtividade");
-                _descricaoAtividade = StructuralObject.SetValidValue(value, false);
+                _descricaoAtividade = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("descricaoAtividade");
                 OndescricaoAtividadeChanged();
             }
