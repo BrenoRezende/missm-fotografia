@@ -13,7 +13,6 @@
           <EntitySet Name="tb_funcionario" EntityType="missmfotografiaModel.Store.tb_funcionario" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_pedido" EntityType="missmfotografiaModel.Store.tb_pedido" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_pedido_tb_evento" EntityType="missmfotografiaModel.Store.tb_pedido_tb_evento" store:Type="Tables" Schema="missmfotografia" />
-          <EntitySet Name="tb_pedido_tb_produto" EntityType="missmfotografiaModel.Store.tb_pedido_tb_produto" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_pedido_tb_servico" EntityType="missmfotografiaModel.Store.tb_pedido_tb_servico" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_pessoa" EntityType="missmfotografiaModel.Store.tb_pessoa" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_pessoa_tb_agenda" EntityType="missmfotografiaModel.Store.tb_pessoa_tb_agenda" store:Type="Tables" Schema="missmfotografia" />
@@ -31,14 +30,6 @@
           <AssociationSet Name="11" Association="missmfotografiaModel.Store.11">
             <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
             <End Role="tb_evento" EntitySet="tb_evento" />
-          </AssociationSet>
-          <AssociationSet Name="14" Association="missmfotografiaModel.Store.14">
-            <End Role="tb_produto" EntitySet="tb_produto" />
-            <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
-          </AssociationSet>
-          <AssociationSet Name="15" Association="missmfotografiaModel.Store.15">
-            <End Role="tb_pedido" EntitySet="tb_pedido" />
-            <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
           </AssociationSet>
           <AssociationSet Name="18" Association="missmfotografiaModel.Store.18">
             <End Role="tb_pedido" EntitySet="tb_pedido" />
@@ -91,7 +82,7 @@
           </Key>
           <Property Name="idAgenda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeAtividade" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="descricaoAtividade" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="descricaoAtividade" Type="varchar" MaxLength="200" />
           <Property Name="dataAtividade" Type="datetime" Nullable="false" />
           <Property Name="idEvento" Type="int" Nullable="false" />
         </EntityType>
@@ -161,15 +152,6 @@
           <Property Name="idEvento" Type="int" Nullable="false" />
           <Property Name="quantidade" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="tb_pedido_tb_produto">
-          <Key>
-            <PropertyRef Name="idPedidoProduto" />
-          </Key>
-          <Property Name="idPedidoProduto" Type="int" Nullable="false" />
-          <Property Name="idProduto" Type="int" Nullable="false" />
-          <Property Name="idPedido" Type="int" Nullable="false" />
-          <Property Name="quantidade" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="tb_pedido_tb_servico">
           <Key>
             <PropertyRef Name="idPedidoServico" />
@@ -178,6 +160,7 @@
           <Property Name="idPedido" Type="int" Nullable="false" />
           <Property Name="idServico" Type="int" Nullable="false" />
           <Property Name="quantidade" Type="int" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_pessoa">
           <Key>
@@ -270,30 +253,6 @@
             </Principal>
             <Dependent Role="tb_evento">
               <PropertyRef Name="idTipoEvento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="14">
-          <End Role="tb_produto" Type="missmfotografiaModel.Store.tb_produto" Multiplicity="1" />
-          <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_produto">
-              <PropertyRef Name="idProduto" />
-            </Principal>
-            <Dependent Role="tb_pedido_tb_produto">
-              <PropertyRef Name="idProduto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="15">
-          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
-          <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_pedido">
-              <PropertyRef Name="idPedido" />
-            </Principal>
-            <Dependent Role="tb_pedido_tb_produto">
-              <PropertyRef Name="idPedido" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -717,6 +676,7 @@
           <Property Type="Int32" Name="quantidade" Nullable="false" />
           <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C18" FromRole="tb_pedido_tb_servico" ToRole="tb_pedido" />
           <NavigationProperty Name="tb_servico" Relationship="missmfotografiaModel.C19" FromRole="tb_pedido_tb_servico" ToRole="tb_servico" />
+          <Property Type="DateTime" Name="data" Nullable="false" />
         </EntityType>
         <Association Name="C15">
           <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
@@ -965,19 +925,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_pedido_tb_produto">
-            <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_produto">
-              <MappingFragment StoreEntitySet="tb_pedido_tb_produto">
-                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
-                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
-                <ScalarProperty Name="idProduto" ColumnName="idProduto" />
-                <ScalarProperty Name="idPedidoProduto" ColumnName="idPedidoProduto" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tb_pedido_tb_servico">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_servico">
               <MappingFragment StoreEntitySet="tb_pedido_tb_servico">
+                <ScalarProperty Name="data" ColumnName="data" />
                 <ScalarProperty Name="quantidade" ColumnName="quantidade" />
                 <ScalarProperty Name="idServico" ColumnName="idServico" />
                 <ScalarProperty Name="idPedido" ColumnName="idPedido" />

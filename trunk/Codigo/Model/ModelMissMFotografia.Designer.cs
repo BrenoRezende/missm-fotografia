@@ -2500,13 +2500,15 @@ namespace Model
         /// <param name="idPedido">Initial value of the idPedido property.</param>
         /// <param name="idServico">Initial value of the idServico property.</param>
         /// <param name="quantidade">Initial value of the quantidade property.</param>
-        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Int32 quantidade)
+        /// <param name="data">Initial value of the data property.</param>
+        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Int32 quantidade, global::System.DateTime data)
         {
             tb_pedido_tb_servico tb_pedido_tb_servico = new tb_pedido_tb_servico();
             tb_pedido_tb_servico.idPedidoServico = idPedidoServico;
             tb_pedido_tb_servico.idPedido = idPedido;
             tb_pedido_tb_servico.idServico = idServico;
             tb_pedido_tb_servico.quantidade = quantidade;
+            tb_pedido_tb_servico.data = data;
             return tb_pedido_tb_servico;
         }
 
@@ -2612,6 +2614,30 @@ namespace Model
         private global::System.Int32 _quantidade;
         partial void OnquantidadeChanging(global::System.Int32 value);
         partial void OnquantidadeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime data
+        {
+            get
+            {
+                return _data;
+            }
+            set
+            {
+                OndataChanging(value);
+                ReportPropertyChanging("data");
+                _data = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("data");
+                OndataChanged();
+            }
+        }
+        private global::System.DateTime _data;
+        partial void OndataChanging(global::System.DateTime value);
+        partial void OndataChanged();
 
         #endregion
 
