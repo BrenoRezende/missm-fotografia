@@ -20,19 +20,19 @@ using System.Xml.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C20", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C8", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C10", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C11", "tb_tipo_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_tipo_evento), "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_evento), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C9", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C3", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_evento), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C15", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C18", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C19", "tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_servico), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C5", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C4", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C15", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C8", "tb_evento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_evento), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "tb_pessoa_tb_agenda", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pessoa), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda))]
 
 #endregion
@@ -84,22 +84,6 @@ namespace Model
         #endregion
     
         #region ObjectSet Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<tb_agenda> tb_agenda
-        {
-            get
-            {
-                if ((_tb_agenda == null))
-                {
-                    _tb_agenda = base.CreateObjectSet<tb_agenda>("tb_agenda");
-                }
-                return _tb_agenda;
-            }
-        }
-        private ObjectSet<tb_agenda> _tb_agenda;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -232,22 +216,6 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_pedido_tb_produto> tb_pedido_tb_produto
-        {
-            get
-            {
-                if ((_tb_pedido_tb_produto == null))
-                {
-                    _tb_pedido_tb_produto = base.CreateObjectSet<tb_pedido_tb_produto>("tb_pedido_tb_produto");
-                }
-                return _tb_pedido_tb_produto;
-            }
-        }
-        private ObjectSet<tb_pedido_tb_produto> _tb_pedido_tb_produto;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_pedido_tb_servico> tb_pedido_tb_servico
         {
             get
@@ -292,18 +260,42 @@ namespace Model
             }
         }
         private ObjectSet<tb_pessoa> _tb_pessoa;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_pedido_tb_produto> tb_pedido_tb_produto
+        {
+            get
+            {
+                if ((_tb_pedido_tb_produto == null))
+                {
+                    _tb_pedido_tb_produto = base.CreateObjectSet<tb_pedido_tb_produto>("tb_pedido_tb_produto");
+                }
+                return _tb_pedido_tb_produto;
+            }
+        }
+        private ObjectSet<tb_pedido_tb_produto> _tb_pedido_tb_produto;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_agenda> tb_agenda
+        {
+            get
+            {
+                if ((_tb_agenda == null))
+                {
+                    _tb_agenda = base.CreateObjectSet<tb_agenda>("tb_agenda");
+                }
+                return _tb_agenda;
+            }
+        }
+        private ObjectSet<tb_agenda> _tb_agenda;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_agenda EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_agenda(tb_agenda tb_agenda)
-        {
-            base.AddObject("tb_agenda", tb_agenda);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the tb_contas_receber EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -370,14 +362,6 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_pedido_tb_produto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_pedido_tb_produto(tb_pedido_tb_produto tb_pedido_tb_produto)
-        {
-            base.AddObject("tb_pedido_tb_produto", tb_pedido_tb_produto);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the tb_pedido_tb_servico EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_pedido_tb_servico(tb_pedido_tb_servico tb_pedido_tb_servico)
@@ -399,6 +383,22 @@ namespace Model
         public void AddTotb_pessoa(tb_pessoa tb_pessoa)
         {
             base.AddObject("tb_pessoa", tb_pessoa);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_pedido_tb_produto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_pedido_tb_produto(tb_pedido_tb_produto tb_pedido_tb_produto)
+        {
+            base.AddObject("tb_pedido_tb_produto", tb_pedido_tb_produto);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_agenda EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_agenda(tb_agenda tb_agenda)
+        {
+            base.AddObject("tb_agenda", tb_agenda);
         }
 
         #endregion
@@ -424,13 +424,15 @@ namespace Model
         /// </summary>
         /// <param name="idAgenda">Initial value of the idAgenda property.</param>
         /// <param name="nomeAtividade">Initial value of the nomeAtividade property.</param>
+        /// <param name="descricaoAtividade">Initial value of the descricaoAtividade property.</param>
         /// <param name="dataAtividade">Initial value of the dataAtividade property.</param>
         /// <param name="idEvento">Initial value of the idEvento property.</param>
-        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.DateTime dataAtividade, global::System.Int32 idEvento)
+        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.String descricaoAtividade, global::System.DateTime dataAtividade, global::System.Int32 idEvento)
         {
             tb_agenda tb_agenda = new tb_agenda();
             tb_agenda.idAgenda = idAgenda;
             tb_agenda.nomeAtividade = nomeAtividade;
+            tb_agenda.descricaoAtividade = descricaoAtividade;
             tb_agenda.dataAtividade = dataAtividade;
             tb_agenda.idEvento = idEvento;
             return tb_agenda;
@@ -494,7 +496,7 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String descricaoAtividade
         {
@@ -506,7 +508,7 @@ namespace Model
             {
                 OndescricaoAtividadeChanging(value);
                 ReportPropertyChanging("descricaoAtividade");
-                _descricaoAtividade = StructuralObject.SetValidValue(value, true);
+                _descricaoAtividade = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("descricaoAtividade");
                 OndescricaoAtividadeChanged();
             }
@@ -1114,28 +1116,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C8", "tb_agenda")]
-        public EntityCollection<tb_agenda> tb_agenda
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_agenda>("missmfotografiaModel.C8", "tb_agenda");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_agenda>("missmfotografiaModel.C8", "tb_agenda", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C10", "tb_pedido_tb_evento")]
         public EntityCollection<tb_pedido_tb_evento> tb_pedido_tb_evento
         {
@@ -1208,6 +1188,28 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_foto>("missmfotografiaModel.C9", "tb_foto", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C8", "tb_agenda")]
+        public EntityCollection<tb_agenda> tb_agenda
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_agenda>("missmfotografiaModel.C8", "tb_agenda");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_agenda>("missmfotografiaModel.C8", "tb_agenda", value);
                 }
             }
         }
@@ -1973,28 +1975,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C15", "tb_pedido_tb_produto")]
-        public EntityCollection<tb_pedido_tb_produto> tb_pedido_tb_produto
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C18", "tb_pedido_tb_servico")]
         public EntityCollection<tb_pedido_tb_servico> tb_pedido_tb_servico
         {
@@ -2045,6 +2025,28 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("missmfotografiaModel.C4", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C15", "tb_pedido_tb_produto")]
+        public EntityCollection<tb_pedido_tb_produto> tb_pedido_tb_produto
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido_tb_produto>("missmfotografiaModel.C15", "tb_pedido_tb_produto", value);
                 }
             }
         }
@@ -2500,15 +2502,13 @@ namespace Model
         /// <param name="idPedido">Initial value of the idPedido property.</param>
         /// <param name="idServico">Initial value of the idServico property.</param>
         /// <param name="quantidade">Initial value of the quantidade property.</param>
-        /// <param name="data">Initial value of the data property.</param>
-        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Int32 quantidade, global::System.DateTime data)
+        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Int32 quantidade)
         {
             tb_pedido_tb_servico tb_pedido_tb_servico = new tb_pedido_tb_servico();
             tb_pedido_tb_servico.idPedidoServico = idPedidoServico;
             tb_pedido_tb_servico.idPedido = idPedido;
             tb_pedido_tb_servico.idServico = idServico;
             tb_pedido_tb_servico.quantidade = quantidade;
-            tb_pedido_tb_servico.data = data;
             return tb_pedido_tb_servico;
         }
 
@@ -2614,30 +2614,6 @@ namespace Model
         private global::System.Int32 _quantidade;
         partial void OnquantidadeChanging(global::System.Int32 value);
         partial void OnquantidadeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime data
-        {
-            get
-            {
-                return _data;
-            }
-            set
-            {
-                OndataChanging(value);
-                ReportPropertyChanging("data");
-                _data = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("data");
-                OndataChanged();
-            }
-        }
-        private global::System.DateTime _data;
-        partial void OndataChanging(global::System.DateTime value);
-        partial void OndataChanged();
 
         #endregion
 
