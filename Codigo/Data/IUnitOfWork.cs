@@ -26,6 +26,8 @@ namespace Data
         IRepositorioGenerico<tb_pedido_tb_servico> RepositorioPedidoServico { get; }
 
         IRepositorioGenerico<tb_pedido_tb_evento> RepositorioPedidoEvento { get; }
+
+        IRepositorioGenerico<tb_agenda> RepositorioAgenda { get; }
                 
     }
 }
