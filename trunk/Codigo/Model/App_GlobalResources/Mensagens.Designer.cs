@@ -97,6 +97,15 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Descrição da Atividade.
+        /// </summary>
+        public static string descricaoAtividade {
+            get {
+                return ResourceManager.GetString("descricaoAtividade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O {0} é um campo requerido..
         /// </summary>
         public static string erro_requerido {
@@ -111,6 +120,15 @@ namespace Model.App_GlobalResources {
         public static string nome {
             get {
                 return ResourceManager.GetString("nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome da Atividade.
+        /// </summary>
+        public static string nomeAtividade {
+            get {
+                return ResourceManager.GetString("nomeAtividade", resourceCulture);
             }
         }
         

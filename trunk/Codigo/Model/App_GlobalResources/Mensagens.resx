@@ -129,11 +129,17 @@
   <data name="data_nascimento" xml:space="preserve">
     <value>Data de Nascimento</value>
   </data>
+  <data name="descricaoAtividade" xml:space="preserve">
+    <value>Descrição da Atividade</value>
+  </data>
   <data name="erro_requerido" xml:space="preserve">
     <value>O {0} é um campo requerido.</value>
   </data>
   <data name="nome" xml:space="preserve">
     <value>Nome</value>
+  </data>
+  <data name="nomeAtividade" xml:space="preserve">
+    <value>Nome da Atividade</value>
   </data>
   <data name="num_imagens" xml:space="preserve">
     <value>Número de Imagens</value>

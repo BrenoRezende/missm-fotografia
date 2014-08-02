@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorAgenda.cs" />
     <Compile Include="GerenciadorFuncionario.cs" />
     <Compile Include="GerenciadorPedido.cs" />
     <Compile Include="GerenciadorPedidoEvento.cs" />

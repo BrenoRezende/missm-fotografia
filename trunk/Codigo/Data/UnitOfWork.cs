@@ -25,6 +25,7 @@ namespace Data
         private IRepositorioGenerico<tb_pedido_tb_produto> _repPedidoProduto;
         private IRepositorioGenerico<tb_pedido_tb_servico> _repPedidoServico;
         private IRepositorioGenerico<tb_pedido_tb_evento> _repPedidoEvento;
+        private IRepositorioGenerico<tb_agenda> _repAgenda;
         
         public UnitOfWork()
         {
@@ -186,6 +187,21 @@ namespace Data
                     _repPedidoEvento = new RepositorioGenerico<tb_pedido_tb_evento>(_context);
                 }
                 return _repPedidoEvento;
+            }
+        }
+
+        /// <sumary>
+        /// Repositório para manipular dados persistidos de Agenda
+        /// </sumary>
+        public IRepositorioGenerico<tb_agenda> RepositorioAgenda
+        {
+            get
+            {
+                if (_repAgenda == null)
+                {
+                    _repAgenda = new RepositorioGenerico<tb_agenda>(_context);
+                }
+                return _repAgenda;
             }
         }
 
