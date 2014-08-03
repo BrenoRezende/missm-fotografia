@@ -197,10 +197,10 @@
           </Key>
           <Property Name="idProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="nomeProduto" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="formato" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="formato" Type="varchar" MaxLength="50" />
           <Property Name="valorDoProduto" Type="decimal" Nullable="false" />
-          <Property Name="numeroDePaginas" Type="int" Nullable="false" />
-          <Property Name="numeroDeImagens" Type="int" Nullable="false" />
+          <Property Name="numeroDePaginas" Type="int" />
+          <Property Name="numeroDeImagens" Type="int" />
         </EntityType>
         <EntityType Name="tb_servico">
           <Key>
@@ -671,10 +671,10 @@
           </Key>
           <Property Type="Int32" Name="idProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="nomeProduto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="formato" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="formato" Nullable="true" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="Decimal" Name="valorDoProduto" Nullable="false" />
-          <Property Type="Int32" Name="numeroDePaginas" Nullable="false" />
-          <Property Type="Int32" Name="numeroDeImagens" Nullable="false" />
+          <Property Type="Int32" Name="numeroDePaginas" Nullable="true" />
+          <Property Type="Int32" Name="numeroDeImagens" Nullable="true" />
           <NavigationProperty Name="tb_pedido_tb_produto" Relationship="missmfotografiaModel.C14" FromRole="tb_produto" ToRole="tb_pedido_tb_produto" />
         </EntityType>
         <EntityType Name="tb_pessoa">
@@ -992,7 +992,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="ModelMissMFotografia" ZoomLevel="71">
+      <Diagram Name="ModelMissMFotografia" ZoomLevel="61">
         <EntityTypeShape EntityType="missmfotografiaModel.tb_contas_receber" Width="2" PointX="5.5" PointY="7" Height="3.1340950520833335" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_foto" Width="1.5" PointX="8.25" PointY="3.625" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_funcionario" Width="1.5" PointX="3.125" PointY="10.125" Height="2.3648893229166656" IsExpanded="true" />

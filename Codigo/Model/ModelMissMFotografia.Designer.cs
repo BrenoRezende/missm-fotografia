@@ -3229,19 +3229,13 @@ namespace Model
         /// </summary>
         /// <param name="idProduto">Initial value of the idProduto property.</param>
         /// <param name="nomeProduto">Initial value of the nomeProduto property.</param>
-        /// <param name="formato">Initial value of the formato property.</param>
         /// <param name="valorDoProduto">Initial value of the valorDoProduto property.</param>
-        /// <param name="numeroDePaginas">Initial value of the numeroDePaginas property.</param>
-        /// <param name="numeroDeImagens">Initial value of the numeroDeImagens property.</param>
-        public static tb_produto Createtb_produto(global::System.Int32 idProduto, global::System.String nomeProduto, global::System.String formato, global::System.Decimal valorDoProduto, global::System.Int32 numeroDePaginas, global::System.Int32 numeroDeImagens)
+        public static tb_produto Createtb_produto(global::System.Int32 idProduto, global::System.String nomeProduto, global::System.Decimal valorDoProduto)
         {
             tb_produto tb_produto = new tb_produto();
             tb_produto.idProduto = idProduto;
             tb_produto.nomeProduto = nomeProduto;
-            tb_produto.formato = formato;
             tb_produto.valorDoProduto = valorDoProduto;
-            tb_produto.numeroDePaginas = numeroDePaginas;
-            tb_produto.numeroDeImagens = numeroDeImagens;
             return tb_produto;
         }
 
@@ -3303,7 +3297,7 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String formato
         {
@@ -3315,7 +3309,7 @@ namespace Model
             {
                 OnformatoChanging(value);
                 ReportPropertyChanging("formato");
-                _formato = StructuralObject.SetValidValue(value, false);
+                _formato = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("formato");
                 OnformatoChanged();
             }
@@ -3351,9 +3345,9 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 numeroDePaginas
+        public Nullable<global::System.Int32> numeroDePaginas
         {
             get
             {
@@ -3368,16 +3362,16 @@ namespace Model
                 OnnumeroDePaginasChanged();
             }
         }
-        private global::System.Int32 _numeroDePaginas;
-        partial void OnnumeroDePaginasChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _numeroDePaginas;
+        partial void OnnumeroDePaginasChanging(Nullable<global::System.Int32> value);
         partial void OnnumeroDePaginasChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 numeroDeImagens
+        public Nullable<global::System.Int32> numeroDeImagens
         {
             get
             {
@@ -3392,8 +3386,8 @@ namespace Model
                 OnnumeroDeImagensChanged();
             }
         }
-        private global::System.Int32 _numeroDeImagens;
-        partial void OnnumeroDeImagensChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _numeroDeImagens;
+        partial void OnnumeroDeImagensChanging(Nullable<global::System.Int32> value);
         partial void OnnumeroDeImagensChanged();
 
         #endregion

@@ -12,9 +12,9 @@ namespace Model.Models
     {       
         public int IdProduto { get; set; }        
         public string NomeProduto { get; set; }        
-        public int NumeroDePaginas { get; set; }
+        public int? NumeroDePaginas { get; set; }
         public string Formato { get; set; }
-        public int NumeroDeImagens { get; set; }
+        public int? NumeroDeImagens { get; set; }
         public decimal ValorDoProduto { get; set; }
 
         public int IdServico { get; set; }        
