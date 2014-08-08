@@ -6,6 +6,14 @@
     <edmx:StorageModels>
     <Schema Namespace="missmfotografiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="missmfotografiaModelStoreContainer">
+          <EntitySet Name="my_aspnet_applications" EntityType="missmfotografiaModel.Store.my_aspnet_applications" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_membership" EntityType="missmfotografiaModel.Store.my_aspnet_membership" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="missmfotografiaModel.Store.my_aspnet_profiles" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_roles" EntityType="missmfotografiaModel.Store.my_aspnet_roles" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="missmfotografiaModel.Store.my_aspnet_sessioncleanup" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="missmfotografiaModel.Store.my_aspnet_sessions" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_users" EntityType="missmfotografiaModel.Store.my_aspnet_users" store:Type="Tables" Schema="missmfotografia" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="missmfotografiaModel.Store.my_aspnet_usersinroles" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.Store.tb_agenda" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_contas_receber" EntityType="missmfotografiaModel.Store.tb_contas_receber" store:Type="Tables" Schema="missmfotografia" />
           <EntitySet Name="tb_evento" EntityType="missmfotografiaModel.Store.tb_evento" store:Type="Tables" Schema="missmfotografia" />
@@ -68,7 +76,7 @@
             <End Role="tb_contas_receber" EntitySet="tb_contas_receber" />
           </AssociationSet>
           <AssociationSet Name="6" Association="missmfotografiaModel.Store.6">
-            <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+            <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
             <End Role="tb_agenda" EntitySet="tb_agenda" />
           </AssociationSet>
           <AssociationSet Name="9" Association="missmfotografiaModel.Store.9">
@@ -76,6 +84,98 @@
             <End Role="tb_foto" EntitySet="tb_foto" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" MaxLength="256" />
+          <Property Name="description" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" />
+          <Property Name="Comment" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordKey" Type="char" MaxLength="32" />
+          <Property Name="PasswordFormat" Type="tinyint" />
+          <Property Name="PasswordQuestion" Type="varchar" MaxLength="255" />
+          <Property Name="PasswordAnswer" Type="varchar" MaxLength="255" />
+          <Property Name="IsApproved" Type="bool" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="IsLockedOut" Type="bool" />
+          <Property Name="LastLockedOutDate" Type="datetime" />
+          <Property Name="FailedPasswordAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="valueindex" Type="longtext" />
+          <Property Name="stringdata" Type="longtext" />
+          <Property Name="binarydata" Type="longblob" />
+          <Property Name="lastUpdatedDate" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="LastRun" Type="datetime" Nullable="false" />
+          <Property Name="IntervalMinutes" Type="int" Nullable="false" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="SessionId" Type="varchar" Nullable="false" MaxLength="191" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Expires" Type="datetime" Nullable="false" />
+          <Property Name="LockDate" Type="datetime" Nullable="false" />
+          <Property Name="LockId" Type="int" Nullable="false" />
+          <Property Name="Timeout" Type="int" Nullable="false" />
+          <Property Name="Locked" Type="bool" Nullable="false" />
+          <Property Name="SessionItems" Type="longblob" />
+          <Property Name="Flags" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="isAnonymous" Type="bool" Nullable="false" />
+          <Property Name="lastActivityDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="roleId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_agenda">
           <Key>
             <PropertyRef Name="idAgenda" />
@@ -84,7 +184,7 @@
           <Property Name="nomeAtividade" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="descricaoAtividade" Type="varchar" MaxLength="200" />
           <Property Name="dataAtividade" Type="datetime" Nullable="false" />
-          <Property Name="idFuncionario" Type="int" Nullable="false" />
+          <Property Name="idUsers" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_contas_receber">
           <Key>
@@ -367,14 +467,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="6">
-          <End Role="tb_funcionario" Type="missmfotografiaModel.Store.tb_funcionario" Multiplicity="1" />
+          <End Role="my_aspnet_users" Type="missmfotografiaModel.Store.my_aspnet_users" Multiplicity="1" />
           <End Role="tb_agenda" Type="missmfotografiaModel.Store.tb_agenda" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tb_funcionario">
-              <PropertyRef Name="idFuncionario" />
+            <Principal Role="my_aspnet_users">
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tb_agenda">
-              <PropertyRef Name="idFuncionario" />
+              <PropertyRef Name="idUsers" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -390,6 +490,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.missmfotografia.my_aspnet_schemaversion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="my_aspnet_schemaversion">
+        <Property Name="version" Type="int" />
+      </EntityType>-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -460,8 +566,16 @@
             <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
           </AssociationSet>
           <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.tb_agenda" />
-          <AssociationSet Name="C61" Association="missmfotografiaModel.C61">
-            <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+          <EntitySet Name="my_aspnet_applications" EntityType="missmfotografiaModel.my_aspnet_applications" />
+          <EntitySet Name="my_aspnet_membership" EntityType="missmfotografiaModel.my_aspnet_membership" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="missmfotografiaModel.my_aspnet_profiles" />
+          <EntitySet Name="my_aspnet_roles" EntityType="missmfotografiaModel.my_aspnet_roles" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="missmfotografiaModel.my_aspnet_sessioncleanup" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="missmfotografiaModel.my_aspnet_sessions" />
+          <EntitySet Name="my_aspnet_users" EntityType="missmfotografiaModel.my_aspnet_users" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="missmfotografiaModel.my_aspnet_usersinroles" />
+          <AssociationSet Name="C6" Association="missmfotografiaModel.C6">
+            <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
             <End Role="tb_agenda" EntitySet="tb_agenda" />
           </AssociationSet>
           </EntityContainer>
@@ -504,7 +618,6 @@
           <Property Name="numeroConta" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="idPessoa" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_pessoa" Relationship="missmfotografiaModel.C1" FromRole="tb_funcionario" ToRole="tb_pessoa" />
-          <NavigationProperty Name="tb_agenda" Relationship="missmfotografiaModel.C61" FromRole="tb_funcionario" ToRole="tb_agenda" />
         </EntityType>
         <EntityType Name="tb_pedido">
           <Key>
@@ -792,18 +905,111 @@
           <Property Type="String" Name="nomeAtividade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="descricaoAtividade" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="dataAtividade" Nullable="false" />
-          <Property Type="Int32" Name="idFuncionario" Nullable="false" />
-          <NavigationProperty Name="tb_funcionario" Relationship="missmfotografiaModel.C61" FromRole="tb_agenda" ToRole="tb_funcionario" />
+          <Property Type="Int32" Name="idUsers" Nullable="false" />
+          <NavigationProperty Name="my_aspnet_users" Relationship="missmfotografiaModel.C6" FromRole="tb_agenda" ToRole="my_aspnet_users" />
         </EntityType>
-        <Association Name="C61">
-          <End Type="missmfotografiaModel.tb_funcionario" Role="tb_funcionario" Multiplicity="1" />
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="description" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="String" Name="Email" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PasswordKey" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="SByte" Name="PasswordFormat" />
+          <Property Type="String" Name="PasswordQuestion" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PasswordAnswer" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsApproved" />
+          <Property Type="DateTime" Name="LastActivityDate" />
+          <Property Type="DateTime" Name="LastLoginDate" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" />
+          <Property Type="DateTime" Name="CreationDate" />
+          <Property Type="Boolean" Name="IsLockedOut" />
+          <Property Type="DateTime" Name="LastLockedOutDate" />
+          <Property Type="Int64" Name="FailedPasswordAttemptCount" />
+          <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" />
+          <Property Type="Int64" Name="FailedPasswordAnswerAttemptCount" />
+          <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="String" Name="valueindex" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stringdata" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="binarydata" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="lastUpdatedDate" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="applicationId" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Type="DateTime" Name="LastRun" Nullable="false" />
+          <Property Type="Int32" Name="IntervalMinutes" Nullable="false" />
+          <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Type="String" Name="SessionId" Nullable="false" MaxLength="191" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+          <Property Type="DateTime" Name="Created" Nullable="false" />
+          <Property Type="DateTime" Name="Expires" Nullable="false" />
+          <Property Type="DateTime" Name="LockDate" Nullable="false" />
+          <Property Type="Int32" Name="LockId" Nullable="false" />
+          <Property Type="Int32" Name="Timeout" Nullable="false" />
+          <Property Type="Boolean" Name="Locked" Nullable="false" />
+          <Property Type="Binary" Name="SessionItems" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="Flags" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="applicationId" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="isAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="lastActivityDate" />
+          <NavigationProperty Name="tb_agenda" Relationship="missmfotografiaModel.C6" FromRole="my_aspnet_users" ToRole="tb_agenda" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="Int32" Name="roleId" Nullable="false" />
+        </EntityType>
+        <Association Name="C6">
+          <End Type="missmfotografiaModel.my_aspnet_users" Role="my_aspnet_users" Multiplicity="1" />
           <End Type="missmfotografiaModel.tb_agenda" Role="tb_agenda" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tb_funcionario">
-              <PropertyRef Name="idFuncionario" />
+            <Principal Role="my_aspnet_users">
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tb_agenda">
-              <PropertyRef Name="idFuncionario" />
+              <PropertyRef Name="idUsers" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -964,11 +1170,109 @@
           <EntitySetMapping Name="tb_agenda">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_agenda">
               <MappingFragment StoreEntitySet="tb_agenda">
-                <ScalarProperty Name="idFuncionario" ColumnName="idFuncionario" />
+                <ScalarProperty Name="idUsers" ColumnName="idUsers" />
                 <ScalarProperty Name="dataAtividade" ColumnName="dataAtividade" />
                 <ScalarProperty Name="descricaoAtividade" ColumnName="descricaoAtividade" />
                 <ScalarProperty Name="nomeAtividade" ColumnName="nomeAtividade" />
                 <ScalarProperty Name="idAgenda" ColumnName="idAgenda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_applications">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_applications">
+              <MappingFragment StoreEntitySet="my_aspnet_applications">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_membership">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_membership">
+              <MappingFragment StoreEntitySet="my_aspnet_membership">
+                <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_profiles">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_profiles">
+              <MappingFragment StoreEntitySet="my_aspnet_profiles">
+                <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+                <ScalarProperty Name="binarydata" ColumnName="binarydata" />
+                <ScalarProperty Name="stringdata" ColumnName="stringdata" />
+                <ScalarProperty Name="valueindex" ColumnName="valueindex" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_roles">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_roles">
+              <MappingFragment StoreEntitySet="my_aspnet_roles">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessioncleanup">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_sessioncleanup">
+              <MappingFragment StoreEntitySet="my_aspnet_sessioncleanup">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="IntervalMinutes" ColumnName="IntervalMinutes" />
+                <ScalarProperty Name="LastRun" ColumnName="LastRun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessions">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_sessions">
+              <MappingFragment StoreEntitySet="my_aspnet_sessions">
+                <ScalarProperty Name="Flags" ColumnName="Flags" />
+                <ScalarProperty Name="SessionItems" ColumnName="SessionItems" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+                <ScalarProperty Name="LockId" ColumnName="LockId" />
+                <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+                <ScalarProperty Name="Expires" ColumnName="Expires" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_users">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_users">
+              <MappingFragment StoreEntitySet="my_aspnet_users">
+                <ScalarProperty Name="lastActivityDate" ColumnName="lastActivityDate" />
+                <ScalarProperty Name="isAnonymous" ColumnName="isAnonymous" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_usersinroles">
+            <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_usersinroles">
+              <MappingFragment StoreEntitySet="my_aspnet_usersinroles">
+                <ScalarProperty Name="roleId" ColumnName="roleId" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1010,8 +1314,8 @@
           <ConnectorPoint PointX="13.5" PointY="3.8362939453125051" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C11" >
-          <ConnectorPoint PointX="17.375" PointY="3.7401432291666623" />
-          <ConnectorPoint PointX="16.25" PointY="3.7401432291666623" />
+          <ConnectorPoint PointX="17.375" PointY="4.2951871744791639" />
+          <ConnectorPoint PointX="16.25" PointY="4.2951871744791639" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C9" ManuallyRouted="true" >
           <ConnectorPoint PointX="15.390188046412781" PointY="2.7499999999999996" />
@@ -1022,7 +1326,7 @@
         <AssociationConnector Association="missmfotografiaModel.C3" ManuallyRouted="true" >
           <ConnectorPoint PointX="9.105148653023388" PointY="6.625" />
           <ConnectorPoint PointX="9.105148653023388" PointY="6.2398893229166656" />
-          <ConnectorPoint PointX="10.690972222222221" PointY="6.2398893229166656" />
+          <ConnectorPoint PointX="11.065972222222221" PointY="3.8362939453125051" />
           <ConnectorPoint PointX="10.690972222222221" PointY="3.8362939453125051" />
           <ConnectorPoint PointX="11.5" PointY="3.8362939453125051" />
         </AssociationConnector>
@@ -1042,8 +1346,8 @@
           <ConnectorPoint PointX="5.5" PointY="8.77427978515625" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C2" >
-          <ConnectorPoint PointX="4.625" PointY="5.4949446614583328" />
-          <ConnectorPoint PointX="8.25" PointY="5.4949446614583328" />
+          <ConnectorPoint PointX="4.625" PointY="5.6990364583333344" />
+          <ConnectorPoint PointX="8.25" PointY="5.6990364583333344" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C1" >
           <ConnectorPoint PointX="3.875" PointY="9.6725065104166674" />
@@ -1062,11 +1366,18 @@
           <ConnectorPoint PointX="14.75" PointY="6.8699446614583337" />
           <ConnectorPoint PointX="13.125" PointY="6.8699446614583337" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="18" PointY="6" Height="2.3648893229166656" />
-        <AssociationConnector Association="missmfotografiaModel.C61" >
-          <ConnectorPoint PointX="4.625" PointY="11.8047900390625" />
-          <ConnectorPoint PointX="18.75" PointY="11.8047900390625" />
-          <ConnectorPoint PointX="18.75" PointY="8.3648893229166656" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="18" PointY="6" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_applications" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_membership" Width="1.5" PointX="0.75" PointY="4.75" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_profiles" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_roles" Width="1.5" PointX="5.75" PointY="3.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_sessioncleanup" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_sessions" Width="1.5" PointX="0.75" PointY="10.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_users" Width="1.5" PointX="21.5" PointY="4.875" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_usersinroles" Width="1.5" PointX="8.75" PointY="0.75" Height="1.4033821614583388" />
+        <AssociationConnector Association="missmfotografiaModel.C6" >
+          <ConnectorPoint PointX="21.5" PointY="6.5237939453125016" />
+          <ConnectorPoint PointX="19.5" PointY="6.5237939453125016" />
         </AssociationConnector>
         </Diagram>
     </Diagrams>
