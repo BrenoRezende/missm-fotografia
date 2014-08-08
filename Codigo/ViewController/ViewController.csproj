@@ -126,6 +126,9 @@
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Views\Agenda\AgendaEventos.aspx" />
     <Content Include="Views\Agenda\Create.aspx" />
+    <Content Include="Views\Agenda\Delete.aspx" />
+    <Content Include="Views\Agenda\Details.aspx" />
+    <Content Include="Views\Agenda\Edit.aspx" />
     <Content Include="Views\Agenda\Index.aspx" />
     <Content Include="Views\Funcionario\Create.aspx" />
     <Content Include="Views\Funcionario\Delete.aspx" />
