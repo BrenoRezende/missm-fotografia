@@ -119,9 +119,9 @@ namespace Service
         /// </summary>
         /// <param name="nome">Nome do agenda que será buscado base de dados</param>
         /// <returns>AgendaModel</returns>
-        public IEnumerable<AgendaModel> ObterPorNome(string nome)
+        public IEnumerable<AgendaModel> ObterPorUsuario(int idUser)
         {
-            IEnumerable<AgendaModel> agendas = this.GetQuery().Where(agendaModel => agendaModel.Nome.StartsWith(nome));
+            IEnumerable<AgendaModel> agendas = this.GetQuery().Where(agendaModel => agendaModel.IdUsers.Equals(idUser));
             return agendas;
         }
 
