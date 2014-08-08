@@ -46,7 +46,8 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            AgendaModel agendaModel = this.gAgenda.Obter(id);
+            return View(agendaModel);
         }
 
         // GET: /Agenda/Create
@@ -75,49 +76,43 @@ namespace ViewController.Controllers
  
         public ActionResult Edit(int id)
         {
-
-            return View();
+            AgendaModel agendaModel = this.gAgenda.Obter(id);
+            return View(agendaModel);
         }
 
         // POST: /Agenda/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(AgendaModel agendaModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
- 
+                this.gAgenda.Editar(agendaModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(agendaModel);
         }
 
         // GET: /Agenda/Delete/5
  
         public ActionResult Delete(int id)
         {
-            return View();
+            AgendaModel agendaModel = this.gAgenda.Obter(id);
+            return View(agendaModel);
         }
 
         // POST: /Agenda/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            this.gAgenda.Remover(id);
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
     }
 }
