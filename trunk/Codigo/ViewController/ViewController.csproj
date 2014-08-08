@@ -124,6 +124,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Views\Agenda\AgendaEventos.aspx" />
+    <Content Include="Views\Agenda\Create.aspx" />
+    <Content Include="Views\Agenda\Index.aspx" />
     <Content Include="Views\Funcionario\Create.aspx" />
     <Content Include="Views\Funcionario\Delete.aspx" />
     <Content Include="Views\Funcionario\Details.aspx" />

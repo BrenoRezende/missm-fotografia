@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Model.Models;
 using Model;
 using Service;
@@ -13,6 +14,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace ViewController.Controllers
 {
+    [Authorize]
     public class AgendaController : Controller
     {
 
@@ -29,9 +31,10 @@ namespace ViewController.Controllers
 
         public ActionResult Index()
         {
-            return View(this.gAgenda.ObterTodos());
+            int id = Convert.ToInt32(Membership.GetUser().ProviderUserKey.ToString());
+            return View(this.gAgenda.ObterPorUsuario(id));
         }
-
+        
         // GET: /Agenda/AgendaEventos
 
         public ActionResult AgendaEventos()
@@ -39,7 +42,6 @@ namespace ViewController.Controllers
             return View(this.gEvento.ObterTodos());
         }
 
-        //
         // GET: /Agenda/Details/5
 
         public ActionResult Details(int id)
@@ -47,7 +49,6 @@ namespace ViewController.Controllers
             return View();
         }
 
-        //
         // GET: /Agenda/Create
 
         public ActionResult Create()
@@ -55,33 +56,29 @@ namespace ViewController.Controllers
             return View();
         } 
 
-        //
         // POST: /Agenda/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(AgendaModel agendaModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                string id = Membership.GetUser().ProviderUserKey.ToString();
+                agendaModel.IdUsers = Convert.ToInt32(id);
+                this.gAgenda.Inserir(agendaModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(agendaModel);
         }
         
-        //
         // GET: /Agenda/Edit/5
  
         public ActionResult Edit(int id)
         {
+
             return View();
         }
 
-        //
         // POST: /Agenda/Edit/5
 
         [HttpPost]
@@ -99,7 +96,6 @@ namespace ViewController.Controllers
             }
         }
 
-        //
         // GET: /Agenda/Delete/5
  
         public ActionResult Delete(int id)
@@ -107,7 +103,6 @@ namespace ViewController.Controllers
             return View();
         }
 
-        //
         // POST: /Agenda/Delete/5
 
         [HttpPost]
