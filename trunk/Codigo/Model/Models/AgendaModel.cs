@@ -30,6 +30,6 @@ namespace Model.Models
         [DataType(DataType.DateTime)]
         public DateTime Data { get; set; }
 
-        public int IdFuncionario { get; set; }
+        public int IdUsers { get; set; }
     }
 }
