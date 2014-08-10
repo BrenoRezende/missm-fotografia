@@ -1,28 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.AgendaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Delete
+    Remover Atividade da Agenda
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Remover Atividade da Agenda</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja remover essa atividade?</h3>
 <fieldset>
-    <legend>AgendaModel</legend>
-
-    <div class="display-label">IdAgenda</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdAgenda) %>
-    </div>
+    <legend>Dados da Atividade</legend>
 
     <div class="display-label">Nome</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
-    <div class="display-label">Descricao</div>
+    <div class="display-label">Descrição</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Descricao) %>
     </div>
@@ -32,15 +27,11 @@
         <%: Html.DisplayFor(model => model.Data) %>
     </div>
 
-    <div class="display-label">IdUsers</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdUsers) %>
-    </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <input type="submit" value="Remover" /> |
+        <%: Html.ActionLink("Voltar", "Index") %>
     </p>
 <% } %>
 

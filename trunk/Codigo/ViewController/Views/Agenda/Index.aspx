@@ -1,61 +1,83 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Model.Models.AgendaModel>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    Agenda
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
-
-<p>
-    <%: Html.ActionLink("Create New", "Create") %>
-</p>
-<table>
-    <tr>
-        <th>
-            IdAgenda
-        </th>
-        <th>
-            Nome
-        </th>
-        <th>
-            Descricao
-        </th>
-        <th>
-            Data
-        </th>
-        <th>
-            IdUsers
-        </th>
-        <th></th>
-    </tr>
-
-<% foreach (var item in Model) { %>
-    <tr>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IdAgenda) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Nome) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Descricao) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Data) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IdUsers) %>
-        </td>
-        <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdAgenda }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id = item.IdAgenda })%> |
-            <%: Html.ActionLink("Delete", "Delete", new { id = item.IdAgenda })%>
-        </td>
-    </tr>
-<% } %>
-
-</table>
-
+<fieldset>
+        <legend>Agenda Pessoal</legend>
+        <p>
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Data
+                </th>
+                <th></th>
+            </tr>
+            <% foreach (var item in ViewBag.ListaAgenda)
+               { %>
+            <tr>
+                <td>
+                    <%: item.Nome %>
+                </td>
+                <td>
+                    <%: item.Descricao %>
+                </td>
+                <td>
+                    <%: item.Data%>
+                </td>
+                <td>
+                     <%: Html.ActionLink("Editar", "Edit", new { id=item.IdAgenda }) %> |
+                     <%: Html.ActionLink("Detalhes", "Details", new { id = item.IdAgenda })%> |
+                     <%: Html.ActionLink("Remover", "Delete", new { id = item.IdAgenda })%>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+        <p>
+            <%: Html.ActionLink("Cadastrar Nova Atividade", "Create") %>
+        </p>
+</fieldset>
+    <p></p>
+<fieldset>
+    <legend>Agenda de Eventos</legend>
+        <p>
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Tipo do Evento
+                </th>
+                <th>
+                    Data
+                </th>
+            </tr>
+            <% foreach (var item in ViewBag.ListaEvento)
+               { %>
+            <tr>
+                <td>
+                    <%: item.Nome %>
+                </td>
+                <td>
+                    <%: item.NomeTipoEvento %>
+                </td>
+                <td>
+                    <%: item.Data%>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+</fieldset>
 </asp:Content>
