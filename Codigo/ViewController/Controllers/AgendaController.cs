@@ -14,7 +14,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace ViewController.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Funcionario")]
     public class AgendaController : Controller
     {
 

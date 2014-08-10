@@ -12,6 +12,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace ViewController.Controllers
 {
+    [Authorize(Roles = "Funcionario")]
     public class OrcamentoController : Controller
     {
         private GerenciadorOrcamento gOrcamento;
