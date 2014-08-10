@@ -32,14 +32,9 @@ namespace ViewController.Controllers
         public ActionResult Index()
         {
             int id = Convert.ToInt32(Membership.GetUser().ProviderUserKey.ToString());
-            return View(this.gAgenda.ObterPorUsuario(id));
-        }
-        
-        // GET: /Agenda/AgendaEventos
-
-        public ActionResult AgendaEventos()
-        {
-            return View(this.gEvento.ObterTodos());
+            ViewBag.ListaAgenda = this.gAgenda.ObterPorUsuario(id);
+            ViewBag.ListaEvento = this.gEvento.ObterTodos();
+            return View();
         }
 
         // GET: /Agenda/Details/5
