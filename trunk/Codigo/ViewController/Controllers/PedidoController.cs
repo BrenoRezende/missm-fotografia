@@ -11,6 +11,7 @@ using System.Web.Helpers;
 
 namespace ViewController.Controllers
 {
+    [Authorize(Roles = "Funcionario")]
     public class PedidoController : Controller
     {
         private GerenciadorPedido gPedido;
