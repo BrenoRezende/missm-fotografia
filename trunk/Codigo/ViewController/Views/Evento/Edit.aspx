@@ -36,7 +36,7 @@ Editar Evento
         </div>
         <p></p>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Data) %>
+            <%: Html.TextBoxFor(model => model.Data, new { @class = "ui-datepicker" })%>
             <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
         <p></p>
