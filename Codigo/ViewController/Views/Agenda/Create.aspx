@@ -36,12 +36,12 @@
             <%: Html.LabelFor(model => model.Data) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Data) %>
+            <%: Html.TextBoxFor(model => model.Data, new { @class = "ui-datepicker" })%>
             <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Cadastrar Atividade" />
         </p>
     </fieldset>
 <% } %>
