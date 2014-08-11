@@ -21,6 +21,9 @@
                 <th>
                     Data
                 </th>
+                <th>
+                    Status
+                </th>
                 <th></th>
             </tr>
             <% foreach (var item in ViewBag.ListaAgenda)
@@ -34,6 +37,9 @@
                 </td>
                 <td>
                     <%: item.Data%>
+                </td>
+                <td>
+                    <%: item.Status%>
                 </td>
                 <td>
                      <%: Html.ActionLink("Editar", "Edit", new { id=item.IdAgenda }) %> |

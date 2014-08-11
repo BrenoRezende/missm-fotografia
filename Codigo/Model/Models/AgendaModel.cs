@@ -30,6 +30,10 @@ namespace Model.Models
         [DataType(DataType.DateTime)]
         public DateTime Data { get; set; }
 
+        [Required(ErrorMessageResourceType = typeof(Mensagens),
+            ErrorMessageResourceName = "erro_requerido")]
+        public string Status { get; set; }
+
         public int IdUsers { get; set; }
     }
 }

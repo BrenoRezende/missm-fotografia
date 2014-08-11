@@ -2150,7 +2150,8 @@ namespace Model
         /// <param name="descricaoAtividade">Initial value of the descricaoAtividade property.</param>
         /// <param name="dataAtividade">Initial value of the dataAtividade property.</param>
         /// <param name="idUsers">Initial value of the idUsers property.</param>
-        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.String descricaoAtividade, global::System.DateTime dataAtividade, global::System.Int32 idUsers)
+        /// <param name="status">Initial value of the status property.</param>
+        public static tb_agenda Createtb_agenda(global::System.Int32 idAgenda, global::System.String nomeAtividade, global::System.String descricaoAtividade, global::System.DateTime dataAtividade, global::System.Int32 idUsers, global::System.String status)
         {
             tb_agenda tb_agenda = new tb_agenda();
             tb_agenda.idAgenda = idAgenda;
@@ -2158,6 +2159,7 @@ namespace Model
             tb_agenda.descricaoAtividade = descricaoAtividade;
             tb_agenda.dataAtividade = dataAtividade;
             tb_agenda.idUsers = idUsers;
+            tb_agenda.status = status;
             return tb_agenda;
         }
 
@@ -2287,6 +2289,30 @@ namespace Model
         private global::System.Int32 _idUsers;
         partial void OnidUsersChanging(global::System.Int32 value);
         partial void OnidUsersChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String status
+        {
+            get
+            {
+                return _status;
+            }
+            set
+            {
+                OnstatusChanging(value);
+                ReportPropertyChanging("status");
+                _status = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("status");
+                OnstatusChanged();
+            }
+        }
+        private global::System.String _status;
+        partial void OnstatusChanging(global::System.String value);
+        partial void OnstatusChanged();
 
         #endregion
 

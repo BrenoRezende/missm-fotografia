@@ -87,6 +87,7 @@ namespace Service
                             Nome = agenda.nomeAtividade,
                             Descricao = agenda.descricaoAtividade,
                             Data = agenda.dataAtividade,
+                            Status = agenda.status,
                             IdUsers = agenda.idUsers
                         };
             return query;
@@ -136,6 +137,7 @@ namespace Service
             agendaE.nomeAtividade = agendaModel.Nome;
             agendaE.descricaoAtividade = agendaModel.Descricao;
             agendaE.dataAtividade = agendaModel.Data;
+            agendaE.status = agendaModel.Status;
             agendaE.idUsers = agendaModel.IdUsers;
         }
     }

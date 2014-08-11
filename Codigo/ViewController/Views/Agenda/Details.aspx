@@ -26,6 +26,11 @@
         <%: Html.DisplayFor(model => model.Data) %>
     </div>
 
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Status) %>
+    </div>
+
 </fieldset>
 <p>
     <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdAgenda }) %> |

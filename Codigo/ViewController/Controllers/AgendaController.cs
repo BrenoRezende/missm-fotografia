@@ -49,6 +49,13 @@ namespace ViewController.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.Status = new SelectList(new[]
+            {
+               new {Valor = "Pendente", Texto = "Pendente"},
+               new {Valor = "Em Execução", Texto = "Em Execução"},
+               new {Valor = "Concluído", Texto = "Concluído"},
+               
+            }, "Valor", "Texto");
             return View();
         } 
 
@@ -72,6 +79,13 @@ namespace ViewController.Controllers
         public ActionResult Edit(int id)
         {
             AgendaModel agendaModel = this.gAgenda.Obter(id);
+            ViewBag.Status = new SelectList(new[]
+            {
+               new {Valor = "Pendente", Texto = "Pendente"},
+               new {Valor = "Em Execução", Texto = "Em Execução"},
+               new {Valor = "Concluído", Texto = "Concluído"},
+               
+            }, "Valor", "Texto",agendaModel.Status);
             return View(agendaModel);
         }
 
