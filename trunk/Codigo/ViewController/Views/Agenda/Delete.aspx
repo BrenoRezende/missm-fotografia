@@ -27,6 +27,11 @@
         <%: Html.DisplayFor(model => model.Data) %>
     </div>
 
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Status) %>
+    </div>
+
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>

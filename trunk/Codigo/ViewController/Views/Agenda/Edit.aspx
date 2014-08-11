@@ -45,6 +45,14 @@
             <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
 
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Status) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.Status, ViewBag.Status as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.Status) %>
+        </div>
+
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdUsers) %>
             <%: Html.ValidationMessageFor(model => model.IdUsers) %>
