@@ -20,7 +20,7 @@
             <div id="title">
                 <img src="../../Content/logo.png" alt="MissM|Fotografia" style="width: 352px"/>
             </div>
-            <br /><br /><br />
+            <br /><br />
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div>
