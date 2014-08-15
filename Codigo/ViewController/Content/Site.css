@@ -4,7 +4,7 @@ to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
 body {
-    background-color: #5c87b2;
+    background-color: #DCDCDC;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -76,6 +76,66 @@ h5, h6 {
 
 /* you can specify a greater or lesser percentage for the 
 page width. Or, you can specify an exact pixel width. */
+
+.menu 
+{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 45px;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+
+    background: -webkit-linear-gradient(#9D9D85, #5E5E50); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#9D9D85, #5E5E50); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#9D9D85, #5E5E50); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#9D9D85, #5E5E50); /* Standard syntax (must be last) */
+}
+
+.itemMenu
+{
+    display: inline;
+    list-style: none;
+}
+
+
+.itemMenu a
+{
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    height: 40%;
+    width: auto;  
+    border-right: #7C7C79 solid 1px;
+    padding: 10px 20px;
+    line-height: 3.3em;
+    display: inline;
+    color: #F5F5F4;
+}
+
+.itemMenu a:hover
+{
+    text-decoration: none;   
+    
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    
+    background-color: rgba(255,255,255,0.4);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.itemMenu a:active
+{
+    background-color: #4A4A49;
+    text-decoration: none;
+}
+
 .page {
     width: 90%;
     margin-left: auto;
