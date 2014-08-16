@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="missmfotografiaModelStoreContainer" CdmEntityContainer="missmfotografiaEntities">
+    <EntitySetMapping Name="tb_contas_receber">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_contas_receber">
+        <MappingFragment StoreEntitySet="tb_contas_receber">
+          <ScalarProperty Name="idContasReceber" ColumnName="idContasReceber" />
+          <ScalarProperty Name="statusPagamento" ColumnName="statusPagamento" />
+          <ScalarProperty Name="tipoPagamento" ColumnName="tipoPagamento" />
+          <ScalarProperty Name="valorReceber" ColumnName="valorReceber" />
+          <ScalarProperty Name="dataVencimento" ColumnName="dataVencimento" />
+          <ScalarProperty Name="dataPagamento" ColumnName="dataPagamento" />
+          <ScalarProperty Name="valorPago" ColumnName="valorPago" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_foto">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_foto">
+        <MappingFragment StoreEntitySet="tb_foto">
+          <ScalarProperty Name="idFoto" ColumnName="idFoto" />
+          <ScalarProperty Name="imagem" ColumnName="imagem" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_funcionario">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_funcionario">
+        <MappingFragment StoreEntitySet="tb_funcionario">
+          <ScalarProperty Name="idFuncionario" ColumnName="idFuncionario" />
+          <ScalarProperty Name="tipoConta" ColumnName="tipoConta" />
+          <ScalarProperty Name="banco" ColumnName="banco" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numeroConta" ColumnName="numeroConta" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido">
+        <MappingFragment StoreEntitySet="tb_pedido">
+          <ScalarProperty Name="statusContrato" ColumnName="statusContrato" />
+          <ScalarProperty Name="dataEmissao" ColumnName="dataEmissao" />
+          <ScalarProperty Name="statusPedido" ColumnName="statusPedido" />
+          <ScalarProperty Name="valorPedido" ColumnName="valorPedido" />
+          <ScalarProperty Name="dataCriacao" ColumnName="dataCriacao" />
+          <ScalarProperty Name="nomePedido" ColumnName="nomePedido" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_servico">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_servico">
+        <MappingFragment StoreEntitySet="tb_servico">
+          <ScalarProperty Name="valorCobradoAoCliente" ColumnName="valorCobradoAoCliente" />
+          <ScalarProperty Name="valorServico" ColumnName="valorServico" />
+          <ScalarProperty Name="telefoneParceiro" ColumnName="telefoneParceiro" />
+          <ScalarProperty Name="nomeParceiro" ColumnName="nomeParceiro" />
+          <ScalarProperty Name="nomeServico" ColumnName="nomeServico" />
+          <ScalarProperty Name="idServico" ColumnName="idServico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_evento">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_evento">
+        <MappingFragment StoreEntitySet="tb_evento">
+          <ScalarProperty Name="dataEvento" ColumnName="dataEvento" />
+          <ScalarProperty Name="nomeEvento" ColumnName="nomeEvento" />
+          <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido_tb_evento">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_evento">
+        <MappingFragment StoreEntitySet="tb_pedido_tb_evento">
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idPedidoEvento" ColumnName="idPedidoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_evento">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_tipo_evento">
+        <MappingFragment StoreEntitySet="tb_tipo_evento">
+          <ScalarProperty Name="valorTipoEvento" ColumnName="valorTipoEvento" />
+          <ScalarProperty Name="totalConvidados" ColumnName="totalConvidados" />
+          <ScalarProperty Name="nomeTipoEvento" ColumnName="nomeTipoEvento" />
+          <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido_tb_servico">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_servico">
+        <MappingFragment StoreEntitySet="tb_pedido_tb_servico">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="idServico" ColumnName="idServico" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idPedidoServico" ColumnName="idPedidoServico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_produto">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_produto">
+        <MappingFragment StoreEntitySet="tb_produto">
+          <ScalarProperty Name="numeroDeImagens" ColumnName="numeroDeImagens" />
+          <ScalarProperty Name="numeroDePaginas" ColumnName="numeroDePaginas" />
+          <ScalarProperty Name="valorDoProduto" ColumnName="valorDoProduto" />
+          <ScalarProperty Name="formato" ColumnName="formato" />
+          <ScalarProperty Name="nomeProduto" ColumnName="nomeProduto" />
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pessoa">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pessoa">
+        <MappingFragment StoreEntitySet="tb_pessoa">
+          <ScalarProperty Name="tipoPessoa" ColumnName="tipoPessoa" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="rua" ColumnName="rua" />
+          <ScalarProperty Name="senhaPessoa" ColumnName="senhaPessoa" />
+          <ScalarProperty Name="emailPessoa" ColumnName="emailPessoa" />
+          <ScalarProperty Name="telefonePessoa" ColumnName="telefonePessoa" />
+          <ScalarProperty Name="dataNascimentoPessoa" ColumnName="dataNascimentoPessoa" />
+          <ScalarProperty Name="sexoPessoa" ColumnName="sexoPessoa" />
+          <ScalarProperty Name="cpfPessoa" ColumnName="cpfPessoa" />
+          <ScalarProperty Name="nomePessoa" ColumnName="nomePessoa" />
+          <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido_tb_produto">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_produto">
+        <MappingFragment StoreEntitySet="tb_pedido_tb_produto">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="idPedidoProduto" ColumnName="idPedidoProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_agenda">
+      <EntityTypeMapping TypeName="missmfotografiaModel.tb_agenda">
+        <MappingFragment StoreEntitySet="tb_agenda">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="idUsers" ColumnName="idUsers" />
+          <ScalarProperty Name="dataAtividade" ColumnName="dataAtividade" />
+          <ScalarProperty Name="descricaoAtividade" ColumnName="descricaoAtividade" />
+          <ScalarProperty Name="nomeAtividade" ColumnName="nomeAtividade" />
+          <ScalarProperty Name="idAgenda" ColumnName="idAgenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_applications">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_applications">
+        <MappingFragment StoreEntitySet="my_aspnet_applications">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_membership">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_membership">
+        <MappingFragment StoreEntitySet="my_aspnet_membership">
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_profiles">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_profiles">
+        <MappingFragment StoreEntitySet="my_aspnet_profiles">
+          <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+          <ScalarProperty Name="binarydata" ColumnName="binarydata" />
+          <ScalarProperty Name="stringdata" ColumnName="stringdata" />
+          <ScalarProperty Name="valueindex" ColumnName="valueindex" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_roles">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_roles">
+        <MappingFragment StoreEntitySet="my_aspnet_roles">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_sessioncleanup">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_sessioncleanup">
+        <MappingFragment StoreEntitySet="my_aspnet_sessioncleanup">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="IntervalMinutes" ColumnName="IntervalMinutes" />
+          <ScalarProperty Name="LastRun" ColumnName="LastRun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_sessions">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_sessions">
+        <MappingFragment StoreEntitySet="my_aspnet_sessions">
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="SessionItems" ColumnName="SessionItems" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+          <ScalarProperty Name="LockId" ColumnName="LockId" />
+          <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+          <ScalarProperty Name="Expires" ColumnName="Expires" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_users">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_users">
+        <MappingFragment StoreEntitySet="my_aspnet_users">
+          <ScalarProperty Name="lastActivityDate" ColumnName="lastActivityDate" />
+          <ScalarProperty Name="isAnonymous" ColumnName="isAnonymous" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="my_aspnet_usersinroles">
+      <EntityTypeMapping TypeName="missmfotografiaModel.my_aspnet_usersinroles">
+        <MappingFragment StoreEntitySet="my_aspnet_usersinroles">
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

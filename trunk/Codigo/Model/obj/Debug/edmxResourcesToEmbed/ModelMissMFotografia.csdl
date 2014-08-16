@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="missmfotografiaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="missmfotografiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_contas_receber" EntityType="missmfotografiaModel.tb_contas_receber" />
+    <EntitySet Name="tb_foto" EntityType="missmfotografiaModel.tb_foto" />
+    <EntitySet Name="tb_funcionario" EntityType="missmfotografiaModel.tb_funcionario" />
+    <EntitySet Name="tb_pedido" EntityType="missmfotografiaModel.tb_pedido" />
+    <AssociationSet Name="C20" Association="missmfotografiaModel.C20">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_contas_receber" EntitySet="tb_contas_receber" />
+    </AssociationSet>
+    <EntitySet Name="tb_servico" EntityType="missmfotografiaModel.tb_servico" />
+    <EntitySet Name="tb_evento" EntityType="missmfotografiaModel.tb_evento" />
+    <EntitySet Name="tb_pedido_tb_evento" EntityType="missmfotografiaModel.tb_pedido_tb_evento" />
+    <EntitySet Name="tb_tipo_evento" EntityType="missmfotografiaModel.tb_tipo_evento" />
+    <AssociationSet Name="C10" Association="missmfotografiaModel.C10">
+      <End Role="tb_evento" EntitySet="tb_evento" />
+      <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
+    </AssociationSet>
+    <AssociationSet Name="C11" Association="missmfotografiaModel.C11">
+      <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
+      <End Role="tb_evento" EntitySet="tb_evento" />
+    </AssociationSet>
+    <AssociationSet Name="C9" Association="missmfotografiaModel.C9">
+      <End Role="tb_evento" EntitySet="tb_evento" />
+      <End Role="tb_foto" EntitySet="tb_foto" />
+    </AssociationSet>
+    <AssociationSet Name="C3" Association="missmfotografiaModel.C3">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
+    </AssociationSet>
+    <EntitySet Name="tb_pedido_tb_servico" EntityType="missmfotografiaModel.tb_pedido_tb_servico" />
+    <AssociationSet Name="C18" Association="missmfotografiaModel.C18">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_servico" EntitySet="tb_pedido_tb_servico" />
+    </AssociationSet>
+    <AssociationSet Name="C19" Association="missmfotografiaModel.C19">
+      <End Role="tb_servico" EntitySet="tb_servico" />
+      <End Role="tb_pedido_tb_servico" EntitySet="tb_pedido_tb_servico" />
+    </AssociationSet>
+    <EntitySet Name="tb_produto" EntityType="missmfotografiaModel.tb_produto" />
+    <EntitySet Name="tb_pessoa" EntityType="missmfotografiaModel.tb_pessoa" />
+    <AssociationSet Name="C5" Association="missmfotografiaModel.C5">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_contas_receber" EntitySet="tb_contas_receber" />
+    </AssociationSet>
+    <AssociationSet Name="C2" Association="missmfotografiaModel.C2">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_foto" EntitySet="tb_foto" />
+    </AssociationSet>
+    <AssociationSet Name="C1" Association="missmfotografiaModel.C1">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="C4" Association="missmfotografiaModel.C4">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+    </AssociationSet>
+    <EntitySet Name="tb_pedido_tb_produto" EntityType="missmfotografiaModel.tb_pedido_tb_produto" />
+    <AssociationSet Name="C15" Association="missmfotografiaModel.C15">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="C14" Association="missmfotografiaModel.C14">
+      <End Role="tb_produto" EntitySet="tb_produto" />
+      <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
+    </AssociationSet>
+    <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.tb_agenda" />
+    <EntitySet Name="my_aspnet_applications" EntityType="missmfotografiaModel.my_aspnet_applications" />
+    <EntitySet Name="my_aspnet_membership" EntityType="missmfotografiaModel.my_aspnet_membership" />
+    <EntitySet Name="my_aspnet_profiles" EntityType="missmfotografiaModel.my_aspnet_profiles" />
+    <EntitySet Name="my_aspnet_roles" EntityType="missmfotografiaModel.my_aspnet_roles" />
+    <EntitySet Name="my_aspnet_sessioncleanup" EntityType="missmfotografiaModel.my_aspnet_sessioncleanup" />
+    <EntitySet Name="my_aspnet_sessions" EntityType="missmfotografiaModel.my_aspnet_sessions" />
+    <EntitySet Name="my_aspnet_users" EntityType="missmfotografiaModel.my_aspnet_users" />
+    <EntitySet Name="my_aspnet_usersinroles" EntityType="missmfotografiaModel.my_aspnet_usersinroles" />
+    <AssociationSet Name="C6" Association="missmfotografiaModel.C6">
+      <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
+      <End Role="tb_agenda" EntitySet="tb_agenda" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tb_contas_receber">
+    <Key>
+      <PropertyRef Name="idContasReceber" />
+    </Key>
+    <Property Name="idContasReceber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="statusPagamento" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="tipoPagamento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="valorReceber" Type="Single" Nullable="false" />
+    <Property Name="dataVencimento" Type="DateTime" Nullable="false" />
+    <Property Name="dataPagamento" Type="DateTime" />
+    <Property Name="valorPago" Type="Single" />
+    <Property Name="idPessoa" Type="Int32" Nullable="false" />
+    <Property Name="idPedido" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C20" FromRole="tb_contas_receber" ToRole="tb_pedido" />
+    <NavigationProperty Name="tb_pessoa" Relationship="missmfotografiaModel.C5" FromRole="tb_contas_receber" ToRole="tb_pessoa" />
+  </EntityType>
+  <EntityType Name="tb_foto">
+    <Key>
+      <PropertyRef Name="idFoto" />
+    </Key>
+    <Property Name="idFoto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imagem" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="descricao" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="idPessoa" Type="Int32" Nullable="false" />
+    <Property Name="idEvento" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C9" FromRole="tb_foto" ToRole="tb_evento" />
+    <NavigationProperty Name="tb_pessoa" Relationship="missmfotografiaModel.C2" FromRole="tb_foto" ToRole="tb_pessoa" />
+  </EntityType>
+  <EntityType Name="tb_funcionario">
+    <Key>
+      <PropertyRef Name="idFuncionario" />
+    </Key>
+    <Property Name="idFuncionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipoConta" Type="Int32" Nullable="false" />
+    <Property Name="banco" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="agencia" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="numeroConta" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="idPessoa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_pessoa" Relationship="missmfotografiaModel.C1" FromRole="tb_funcionario" ToRole="tb_pessoa" />
+  </EntityType>
+  <EntityType Name="tb_pedido">
+    <Key>
+      <PropertyRef Name="idPedido" />
+    </Key>
+    <Property Type="Int32" Name="idPedido" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="idPessoa" Nullable="false" />
+    <Property Type="String" Name="nomePedido" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataCriacao" Nullable="false" />
+    <Property Type="Decimal" Name="valorPedido" Nullable="false" />
+    <Property Type="String" Name="statusPedido" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataEmissao" Nullable="false" />
+    <Property Type="String" Name="statusContrato" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_contas_receber" Relationship="missmfotografiaModel.C20" FromRole="tb_pedido" ToRole="tb_contas_receber" />
+    <NavigationProperty Name="tb_pedido_tb_evento" Relationship="missmfotografiaModel.C3" FromRole="tb_pedido" ToRole="tb_pedido_tb_evento" />
+    <NavigationProperty Name="tb_pedido_tb_servico" Relationship="missmfotografiaModel.C18" FromRole="tb_pedido" ToRole="tb_pedido_tb_servico" />
+    <NavigationProperty Name="tb_pessoa" Relationship="missmfotografiaModel.C4" FromRole="tb_pedido" ToRole="tb_pessoa" />
+    <NavigationProperty Name="tb_pedido_tb_produto" Relationship="missmfotografiaModel.C15" FromRole="tb_pedido" ToRole="tb_pedido_tb_produto" />
+  </EntityType>
+  <Association Name="C20">
+    <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_contas_receber" Role="tb_contas_receber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_contas_receber">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_servico">
+    <Key>
+      <PropertyRef Name="idServico" />
+    </Key>
+    <Property Type="Int32" Name="idServico" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nomeServico" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nomeParceiro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefoneParceiro" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="valorServico" Nullable="false" />
+    <Property Type="Decimal" Name="valorCobradoAoCliente" Nullable="false" />
+    <NavigationProperty Name="tb_pedido_tb_servico" Relationship="missmfotografiaModel.C19" FromRole="tb_servico" ToRole="tb_pedido_tb_servico" />
+  </EntityType>
+  <EntityType Name="tb_evento">
+    <Key>
+      <PropertyRef Name="idEvento" />
+    </Key>
+    <Property Type="Int32" Name="idEvento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="idTipoEvento" Nullable="false" />
+    <Property Type="String" Name="nomeEvento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataEvento" Nullable="false" />
+    <NavigationProperty Name="tb_pedido_tb_evento" Relationship="missmfotografiaModel.C10" FromRole="tb_evento" ToRole="tb_pedido_tb_evento" />
+    <NavigationProperty Name="tb_tipo_evento" Relationship="missmfotografiaModel.C11" FromRole="tb_evento" ToRole="tb_tipo_evento" />
+    <NavigationProperty Name="tb_foto" Relationship="missmfotografiaModel.C9" FromRole="tb_evento" ToRole="tb_foto" />
+  </EntityType>
+  <EntityType Name="tb_pedido_tb_evento">
+    <Key>
+      <PropertyRef Name="idPedidoEvento" />
+    </Key>
+    <Property Type="Int32" Name="idPedidoEvento" Nullable="false" />
+    <Property Type="Int32" Name="idPedido" Nullable="false" />
+    <Property Type="Int32" Name="idEvento" Nullable="false" />
+    <Property Type="Int32" Name="quantidade" Nullable="false" />
+    <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C10" FromRole="tb_pedido_tb_evento" ToRole="tb_evento" />
+    <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C3" FromRole="tb_pedido_tb_evento" ToRole="tb_pedido" />
+  </EntityType>
+  <EntityType Name="tb_tipo_evento">
+    <Key>
+      <PropertyRef Name="idTipoEvento" />
+    </Key>
+    <Property Type="Int32" Name="idTipoEvento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nomeTipoEvento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="totalConvidados" Nullable="false" />
+    <Property Type="Decimal" Name="valorTipoEvento" Nullable="false" />
+    <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C11" FromRole="tb_tipo_evento" ToRole="tb_evento" />
+  </EntityType>
+  <Association Name="C10">
+    <End Type="missmfotografiaModel.tb_evento" Role="tb_evento" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_evento" Role="tb_pedido_tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C11">
+    <End Type="missmfotografiaModel.tb_tipo_evento" Role="tb_tipo_evento" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_evento" Role="tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipo_evento">
+        <PropertyRef Name="idTipoEvento" />
+      </Principal>
+      <Dependent Role="tb_evento">
+        <PropertyRef Name="idTipoEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C9">
+    <End Type="missmfotografiaModel.tb_evento" Role="tb_evento" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_foto" Role="tb_foto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Principal>
+      <Dependent Role="tb_foto">
+        <PropertyRef Name="idEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C3">
+    <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_evento" Role="tb_pedido_tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_evento">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_pedido_tb_servico">
+    <Key>
+      <PropertyRef Name="idPedidoServico" />
+    </Key>
+    <Property Type="Int32" Name="idPedidoServico" Nullable="false" />
+    <Property Type="Int32" Name="idPedido" Nullable="false" />
+    <Property Type="Int32" Name="idServico" Nullable="false" />
+    <Property Type="Int32" Name="quantidade" Nullable="false" />
+    <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C18" FromRole="tb_pedido_tb_servico" ToRole="tb_pedido" />
+    <NavigationProperty Name="tb_servico" Relationship="missmfotografiaModel.C19" FromRole="tb_pedido_tb_servico" ToRole="tb_servico" />
+    <Property Type="DateTime" Name="data" Nullable="false" />
+  </EntityType>
+  <Association Name="C18">
+    <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_servico" Role="tb_pedido_tb_servico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_servico">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C19">
+    <End Type="missmfotografiaModel.tb_servico" Role="tb_servico" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_servico" Role="tb_pedido_tb_servico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_servico">
+        <PropertyRef Name="idServico" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_servico">
+        <PropertyRef Name="idServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_produto">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Type="Int32" Name="idProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nomeProduto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="formato" Nullable="true" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="valorDoProduto" Nullable="false" />
+    <Property Type="Int32" Name="numeroDePaginas" Nullable="true" />
+    <Property Type="Int32" Name="numeroDeImagens" Nullable="true" />
+    <NavigationProperty Name="tb_pedido_tb_produto" Relationship="missmfotografiaModel.C14" FromRole="tb_produto" ToRole="tb_pedido_tb_produto" />
+  </EntityType>
+  <EntityType Name="tb_pessoa">
+    <Key>
+      <PropertyRef Name="idPessoa" />
+    </Key>
+    <Property Type="Int32" Name="idPessoa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nomePessoa" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cpfPessoa" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sexoPessoa" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataNascimentoPessoa" Nullable="false" />
+    <Property Type="String" Name="telefonePessoa" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="emailPessoa" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="senhaPessoa" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rua" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="numero" Nullable="false" />
+    <Property Type="String" Name="bairro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cidade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tipoPessoa" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_contas_receber" Relationship="missmfotografiaModel.C5" FromRole="tb_pessoa" ToRole="tb_contas_receber" />
+    <NavigationProperty Name="tb_foto" Relationship="missmfotografiaModel.C2" FromRole="tb_pessoa" ToRole="tb_foto" />
+    <NavigationProperty Name="tb_funcionario" Relationship="missmfotografiaModel.C1" FromRole="tb_pessoa" ToRole="tb_funcionario" />
+    <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C4" FromRole="tb_pessoa" ToRole="tb_pedido" />
+  </EntityType>
+  <Association Name="C5">
+    <End Type="missmfotografiaModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_contas_receber" Role="tb_contas_receber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_contas_receber">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C2">
+    <End Type="missmfotografiaModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_foto" Role="tb_foto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_foto">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C1">
+    <End Type="missmfotografiaModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_funcionario" Role="tb_funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_funcionario">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C4">
+    <End Type="missmfotografiaModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_pedido">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_pedido_tb_produto">
+    <Key>
+      <PropertyRef Name="idPedidoProduto" />
+    </Key>
+    <Property Type="Int32" Name="idPedidoProduto" Nullable="false" />
+    <Property Type="Int32" Name="idProduto" Nullable="false" />
+    <Property Type="Int32" Name="idPedido" Nullable="false" />
+    <Property Type="Int32" Name="quantidade" Nullable="false" />
+    <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C15" FromRole="tb_pedido_tb_produto" ToRole="tb_pedido" />
+    <NavigationProperty Name="tb_produto" Relationship="missmfotografiaModel.C14" FromRole="tb_pedido_tb_produto" ToRole="tb_produto" />
+    <Property Type="DateTime" Name="data" Nullable="false" />
+  </EntityType>
+  <Association Name="C15">
+    <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_produto" Role="tb_pedido_tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_produto">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="C14">
+    <End Type="missmfotografiaModel.tb_produto" Role="tb_produto" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_pedido_tb_produto" Role="tb_pedido_tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produto">
+        <PropertyRef Name="idProduto" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_produto">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_agenda">
+    <Key>
+      <PropertyRef Name="idAgenda" />
+    </Key>
+    <Property Type="Int32" Name="idAgenda" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="nomeAtividade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descricaoAtividade" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dataAtividade" Nullable="false" />
+    <Property Type="Int32" Name="idUsers" Nullable="false" />
+    <NavigationProperty Name="my_aspnet_users" Relationship="missmfotografiaModel.C6" FromRole="tb_agenda" ToRole="my_aspnet_users" />
+    <Property Type="String" Name="status" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_applications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_membership">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Type="Int32" Name="userId" Nullable="false" />
+    <Property Type="String" Name="Email" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comment" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PasswordKey" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Type="SByte" Name="PasswordFormat" />
+    <Property Type="String" Name="PasswordQuestion" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PasswordAnswer" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsApproved" />
+    <Property Type="DateTime" Name="LastActivityDate" />
+    <Property Type="DateTime" Name="LastLoginDate" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" />
+    <Property Type="DateTime" Name="CreationDate" />
+    <Property Type="Boolean" Name="IsLockedOut" />
+    <Property Type="DateTime" Name="LastLockedOutDate" />
+    <Property Type="Int64" Name="FailedPasswordAttemptCount" />
+    <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" />
+    <Property Type="Int64" Name="FailedPasswordAnswerAttemptCount" />
+    <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" />
+  </EntityType>
+  <EntityType Name="my_aspnet_profiles">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Type="Int32" Name="userId" Nullable="false" />
+    <Property Type="String" Name="valueindex" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stringdata" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="binarydata" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="lastUpdatedDate" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="my_aspnet_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="applicationId" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessioncleanup">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Type="DateTime" Name="LastRun" Nullable="false" />
+    <Property Type="Int32" Name="IntervalMinutes" Nullable="false" />
+    <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Type="String" Name="SessionId" Nullable="false" MaxLength="191" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+    <Property Type="DateTime" Name="Created" Nullable="false" />
+    <Property Type="DateTime" Name="Expires" Nullable="false" />
+    <Property Type="DateTime" Name="LockDate" Nullable="false" />
+    <Property Type="Int32" Name="LockId" Nullable="false" />
+    <Property Type="Int32" Name="Timeout" Nullable="false" />
+    <Property Type="Boolean" Name="Locked" Nullable="false" />
+    <Property Type="Binary" Name="SessionItems" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="Flags" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="applicationId" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isAnonymous" Nullable="false" />
+    <Property Type="DateTime" Name="lastActivityDate" />
+    <NavigationProperty Name="tb_agenda" Relationship="missmfotografiaModel.C6" FromRole="my_aspnet_users" ToRole="tb_agenda" />
+  </EntityType>
+  <EntityType Name="my_aspnet_usersinroles">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Type="Int32" Name="userId" Nullable="false" />
+    <Property Type="Int32" Name="roleId" Nullable="false" />
+  </EntityType>
+  <Association Name="C6">
+    <End Type="missmfotografiaModel.my_aspnet_users" Role="my_aspnet_users" Multiplicity="1" />
+    <End Type="missmfotografiaModel.tb_agenda" Role="tb_agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_agenda">
+        <PropertyRef Name="idUsers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
