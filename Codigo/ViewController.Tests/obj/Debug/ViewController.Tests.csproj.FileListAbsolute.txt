@@ -1,0 +1,14 @@
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll.config
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.Tests.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Service.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Model.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Data.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\ViewController.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Service.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Model.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\bin\Debug\Data.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.csprojResolveAssemblyReference.cache
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\ViewController.Tests\obj\Debug\ViewController.Tests.pdb

@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="missmfotografiaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="missmfotografiaModelStoreContainer">
+    <EntitySet Name="my_aspnet_applications" EntityType="missmfotografiaModel.Store.my_aspnet_applications" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_membership" EntityType="missmfotografiaModel.Store.my_aspnet_membership" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_profiles" EntityType="missmfotografiaModel.Store.my_aspnet_profiles" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_roles" EntityType="missmfotografiaModel.Store.my_aspnet_roles" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_sessioncleanup" EntityType="missmfotografiaModel.Store.my_aspnet_sessioncleanup" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_sessions" EntityType="missmfotografiaModel.Store.my_aspnet_sessions" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_users" EntityType="missmfotografiaModel.Store.my_aspnet_users" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="my_aspnet_usersinroles" EntityType="missmfotografiaModel.Store.my_aspnet_usersinroles" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_agenda" EntityType="missmfotografiaModel.Store.tb_agenda" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_contas_receber" EntityType="missmfotografiaModel.Store.tb_contas_receber" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_evento" EntityType="missmfotografiaModel.Store.tb_evento" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_foto" EntityType="missmfotografiaModel.Store.tb_foto" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_funcionario" EntityType="missmfotografiaModel.Store.tb_funcionario" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_pedido" EntityType="missmfotografiaModel.Store.tb_pedido" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_pedido_tb_evento" EntityType="missmfotografiaModel.Store.tb_pedido_tb_evento" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_pedido_tb_produto" EntityType="missmfotografiaModel.Store.tb_pedido_tb_produto" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_pedido_tb_servico" EntityType="missmfotografiaModel.Store.tb_pedido_tb_servico" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_pessoa" EntityType="missmfotografiaModel.Store.tb_pessoa" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_produto" EntityType="missmfotografiaModel.Store.tb_produto" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_servico" EntityType="missmfotografiaModel.Store.tb_servico" store:Type="Tables" Schema="missmfotografia" />
+    <EntitySet Name="tb_tipo_evento" EntityType="missmfotografiaModel.Store.tb_tipo_evento" store:Type="Tables" Schema="missmfotografia" />
+    <AssociationSet Name="1" Association="missmfotografiaModel.Store.1">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="10" Association="missmfotografiaModel.Store.10">
+      <End Role="tb_evento" EntitySet="tb_evento" />
+      <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
+    </AssociationSet>
+    <AssociationSet Name="11" Association="missmfotografiaModel.Store.11">
+      <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
+      <End Role="tb_evento" EntitySet="tb_evento" />
+    </AssociationSet>
+    <AssociationSet Name="14" Association="missmfotografiaModel.Store.14">
+      <End Role="tb_produto" EntitySet="tb_produto" />
+      <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="15" Association="missmfotografiaModel.Store.15">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_produto" EntitySet="tb_pedido_tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="18" Association="missmfotografiaModel.Store.18">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_servico" EntitySet="tb_pedido_tb_servico" />
+    </AssociationSet>
+    <AssociationSet Name="19" Association="missmfotografiaModel.Store.19">
+      <End Role="tb_servico" EntitySet="tb_servico" />
+      <End Role="tb_pedido_tb_servico" EntitySet="tb_pedido_tb_servico" />
+    </AssociationSet>
+    <AssociationSet Name="2" Association="missmfotografiaModel.Store.2">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_foto" EntitySet="tb_foto" />
+    </AssociationSet>
+    <AssociationSet Name="20" Association="missmfotografiaModel.Store.20">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_contas_receber" EntitySet="tb_contas_receber" />
+    </AssociationSet>
+    <AssociationSet Name="3" Association="missmfotografiaModel.Store.3">
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+      <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
+    </AssociationSet>
+    <AssociationSet Name="4" Association="missmfotografiaModel.Store.4">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_pedido" EntitySet="tb_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="5" Association="missmfotografiaModel.Store.5">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_contas_receber" EntitySet="tb_contas_receber" />
+    </AssociationSet>
+    <AssociationSet Name="6" Association="missmfotografiaModel.Store.6">
+      <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
+      <End Role="tb_agenda" EntitySet="tb_agenda" />
+    </AssociationSet>
+    <AssociationSet Name="9" Association="missmfotografiaModel.Store.9">
+      <End Role="tb_evento" EntitySet="tb_evento" />
+      <End Role="tb_foto" EntitySet="tb_foto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="my_aspnet_applications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="256" />
+    <Property Name="description" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="my_aspnet_membership">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="128" />
+    <Property Name="Comment" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordKey" Type="char" MaxLength="32" />
+    <Property Name="PasswordFormat" Type="tinyint" />
+    <Property Name="PasswordQuestion" Type="varchar" MaxLength="255" />
+    <Property Name="PasswordAnswer" Type="varchar" MaxLength="255" />
+    <Property Name="IsApproved" Type="bool" />
+    <Property Name="LastActivityDate" Type="datetime" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="IsLockedOut" Type="bool" />
+    <Property Name="LastLockedOutDate" Type="datetime" />
+    <Property Name="FailedPasswordAttemptCount" Type="uint" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="uint" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" />
+  </EntityType>
+  <EntityType Name="my_aspnet_profiles">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="valueindex" Type="longtext" />
+    <Property Name="stringdata" Type="longtext" />
+    <Property Name="binarydata" Type="longblob" />
+    <Property Name="lastUpdatedDate" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="my_aspnet_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessioncleanup">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="LastRun" Type="datetime" Nullable="false" />
+    <Property Name="IntervalMinutes" Type="int" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="SessionId" Type="varchar" Nullable="false" MaxLength="191" />
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Expires" Type="datetime" Nullable="false" />
+    <Property Name="LockDate" Type="datetime" Nullable="false" />
+    <Property Name="LockId" Type="int" Nullable="false" />
+    <Property Name="Timeout" Type="int" Nullable="false" />
+    <Property Name="Locked" Type="bool" Nullable="false" />
+    <Property Name="SessionItems" Type="longblob" />
+    <Property Name="Flags" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="isAnonymous" Type="bool" Nullable="false" />
+    <Property Name="lastActivityDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="my_aspnet_usersinroles">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="roleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_agenda">
+    <Key>
+      <PropertyRef Name="idAgenda" />
+    </Key>
+    <Property Name="idAgenda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomeAtividade" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="descricaoAtividade" Type="varchar" MaxLength="200" />
+    <Property Name="dataAtividade" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="idUsers" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_contas_receber">
+    <Key>
+      <PropertyRef Name="idContasReceber" />
+    </Key>
+    <Property Name="idContasReceber" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="statusPagamento" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="tipoPagamento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="valorReceber" Type="float" Nullable="false" />
+    <Property Name="dataVencimento" Type="date" Nullable="false" />
+    <Property Name="dataPagamento" Type="date" />
+    <Property Name="valorPago" Type="float" />
+    <Property Name="idPessoa" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_evento">
+    <Key>
+      <PropertyRef Name="idEvento" />
+    </Key>
+    <Property Name="idEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoEvento" Type="int" Nullable="false" />
+    <Property Name="nomeEvento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dataEvento" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_foto">
+    <Key>
+      <PropertyRef Name="idFoto" />
+    </Key>
+    <Property Name="idFoto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="imagem" Type="longblob" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="200" />
+    <Property Name="idPessoa" Type="int" Nullable="false" />
+    <Property Name="idEvento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_funcionario">
+    <Key>
+      <PropertyRef Name="idFuncionario" />
+    </Key>
+    <Property Name="idFuncionario" Type="int" Nullable="false" />
+    <Property Name="tipoConta" Type="int" Nullable="false" />
+    <Property Name="banco" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="agencia" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="numeroConta" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="idPessoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_pedido">
+    <Key>
+      <PropertyRef Name="idPedido" />
+    </Key>
+    <Property Name="idPedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPessoa" Type="int" Nullable="false" />
+    <Property Name="nomePedido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dataCriacao" Type="date" Nullable="false" />
+    <Property Name="valorPedido" Type="decimal" Nullable="false" />
+    <Property Name="statusPedido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dataEmissao" Type="date" Nullable="false" />
+    <Property Name="statusContrato" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_pedido_tb_evento">
+    <Key>
+      <PropertyRef Name="idPedidoEvento" />
+    </Key>
+    <Property Name="idPedidoEvento" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="idEvento" Type="int" Nullable="false" />
+    <Property Name="quantidade" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_pedido_tb_produto">
+    <Key>
+      <PropertyRef Name="idPedidoProduto" />
+    </Key>
+    <Property Name="idPedidoProduto" Type="int" Nullable="false" />
+    <Property Name="idProduto" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="quantidade" Type="int" Nullable="false" />
+    <Property Name="data" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_pedido_tb_servico">
+    <Key>
+      <PropertyRef Name="idPedidoServico" />
+    </Key>
+    <Property Name="idPedidoServico" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="idServico" Type="int" Nullable="false" />
+    <Property Name="quantidade" Type="int" Nullable="false" />
+    <Property Name="data" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_pessoa">
+    <Key>
+      <PropertyRef Name="idPessoa" />
+    </Key>
+    <Property Name="idPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomePessoa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="cpfPessoa" Type="varchar" Nullable="false" MaxLength="11" />
+    <Property Name="sexoPessoa" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="dataNascimentoPessoa" Type="date" Nullable="false" />
+    <Property Name="telefonePessoa" Type="varchar" MaxLength="12" />
+    <Property Name="emailPessoa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="senhaPessoa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="rua" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="bairro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="cidade" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="tipoPessoa" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tb_produto">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Name="idProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomeProduto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="formato" Type="varchar" MaxLength="50" />
+    <Property Name="valorDoProduto" Type="decimal" Nullable="false" />
+    <Property Name="numeroDePaginas" Type="int" />
+    <Property Name="numeroDeImagens" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_servico">
+    <Key>
+      <PropertyRef Name="idServico" />
+    </Key>
+    <Property Name="idServico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomeServico" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="nomeParceiro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="telefoneParceiro" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="valorServico" Type="decimal" Nullable="false" />
+    <Property Name="valorCobradoAoCliente" Type="decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_tipo_evento">
+    <Key>
+      <PropertyRef Name="idTipoEvento" />
+    </Key>
+    <Property Name="idTipoEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomeTipoEvento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="totalConvidados" Type="int" Nullable="false" />
+    <Property Name="valorTipoEvento" Type="decimal" Nullable="false" />
+  </EntityType>
+  <Association Name="1">
+    <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_funcionario" Type="missmfotografiaModel.Store.tb_funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_funcionario">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="10">
+    <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
+    <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="11">
+    <End Role="tb_tipo_evento" Type="missmfotografiaModel.Store.tb_tipo_evento" Multiplicity="1" />
+    <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipo_evento">
+        <PropertyRef Name="idTipoEvento" />
+      </Principal>
+      <Dependent Role="tb_evento">
+        <PropertyRef Name="idTipoEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="14">
+    <End Role="tb_produto" Type="missmfotografiaModel.Store.tb_produto" Multiplicity="1" />
+    <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produto">
+        <PropertyRef Name="idProduto" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_produto">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="15">
+    <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+    <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_produto">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="18">
+    <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+    <End Role="tb_pedido_tb_servico" Type="missmfotografiaModel.Store.tb_pedido_tb_servico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_servico">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="19">
+    <End Role="tb_servico" Type="missmfotografiaModel.Store.tb_servico" Multiplicity="1" />
+    <End Role="tb_pedido_tb_servico" Type="missmfotografiaModel.Store.tb_pedido_tb_servico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_servico">
+        <PropertyRef Name="idServico" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_servico">
+        <PropertyRef Name="idServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="2">
+    <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_foto" Type="missmfotografiaModel.Store.tb_foto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_foto">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="20">
+    <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+    <End Role="tb_contas_receber" Type="missmfotografiaModel.Store.tb_contas_receber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_contas_receber">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="3">
+    <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+    <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pedido">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="tb_pedido_tb_evento">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="4">
+    <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_pedido">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="5">
+    <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_contas_receber" Type="missmfotografiaModel.Store.tb_contas_receber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="idPessoa" />
+      </Principal>
+      <Dependent Role="tb_contas_receber">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="6">
+    <End Role="my_aspnet_users" Type="missmfotografiaModel.Store.my_aspnet_users" Multiplicity="1" />
+    <End Role="tb_agenda" Type="missmfotografiaModel.Store.tb_agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="my_aspnet_users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_agenda">
+        <PropertyRef Name="idUsers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="9">
+    <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
+    <End Role="tb_foto" Type="missmfotografiaModel.Store.tb_foto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_evento">
+        <PropertyRef Name="idEvento" />
+      </Principal>
+      <Dependent Role="tb_foto">
+        <PropertyRef Name="idEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

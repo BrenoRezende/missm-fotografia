@@ -1,0 +1,7 @@
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\bin\Debug\Data.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\bin\Debug\Data.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\bin\Debug\Model.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\bin\Debug\Model.pdb
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\obj\Debug\Data.dll
+D:\Projetos\MissMFotografia\trunk\Codigo\Data\obj\Debug\Data.pdb
