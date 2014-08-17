@@ -1,41 +1,3 @@
-/*
-Template Name: PhotoBusiness
-File: Layout CSS
-Author: OS Templates
-Author URI: http://www.os-templates.com/
-Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
-*/
-
-@import url(navi.css);
-@import url(forms.css);
-@import url(tables.css);
-@import url(gallery.css);
-
-body{
-	margin:0;
-	padding:0;
-	font-size:12px;
-	font-family:verdana, Arial, Helvetica, sans-serif;
-	color:#CCCCCC;
-	background-color:#2E2E2E;
-	}
-
-img{border:0; padding:0; margin:0;}
-.justify{text-align:justify;}
-.bold{font-weight:bold;}
-.center{text-align:center;}
-.right{text-align:right;}
-.nostart {list-style-type:none; margin:0; padding:0;}
-.clear{clear: both;}
-br.clear{clear:both; margin-top:-15px;}
-a{outline:none; text-decoration:none;}
-
-.fl_left{float:left;}
-.fl_right{float:right;}
-
-.imgl, .imgr{border:1px solid #666666; padding:5px;}
-.imgl{float:left; margin:0 8px 8px 0; clear:left;}
-.imgr{float:right; margin:0 0 8px 8px; clear:right;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
@@ -46,23 +8,8 @@ div.wrapper{
 	text-align:left;
 	}
 
-div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{
-	margin:0 0 20px 0;
-	padding:0 0 8px 0;
-	font-size:22px;
-	font-weight:normal;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	border-bottom:1px dashed #DDDDDD;
-	}
-
-.col1{color:#333333; background-color:#000000;}
-.col2{color:#DBDBDB; background-color:#000000; border-bottom:1px solid #3B3B3B;}
-.col3{color:#DBDBDB; background-color:#000000; border-bottom:1px solid #3B3B3B;}
-.col4{color:#DBDBDB; background-color:#000000; border-bottom:1px solid #3B3B3B;}
-.col5{color:#CCCCCC; background-color:#000000; border-bottom:1px solid #3B3B3B;}
-.col5 a{color:#99CC00; background-color:#000000;}
-.col6{color:#FFFFFF; background-color:#1B1B1B; border-bottom:1px solid #3B3B3B;}
-.col7, .col7 a{color:#CCCCCC; background-color:#2E2E2E;}
+.col3{color:#DBDBDB; background-color:#DCDCDC; border-bottom:1px solid #3B3B3B;}
+.col4{color:#DBDBDB; background-color:#DCDCDC; border-bottom:1px solid #3B3B3B;}
 
 /* ----------------------------------------------Generalise-------------------------------------*/
 
