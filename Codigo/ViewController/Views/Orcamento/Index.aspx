@@ -1,202 +1,51 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Model.Models.OrcamentoModel>" %>
+﻿<%@Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage<Model.Models.OrcamentoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Criar Orçamento
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-
-<h2>Criar Orçamento</h2>
-
-<% using (Html.BeginForm()) { %>
-    <%: Html.ValidationSummary(true) %>
+    <!-- Arquivo necessário para as View partial -->
+    <script src="<%: Url.Content("~/Scripts/jquery-1.5.1.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"
+        type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"
+        type="text/javascript"></script>
+    
+    <% using (Html.BeginForm())
+       { %>
+    <%: Html.ValidationSummary(true)%>
     <fieldset>
-        <legend>Lista de Produtos</legend>
-                
-        <p></p>
-        
-        <h2>Produtos Escolhidos</h2>
-
-        <div>
-            <%: Html.DropDownListFor(model => model.IdProduto, ViewBag.listaProdutos as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdTipoEvento) %>
-            <input type="submit" value="Adicionar" />
+        <legend>Tipos de Evento</legend>
+        <div class="thumbnail">
+             <% Html.RenderPartial("../Orcamento/NovoTipoEvento", Model.TipoEvento); %>
+             <% Html.RenderPartial("../Orcamento/NovoTipoEvento", Model.TipoEvento); %>
+             <br />
+             <% Html.RenderPartial("../Orcamento/ListaTipoEvento", Model.ListaTipoEvento); %>
         </div>
-        <p></p>
-        <div style="overflow: auto; width: 1020px; height: 200px; ">   
-        <table class="tabela" style="width:1000px">          
-            <tr>
-                <th>
-                    Nome do Produto
-                </th>
-                <th>
-                    Formato
-                </th>
-                <th>
-                    Número de Páginas
-                </th>
-                <th>
-                    Número de Imagens
-                </th>
-                <th>
-                    Valor do Produto
-                </th>
-                <th>
-                    Remover
-                </th>
-            </tr>
-        
-            <% foreach (var item in ViewBag.listaProdutos)
-               { %>
-            <tr>
-                <td>
-                               
-                </td>
-                <td>
-                   
-                </td>
-                <td>
-                  
-                </td>
-                <td>
-                   
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-
-            </tr>
-            <% } %>
-        </table>  
-        </div>    
-
     </fieldset>
-
-<p></p>
-
     <fieldset>
-        <legend>Lista de Produtos</legend>
-                
-        <p></p>
-        
-        <h2>Serviços Escolhidos</h2>
-
-        <div>
-            <%: Html.DropDownListFor(model => model.IdServico, ViewBag.listaServicos as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdServico) %>
-            <input type="submit" value="Adicionar" />
+        <legend>Produtos</legend>
+        <div class="thumbnail">
+             <% Html.RenderPartial("../Orcamento/NovoProduto", Model.Produto); %>
+             <br />
+             <% Html.RenderPartial("../Orcamento/ListaProduto", Model.ListaProdutos); %>
         </div>
-        <p></p>
-        <div style="overflow: auto; width: 1020px; height: 200px; ">   
-        <table class="tabela" style="width:1000px">          
-            <tr>
-                <th>
-                    Tipo do Servico
-                </th>
-                <th>
-                    Nome do Parceiro
-                </th>
-                <th>
-                    Tel. Parceiro
-                </th>
-                <th>
-                    Valor do Serviço
-                </th>
-                <th>
-                    Remover
-                </th>
-            </tr>
-        
-            <% foreach (var item in ViewBag.listaServicos)
-               { %>
-            <tr>
-                <td>
-                               
-                </td>
-                <td>
-                   
-                </td>
-                <td>
-                  
-                </td>
-                <td>
-                   
-                </td>
-                <td>
-                    
-                </td>
-
-
-            </tr>
-            <% } %>
-        </table>  
-        </div>    
-
     </fieldset>
-
-    <p></p>
-
-     <fieldset>
-        <legend>Lista de Produtos</legend>
-                
-        <p></p>
-        
-        <h2>Produtos Escolhidos</h2>
-
-        <div>
-            <%: Html.DropDownListFor(model => model.IdTipoEvento, ViewBag.listaTipoDeEventos as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdTipoEvento) %>
-            <input type="submit" value="Adicionar" />
+    <fieldset>
+        <legend>Serviços</legend>
+        <div class="thumbnail">
+             <% Html.RenderPartial("../Orcamento/NovoServico", Model.Servico); %>
+             <br />
+             <% Html.RenderPartial("../Orcamento/ListaServico", Model.ListaServico); %>
         </div>
-        <p></p>
-        <div style="overflow: auto; width: 1020px; height: 200px; ">   
-        <table class="tabela" style="width:1000px">          
-            <tr>
-                <th>
-                    Tipo de Evento
-                </th>
-                <th>
-                    Total de Convidados
-                </th>
-                <th>
-                    Valor do Evento
-                </th>
-                
-                <th>
-                    Remover
-                </th>
-            </tr>
-        
-            <% foreach (var item in ViewBag.listaTipoDeEventos)
-               { %>
-            <tr>
-                <td>
-                               
-                </td>
-                <td>
-                   
-                </td>
-                <td>
-                  
-                </td>
-                <td>
-                   
-                </td>
-
-            </tr>
-            <% } %>
-        </table>  
-        </div>    
-
     </fieldset>
-<% } %>
+    <% } %>
 
-
-
+    <div>
+        <a href="<%: Url.Action("SalvarOrcamento", "Pedido") %>">
+            <button>Salvar Orçamento</button>
+        </a>
+    </div>
 </asp:Content>
