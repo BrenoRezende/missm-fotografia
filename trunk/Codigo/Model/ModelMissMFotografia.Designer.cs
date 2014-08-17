@@ -28,11 +28,11 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C19", "tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_servico), "tb_pedido_tb_servico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_servico), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C5", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_contas_receber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_contas_receber), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_foto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_foto), true)]
-[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C4", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C15", "tb_pedido", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pedido), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C14", "tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_produto), "tb_pedido_tb_produto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_pedido_tb_produto), true)]
 [assembly: EdmRelationshipAttribute("missmfotografiaModel", "C6", "my_aspnet_users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.my_aspnet_users), "tb_agenda", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_agenda), true)]
+[assembly: EdmRelationshipAttribute("missmfotografiaModel", "C1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.tb_funcionario), true)]
 
 #endregion
 
@@ -115,22 +115,6 @@ namespace Model
             }
         }
         private ObjectSet<tb_foto> _tb_foto;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<tb_funcionario> tb_funcionario
-        {
-            get
-            {
-                if ((_tb_funcionario == null))
-                {
-                    _tb_funcionario = base.CreateObjectSet<tb_funcionario>("tb_funcionario");
-                }
-                return _tb_funcionario;
-            }
-        }
-        private ObjectSet<tb_funcionario> _tb_funcionario;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -419,6 +403,22 @@ namespace Model
             }
         }
         private ObjectSet<my_aspnet_usersinroles> _my_aspnet_usersinroles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_funcionario> tb_funcionario
+        {
+            get
+            {
+                if ((_tb_funcionario == null))
+                {
+                    _tb_funcionario = base.CreateObjectSet<tb_funcionario>("tb_funcionario");
+                }
+                return _tb_funcionario;
+            }
+        }
+        private ObjectSet<tb_funcionario> _tb_funcionario;
 
         #endregion
 
@@ -438,14 +438,6 @@ namespace Model
         public void AddTotb_foto(tb_foto tb_foto)
         {
             base.AddObject("tb_foto", tb_foto);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_funcionario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_funcionario(tb_funcionario tb_funcionario)
-        {
-            base.AddObject("tb_funcionario", tb_funcionario);
         }
     
         /// <summary>
@@ -590,6 +582,14 @@ namespace Model
         public void AddTomy_aspnet_usersinroles(my_aspnet_usersinroles my_aspnet_usersinroles)
         {
             base.AddObject("my_aspnet_usersinroles", my_aspnet_usersinroles);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_funcionario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_funcionario(tb_funcionario tb_funcionario)
+        {
+            base.AddObject("tb_funcionario", tb_funcionario);
         }
 
         #endregion
@@ -3181,7 +3181,7 @@ namespace Model
         /// <param name="agencia">Initial value of the agencia property.</param>
         /// <param name="numeroConta">Initial value of the numeroConta property.</param>
         /// <param name="idPessoa">Initial value of the idPessoa property.</param>
-        public static tb_funcionario Createtb_funcionario(global::System.Int32 idFuncionario, global::System.Int32 tipoConta, global::System.String banco, global::System.String agencia, global::System.String numeroConta, global::System.Int32 idPessoa)
+        public static tb_funcionario Createtb_funcionario(global::System.Int32 idFuncionario, global::System.String tipoConta, global::System.String banco, global::System.String agencia, global::System.String numeroConta, global::System.Int32 idPessoa)
         {
             tb_funcionario tb_funcionario = new tb_funcionario();
             tb_funcionario.idFuncionario = idFuncionario;
@@ -3229,7 +3229,7 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 tipoConta
+        public global::System.String tipoConta
         {
             get
             {
@@ -3239,13 +3239,13 @@ namespace Model
             {
                 OntipoContaChanging(value);
                 ReportPropertyChanging("tipoConta");
-                _tipoConta = StructuralObject.SetValidValue(value);
+                _tipoConta = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("tipoConta");
                 OntipoContaChanged();
             }
         }
-        private global::System.Int32 _tipoConta;
-        partial void OntipoContaChanging(global::System.Int32 value);
+        private global::System.String _tipoConta;
+        partial void OntipoContaChanging(global::System.String value);
         partial void OntipoContaChanged();
     
         /// <summary>
@@ -4900,28 +4900,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C1", "tb_funcionario")]
-        public EntityCollection<tb_funcionario> tb_funcionario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_funcionario>("missmfotografiaModel.C1", "tb_funcionario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_funcionario>("missmfotografiaModel.C1", "tb_funcionario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C4", "tb_pedido")]
         public EntityCollection<tb_pedido> tb_pedido
         {
@@ -4934,6 +4912,28 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pedido>("missmfotografiaModel.C4", "tb_pedido", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("missmfotografiaModel", "C1", "tb_funcionario")]
+        public EntityCollection<tb_funcionario> tb_funcionario
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_funcionario>("missmfotografiaModel.C1", "tb_funcionario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_funcionario>("missmfotografiaModel.C1", "tb_funcionario", value);
                 }
             }
         }
