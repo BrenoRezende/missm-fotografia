@@ -48,7 +48,7 @@
             <%: Html.ValidationMessageFor(model => model.Status) %>
         </div>
         <p>
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar Atividade" />
         </p>
     </fieldset>
 <% } %>
