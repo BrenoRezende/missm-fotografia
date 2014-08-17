@@ -32,7 +32,7 @@
             <ul>
                 <li><a href="#"><strong>Casamentos</strong><img src="../../Content/imagens/234x210.gif"
                     alt="" /></a></li>
-                <li><a href="#"><strong>Acompanhamento de Bebê</strong><img src="../../Content/imagens/234x210.gif"
+                <li><a href="#"><strong>Acompanhamen -to de Bebê</strong><img src="../../Content/imagens/234x210.gif"
                     alt="" /></a></li>
                 <li><a href="#"><strong>Ensaio Casal</strong><img src="../../Content/imagens/234x210.gif"
                     alt="" /></a></li>
