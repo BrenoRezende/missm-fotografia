@@ -42,7 +42,14 @@ namespace ViewController.Controllers
         // GET: /Funcionario/Create
 
         public ActionResult Create()
-        {            
+        {
+            ViewBag.TipoConta = new SelectList(new[]
+            {
+               new {Valor = "Conta Corrente", Texto = "Conta Corrente"},
+               new {Valor = "Conta Poupança", Texto = "Conta Poupança"},
+               new {Valor = "Conta Salário", Texto = "Conta Salário"},
+               
+            }, "Valor", "Texto");
             return View();
         }
 
@@ -65,7 +72,14 @@ namespace ViewController.Controllers
 
         public ActionResult Edit(int id)
         {
-            FuncionarioModel funcionarioModel = this.gFuncionario.Obter(id);            
+            FuncionarioModel funcionarioModel = this.gFuncionario.Obter(id);
+            ViewBag.TipoConta = new SelectList(new[]
+            {
+               new {Valor = "Conta Corrente", Texto = "Conta Corrente"},
+               new {Valor = "Conta Poupança", Texto = "Conta Poupança"},
+               new {Valor = "Conta Salário", Texto = "Conta Salário"},
+               
+            }, "Valor", "Texto",funcionarioModel.TipoConta);
             return View(funcionarioModel);
         }
 
