@@ -20,7 +20,7 @@
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Nome) %>
+            <%: Html.TextBoxFor( model => model.Nome, new { size = 105 })%>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
@@ -48,7 +48,7 @@
             <%: Html.ValidationMessageFor(model => model.Status) %>
         </div>
         <p>
-            <input type="submit" value="Cadastrar Atividade" />
+            <input type="submit" value="Cadastrar" />
         </p>
     </fieldset>
 <% } %>
