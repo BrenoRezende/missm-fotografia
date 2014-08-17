@@ -42,6 +42,7 @@ namespace Model.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
+        [Display(Name = "email", ResourceType = typeof(Mensagens))]
         [StringLength(50)]
         public string Email { get; set; }
 
@@ -57,6 +58,7 @@ namespace Model.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
+        [Display(Name = "numero", ResourceType = typeof(Mensagens))]
         public int Numero { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
