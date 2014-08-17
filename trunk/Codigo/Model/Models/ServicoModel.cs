@@ -24,6 +24,7 @@ namespace Model.Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
+        [Display(Name = "nome_parceiro", ResourceType = typeof(Mensagens))]
         [StringLength(50)]
         public string NomeParceiro { get; set; }
 

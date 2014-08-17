@@ -25,7 +25,9 @@ namespace Model.Models
                 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
           ErrorMessageResourceName = "erro_requerido")]
-        public int TipoConta { get; set; }
+        [Display(Name = "tipo_conta", ResourceType = typeof(Mensagens))]
+        [StringLength(30)]
+        public string TipoConta { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
             ErrorMessageResourceName = "erro_requerido")]
@@ -35,11 +37,13 @@ namespace Model.Models
         [Required(ErrorMessageResourceType = typeof(Mensagens),
            ErrorMessageResourceName = "erro_requerido")]
         [StringLength(10)]
+        [Display(Name = "agencia", ResourceType = typeof(Mensagens))]
         public string Agencia { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens),
            ErrorMessageResourceName = "erro_requerido")]
         [StringLength(10)]
+        [Display(Name = "numero_conta", ResourceType = typeof(Mensagens))]
         public string NumeroConta { get; set; }
 
         
