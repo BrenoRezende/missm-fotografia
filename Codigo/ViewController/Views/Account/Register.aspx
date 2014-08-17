@@ -1,26 +1,25 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ViewController.Models.RegisterModel>" %>
 
 <asp:Content ID="registerTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    Register
+    Nova Conta 
 </asp:Content>
 
-<asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Create a New Account</h2>
-    <p>
-        Use the form below to create a new account. 
-    </p>
-    <p>
-        Passwords are required to be a minimum of <%: Membership.MinRequiredPasswordLength %> characters in length.
-    </p>
+<asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">    
+    <h4>
+        Utilize o formulário abaixo para criar uma nova conta.
+    </h4>
+    <h4>
+       A senha deve ter no mínimo <%: Membership.MinRequiredPasswordLength %>, contendo números e letras.
+    </h4>
 
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.") %>
+        <%: Html.ValidationSummary(true, "A criação da contas não foi bem sucedida. Corrija os erros e tente outra vez.")%>
         <div>
             <fieldset>
-                <legend>Account Information</legend>
+                <legend>Criar Nova Conta </legend>
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.UserName) %>
@@ -55,7 +54,7 @@
                 </div>
                 
                 <p>
-                    <input type="submit" value="Register" />
+                    <input type="submit" value="Criar Conta" />
                 </p>
             </fieldset>
         </div>

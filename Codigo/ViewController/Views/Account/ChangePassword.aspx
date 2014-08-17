@@ -1,26 +1,26 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ViewController.Models.ChangePasswordModel>" %>
 
 <asp:Content ID="changePasswordTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    Change Password
+    Alterar Senha
 </asp:Content>
 
 <asp:Content ID="changePasswordContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Change Password</h2>
-    <p>
-        Use the form below to change your password. 
-    </p>
-    <p>
-        New passwords are required to be a minimum of <%: Membership.MinRequiredPasswordLength %> characters in length.
-    </p>
+
+    <h4>
+        Utilize o formulário abaixo para alterar sua senha.
+    </h4>
+    <h4>
+        A nova senha deve ter no mínimo <%: Membership.MinRequiredPasswordLength %>, contendo números e letras. in length.
+    </h4>
 
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Password change was unsuccessful. Please correct the errors and try again.") %>
+        <%: Html.ValidationSummary(true, "A criação da contas não foi bem sucedida. Corrija os erros e tente outra vez.")%>
         <div>
             <fieldset>
-                <legend>Account Information</legend>
+                <legend>Alterar Senha</legend>
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.OldPassword) %>
@@ -47,7 +47,7 @@
                 </div>
                 
                 <p>
-                    <input type="submit" value="Change Password" />
+                    <input type="submit" value="Alterar Senha" />
                 </p>
             </fieldset>
         </div>
