@@ -8,7 +8,7 @@ using Data;
 
 namespace Service
 {
-    public class GerenciadorOrcamento
+  /**  public class GerenciadorOrcamento
     {
         private IUnitOfWork unitOfWork;
         private bool shared;
@@ -115,5 +115,5 @@ namespace Service
         {
             return GetQueryTiposDeEventos();
         }
-    }
+    }*/
 }

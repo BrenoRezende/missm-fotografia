@@ -16,6 +16,8 @@ namespace ViewController.Controllers
     {
         private GerenciadorPedido gPedido;
 
+        private GerenciadorPessoa gCliente;
+
         private GerenciadorProduto gProduto;
         private GerenciadorPedidoProduto gPedidoProduto;
 
@@ -30,6 +32,8 @@ namespace ViewController.Controllers
         { 
             gPedido = new GerenciadorPedido();
 
+            gCliente = new GerenciadorPessoa();
+
             gProduto = new GerenciadorProduto();
             gPedidoProduto = new GerenciadorPedidoProduto();
 
@@ -42,10 +46,20 @@ namespace ViewController.Controllers
         
         //GET: /Pedido/
 
-        public ActionResult Index()
+        public ActionResult SalvarOrcamento()
         {
-            var tipoPedidoLista = ObterTodosParaExibicao(gProduto);
-            ViewBag.Produtos = new SelectList(tipoPedidoLista, "Id", "NomeExibido");            
+            ViewBag.IdCliente = new SelectList(gCliente.ObterTodos(), "IdPessoa", "Nome");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SalvarOrcamento(PedidoModel pedidoModel)
+        {
+            pedidoModel.DataCriacao = DateTime.Now;
+            pedidoModel.DataEmissao = DateTime.Now;
+            pedidoModel.StatusPedido = "Orcamento";
+            pedidoModel.StatusContrato = "Sem Contrato";
+            gPedido.Inserir(pedidoModel);
             return View();
         }
 

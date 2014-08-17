@@ -14,17 +14,14 @@ namespace ViewController.Controllers
 {
     public class OrcamentoController : Controller
     {
-        private GerenciadorOrcamento gOrcamento;
+
         private GerenciadorProduto gProduto;
         private GerenciadorServico gServico;
         private GerenciadorTipoEvento gTipoDeEvento;
 
 
-        private decimal valorProduto = 0;
-
         public OrcamentoController()
         {
-            this.gOrcamento = new GerenciadorOrcamento();
             this.gProduto = new GerenciadorProduto();
             this.gServico = new GerenciadorServico();
             this.gTipoDeEvento = new GerenciadorTipoEvento();
@@ -32,99 +29,85 @@ namespace ViewController.Controllers
 
         public ActionResult Index()
         {
+            OrcamentoModel orcamentoModel = new OrcamentoModel();
 
-            var produtos = ObterTodosProdutosParaExibicao(this.gProduto);
-            ViewBag.listaProdutos = new SelectList(produtos, "Id", "NomeExibido");
-            ViewBag.valorPro = valorProduto;
+            orcamentoModel.Produto = new ProdutoModel();
+            ViewBag.IdProduto = new SelectList(gProduto.ObterTodos(), "IdProduto", "Nome");
+            orcamentoModel.ListaProdutos = SessionController.ListaProdutosEscolhidos;
 
-            var servicos = ObterTodosServicosParaExibicao(this.gServico);
-            ViewBag.listaServicos = new SelectList(servicos, "Id", "NomeExibido");
+            orcamentoModel.Servico = new ServicoModel();
+            ViewBag.IdServico = new SelectList(gServico.ObterTodos(), "IdServico", "NomeServico");
+            orcamentoModel.ListaServico = SessionController.ListaServicosEscolhidos;
 
-            var tiposDeEvento = ObterTodosTiposDeEventoParaExibicao(this.gTipoDeEvento);
-            ViewBag.listaTipoDeEventos = new SelectList(tiposDeEvento, "Id", "NomeExibido");
+            orcamentoModel.TipoEvento = new TipoEventoModel();
+            ViewBag.IdTipoEvento = new SelectList(gTipoDeEvento.ObterTodos(), "IdTipoEvento", "Nome");
+            orcamentoModel.ListaTipoEvento = SessionController.TipoEventoEscolhido;
+
+            return View(orcamentoModel);
+        }
 
 
+        [HttpPost]
+        public ActionResult NovoProduto(ProdutoModel produtoModel)
+        {
+            if (produtoModel.IdProduto > 0)
+            {
+                ProdutoModel pM = gProduto.Obter(produtoModel.IdProduto);
+                List<ProdutoModel> ListaProdutos = (List<ProdutoModel>)SessionController.ListaProdutosEscolhidos;
+                ListaProdutos.Add(pM);
+
+                SessionController.ListaProdutosEscolhidos = ListaProdutos;
+                return RedirectToAction("Index");
+            }
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Index(ProdutoModel produtoModel)
+        public ActionResult ListaProduto()
         {
-            if (ModelState.IsValid)
+            return View(SessionController.ListaProdutosEscolhidos);
+        }
+
+
+        [HttpPost]
+        public ActionResult NovoServico(ServicoModel servicoModel)
+        {
+            if (servicoModel.IdServico > 0)
             {
-                ViewBag.recebeProduto = produtoModel;
+                ServicoModel sM = gServico.Obter(servicoModel.IdServico);
+                List<ServicoModel> ListaServicos = (List<ServicoModel>)SessionController.ListaServicosEscolhidos;
+                ListaServicos.Add(sM);
+
+                SessionController.ListaServicosEscolhidos = ListaServicos;
                 return RedirectToAction("Index");
             }
-            return View(produtoModel);
+            return View();
         }
 
-
-
-        /// <summary>
-        /// Obter todos os tipos de evento cadastrados, personalizados para exibicao
-        /// </summary>
-        /// <param name="gProduto"></param>
-        /// <returns>Lista com dados personalizados para exibicao</returns>
-        public List<object> ObterTodosProdutosParaExibicao(GerenciadorProduto gProduto)
+        public ActionResult ListaServico()
         {
-            var produtos = gProduto.ObterTodos();
-            List<object> produtosLista = new List<object>();
-
-            foreach (var tp in produtos)
-                produtosLista.Add(new
-                {
-                    Id = tp.IdProduto,
-                    NomeExibido = "Nome: " + tp.Nome + "...................| Formato: " + tp.Formato + "...................| Número de Páginas: " + tp.NumeroDePaginas
-                    + "...................| Número de Imágens: " + tp.NumeroDeImagens
-
-                });
-
-            return produtosLista;
+            return View(SessionController.ListaServicosEscolhidos);
         }
 
-
-        /// <summary>
-        /// Obter todos os tipos de evento cadastrados, personalizados para exibicao
-        /// </summary>
-        /// <param name="gServico"></param>
-        /// <returns>Lista com dados personalizados para exibicao</returns>
-        public List<object> ObterTodosServicosParaExibicao(GerenciadorServico gServico)
+        [HttpPost]
+        public ActionResult NovoTipoEvento(TipoEventoModel tipoEventoModel)
         {
-            var servicos = gServico.ObterTodos();
-            List<object> servicosLista = new List<object>();
+            if (tipoEventoModel.IdTipoEvento > 0)
+            {
+                TipoEventoModel sM = gTipoDeEvento.Obter(tipoEventoModel.IdTipoEvento);
+                List<TipoEventoModel> ListaTipoEvento = (List<TipoEventoModel>)SessionController.TipoEventoEscolhido;
+                ListaTipoEvento.Add(sM);
 
-            foreach (var ts in servicos)
-                servicosLista.Add(new
-                {
-                    Id = ts.IdServico,
-                    NomeExibido = "Tipo de Serviço: " + ts.NomeServico + "...................| Nome do Parceiro: " + ts.NomeParceiro + "...................| Tel. Parceiro: " + ts.TelefoneParceiro
-                    + "...................| Valor: " + ts.ValorCobradoAoCliente
-
-                });
-
-            return servicosLista;
+                SessionController.TipoEventoEscolhido = ListaTipoEvento;
+                return RedirectToAction("Index");
+            }
+            return View();
         }
 
-        /// <summary>
-        /// Obter todos os tipos de evento cadastrados, personalizados para exibicao
-        /// </summary>
-        /// <param name="gTipoDeEvento"></param>
-        /// <returns>Lista com dados personalizados para exibicao</returns>
-        public List<object> ObterTodosTiposDeEventoParaExibicao(GerenciadorTipoEvento gTipoDeEvento)
+        public ActionResult ListaTipoEvento()
         {
-            var tipoDeEventos = gTipoDeEvento.ObterTodos();
-            List<object> tiposDeEventoLista = new List<object>();
-
-            foreach (var tte in tipoDeEventos)
-                tiposDeEventoLista.Add(new
-                {
-                    Id = tte.IdTipoEvento,
-                    NomeExibido = "Nome: " + tte.Nome + "...................| Total de Convidados: " + tte.TotalConvidados + "...................| Valor: " + tte.Valor
-
-                });
-
-            return tiposDeEventoLista;
+            return View(SessionController.TipoEventoEscolhido);
         }
+
 
         protected override void Dispose(bool disposing)
         {
