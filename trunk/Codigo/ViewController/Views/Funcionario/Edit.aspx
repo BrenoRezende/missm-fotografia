@@ -142,7 +142,7 @@
         </div>
         <p></p> 
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.TipoConta) %>
+              <%: Html.DropDownListFor(model => model.TipoConta ,ViewBag.TipoConta as SelectList) %>
             <%: Html.ValidationMessageFor(model => model.TipoConta) %>
         </div>
         <p></p>
