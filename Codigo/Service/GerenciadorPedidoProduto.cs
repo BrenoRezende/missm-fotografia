@@ -82,10 +82,31 @@ namespace Service
             return pedidoProdutos.ElementAtOrDefault(0);
         }
 
-        public PedidoProdutoModel ObterPorOrcamento(int idPedido)
+        public IEnumerable<PedidoProdutoModel> ObterPorOrcamento(int idPedido)
         {
             IEnumerable<PedidoProdutoModel> pedidoProdutos = GetQuery().Where(pedidoProdutoModel => pedidoProdutoModel.IdPedido.Equals(idPedido));
-            return pedidoProdutos.ElementAtOrDefault(0);
+            return pedidoProdutos;
+        }
+
+        public IEnumerable<ProdutoModel> ObterProdutosDoOrcamento(int idPedido)
+        {
+            IQueryable<tb_pedido_tb_produto> tb_pedido_produto = unitOfWork.RepositorioPedidoProduto.GetQueryable();
+            IQueryable<tb_produto> tb_produto = unitOfWork.RepositorioProduto.GetQueryable();
+
+            var query = from pedido in tb_pedido_produto
+                        join produto in tb_produto
+                        on pedido.idProduto equals produto.idProduto
+                      
+                        select new ProdutoModel
+                        {
+                            Nome = produto.nomeProduto,
+                            NumeroDePaginas = produto.numeroDePaginas,
+                            NumeroDeImagens = produto.numeroDeImagens,
+                            Formato = produto.formato,
+                            ValorDoProduto = produto.valorDoProduto
+                        };
+            return query;
+        
         }
 
         private void Atribuir(PedidoProdutoModel pedidoProdutoModel, tb_pedido_tb_produto pedidoProdutoE)

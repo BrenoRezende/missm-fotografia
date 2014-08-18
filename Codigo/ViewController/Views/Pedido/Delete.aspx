@@ -9,7 +9,7 @@
 
 <h3>Tem certeza que deseja remover esse orçamento?</h3>
 <fieldset>
-    <legend>PedidoModel</legend>
+    <legend>Remover Orçamento</legend>
 
     <div class="display-field">
         <%: Html.HiddenFor(model => model.IdPedido) %>
@@ -43,7 +43,7 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
+        <input type="submit" value="Remover" /> 
     </p>
 <% } %>
 

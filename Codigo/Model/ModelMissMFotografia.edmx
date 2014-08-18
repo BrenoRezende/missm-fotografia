@@ -367,7 +367,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="15">
-          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pedido">
@@ -379,7 +381,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="18">
-          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido_tb_servico" Type="missmfotografiaModel.Store.tb_pedido_tb_servico" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pedido">
@@ -415,7 +419,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="20">
-          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_contas_receber" Type="missmfotografiaModel.Store.tb_contas_receber" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pedido">
@@ -427,7 +433,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="3">
-          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1" />
+          <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pedido">
@@ -439,7 +447,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="4">
-          <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido" Type="missmfotografiaModel.Store.tb_pedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pessoa">

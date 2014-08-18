@@ -145,8 +145,9 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
-            ViewBag.Produtos = gPedidoProduto.ObterPorOrcamento(id);
-            return View();
+            IEnumerable<ProdutoModel> pedidoProdutoModel = gPedidoProduto.ObterProdutosDoOrcamento(id);       
+
+            return View(pedidoProdutoModel);
         }
 
         //
