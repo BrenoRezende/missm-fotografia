@@ -40,6 +40,9 @@
             <td>
                 <%: Html.DisplayFor(modelItem => item.ValorDoProduto) %>
             </td>
+            <td>
+                <%: Html.ActionLink("Remover", "RemoverProduto", new { id = item.IdProduto })%> |
+            </td>
         </tr>
         <% } %>
     </table>

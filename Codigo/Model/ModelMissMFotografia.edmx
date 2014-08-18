@@ -248,7 +248,7 @@
           <Key>
             <PropertyRef Name="idPedidoEvento" />
           </Key>
-          <Property Name="idPedidoEvento" Type="int" Nullable="false" />
+          <Property Name="idPedidoEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="idPedido" Type="int" Nullable="false" />
           <Property Name="idEvento" Type="int" Nullable="false" />
         </EntityType>
@@ -256,19 +256,17 @@
           <Key>
             <PropertyRef Name="idPedidoProduto" />
           </Key>
-          <Property Name="idPedidoProduto" Type="int" Nullable="false" />
+          <Property Name="idPedidoProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="idProduto" Type="int" Nullable="false" />
           <Property Name="idPedido" Type="int" Nullable="false" />
-          <Property Name="data" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_pedido_tb_servico">
           <Key>
             <PropertyRef Name="idPedidoServico" />
           </Key>
-          <Property Name="idPedidoServico" Type="int" Nullable="false" />
+          <Property Name="idPedidoServico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="idPedido" Type="int" Nullable="false" />
           <Property Name="idServico" Type="int" Nullable="false" />
-          <Property Name="data" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_pessoa">
           <Key>
@@ -730,7 +728,6 @@
           <Property Type="Int32" Name="idServico" Nullable="false" />
           <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C18" FromRole="tb_pedido_tb_servico" ToRole="tb_pedido" />
           <NavigationProperty Name="tb_servico" Relationship="missmfotografiaModel.C19" FromRole="tb_pedido_tb_servico" ToRole="tb_servico" />
-          <Property Type="DateTime" Name="data" Nullable="false" />
         </EntityType>
         <Association Name="C18">
           <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
@@ -836,7 +833,6 @@
           <Property Type="Int32" Name="idPedido" Nullable="false" />
           <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C15" FromRole="tb_pedido_tb_produto" ToRole="tb_pedido" />
           <NavigationProperty Name="tb_produto" Relationship="missmfotografiaModel.C14" FromRole="tb_pedido_tb_produto" ToRole="tb_produto" />
-          <Property Type="DateTime" Name="data" Nullable="false" />
         </EntityType>
         <Association Name="C15">
           <End Type="missmfotografiaModel.tb_pedido" Role="tb_pedido" Multiplicity="1" />
@@ -1093,7 +1089,6 @@
           <EntitySetMapping Name="tb_pedido_tb_servico">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_servico">
               <MappingFragment StoreEntitySet="tb_pedido_tb_servico">
-                <ScalarProperty Name="data" ColumnName="data" />
                 <ScalarProperty Name="idServico" ColumnName="idServico" />
                 <ScalarProperty Name="idPedido" ColumnName="idPedido" />
                 <ScalarProperty Name="idPedidoServico" ColumnName="idPedidoServico" />
@@ -1135,7 +1130,6 @@
           <EntitySetMapping Name="tb_pedido_tb_produto">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_produto">
               <MappingFragment StoreEntitySet="tb_pedido_tb_produto">
-                <ScalarProperty Name="data" ColumnName="data" />
                 <ScalarProperty Name="idPedido" ColumnName="idPedido" />
                 <ScalarProperty Name="idProduto" ColumnName="idProduto" />
                 <ScalarProperty Name="idPedidoProduto" ColumnName="idPedidoProduto" />
@@ -1311,18 +1305,18 @@
           <ConnectorPoint PointX="8.888862242545045" PointY="3.625" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C3" ManuallyRouted="false" >
-          <ConnectorPoint PointX="9.75" PointY="8.2112939453125" />
-          <ConnectorPoint PointX="13.34375" PointY="8.2112939453125" />
+          <ConnectorPoint PointX="9.75" PointY="8.1151432291666659" />
+          <ConnectorPoint PointX="13.34375" PointY="8.1151432291666659" />
           <ConnectorPoint PointX="13.34375" PointY="4.7302864583333326" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_servico" Width="1.875" PointX="11.25" PointY="8.5" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_servico" Width="1.875" PointX="11.25" PointY="8.5" Height="1.9802864583333335" />
         <AssociationConnector Association="missmfotografiaModel.C18" >
           <ConnectorPoint PointX="9.75" PointY="9.3218489583333337" />
           <ConnectorPoint PointX="11.25" PointY="9.3218489583333337" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C19" >
-          <ConnectorPoint PointX="14.75" PointY="9.5862939453125" />
-          <ConnectorPoint PointX="13.125" PointY="9.5862939453125" />
+          <ConnectorPoint PointX="14.75" PointY="9.4901432291666659" />
+          <ConnectorPoint PointX="13.125" PointY="9.4901432291666659" />
         </AssociationConnector>
         <EntityTypeShape EntityType="missmfotografiaModel.tb_produto" Width="1.75" PointX="14.75" PointY="5.625" Height="2.3648893229166674" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_pessoa" Width="1.5" PointX="3.125" PointY="5" Height="4.6725065104166674" />
@@ -1338,16 +1332,16 @@
           <ConnectorPoint PointX="4.625" PointY="6.78125" />
           <ConnectorPoint PointX="8.25" PointY="6.78125" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_produto" Width="1.5" PointX="11.625" PointY="5.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_produto" Width="1.5" PointX="11.625" PointY="5.75" Height="1.9802864583333326" />
         <AssociationConnector Association="missmfotografiaModel.C15" >
-          <ConnectorPoint PointX="9.75" PointY="7.2737939453125" />
-          <ConnectorPoint PointX="11.625" PointY="7.2737939453125" />
+          <ConnectorPoint PointX="9.75" PointY="7.1776432291666659" />
+          <ConnectorPoint PointX="11.625" PointY="7.1776432291666659" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C14" >
-          <ConnectorPoint PointX="14.75" PointY="6.8362939453125" />
-          <ConnectorPoint PointX="13.427083333333334" PointY="6.8362939453124989" />
-          <ConnectorPoint PointX="13.260416666666666" PointY="6.8362939453125" />
-          <ConnectorPoint PointX="13.125" PointY="6.8362939453125" />
+          <ConnectorPoint PointX="14.75" PointY="6.7401432291666659" />
+          <ConnectorPoint PointX="13.427083333333334" PointY="6.740143229166665" />
+          <ConnectorPoint PointX="13.260416666666666" PointY="6.7401432291666659" />
+          <ConnectorPoint PointX="13.125" PointY="6.7401432291666659" />
         </AssociationConnector>
         <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="18" PointY="6" Height="2.1725878906249996" />
         <EntityTypeShape EntityType="missmfotografiaModel.my_aspnet_applications" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937500031" />

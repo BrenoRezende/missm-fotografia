@@ -67,6 +67,23 @@ namespace ViewController.Controllers
             return View(SessionController.ListaProdutosEscolhidos);
         }
 
+        public ActionResult RemoverProduto(int id)
+        {
+
+            List<ProdutoModel> listaProduto = SessionController.ListaProdutosEscolhidos;
+            foreach (ProdutoModel pM in listaProduto)
+            {
+                if (id == pM.IdProduto)
+                {
+                    listaProduto.Remove(pM);
+                    break;
+                }
+            }
+
+            SessionController.ListaProdutosEscolhidos = listaProduto;
+            return RedirectToAction("Index");
+        }
+
 
         [HttpPost]
         public ActionResult NovoServico(ServicoModel servicoModel)
