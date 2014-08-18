@@ -50,9 +50,9 @@ namespace Service
             unitOfWork.Commit(shared);
         }
 
-        public void Remover(int idPedidoEvento)
+        public void Remover(int idPedido)
         {
-            unitOfWork.RepositorioPedidoEvento.Remover(pedidoEvento => pedidoEvento.idPedidoEvento.Equals(idPedidoEvento));
+            unitOfWork.RepositorioPedidoEvento.Remover(pedidoEvento => pedidoEvento.idPedido.Equals(idPedido));
             unitOfWork.Commit(shared);
         }
 

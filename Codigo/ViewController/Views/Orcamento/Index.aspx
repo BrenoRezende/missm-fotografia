@@ -16,15 +16,7 @@
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true)%>
-    <fieldset>
-        <legend>Tipos de Evento</legend>
-        <div class="thumbnail">
-             <% Html.RenderPartial("../Orcamento/NovoTipoEvento", Model.TipoEvento); %>
-             <% Html.RenderPartial("../Orcamento/NovoTipoEvento", Model.TipoEvento); %>
-             <br />
-             <% Html.RenderPartial("../Orcamento/ListaTipoEvento", Model.ListaTipoEvento); %>
-        </div>
-    </fieldset>
+    
     <fieldset>
         <legend>Produtos</legend>
         <div class="thumbnail">
@@ -41,11 +33,22 @@
              <% Html.RenderPartial("../Orcamento/ListaServico", Model.ListaServico); %>
         </div>
     </fieldset>
+    <fieldset>
+        <legend>Tipos de Evento</legend>
+        <div class="thumbnail">
+             <% Html.RenderPartial("../Orcamento/NovoTipoEvento", Model.TipoEvento); %>
+             <br />
+             <% Html.RenderPartial("../Orcamento/ListaTipoEvento", Model.ListaTipoEvento); %>
+        </div>
+    </fieldset>
     <% } %>
 
     <div>
         <a href="<%: Url.Action("SalvarOrcamento", "Pedido") %>">
             <button>Salvar Orçamento</button>
+        </a>
+        <a href="<%: Url.Action("Limpar", "Orcamento") %>">
+            <button>Limpar Campos</button>
         </a>
     </div>
 </asp:Content>

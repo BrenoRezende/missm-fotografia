@@ -41,7 +41,7 @@
                 <%: Html.DisplayFor(modelItem => item.ValorDoProduto) %>
             </td>
             <td>
-                <%: Html.ActionLink("Remover", "RemoverProduto", new { id = item.IdProduto })%> |
+                <%: Html.ActionLink("Remover", "RemoverProduto", new { id = item.IdProduto })%>
             </td>
         </tr>
         <% } %>

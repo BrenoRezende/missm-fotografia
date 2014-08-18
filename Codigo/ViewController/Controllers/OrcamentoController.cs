@@ -18,13 +18,14 @@ namespace ViewController.Controllers
         private GerenciadorProduto gProduto;
         private GerenciadorServico gServico;
         private GerenciadorTipoEvento gTipoDeEvento;
-
+        private GerenciadorPedido gPedido;
 
         public OrcamentoController()
         {
             this.gProduto = new GerenciadorProduto();
             this.gServico = new GerenciadorServico();
             this.gTipoDeEvento = new GerenciadorTipoEvento();
+            this.gPedido = new GerenciadorPedido();
         }
 
         public ActionResult Index()
@@ -105,6 +106,23 @@ namespace ViewController.Controllers
             return View(SessionController.ListaServicosEscolhidos);
         }
 
+        public ActionResult RemoverServico(int id)
+        {
+
+            List<ServicoModel> listaServico = SessionController.ListaServicosEscolhidos;
+            foreach (ServicoModel sM in listaServico)
+            {
+                if (id == sM.IdServico)
+                {
+                    listaServico.Remove(sM);
+                    break;
+                }
+            }
+
+            SessionController.ListaServicosEscolhidos = listaServico;
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public ActionResult NovoTipoEvento(TipoEventoModel tipoEventoModel)
         {
@@ -125,6 +143,37 @@ namespace ViewController.Controllers
             return View(SessionController.TipoEventoEscolhido);
         }
 
+        public ActionResult RemoverTipoEvento(int id)
+        {
+
+            List<TipoEventoModel> listaTipoEvento = SessionController.TipoEventoEscolhido;
+            foreach (TipoEventoModel tEM in listaTipoEvento)
+            {
+                if (id == tEM.IdTipoEvento)
+                {
+                    listaTipoEvento.Remove(tEM);
+                    break;
+                }
+            }
+
+            SessionController.TipoEventoEscolhido = listaTipoEvento;
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Limpar()
+        {
+            SessionController.ListaProdutosEscolhidos = null;
+            SessionController.ListaServicosEscolhidos = null;
+            SessionController.TipoEventoEscolhido = null;
+
+            return RedirectToAction("Index", "Orcamento");
+        }
+
+        public ActionResult VisualizarOrcamentos(int id)
+        {
+            IEnumerable<PedidoModel> orcamento = gPedido.ObterPorCliente(id);
+            return View(orcamento);
+        }
 
         protected override void Dispose(bool disposing)
         {

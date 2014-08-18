@@ -117,6 +117,19 @@ namespace Service
             return pedidos.ElementAtOrDefault(0);
         }
 
+
+        /// <summary>
+        /// Obtém um Pedido
+        /// </summary>
+        /// <param name="idPedido">Identificador do evento na base de dados</param>
+        /// <returns>PedidoModel</returns>
+        public IEnumerable<PedidoModel> ObterPorCliente(int idCliente)
+        {
+            IEnumerable<PedidoModel> pedidos = this.GetQuery().Where(pedidoModel => pedidoModel.IdPessoa.Equals(idCliente) && 
+                pedidoModel.StatusPedido.Equals("Orcamento"));
+
+            return pedidos;
+        }
         /// <summary>
         /// Obtém um evento pelo nome
         /// </summary>

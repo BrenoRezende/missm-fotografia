@@ -145,6 +145,7 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
+            ViewBag.Produtos = gPedidoProduto.ObterPorOrcamento(id);
             return View();
         }
 
@@ -205,25 +206,21 @@ namespace ViewController.Controllers
  
         public ActionResult Delete(int id)
         {
-            return View();
+            PedidoModel pedidoModel = this.gPedido.Obter(id);
+            return View(pedidoModel);
         }
 
         //
         // POST: /Pedido/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            this.gPedidoProduto.Remover(id);
+            this.gPedidoServico.Remover(id);
+            this.gPedidoEvento.Remover(id);
+            this.gPedido.Remover(id);
+            return RedirectToAction("Index","Pessoa");
         }
 
         /// <summary>

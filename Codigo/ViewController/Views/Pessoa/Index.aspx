@@ -49,7 +49,7 @@
             <%: Html.DisplayFor(modelItem => item.Email) %>
         </td>
         <td>
-            
+            <%: Html.ActionLink("Orçamentos", "VisualizarOrcamentos", "Orcamento", new { id = item.IdPessoa }, null)%>
         </td>
         <td>
             
