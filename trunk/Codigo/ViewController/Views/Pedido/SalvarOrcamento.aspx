@@ -6,8 +6,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>SalvarOrcamento</h2>
-
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
@@ -17,7 +15,7 @@
         <legend>Salvar Orçamento</legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.NomePedido) %>
+            Nome do Orçamento
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.NomePedido) %>
@@ -25,7 +23,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPessoa) %>
+            Nome do Cliente
         </div>
         <div class="editor-field">
             <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdCliente as SelectList) %>
@@ -42,6 +40,6 @@
         <a href="<%: Url.Action("Index", "Orcamento") %>">
             <button>Voltar</button>
         </a>
-    </div>
+</div>
 
 </asp:Content>

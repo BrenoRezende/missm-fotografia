@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <h2>Remover Cliente</h2>
-<h1>Tem certeza que deseja remover esse produto?</h1>
+<h1>Tem certeza que deseja remover esse cliente?</h1>
 
 <fieldset>
     <div class="display-label">Código</div>

@@ -16,7 +16,7 @@ namespace ViewController.Controllers
     {
         
         private GerenciadorPessoa gPessoa;
-
+       
         public PessoaController()
         {
             this.gPessoa = new GerenciadorPessoa();
@@ -97,6 +97,7 @@ namespace ViewController.Controllers
             this.gPessoa.Remover(id);
             return RedirectToAction("Index");
         }
+
 
         protected override void Dispose(bool disposing)
         {

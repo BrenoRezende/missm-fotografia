@@ -50,9 +50,9 @@ namespace Service
             unitOfWork.Commit(shared);
         }
 
-        public void Remover(int idPedidoProduto)
+        public void Remover(int idPedido)
         {
-            unitOfWork.RepositorioPedidoProduto.Remover(pedidoProduto => pedidoProduto.idPedidoProduto.Equals(idPedidoProduto));
+            unitOfWork.RepositorioPedidoProduto.Remover(pedidoProduto => pedidoProduto.idPedido.Equals(idPedido));
             unitOfWork.Commit(shared);
 
         }
@@ -79,6 +79,12 @@ namespace Service
         public PedidoProdutoModel Obter(int idPedidoProduto)
         {
             IEnumerable<PedidoProdutoModel> pedidoProdutos = GetQuery().Where(pedidoProdutoModel => pedidoProdutoModel.IdPedidoProduto.Equals(idPedidoProduto));
+            return pedidoProdutos.ElementAtOrDefault(0);
+        }
+
+        public PedidoProdutoModel ObterPorOrcamento(int idPedido)
+        {
+            IEnumerable<PedidoProdutoModel> pedidoProdutos = GetQuery().Where(pedidoProdutoModel => pedidoProdutoModel.IdPedido.Equals(idPedido));
             return pedidoProdutos.ElementAtOrDefault(0);
         }
 
