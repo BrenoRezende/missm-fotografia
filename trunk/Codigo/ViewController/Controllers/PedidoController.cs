@@ -61,25 +61,81 @@ namespace ViewController.Controllers
                 pedidoModel.StatusPedido = "Orcamento";
                 pedidoModel.StatusContrato = "Sem Contrato";
 
+                decimal valor = 0;
+
+                PedidoProdutoModel pedidoProdutoModel = new PedidoProdutoModel();
+                List<ProdutoModel> listaProdutos = SessionController.ListaProdutosEscolhidos;
+
+                foreach (ProdutoModel p in listaProdutos)
+                {
+                    valor += p.ValorDoProduto;
+                }
+
+                PedidoServicoModel pedidoServicoModel = new PedidoServicoModel();
+                List<ServicoModel> listaServicos = SessionController.ListaServicosEscolhidos;
+
+                foreach (ServicoModel s in listaServicos)
+                {
+                    valor += s.ValorServico;
+                }
+
+                PedidoEventoModel pedidoEventoModel = new PedidoEventoModel();
+                List<TipoEventoModel> listaTipoEvento = SessionController.TipoEventoEscolhido;
+
+                foreach (TipoEventoModel t in listaTipoEvento)
+                {
+                    valor += t.Valor;
+                }
+
+                pedidoModel.Valor = valor;
+
                 int idPedido = gPedido.Inserir(pedidoModel);
                 
 
-                PedidoProdutoModel pedidoProdutoModel = new PedidoProdutoModel();
+                
                 pedidoProdutoModel.IdPedido = idPedido;
-                List<ProdutoModel> listaProdutos = SessionController.ListaProdutosEscolhidos;
+                
 
                 foreach (ProdutoModel pM in listaProdutos)
                 {
                     pedidoProdutoModel.IdProduto = pM.IdProduto;
-                 
+                    
                     gPedidoProduto.Inserir(pedidoProdutoModel);        
                     
                 }
 
 
+                
+                pedidoServicoModel.IdPedido = idPedido;
+                
+
+                foreach (ServicoModel sM in listaServicos)
+                {
+                    pedidoServicoModel.IdServico = sM.IdServico;
+
+                    gPedidoServico.Inserir(pedidoServicoModel);
+                }
+
+
+                
+                pedidoEventoModel.IdPedido = idPedido;
+                
+
+                foreach (TipoEventoModel tEM in listaTipoEvento)
+                {
+                    pedidoEventoModel.IdEvento = tEM.IdTipoEvento;
+
+                    gPedidoEvento.Inserir(pedidoEventoModel);
+                }
+
+                SessionController.ListaProdutosEscolhidos = null;
+                SessionController.ListaServicosEscolhidos = null;
+                SessionController.TipoEventoEscolhido = null;
+
                 return RedirectToAction("Index", "Orcamento");
             }
 
+        
             return View(pedidoModel);
 
         }

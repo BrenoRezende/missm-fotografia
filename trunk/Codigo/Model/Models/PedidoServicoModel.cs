@@ -13,8 +13,7 @@ namespace Model.Models
     {
         public int IdPedidoServico { get; set; }
         public int IdPedido { get; set; }
-        public int IdServico { get; set; }        
-        public int Quantidade { get; set; }
+        public int IdServico { get; set; }       
 
     }
 }
