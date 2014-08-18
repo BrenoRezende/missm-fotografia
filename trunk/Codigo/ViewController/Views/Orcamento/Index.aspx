@@ -18,6 +18,16 @@
     <%: Html.ValidationSummary(true)%>
     
     <fieldset>
+        <legend>Serviços</legend>
+        <div class="thumbnail">
+             <% Html.RenderPartial("../Orcamento/NovoServico", Model.Servico); %>
+             <% Html.RenderPartial("../Orcamento/NovoServico", Model.Servico); %>
+             <br />
+             <% Html.RenderPartial("../Orcamento/ListaServico", Model.ListaServico); %>
+        </div>
+    </fieldset>
+
+    <fieldset>
         <legend>Produtos</legend>
         <div class="thumbnail">
              <% Html.RenderPartial("../Orcamento/NovoProduto", Model.Produto); %>
@@ -25,14 +35,7 @@
              <% Html.RenderPartial("../Orcamento/ListaProduto", Model.ListaProdutos); %>
         </div>
     </fieldset>
-    <fieldset>
-        <legend>Serviços</legend>
-        <div class="thumbnail">
-             <% Html.RenderPartial("../Orcamento/NovoServico", Model.Servico); %>
-             <br />
-             <% Html.RenderPartial("../Orcamento/ListaServico", Model.ListaServico); %>
-        </div>
-    </fieldset>
+    
     <fieldset>
         <legend>Tipos de Evento</legend>
         <div class="thumbnail">

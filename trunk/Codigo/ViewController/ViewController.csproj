@@ -144,6 +144,7 @@
     <Content Include="Views\Orcamento\NovoTipoEvento.ascx" />
     <Content Include="Views\Orcamento\VisualizarOrcamentos.aspx" />
     <Content Include="Views\Pedido\Delete.aspx" />
+    <Content Include="Views\Pedido\Details.aspx" />
     <Content Include="Views\Pedido\SalvarOrcamento.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
