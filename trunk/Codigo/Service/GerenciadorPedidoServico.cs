@@ -67,7 +67,6 @@ namespace Service
                             IdPedidoServico = pedidoServico.idPedidoServico,
                             IdPedido = pedidoServico.idPedido,  
                             IdServico = pedidoServico.idServico,                           
-                            Quantidade = pedidoServico.quantidade
                         };
             return query;
         }
@@ -88,7 +87,6 @@ namespace Service
             pedidoServicoE.idPedidoServico = pedidoServicoModel.IdPedidoServico;
             pedidoServicoE.idServico = pedidoServicoModel.IdServico;
             pedidoServicoE.idPedido = pedidoServicoModel.IdPedido;            
-            pedidoServicoE.quantidade = pedidoServicoModel.Quantidade;
         }
     }
 

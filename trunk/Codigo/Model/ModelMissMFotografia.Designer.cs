@@ -3776,14 +3776,12 @@ namespace Model
         /// <param name="idPedidoEvento">Initial value of the idPedidoEvento property.</param>
         /// <param name="idPedido">Initial value of the idPedido property.</param>
         /// <param name="idEvento">Initial value of the idEvento property.</param>
-        /// <param name="quantidade">Initial value of the quantidade property.</param>
-        public static tb_pedido_tb_evento Createtb_pedido_tb_evento(global::System.Int32 idPedidoEvento, global::System.Int32 idPedido, global::System.Int32 idEvento, global::System.Int32 quantidade)
+        public static tb_pedido_tb_evento Createtb_pedido_tb_evento(global::System.Int32 idPedidoEvento, global::System.Int32 idPedido, global::System.Int32 idEvento)
         {
             tb_pedido_tb_evento tb_pedido_tb_evento = new tb_pedido_tb_evento();
             tb_pedido_tb_evento.idPedidoEvento = idPedidoEvento;
             tb_pedido_tb_evento.idPedido = idPedido;
             tb_pedido_tb_evento.idEvento = idEvento;
-            tb_pedido_tb_evento.quantidade = quantidade;
             return tb_pedido_tb_evento;
         }
 
@@ -3865,30 +3863,6 @@ namespace Model
         private global::System.Int32 _idEvento;
         partial void OnidEventoChanging(global::System.Int32 value);
         partial void OnidEventoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 quantidade
-        {
-            get
-            {
-                return _quantidade;
-            }
-            set
-            {
-                OnquantidadeChanging(value);
-                ReportPropertyChanging("quantidade");
-                _quantidade = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("quantidade");
-                OnquantidadeChanged();
-            }
-        }
-        private global::System.Int32 _quantidade;
-        partial void OnquantidadeChanging(global::System.Int32 value);
-        partial void OnquantidadeChanged();
 
         #endregion
 
@@ -3991,15 +3965,13 @@ namespace Model
         /// <param name="idPedidoProduto">Initial value of the idPedidoProduto property.</param>
         /// <param name="idProduto">Initial value of the idProduto property.</param>
         /// <param name="idPedido">Initial value of the idPedido property.</param>
-        /// <param name="quantidade">Initial value of the quantidade property.</param>
         /// <param name="data">Initial value of the data property.</param>
-        public static tb_pedido_tb_produto Createtb_pedido_tb_produto(global::System.Int32 idPedidoProduto, global::System.Int32 idProduto, global::System.Int32 idPedido, global::System.Int32 quantidade, global::System.DateTime data)
+        public static tb_pedido_tb_produto Createtb_pedido_tb_produto(global::System.Int32 idPedidoProduto, global::System.Int32 idProduto, global::System.Int32 idPedido, global::System.DateTime data)
         {
             tb_pedido_tb_produto tb_pedido_tb_produto = new tb_pedido_tb_produto();
             tb_pedido_tb_produto.idPedidoProduto = idPedidoProduto;
             tb_pedido_tb_produto.idProduto = idProduto;
             tb_pedido_tb_produto.idPedido = idPedido;
-            tb_pedido_tb_produto.quantidade = quantidade;
             tb_pedido_tb_produto.data = data;
             return tb_pedido_tb_produto;
         }
@@ -4082,30 +4054,6 @@ namespace Model
         private global::System.Int32 _idPedido;
         partial void OnidPedidoChanging(global::System.Int32 value);
         partial void OnidPedidoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 quantidade
-        {
-            get
-            {
-                return _quantidade;
-            }
-            set
-            {
-                OnquantidadeChanging(value);
-                ReportPropertyChanging("quantidade");
-                _quantidade = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("quantidade");
-                OnquantidadeChanged();
-            }
-        }
-        private global::System.Int32 _quantidade;
-        partial void OnquantidadeChanging(global::System.Int32 value);
-        partial void OnquantidadeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4232,15 +4180,13 @@ namespace Model
         /// <param name="idPedidoServico">Initial value of the idPedidoServico property.</param>
         /// <param name="idPedido">Initial value of the idPedido property.</param>
         /// <param name="idServico">Initial value of the idServico property.</param>
-        /// <param name="quantidade">Initial value of the quantidade property.</param>
         /// <param name="data">Initial value of the data property.</param>
-        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.Int32 quantidade, global::System.DateTime data)
+        public static tb_pedido_tb_servico Createtb_pedido_tb_servico(global::System.Int32 idPedidoServico, global::System.Int32 idPedido, global::System.Int32 idServico, global::System.DateTime data)
         {
             tb_pedido_tb_servico tb_pedido_tb_servico = new tb_pedido_tb_servico();
             tb_pedido_tb_servico.idPedidoServico = idPedidoServico;
             tb_pedido_tb_servico.idPedido = idPedido;
             tb_pedido_tb_servico.idServico = idServico;
-            tb_pedido_tb_servico.quantidade = quantidade;
             tb_pedido_tb_servico.data = data;
             return tb_pedido_tb_servico;
         }
@@ -4323,30 +4269,6 @@ namespace Model
         private global::System.Int32 _idServico;
         partial void OnidServicoChanging(global::System.Int32 value);
         partial void OnidServicoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 quantidade
-        {
-            get
-            {
-                return _quantidade;
-            }
-            set
-            {
-                OnquantidadeChanging(value);
-                ReportPropertyChanging("quantidade");
-                _quantidade = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("quantidade");
-                OnquantidadeChanged();
-            }
-        }
-        private global::System.Int32 _quantidade;
-        partial void OnquantidadeChanging(global::System.Int32 value);
-        partial void OnquantidadeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
