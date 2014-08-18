@@ -67,7 +67,6 @@ namespace Service
                             IdPedidoProduto = pedidoProduto.idPedidoProduto,                            
                             IdPedido = pedidoProduto.idPedido,                                      
                             IdProduto = pedidoProduto.idProduto,                               
-                            Quantidade = pedidoProduto.quantidade
                         };
             return query;
         }
@@ -87,8 +86,7 @@ namespace Service
         {
             pedidoProdutoE.idPedidoProduto = pedidoProdutoModel.IdPedidoProduto;
             pedidoProdutoE.idProduto = pedidoProdutoModel.IdProduto;
-            pedidoProdutoE.idPedido = pedidoProdutoModel.IdPedido;    
-            pedidoProdutoE.quantidade = pedidoProdutoModel.Quantidade;  
+            pedidoProdutoE.idPedido = pedidoProdutoModel.IdPedido;     
         }
     }
     

@@ -66,7 +66,6 @@ namespace Service
                             IdPedidoEvento = pedidoEvento.idPedidoEvento,
                             IdPedido = pedidoEvento.idPedido,                
                             IdEvento = pedidoEvento.idEvento,                           
-                            Quantidade = pedidoEvento.quantidade
                         };
             return query;
         }
@@ -87,7 +86,6 @@ namespace Service
             pedidoEventoE.idPedidoEvento = pedidoEventoModel.IdPedidoEvento;
             pedidoEventoE.idEvento = pedidoEventoModel.IdEvento;
             pedidoEventoE.idPedido = pedidoEventoModel.IdPedido;           
-            pedidoEventoE.quantidade = pedidoEventoModel.Quantidade;
         }
     }
 }

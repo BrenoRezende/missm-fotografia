@@ -55,12 +55,33 @@ namespace ViewController.Controllers
         [HttpPost]
         public ActionResult SalvarOrcamento(PedidoModel pedidoModel)
         {
-            pedidoModel.DataCriacao = DateTime.Now;
-            pedidoModel.DataEmissao = DateTime.Now;
-            pedidoModel.StatusPedido = "Orcamento";
-            pedidoModel.StatusContrato = "Sem Contrato";
-            gPedido.Inserir(pedidoModel);
-            return View();
+            if (pedidoModel.IdPessoa > 0)
+            {
+                pedidoModel.DataEmissao = DateTime.Now;
+                pedidoModel.StatusPedido = "Orcamento";
+                pedidoModel.StatusContrato = "Sem Contrato";
+
+                int idPedido = gPedido.Inserir(pedidoModel);
+                
+
+                PedidoProdutoModel pedidoProdutoModel = new PedidoProdutoModel();
+                pedidoProdutoModel.IdPedido = idPedido;
+                List<ProdutoModel> listaProdutos = SessionController.ListaProdutosEscolhidos;
+
+                foreach (ProdutoModel pM in listaProdutos)
+                {
+                    pedidoProdutoModel.IdProduto = pM.IdProduto;
+                 
+                    gPedidoProduto.Inserir(pedidoProdutoModel);        
+                    
+                }
+
+
+                return RedirectToAction("Index", "Orcamento");
+            }
+
+            return View(pedidoModel);
+
         }
 
         //
