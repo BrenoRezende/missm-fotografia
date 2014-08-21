@@ -31,10 +31,6 @@
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
           </AssociationSet>
-          <AssociationSet Name="10" Association="missmfotografiaModel.Store.10">
-            <End Role="tb_evento" EntitySet="tb_evento" />
-            <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
-          </AssociationSet>
           <AssociationSet Name="11" Association="missmfotografiaModel.Store.11">
             <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
             <End Role="tb_evento" EntitySet="tb_evento" />
@@ -78,6 +74,10 @@
           <AssociationSet Name="6" Association="missmfotografiaModel.Store.6">
             <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
             <End Role="tb_agenda" EntitySet="tb_agenda" />
+          </AssociationSet>
+          <AssociationSet Name="7" Association="missmfotografiaModel.Store.7">
+            <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
+            <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
           </AssociationSet>
           <AssociationSet Name="9" Association="missmfotografiaModel.Store.9">
             <End Role="tb_evento" EntitySet="tb_evento" />
@@ -250,7 +250,7 @@
           </Key>
           <Property Name="idPedidoEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="idPedido" Type="int" Nullable="false" />
-          <Property Name="idEvento" Type="int" Nullable="false" />
+          <Property Name="idTipoEvento" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_pedido_tb_produto">
           <Key>
@@ -330,20 +330,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="10">
-          <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
-          <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Principal>
-            <Dependent Role="tb_pedido_tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="11">
-          <End Role="tb_tipo_evento" Type="missmfotografiaModel.Store.tb_tipo_evento" Multiplicity="1" />
+          <End Role="tb_tipo_evento" Type="missmfotografiaModel.Store.tb_tipo_evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_tipo_evento">
@@ -355,7 +345,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="14">
-          <End Role="tb_produto" Type="missmfotografiaModel.Store.tb_produto" Multiplicity="1" />
+          <End Role="tb_produto" Type="missmfotografiaModel.Store.tb_produto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido_tb_produto" Type="missmfotografiaModel.Store.tb_pedido_tb_produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_produto">
@@ -395,7 +387,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="19">
-          <End Role="tb_servico" Type="missmfotografiaModel.Store.tb_servico" Multiplicity="1" />
+          <End Role="tb_servico" Type="missmfotografiaModel.Store.tb_servico" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_pedido_tb_servico" Type="missmfotografiaModel.Store.tb_pedido_tb_servico" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_servico">
@@ -461,7 +455,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="5">
-          <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_pessoa" Type="missmfotografiaModel.Store.tb_pessoa" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="tb_contas_receber" Type="missmfotografiaModel.Store.tb_contas_receber" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tb_pessoa">
@@ -484,6 +480,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="7">
+          <End Role="tb_tipo_evento" Type="missmfotografiaModel.Store.tb_tipo_evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tb_pedido_tb_evento" Type="missmfotografiaModel.Store.tb_pedido_tb_evento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_evento">
+              <PropertyRef Name="idTipoEvento" />
+            </Principal>
+            <Dependent Role="tb_pedido_tb_evento">
+              <PropertyRef Name="idTipoEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="9">
           <End Role="tb_evento" Type="missmfotografiaModel.Store.tb_evento" Multiplicity="1" />
           <End Role="tb_foto" Type="missmfotografiaModel.Store.tb_foto" Multiplicity="*" />
@@ -496,6 +506,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.missmfotografia.my_aspnet_schemaversion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="my_aspnet_schemaversion">
+        <Property Name="version" Type="int" />
+      </EntityType>-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -512,10 +528,6 @@
           <EntitySet Name="tb_evento" EntityType="missmfotografiaModel.tb_evento" />
           <EntitySet Name="tb_pedido_tb_evento" EntityType="missmfotografiaModel.tb_pedido_tb_evento" />
           <EntitySet Name="tb_tipo_evento" EntityType="missmfotografiaModel.tb_tipo_evento" />
-          <AssociationSet Name="C10" Association="missmfotografiaModel.C10">
-            <End Role="tb_evento" EntitySet="tb_evento" />
-            <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
-          </AssociationSet>
           <AssociationSet Name="C11" Association="missmfotografiaModel.C11">
             <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
             <End Role="tb_evento" EntitySet="tb_evento" />
@@ -577,6 +589,10 @@
           <AssociationSet Name="C1" Association="missmfotografiaModel.C1">
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="C71" Association="missmfotografiaModel.C71">
+            <End Role="tb_tipo_evento" EntitySet="tb_tipo_evento" />
+            <End Role="tb_pedido_tb_evento" EntitySet="tb_pedido_tb_evento" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="tb_contas_receber">
@@ -657,7 +673,6 @@
           <Property Type="Int32" Name="idTipoEvento" Nullable="false" />
           <Property Type="String" Name="nomeEvento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="dataEvento" Nullable="false" />
-          <NavigationProperty Name="tb_pedido_tb_evento" Relationship="missmfotografiaModel.C10" FromRole="tb_evento" ToRole="tb_pedido_tb_evento" />
           <NavigationProperty Name="tb_tipo_evento" Relationship="missmfotografiaModel.C11" FromRole="tb_evento" ToRole="tb_tipo_evento" />
           <NavigationProperty Name="tb_foto" Relationship="missmfotografiaModel.C9" FromRole="tb_evento" ToRole="tb_foto" />
         </EntityType>
@@ -667,9 +682,9 @@
           </Key>
           <Property Type="Int32" Name="idPedidoEvento" Nullable="false" />
           <Property Type="Int32" Name="idPedido" Nullable="false" />
-          <Property Type="Int32" Name="idEvento" Nullable="false" />
-          <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C10" FromRole="tb_pedido_tb_evento" ToRole="tb_evento" />
           <NavigationProperty Name="tb_pedido" Relationship="missmfotografiaModel.C3" FromRole="tb_pedido_tb_evento" ToRole="tb_pedido" />
+          <Property Type="Int32" Name="idTipoEvento" Nullable="false" />
+          <NavigationProperty Name="tb_tipo_evento" Relationship="missmfotografiaModel.C71" FromRole="tb_pedido_tb_evento" ToRole="tb_tipo_evento" />
         </EntityType>
         <EntityType Name="tb_tipo_evento">
           <Key>
@@ -680,19 +695,8 @@
           <Property Type="Int32" Name="totalConvidados" Nullable="false" />
           <Property Type="Decimal" Name="valorTipoEvento" Nullable="false" />
           <NavigationProperty Name="tb_evento" Relationship="missmfotografiaModel.C11" FromRole="tb_tipo_evento" ToRole="tb_evento" />
+          <NavigationProperty Name="tb_pedido_tb_evento" Relationship="missmfotografiaModel.C71" FromRole="tb_tipo_evento" ToRole="tb_pedido_tb_evento" />
         </EntityType>
-        <Association Name="C10">
-          <End Type="missmfotografiaModel.tb_evento" Role="tb_evento" Multiplicity="1" />
-          <End Type="missmfotografiaModel.tb_pedido_tb_evento" Role="tb_pedido_tb_evento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Principal>
-            <Dependent Role="tb_pedido_tb_evento">
-              <PropertyRef Name="idEvento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="C11">
           <End Type="missmfotografiaModel.tb_tipo_evento" Role="tb_tipo_evento" Multiplicity="1" />
           <End Type="missmfotografiaModel.tb_evento" Role="tb_evento" Multiplicity="*" />
@@ -1009,6 +1013,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="C71">
+          <End Type="missmfotografiaModel.tb_tipo_evento" Role="tb_tipo_evento" Multiplicity="1" />
+          <End Type="missmfotografiaModel.tb_pedido_tb_evento" Role="tb_pedido_tb_evento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_evento">
+              <PropertyRef Name="idTipoEvento" />
+            </Principal>
+            <Dependent Role="tb_pedido_tb_evento">
+              <PropertyRef Name="idTipoEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1080,7 +1096,7 @@
           <EntitySetMapping Name="tb_pedido_tb_evento">
             <EntityTypeMapping TypeName="missmfotografiaModel.tb_pedido_tb_evento">
               <MappingFragment StoreEntitySet="tb_pedido_tb_evento">
-                <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+                <ScalarProperty Name="idTipoEvento" ColumnName="idTipoEvento" />
                 <ScalarProperty Name="idPedido" ColumnName="idPedido" />
                 <ScalarProperty Name="idPedidoEvento" ColumnName="idPedidoEvento" />
               </MappingFragment>
@@ -1298,26 +1314,24 @@
         </AssociationConnector>
         <EntityTypeShape EntityType="missmfotografiaModel.tb_servico" Width="1.875" PointX="14.75" PointY="8.5" Height="2.3648893229166674" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_evento" Width="1.5" PointX="14.75" PointY="2.75" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_evento" Width="2" PointX="11.5" PointY="2.75" Height="1.9802864583333326" />
+        <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_evento" Width="2" PointX="10.875" PointY="3" Height="1.9802864583333326" />
         <EntityTypeShape EntityType="missmfotografiaModel.tb_tipo_evento" Width="1.5" PointX="17.375" PointY="2.75" Height="1.9802864583333246" />
-        <AssociationConnector Association="missmfotografiaModel.C10" >
-          <ConnectorPoint PointX="14.75" PointY="3.7401432291666663" />
-          <ConnectorPoint PointX="13.5" PointY="3.7401432291666663" />
-        </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C11" >
-          <ConnectorPoint PointX="17.375" PointY="4.2951871744791639" />
-          <ConnectorPoint PointX="16.25" PointY="4.2951871744791639" />
+          <ConnectorPoint PointX="17.375" PointY="3.8362939453125" />
+          <ConnectorPoint PointX="16.25" PointY="3.8362939453125" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C9" ManuallyRouted="true" >
-          <ConnectorPoint PointX="15.390188046412781" PointY="2.7499999999999996" />
+          <ConnectorPoint PointX="15.390188046412781" PointY="2.7499999999999991" />
           <ConnectorPoint PointX="15.390188046412781" PointY="2.5347222222222223" />
+          <ConnectorPoint PointX="13.333333333333334" PointY="2.5347222222222219" />
+          <ConnectorPoint PointX="13.166666666666666" PointY="2.5347222222222223" />
           <ConnectorPoint PointX="8.888862242545045" PointY="2.5347222222222223" />
           <ConnectorPoint PointX="8.888862242545045" PointY="3.625" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C3" ManuallyRouted="false" >
           <ConnectorPoint PointX="9.75" PointY="8.1151432291666659" />
-          <ConnectorPoint PointX="13.34375" PointY="8.1151432291666659" />
-          <ConnectorPoint PointX="13.34375" PointY="4.7302864583333326" />
+          <ConnectorPoint PointX="11.03125" PointY="8.1151432291666659" />
+          <ConnectorPoint PointX="11.03125" PointY="4.9802864583333326" />
         </AssociationConnector>
         <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_servico" Width="1.875" PointX="11.25" PointY="8.5" Height="1.9802864583333335" />
         <AssociationConnector Association="missmfotografiaModel.C18" >
@@ -1345,12 +1359,12 @@
         <EntityTypeShape EntityType="missmfotografiaModel.tb_pedido_tb_produto" Width="1.5" PointX="11.625" PointY="5.75" Height="1.9802864583333326" />
         <AssociationConnector Association="missmfotografiaModel.C15" >
           <ConnectorPoint PointX="9.75" PointY="7.1776432291666659" />
+          <ConnectorPoint PointX="10.947916666666666" PointY="7.177643229166665" />
+          <ConnectorPoint PointX="11.114583333333334" PointY="7.1776432291666659" />
           <ConnectorPoint PointX="11.625" PointY="7.1776432291666659" />
         </AssociationConnector>
         <AssociationConnector Association="missmfotografiaModel.C14" >
           <ConnectorPoint PointX="14.75" PointY="6.7401432291666659" />
-          <ConnectorPoint PointX="13.427083333333334" PointY="6.740143229166665" />
-          <ConnectorPoint PointX="13.260416666666666" PointY="6.7401432291666659" />
           <ConnectorPoint PointX="13.125" PointY="6.7401432291666659" />
         </AssociationConnector>
         <EntityTypeShape EntityType="missmfotografiaModel.tb_agenda" Width="1.5" PointX="18" PointY="6" Height="2.1725878906249996" />
@@ -1370,6 +1384,13 @@
         <AssociationConnector Association="missmfotografiaModel.C1" >
           <ConnectorPoint PointX="4" PointY="9.4802050781250014" />
           <ConnectorPoint PointX="4" PointY="10.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="missmfotografiaModel.C71" >
+          <ConnectorPoint PointX="17.375" PointY="2.75" />
+          <ConnectorPoint PointX="17" PointY="2.375" />
+          <ConnectorPoint PointX="13.25" PointY="2.375" />
+          <ConnectorPoint PointX="13.25" PointY="2.625" />
+          <ConnectorPoint PointX="12.875" PointY="3" />
         </AssociationConnector>
         </Diagram>
     </Diagrams>

@@ -123,7 +123,7 @@ namespace ViewController.Controllers
 
                 foreach (TipoEventoModel tEM in listaTipoEvento)
                 {
-                    pedidoEventoModel.IdEvento = tEM.IdTipoEvento;
+                    pedidoEventoModel.IdTipoEvento = tEM.IdTipoEvento;
 
                     gPedidoEvento.Inserir(pedidoEventoModel);
                 }

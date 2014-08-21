@@ -60,12 +60,12 @@ namespace Service
         {
             IQueryable<tb_pedido_tb_evento> tb_pedido_evento = unitOfWork.RepositorioPedidoEvento.GetQueryable();
             var query = from pedidoEvento in tb_pedido_evento
-                        orderby (pedidoEvento.tb_evento.nomeEvento)
+                        orderby (pedidoEvento.tb_tipo_evento.nomeTipoEvento)
                         select new PedidoEventoModel
                         {
                             IdPedidoEvento = pedidoEvento.idPedidoEvento,
                             IdPedido = pedidoEvento.idPedido,                
-                            IdEvento = pedidoEvento.idEvento,                           
+                            IdTipoEvento = pedidoEvento.idTipoEvento                          
                         };
             return query;
         }
@@ -84,7 +84,7 @@ namespace Service
         private void Atribuir(PedidoEventoModel pedidoEventoModel, tb_pedido_tb_evento pedidoEventoE)
         {
             pedidoEventoE.idPedidoEvento = pedidoEventoModel.IdPedidoEvento;
-            pedidoEventoE.idEvento = pedidoEventoModel.IdEvento;
+            pedidoEventoE.idTipoEvento = pedidoEventoModel.IdTipoEvento;
             pedidoEventoE.idPedido = pedidoEventoModel.IdPedido;           
         }
     }
