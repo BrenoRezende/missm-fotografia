@@ -96,7 +96,7 @@ namespace Service
             var query = from pedido in tb_pedido_produto
                         join produto in tb_produto
                         on pedido.idProduto equals produto.idProduto
-                      
+                        where idPedido == pedido.idPedido
                         select new ProdutoModel
                         {
                             Nome = produto.nomeProduto,

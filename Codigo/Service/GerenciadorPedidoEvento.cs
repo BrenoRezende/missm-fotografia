@@ -81,6 +81,25 @@ namespace Service
             return pedidoEventos.ElementAtOrDefault(0);
         }
 
+        public IEnumerable<TipoEventoModel> ObterTipoEventosDoOrcamento(int idPedido)
+        {
+            IQueryable<tb_pedido_tb_evento> tb_pedido_tipoEvento = unitOfWork.RepositorioPedidoEvento.GetQueryable();
+            IQueryable<tb_tipo_evento> tb_tipoEvento = unitOfWork.RepositorioTipoEvento.GetQueryable();
+
+            var query = from pedido in tb_pedido_tipoEvento
+                        join tipoEvento in tb_tipoEvento
+                        on pedido.idTipoEvento equals tipoEvento.idTipoEvento
+                        where idPedido == pedido.idPedido
+                        select new TipoEventoModel
+                        {
+                            Nome = tipoEvento.nomeTipoEvento,
+                            TotalConvidados = tipoEvento.totalConvidados,
+                            Valor = tipoEvento.valorTipoEvento
+                        };
+            return query;
+
+        }
+
         private void Atribuir(PedidoEventoModel pedidoEventoModel, tb_pedido_tb_evento pedidoEventoE)
         {
             pedidoEventoE.idPedidoEvento = pedidoEventoModel.IdPedidoEvento;

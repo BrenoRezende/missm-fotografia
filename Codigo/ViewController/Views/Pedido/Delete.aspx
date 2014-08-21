@@ -46,5 +46,9 @@
         <input type="submit" value="Remover" /> 
     </p>
 <% } %>
-
+<div>
+        <a href="<%: Url.Action("Index", "Pessoa") %>">
+            <button>Voltar</button>
+        </a>
+</div>
 </asp:Content>
