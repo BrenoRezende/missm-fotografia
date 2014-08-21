@@ -12,6 +12,6 @@ namespace Model.Models
     {
         public int IdPedidoEvento { get; set; }
         public int IdPedido { get; set; }  
-        public int IdEvento { get; set; }
+        public int IdTipoEvento { get; set; }
     }
 }
