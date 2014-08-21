@@ -145,9 +145,11 @@ namespace ViewController.Controllers
 
         public ActionResult Details(int id)
         {
-            IEnumerable<ProdutoModel> pedidoProdutoModel = gPedidoProduto.ObterProdutosDoOrcamento(id);       
+            ViewBag.pedidoProdutoModel = gPedidoProduto.ObterProdutosDoOrcamento(id);
+            ViewBag.pedidoServicoModel = gPedidoServico.ObterServicosDoOrcamento(id);
+            ViewBag.pedidoTipoEventoModel = gPedidoEvento.ObterTipoEventosDoOrcamento(id);
 
-            return View(pedidoProdutoModel);
+            return View();
         }
 
         //

@@ -52,7 +52,7 @@ namespace Service
 
         public void Remover(int idPedido)
         {
-            unitOfWork.RepositorioPedidoProduto.Remover(pedidoServico => pedidoServico.idPedido.Equals(idPedido));
+            unitOfWork.RepositorioPedidoServico.Remover(pedidoServico => pedidoServico.idPedido.Equals(idPedido));
             unitOfWork.Commit(shared);
 
         }
@@ -80,6 +80,27 @@ namespace Service
         {
             IEnumerable<PedidoServicoModel> pedidoServicos = GetQuery().Where(pedidoServicoModel => pedidoServicoModel.IdPedidoServico.Equals(idPedidoServico));
             return pedidoServicos.ElementAtOrDefault(0);
+        }
+
+        public IEnumerable<ServicoModel> ObterServicosDoOrcamento(int idPedido)
+        {
+            IQueryable<tb_pedido_tb_servico> tb_pedido_servico = unitOfWork.RepositorioPedidoServico.GetQueryable();
+            IQueryable<tb_servico> tb_servico = unitOfWork.RepositorioServico.GetQueryable();
+
+            var query = from pedido in tb_pedido_servico
+                        join servico in tb_servico
+                        on pedido.idServico equals servico.idServico
+                        where idPedido == pedido.idPedido
+                        select new ServicoModel
+                        {
+                            NomeServico = servico.nomeServico,
+                            NomeParceiro = servico.nomeParceiro,
+                            TelefoneParceiro = servico.telefoneParceiro,
+                            ValorServico = servico.valorServico,
+                            ValorCobradoAoCliente = servico.valorCobradoAoCliente
+                        };
+            return query;
+
         }
 
         private void Atribuir(PedidoServicoModel pedidoServicoModel, tb_pedido_tb_servico pedidoServicoE)
