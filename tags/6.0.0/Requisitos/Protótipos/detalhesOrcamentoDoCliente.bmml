@@ -1,0 +1,98 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1080" measuredH="770" mockupW="1017" mockupH="666">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="63" y="104" w="1017" h="666" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MissM%0Ahttp%3A//www.missm.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="860" y="212" w="-1" h="-1" measuredW="155" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>missm.estudio@gmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="770" y="198" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>./assets/icon_user.png%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="1030" y="213" w="-1" h="-1" measuredW="25" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Tela%20Inicial%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml%26bm%3BTela%20Inicial.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22967%2C109%2C992%2C128%22%20href%3D%22Tela%2520Inicial.bmml%22%20alt%3D%22Tela%20Inicial%22%20id%3D%223%22/%3E</map>
+        <text>Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::SearchBox" x="182" y="354" w="179" h="-1" measuredW="120" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20aqui%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="118" y="356" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pesquisar</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::DataGrid" x="118" y="394" w="934" h="274" measuredW="438" measuredH="61" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <borderStyle>square</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>false</hLines>
+        <rowHeight>40</rowHeight>
+        <text>Nome%20do%20Or%E7amento%2C%20Data%2C%20Editar%2C%20Gerar%20Contrato%2C%20Imprimir%0A%2C%2013/01/1014</text>
+        <verticalScrollbar>true</verticalScrollbar>
+        <vLines>true</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="998" y="683" w="-1" h="-1" measuredW="57" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>ConsultarCliente%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22935%2C579%2C992%2C606%22%20href%3D%22ConsultarCliente.bmml%22%20alt%3D%22ConsultarCliente%22%20id%3D%229%22/%3E</map>
+        <text>Voltar</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="118" y="678" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>criarOrcamento1%26bm%3BcriarOrcamento1.bmml%26bm%3BcriarOrcamento1.bmml%26bm%3BcriarOrcamento1.bmml</href>
+        <icon>SquaredPlusIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2255%2C574%2C79%2C598%22%20href%3D%22criarOrcamento1.bmml%22%20alt%3D%22criarOrcamento1%22%20id%3D%2210%22/%3E</map>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="190" y="425" w="138" h="15" measuredW="275" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Batizado%20de%20Jo%E3ozinho</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="943" y="419" w="-1" h="-1" measuredW="46" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>imprimirOrcamento%26bm%3BimprimirOrcamento.bmml%26bm%3BimprimirOrcamento.bmml%26bm%3BimprimirOrcamento.bmml</href>
+        <icon>PrintIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22880%2C315%2C926%2C342%22%20href%3D%22imprimirOrcamento.bmml%22%20alt%3D%22imprimirOrcamento%22%20id%3D%2215%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="600" y="419" w="-1" h="-1" measuredW="46" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>AtualizarOrcamento1%26bm%3BAtualizarOrcamento1.bmml%26bm%3BAtualizarOrcamento1.bmml%26bm%3BAtualizarOrcamento1.bmml</href>
+        <icon>PencilIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22537%2C315%2C583%2C342%22%20href%3D%22AtualizarOrcamento1.bmml%22%20alt%3D%22AtualizarOrcamento1%22%20id%3D%2218%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Button" x="759" y="419" w="41" h="27" measuredW="46" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>DocPDFIcon%7Csmall</icon>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Canvas" x="95" y="338" w="972" h="395" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::ButtonBar" x="80" y="261" w="992" h="65" measuredW="711" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>AgendaAtividades%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%26bm%3BAgendaAtividades.bmml%2CConsultarCliente%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%26bm%3BConsultarCliente.bmml%2CEscolherFotos%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%26bm%3BEscolherFotos.bmml%2CcriarOrcamento%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%26bm%3BcriarOrcamento.bmml%2CConsultaProduto%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%26bm%3BConsultaProduto.bmml%2CEventos%26bm%3BEventos.bmml%26bm%3BEventos.bmml%26bm%3BEventos.bmml%2CConsultaServi%E7o%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%26bm%3BConsultaServi%E7o.bmml%2CConsultarFuncionario%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%26bm%3BConsultarFuncionario.bmml%2CRelatorio%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml%26bm%3BRelatorio.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2217%2C157%2C114%2C222%22%20href%3D%22AgendaAtividades.bmml%22%20alt%3D%22AgendaAtividades%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22114%2C157%2C215%2C222%22%20href%3D%22ConsultarCliente.bmml%22%20alt%3D%22ConsultarCliente%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22215%2C157%2C300%2C222%22%20href%3D%22EscolherFotos.bmml%22%20alt%3D%22EscolherFotos%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22300%2C157%2C436%2C222%22%20href%3D%22criarOrcamento.bmml%22%20alt%3D%22criarOrcamento%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22436%2C157%2C543%2C222%22%20href%3D%22ConsultaProduto.bmml%22%20alt%3D%22ConsultaProduto%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22543%2C157%2C644%2C222%22%20href%3D%22Eventos.bmml%22%20alt%3D%22Eventos%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22644%2C157%2C750%2C222%22%20href%3D%22ConsultaServi%25C3%25A7o.bmml%22%20alt%3D%22ConsultaServi%E7o%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22750%2C157%2C888%2C222%22%20href%3D%22ConsultarFuncionario.bmml%22%20alt%3D%22ConsultarFuncionario%22%20id%3D%2224%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22888%2C157%2C1005%2C222%22%20href%3D%22Relatorio.bmml%22%20alt%3D%22Relatorio%22%20id%3D%2224%22/%3E</map>
+        <selectedIndex>1</selectedIndex>
+        <text>Agenda%2C%20Clientes%2C%20%20Fotos%2C%20Or%E7amentos%2C%20Produtos%2C%20Eventos%2C%20Servi%E7os%2C%20Funcion%E1rios%2C%20Relat%F3rios</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
