@@ -121,12 +121,13 @@ namespace ViewController.Controllers
             List<object> tipoEventoLista = new List<object>();
 
             foreach (var tp in tipoEventos)
+            {
                 tipoEventoLista.Add(new
                 {
                     Id = tp.IdTipoEvento,
                     NomeExibido = tp.IdTipoEvento + " - " + tp.Nome
                 });
-
+            }
             return tipoEventoLista;
         }
 
