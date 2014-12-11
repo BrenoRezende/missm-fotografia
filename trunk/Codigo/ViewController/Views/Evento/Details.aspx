@@ -26,7 +26,6 @@ Detalhes do Evento
     <div class="display-label">Tipo do Evento</div>
     <p></p>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdTipoEvento) %>
         <%: Html.DisplayFor(model => model.NomeTipoEvento) %>
     </div>
     <p></p>
