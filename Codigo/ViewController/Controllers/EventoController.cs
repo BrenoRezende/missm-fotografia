@@ -125,7 +125,7 @@ namespace ViewController.Controllers
                 tipoEventoLista.Add(new
                 {
                     Id = tp.IdTipoEvento,
-                    NomeExibido = tp.IdTipoEvento + " - " + tp.Nome
+                    NomeExibido = tp.Nome + " - " + tp.TotalConvidados
                 });
             }
             return tipoEventoLista;
