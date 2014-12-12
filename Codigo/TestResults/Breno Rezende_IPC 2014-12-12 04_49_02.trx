@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="abb74c9d-163f-4c40-aec2-9e78a7954dbe" name="Breno Rezende@IPC 2014-12-12 04:49:02" runUser="iPC\Breno Rezende" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="35301d3e-b6bd-41ad-9cc5-0a823339c63d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Breno Rezende_IPC 2014-12-12 04_49_02">
+      <DeploymentItem filename="C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\bin\Debug\Service.dll" />
+      <DeploymentItem filename="C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\bin\Debug\Data.dll" />
+      <DeploymentItem filename="C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\bin\Debug\Model.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-12T04:49:02.9973783-03:00" queuing="2014-12-12T04:49:09.6699328-03:00" start="2014-12-12T04:49:09.7790073-03:00" finish="2014-12-12T04:49:57.0520328-03:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="10" executed="10" error="0" failed="8" timeout="0" aborted="1" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="IPC" outcome="Error" timestamp="2014-12-12T04:49:57.0510315-03:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="EditarValidoTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="5cceba36-c034-fc89-e290-80bb5f568daa">
+      <Execution id="7c9aa0fe-5f77-4c89-8a6f-d9daf5379f97" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EditarValidoTest" />
+    </UnitTest>
+    <UnitTest name="GerenciadorTipoEventoConstructorTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="31ecc8da-e51f-bd3f-97be-6dbf34938ae0">
+      <Execution id="fb5ac204-6ec9-48ec-a07c-73fe5ccc2212" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorTipoEventoConstructorTest" />
+    </UnitTest>
+    <UnitTest name="ObterTodosTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="2be6d4e9-ff68-7828-86dc-93ecb4e02848">
+      <Execution id="9e9b9ee0-7bf1-4e6c-92fb-3ad5be33528a" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTodosTest" />
+    </UnitTest>
+    <UnitTest name="ObterPorNomeTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="f7f501b7-8d7a-e276-e713-a36339f926ca">
+      <Execution id="23a08877-c33a-4f93-a1b1-3db0e21fc563" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterPorNomeTest" />
+    </UnitTest>
+    <UnitTest name="GetQueryTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="b7c203e0-5b5e-f3ab-e80a-bac4b3478007">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="00fc6425-b547-435b-8c07-75f0b7bac94c" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetQueryTest" />
+    </UnitTest>
+    <UnitTest name="AtribuirTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="eaed738e-e724-7218-f30f-8715551409f0">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="999d2360-c857-4402-b4f7-9bce75366c5a" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AtribuirTest" />
+    </UnitTest>
+    <UnitTest name="ObterTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="7941efc7-3896-ca56-f0b8-d03a3e47ae33">
+      <Execution id="50dcf3e1-2dad-4806-abc3-f7d9c26585de" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTest" />
+    </UnitTest>
+    <UnitTest name="RemoverTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="9ca1d56e-dbd7-5b4f-98ba-031f69ecaa9a">
+      <Execution id="b25a8bcd-b5ff-4e33-9a9e-2fcb90f8c998" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RemoverTest" />
+    </UnitTest>
+    <UnitTest name="GerenciadorTipoEventoConstructorTest1" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="a0eb54aa-1b96-e8b6-0f2e-b6962597adc1">
+      <Execution id="bbb9fde5-bbd2-4e75-b9b2-e2a674303f04" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorTipoEventoConstructorTest1" />
+    </UnitTest>
+    <UnitTest name="InserirTest" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\servicetests\bin\debug\servicetests.dll" id="63749a1f-1341-acc0-af93-974eb67bd3c3">
+      <Execution id="1af20aee-84e6-42ff-95d7-078e417e6ca4" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ServiceTests/bin/Debug/ServiceTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceTests.GerenciadorTipoEventoTest, ServiceTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InserirTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="31ecc8da-e51f-bd3f-97be-6dbf34938ae0" executionId="fb5ac204-6ec9-48ec-a07c-73fe5ccc2212" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0eb54aa-1b96-e8b6-0f2e-b6962597adc1" executionId="bbb9fde5-bbd2-4e75-b9b2-e2a674303f04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eaed738e-e724-7218-f30f-8715551409f0" executionId="999d2360-c857-4402-b4f7-9bce75366c5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7c203e0-5b5e-f3ab-e80a-bac4b3478007" executionId="00fc6425-b547-435b-8c07-75f0b7bac94c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63749a1f-1341-acc0-af93-974eb67bd3c3" executionId="1af20aee-84e6-42ff-95d7-078e417e6ca4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7941efc7-3896-ca56-f0b8-d03a3e47ae33" executionId="50dcf3e1-2dad-4806-abc3-f7d9c26585de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7f501b7-8d7a-e276-e713-a36339f926ca" executionId="23a08877-c33a-4f93-a1b1-3db0e21fc563" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2be6d4e9-ff68-7828-86dc-93ecb4e02848" executionId="9e9b9ee0-7bf1-4e6c-92fb-3ad5be33528a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ca1d56e-dbd7-5b4f-98ba-031f69ecaa9a" executionId="b25a8bcd-b5ff-4e33-9a9e-2fcb90f8c998" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cceba36-c034-fc89-e290-80bb5f568daa" executionId="7c9aa0fe-5f77-4c89-8a6f-d9daf5379f97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fb5ac204-6ec9-48ec-a07c-73fe5ccc2212" testId="31ecc8da-e51f-bd3f-97be-6dbf34938ae0" testName="GerenciadorTipoEventoConstructorTest" computerName="IPC" duration="00:00:34.4276838" startTime="2014-12-12T04:49:10.0473142-03:00" endTime="2014-12-12T04:49:45.1533544-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb5ac204-6ec9-48ec-a07c-73fe5ccc2212">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. TODO: Implement code to verify target</Message>
+          <StackTrace>   em ServiceTests.GerenciadorTipoEventoTest.GerenciadorTipoEventoConstructorTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 80
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bbb9fde5-bbd2-4e75-b9b2-e2a674303f04" testId="a0eb54aa-1b96-e8b6-0f2e-b6962597adc1" testName="GerenciadorTipoEventoConstructorTest1" computerName="IPC" duration="00:00:05.4447740" startTime="2014-12-12T04:49:45.1693650-03:00" endTime="2014-12-12T04:49:50.6205639-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bbb9fde5-bbd2-4e75-b9b2-e2a674303f04">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.GerenciadorTipoEventoConstructorTest1 threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.GerenciadorTipoEventoConstructorTest1() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="999d2360-c857-4402-b4f7-9bce75366c5a" testId="eaed738e-e724-7218-f30f-8715551409f0" testName="AtribuirTest" computerName="IPC" duration="00:00:01.6181816" startTime="2014-12-12T04:49:50.6282954-03:00" endTime="2014-12-12T04:49:52.2511804-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="999d2360-c857-4402-b4f7-9bce75366c5a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.AtribuirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorTipoEvento_Accessor..ctor()
+   em ServiceTests.GerenciadorTipoEventoTest.AtribuirTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 100
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="00fc6425-b547-435b-8c07-75f0b7bac94c" testId="b7c203e0-5b5e-f3ab-e80a-bac4b3478007" testName="GetQueryTest" computerName="IPC" duration="00:00:00.8950763" startTime="2014-12-12T04:49:52.2571865-03:00" endTime="2014-12-12T04:49:53.1563821-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00fc6425-b547-435b-8c07-75f0b7bac94c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.GetQueryTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorTipoEvento_Accessor..ctor()
+   em ServiceTests.GerenciadorTipoEventoTest.GetQueryTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 142
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1af20aee-84e6-42ff-95d7-078e417e6ca4" testId="63749a1f-1341-acc0-af93-974eb67bd3c3" testName="InserirTest" computerName="IPC" duration="00:00:00.2904906" startTime="2014-12-12T04:49:53.1624985-03:00" endTime="2014-12-12T04:49:53.4564651-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1af20aee-84e6-42ff-95d7-078e417e6ca4">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.InserirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.InserirTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 156
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="50dcf3e1-2dad-4806-abc3-f7d9c26585de" testId="7941efc7-3896-ca56-f0b8-d03a3e47ae33" testName="ObterTest" computerName="IPC" duration="00:00:00.2576536" startTime="2014-12-12T04:49:53.4624711-03:00" endTime="2014-12-12T04:49:53.7229862-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50dcf3e1-2dad-4806-abc3-f7d9c26585de">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.ObterTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.ObterTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 179
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="23a08877-c33a-4f93-a1b1-3db0e21fc563" testId="f7f501b7-8d7a-e276-e713-a36339f926ca" testName="ObterPorNomeTest" computerName="IPC" duration="00:00:00.2749397" startTime="2014-12-12T04:49:53.7580092-03:00" endTime="2014-12-12T04:49:54.0369861-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23a08877-c33a-4f93-a1b1-3db0e21fc563">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.ObterPorNomeTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.ObterPorNomeTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 194
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9e9b9ee0-7bf1-4e6c-92fb-3ad5be33528a" testId="2be6d4e9-ff68-7828-86dc-93ecb4e02848" testName="ObterTodosTest" computerName="IPC" duration="00:00:00.4599139" startTime="2014-12-12T04:49:54.0419925-03:00" endTime="2014-12-12T04:49:54.5063742-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e9b9ee0-7bf1-4e6c-92fb-3ad5be33528a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.ObterTodosTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.ObterTodosTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 209
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b25a8bcd-b5ff-4e33-9a9e-2fcb90f8c998" testId="9ca1d56e-dbd7-5b4f-98ba-031f69ecaa9a" testName="RemoverTest" computerName="IPC" duration="00:00:00.6697259" startTime="2014-12-12T04:49:54.5113827-03:00" endTime="2014-12-12T04:49:55.1853017-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b25a8bcd-b5ff-4e33-9a9e-2fcb90f8c998">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceTests.GerenciadorTipoEventoTest.RemoverTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorTipoEvento..ctor() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\Service\GerenciadorTipoEvento.cs:linha 27
+   em ServiceTests.GerenciadorTipoEventoTest.RemoverTest() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ServiceTests\GerenciadorTipoEventoTest.cs:linha 223
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7c9aa0fe-5f77-4c89-8a6f-d9daf5379f97" testId="5cceba36-c034-fc89-e290-80bb5f568daa" testName="EditarValidoTest" computerName="IPC" duration="00:00:01.8607271" startTime="2014-12-12T04:49:55.1913057-03:00" endTime="2014-12-12T04:49:57.0520328-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c9aa0fe-5f77-4c89-8a6f-d9daf5379f97">
+    </UnitTestResult>
+  </Results>
+</TestRun>

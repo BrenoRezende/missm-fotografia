@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="565359cb-8701-41ce-bf58-a415c332a0a0" name="Breno Rezende@IPC 2014-12-04 22:47:29" runUser="iPC\Breno Rezende" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="257d8f23-3831-46a5-8b7a-07895132eaf0">
+    <Deployment runDeploymentRoot="Breno Rezende_IPC 2014-12-04 22_47_29">
+      <DeploymentItem filename="C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ViewController\bin\ViewController.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-04T22:47:29.3231377-03:00" queuing="2014-12-04T22:47:32.2781458-03:00" start="2014-12-04T22:47:32.4132351-03:00" finish="2014-12-04T22:47:34.3593479-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\viewcontroller.tests\bin\debug\viewcontroller.tests.dll" id="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4">
+      <Execution id="b47b58d1-1b9d-4b39-89a7-53cf4560e8a5" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ViewController.Tests/bin/Debug/ViewController.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ViewController.Tests.Controllers.HomeControllerTest, ViewController.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\breno rezende\documents\projeto\trunk\codigo\viewcontroller.tests\bin\debug\viewcontroller.tests.dll" id="cc938468-38ce-a080-97b4-cd6adeb2b0a8">
+      <Execution id="69dfeb33-7c8a-4df2-ae2f-10a3e7a05b24" />
+      <TestMethod codeBase="C:/Users/Breno Rezende/Documents/Projeto/trunk/Codigo/ViewController.Tests/bin/Debug/ViewController.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ViewController.Tests.Controllers.HomeControllerTest, ViewController.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="cc938468-38ce-a080-97b4-cd6adeb2b0a8" executionId="69dfeb33-7c8a-4df2-ae2f-10a3e7a05b24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4" executionId="b47b58d1-1b9d-4b39-89a7-53cf4560e8a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="69dfeb33-7c8a-4df2-ae2f-10a3e7a05b24" testId="cc938468-38ce-a080-97b4-cd6adeb2b0a8" testName="Index" computerName="IPC" duration="00:00:01.0865685" startTime="2014-12-04T22:47:32.6303788-03:00" endTime="2014-12-04T22:47:34.2116743-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69dfeb33-7c8a-4df2-ae2f-10a3e7a05b24">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ViewController.Tests.Controllers.HomeControllerTest.Index threw exception: 
+System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.</Message>
+          <StackTrace>    em ViewController.Tests.Controllers.HomeControllerTest.Index() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ViewController.Tests\Controllers\HomeControllerTest.cs:linha 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b47b58d1-1b9d-4b39-89a7-53cf4560e8a5" testId="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4" testName="About" computerName="IPC" duration="00:00:00.0780853" startTime="2014-12-04T22:47:34.2146740-03:00" endTime="2014-12-04T22:47:34.2973134-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b47b58d1-1b9d-4b39-89a7-53cf4560e8a5">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNotNull failed. </Message>
+          <StackTrace>   em ViewController.Tests.Controllers.HomeControllerTest.About() na C:\Users\Breno Rezende\Documents\Projeto\trunk\Codigo\ViewController.Tests\Controllers\HomeControllerTest.cs:linha 38
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
