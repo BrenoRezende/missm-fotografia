@@ -35,8 +35,11 @@ using MySql.Data.MySqlClient;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+<<<<<<< .mine
+
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Services.Tests")]=======
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ViewController.Tests")]
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ViewController.Tests")]
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ServiceTest")]
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ServiceTests")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ServiceTests")]>>>>>>> .r372
