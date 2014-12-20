@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c6999ec6-a644-40d0-af4e-65380b497167" name="Victor@VITINHO 2014-12-19 08:48:16" runUser="VITINHO\Victor" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="96193852-3724-4d8c-b127-a6f7ef7802cb">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Victor_VITINHO 2014-12-19 08_48_16">
+      <DeploymentItem filename="D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\bin\Debug\Data.dll" />
+      <DeploymentItem filename="D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\ViewController\bin\ViewController.dll" />
+      <DeploymentItem filename="D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\bin\Debug\Model.dll" />
+      <DeploymentItem filename="D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\bin\Debug\Service.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-19T08:48:16.7417499-03:00" queuing="2014-12-19T08:48:17.4642323-03:00" start="2014-12-19T08:48:17.4942528-03:00" finish="2014-12-19T08:48:22.8361539-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="22" executed="22" error="0" failed="20" timeout="0" aborted="0" inconclusive="2" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ObterTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="40dd120d-c048-bf7e-3d6c-7d0149e955fa">
+      <Execution id="c36a762d-cd75-4561-a7d8-a4d5b1e06e12" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTest" />
+    </UnitTest>
+    <UnitTest name="ObterTodosTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="1c0cedb0-b25f-b662-abf8-81401b6f7a39">
+      <Execution id="f01058d8-2f29-4fdf-b5b3-664433554c59" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTodosTest" />
+    </UnitTest>
+    <UnitTest name="EditarTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="48e92823-1461-8e4e-954f-e68269b18dc5">
+      <Execution id="c7a70433-0352-48e8-a87c-40295e78ef95" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EditarTest" />
+    </UnitTest>
+    <UnitTest name="AtribuirTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="465b7fc1-6cde-e84b-2b57-d2173d2b2548">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="2ba86bcf-672c-45cb-9020-1f315435df63" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AtribuirTest" />
+    </UnitTest>
+    <UnitTest name="GetQueryTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="9bd77c83-f673-c944-e672-4a6b110812a8">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="03cd1ad9-b63c-4ebe-93fc-ab31c5b370b2" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetQueryTest" />
+    </UnitTest>
+    <UnitTest name="ObterPorNomeTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="4c7f2e49-c89e-2bd9-2629-e73757c5113e">
+      <Execution id="495f4ac3-42c3-48af-baca-77643b80074f" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterPorNomeTest" />
+    </UnitTest>
+    <UnitTest name="RemoverTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="500a9f04-13aa-4b28-575d-641e917f823c">
+      <Execution id="5e5d4d89-cd74-43b8-a3b5-a312c3016028" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RemoverTest" />
+    </UnitTest>
+    <UnitTest name="Index" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\viewcontroller.tests\bin\debug\viewcontroller.tests.dll" id="cc938468-38ce-a080-97b4-cd6adeb2b0a8">
+      <Execution id="3adf1c1c-bbf3-4577-af25-37fb65197ab5" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/ViewController.Tests/bin/Debug/ViewController.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ViewController.Tests.Controllers.HomeControllerTest, ViewController.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="GerenciadorProdutoConstructorTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="bab09768-4886-305d-3ed3-45c54daee332">
+      <Execution id="4b031ab2-bc18-423d-a048-85c24800afb8" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorProdutoConstructorTest" />
+    </UnitTest>
+    <UnitTest name="InserirTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="b21441f7-6dc5-cada-ca28-10cd2dc8eb87">
+      <Execution id="692b810c-554a-4a51-935f-14c2371e0b3f" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InserirTest" />
+    </UnitTest>
+    <UnitTest name="GerenciadorServicoConstructorTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="94ce936f-c6a8-2a58-a405-c63927d52b05">
+      <Execution id="b7797f2a-6101-4674-844f-f7924f827799" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorServicoConstructorTest" />
+    </UnitTest>
+    <UnitTest name="ObterPorNomeTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="c1657d03-d2ed-cd66-fadb-dad2bf17dc0a">
+      <Execution id="7dd70e2a-6fcb-43d0-a21f-48c6bd4822ab" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterPorNomeTest" />
+    </UnitTest>
+    <UnitTest name="ObterTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="69daa0d8-709d-0ebb-4eaa-3a27cfa50f42">
+      <Execution id="f21e1f9a-5507-41e5-95de-5f6f559448d3" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTest" />
+    </UnitTest>
+    <UnitTest name="GetQueryTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="d5e92530-d3c6-3c20-47a0-d966671a14f1">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="7749331b-6471-4f83-a66d-c9eef55a714a" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetQueryTest" />
+    </UnitTest>
+    <UnitTest name="GerenciadorServicoConstructorTest1" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="440e785a-d733-fd14-7f2b-465fa3d09a7f">
+      <Execution id="269f044a-6270-40f8-af8c-681814e4ed01" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorServicoConstructorTest1" />
+    </UnitTest>
+    <UnitTest name="RemoverTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="29bf1b9a-3524-8b52-f5a7-92dd47bc6703">
+      <Execution id="89318642-dde3-4585-b93f-d094601a649f" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RemoverTest" />
+    </UnitTest>
+    <UnitTest name="EditarTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="8c400a26-78d6-a313-ac1d-6ffd8110a49e">
+      <Execution id="05e9448e-a19b-45f7-a950-aab1358bb9c0" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EditarTest" />
+    </UnitTest>
+    <UnitTest name="AtribuirTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="54ee6105-608b-7741-5396-fb3ef574f20c">
+      <DeploymentItems>
+        <DeploymentItem filename="Service.dll" />
+      </DeploymentItems>
+      <Execution id="96fa1157-eb7f-41a2-b6dc-38876dd33ac2" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorServicoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AtribuirTest" />
+    </UnitTest>
+    <UnitTest name="InserirTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="b38a60a2-19c3-6bf0-2921-9bfbb4141b3c">
+      <Execution id="c8aa962d-68e8-46eb-b58d-073919d8a2c3" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InserirTest" />
+    </UnitTest>
+    <UnitTest name="GerenciadorProdutoConstructorTest1" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="7a1cff3c-6241-4f0f-0b7c-de72fa90cc87">
+      <Execution id="8d7668c8-6116-423d-9559-a03dde88f70f" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GerenciadorProdutoConstructorTest1" />
+    </UnitTest>
+    <UnitTest name="About" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\viewcontroller.tests\bin\debug\viewcontroller.tests.dll" id="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4">
+      <Execution id="8f04805f-a17e-4501-a8a1-aa3cf53b3a56" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/ViewController.Tests/bin/Debug/ViewController.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ViewController.Tests.Controllers.HomeControllerTest, ViewController.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="ObterTodosTest" storage="d:\ufs\engenharia de software ii\missm\trunk\codigo\services.tests\bin\debug\services.tests.dll" id="2f4c3ef4-ced1-912c-0359-9434f920ee35">
+      <Execution id="ae871308-539e-4113-b9b2-e6447c71d4ee" />
+      <TestMethod codeBase="D:/UFS/Engenharia de Software II/MissM/trunk/Codigo/Services.Tests/bin/Debug/Services.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Service.Tests.GerenciadorProdutoTest, Services.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ObterTodosTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1c0cedb0-b25f-b662-abf8-81401b6f7a39" executionId="f01058d8-2f29-4fdf-b5b3-664433554c59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4" executionId="8f04805f-a17e-4501-a8a1-aa3cf53b3a56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29bf1b9a-3524-8b52-f5a7-92dd47bc6703" executionId="89318642-dde3-4585-b93f-d094601a649f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f4c3ef4-ced1-912c-0359-9434f920ee35" executionId="ae871308-539e-4113-b9b2-e6447c71d4ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="40dd120d-c048-bf7e-3d6c-7d0149e955fa" executionId="c36a762d-cd75-4561-a7d8-a4d5b1e06e12" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="440e785a-d733-fd14-7f2b-465fa3d09a7f" executionId="269f044a-6270-40f8-af8c-681814e4ed01" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="465b7fc1-6cde-e84b-2b57-d2173d2b2548" executionId="2ba86bcf-672c-45cb-9020-1f315435df63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48e92823-1461-8e4e-954f-e68269b18dc5" executionId="c7a70433-0352-48e8-a87c-40295e78ef95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c7f2e49-c89e-2bd9-2629-e73757c5113e" executionId="495f4ac3-42c3-48af-baca-77643b80074f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="500a9f04-13aa-4b28-575d-641e917f823c" executionId="5e5d4d89-cd74-43b8-a3b5-a312c3016028" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54ee6105-608b-7741-5396-fb3ef574f20c" executionId="96fa1157-eb7f-41a2-b6dc-38876dd33ac2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69daa0d8-709d-0ebb-4eaa-3a27cfa50f42" executionId="f21e1f9a-5507-41e5-95de-5f6f559448d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a1cff3c-6241-4f0f-0b7c-de72fa90cc87" executionId="8d7668c8-6116-423d-9559-a03dde88f70f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c400a26-78d6-a313-ac1d-6ffd8110a49e" executionId="05e9448e-a19b-45f7-a950-aab1358bb9c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94ce936f-c6a8-2a58-a405-c63927d52b05" executionId="b7797f2a-6101-4674-844f-f7924f827799" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bd77c83-f673-c944-e672-4a6b110812a8" executionId="03cd1ad9-b63c-4ebe-93fc-ab31c5b370b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b21441f7-6dc5-cada-ca28-10cd2dc8eb87" executionId="692b810c-554a-4a51-935f-14c2371e0b3f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b38a60a2-19c3-6bf0-2921-9bfbb4141b3c" executionId="c8aa962d-68e8-46eb-b58d-073919d8a2c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bab09768-4886-305d-3ed3-45c54daee332" executionId="4b031ab2-bc18-423d-a048-85c24800afb8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1657d03-d2ed-cd66-fadb-dad2bf17dc0a" executionId="7dd70e2a-6fcb-43d0-a21f-48c6bd4822ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc938468-38ce-a080-97b4-cd6adeb2b0a8" executionId="3adf1c1c-bbf3-4577-af25-37fb65197ab5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5e92530-d3c6-3c20-47a0-d966671a14f1" executionId="7749331b-6471-4f83-a66d-c9eef55a714a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f01058d8-2f29-4fdf-b5b3-664433554c59" testId="1c0cedb0-b25f-b662-abf8-81401b6f7a39" testName="ObterTodosTest" computerName="VITINHO" duration="00:00:00.4655385" startTime="2014-12-19T08:48:17.5282822-03:00" endTime="2014-12-19T08:48:20.2924709-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f01058d8-2f29-4fdf-b5b3-664433554c59">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.ObterTodosTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.ObterTodosTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 208
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8f04805f-a17e-4501-a8a1-aa3cf53b3a56" testId="1c7fc02c-8ab6-e2ed-f84c-dbbf4d0637c4" testName="About" computerName="VITINHO" duration="00:00:00.5436645" startTime="2014-12-19T08:48:20.2954575-03:00" endTime="2014-12-19T08:48:22.0676485-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f04805f-a17e-4501-a8a1-aa3cf53b3a56">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNotNull failed. </Message>
+          <StackTrace>   em ViewController.Tests.Controllers.HomeControllerTest.About() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\ViewController.Tests\Controllers\HomeControllerTest.cs:linha 38
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="89318642-dde3-4585-b93f-d094601a649f" testId="29bf1b9a-3524-8b52-f5a7-92dd47bc6703" testName="RemoverTest" computerName="VITINHO" duration="00:00:00.0089824" startTime="2014-12-19T08:48:22.0696427-03:00" endTime="2014-12-19T08:48:22.0856528-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="89318642-dde3-4585-b93f-d094601a649f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.RemoverTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.RemoverTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae871308-539e-4113-b9b2-e6447c71d4ee" testId="2f4c3ef4-ced1-912c-0359-9434f920ee35" testName="ObterTodosTest" computerName="VITINHO" duration="00:00:00.0456699" startTime="2014-12-19T08:48:22.0896555-03:00" endTime="2014-12-19T08:48:22.1446923-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae871308-539e-4113-b9b2-e6447c71d4ee">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.ObterTodosTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.ObterTodosTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 208
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c36a762d-cd75-4561-a7d8-a4d5b1e06e12" testId="40dd120d-c048-bf7e-3d6c-7d0149e955fa" testName="ObterTest" computerName="VITINHO" duration="00:00:00.0073664" startTime="2014-12-19T08:48:22.1476979-03:00" endTime="2014-12-19T08:48:22.1637050-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c36a762d-cd75-4561-a7d8-a4d5b1e06e12">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.ObterTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.ObterTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 178
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="269f044a-6270-40f8-af8c-681814e4ed01" testId="440e785a-d733-fd14-7f2b-465fa3d09a7f" testName="GerenciadorServicoConstructorTest1" computerName="VITINHO" duration="00:00:00.0074362" startTime="2014-12-19T08:48:22.1677081-03:00" endTime="2014-12-19T08:48:22.1837188-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="269f044a-6270-40f8-af8c-681814e4ed01">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.GerenciadorServicoConstructorTest1 threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.GerenciadorServicoConstructorTest1() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ba86bcf-672c-45cb-9020-1f315435df63" testId="465b7fc1-6cde-e84b-2b57-d2173d2b2548" testName="AtribuirTest" computerName="VITINHO" duration="00:00:00.0792944" startTime="2014-12-19T08:48:22.1857197-03:00" endTime="2014-12-19T08:48:22.2737826-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ba86bcf-672c-45cb-9020-1f315435df63">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.AtribuirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorProduto_Accessor..ctor()
+   em Service.Tests.GerenciadorProdutoTest.AtribuirTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 100
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c7a70433-0352-48e8-a87c-40295e78ef95" testId="48e92823-1461-8e4e-954f-e68269b18dc5" testName="EditarTest" computerName="VITINHO" duration="00:00:00.0072504" startTime="2014-12-19T08:48:22.2757798-03:00" endTime="2014-12-19T08:48:22.2897891-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7a70433-0352-48e8-a87c-40295e78ef95">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.EditarTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.EditarTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="495f4ac3-42c3-48af-baca-77643b80074f" testId="4c7f2e49-c89e-2bd9-2629-e73757c5113e" testName="ObterPorNomeTest" computerName="VITINHO" duration="00:00:00.0060424" startTime="2014-12-19T08:48:22.2917925-03:00" endTime="2014-12-19T08:48:22.3037980-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="495f4ac3-42c3-48af-baca-77643b80074f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.ObterPorNomeTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.ObterPorNomeTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 193
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5e5d4d89-cd74-43b8-a3b5-a312c3016028" testId="500a9f04-13aa-4b28-575d-641e917f823c" testName="RemoverTest" computerName="VITINHO" duration="00:00:00.0089777" startTime="2014-12-19T08:48:22.3058029-03:00" endTime="2014-12-19T08:48:22.3218100-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e5d4d89-cd74-43b8-a3b5-a312c3016028">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.RemoverTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.RemoverTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 222
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="96fa1157-eb7f-41a2-b6dc-38876dd33ac2" testId="54ee6105-608b-7741-5396-fb3ef574f20c" testName="AtribuirTest" computerName="VITINHO" duration="00:00:00.0202791" startTime="2014-12-19T08:48:22.3238124-03:00" endTime="2014-12-19T08:48:22.3538319-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96fa1157-eb7f-41a2-b6dc-38876dd33ac2">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.AtribuirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorServico_Accessor..ctor()
+   em Service.Tests.GerenciadorServicoTest.AtribuirTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 100
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f21e1f9a-5507-41e5-95de-5f6f559448d3" testId="69daa0d8-709d-0ebb-4eaa-3a27cfa50f42" testName="ObterTest" computerName="VITINHO" duration="00:00:00.0075255" startTime="2014-12-19T08:48:22.3568339-03:00" endTime="2014-12-19T08:48:22.3738468-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f21e1f9a-5507-41e5-95de-5f6f559448d3">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.ObterTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.ObterTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 178
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d7668c8-6116-423d-9559-a03dde88f70f" testId="7a1cff3c-6241-4f0f-0b7c-de72fa90cc87" testName="GerenciadorProdutoConstructorTest1" computerName="VITINHO" duration="00:00:00.0091815" startTime="2014-12-19T08:48:22.3768483-03:00" endTime="2014-12-19T08:48:22.3938597-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d7668c8-6116-423d-9559-a03dde88f70f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.GerenciadorProdutoConstructorTest1 threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.GerenciadorProdutoConstructorTest1() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="05e9448e-a19b-45f7-a950-aab1358bb9c0" testId="8c400a26-78d6-a313-ac1d-6ffd8110a49e" testName="EditarTest" computerName="VITINHO" duration="00:00:00.0105855" startTime="2014-12-19T08:48:22.3968611-03:00" endTime="2014-12-19T08:48:22.4148727-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05e9448e-a19b-45f7-a950-aab1358bb9c0">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.EditarTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.EditarTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b7797f2a-6101-4674-844f-f7924f827799" testId="94ce936f-c6a8-2a58-a405-c63927d52b05" testName="GerenciadorServicoConstructorTest" computerName="VITINHO" duration="00:00:00.0566860" startTime="2014-12-19T08:48:22.4188758-03:00" endTime="2014-12-19T08:48:22.4839188-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7797f2a-6101-4674-844f-f7924f827799">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. TODO: Implement code to verify target</Message>
+          <StackTrace>   em Service.Tests.GerenciadorServicoTest.GerenciadorServicoConstructorTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 80
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03cd1ad9-b63c-4ebe-93fc-ab31c5b370b2" testId="9bd77c83-f673-c944-e672-4a6b110812a8" testName="GetQueryTest" computerName="VITINHO" duration="00:00:00.0145307" startTime="2014-12-19T08:48:22.4859196-03:00" endTime="2014-12-19T08:48:22.5079410-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03cd1ad9-b63c-4ebe-93fc-ab31c5b370b2">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.GetQueryTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorServico_Accessor..ctor()
+   em Service.Tests.GerenciadorServicoTest.GetQueryTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 145
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="692b810c-554a-4a51-935f-14c2371e0b3f" testId="b21441f7-6dc5-cada-ca28-10cd2dc8eb87" testName="InserirTest" computerName="VITINHO" duration="00:00:00.0106306" startTime="2014-12-19T08:48:22.5119375-03:00" endTime="2014-12-19T08:48:22.5299541-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="692b810c-554a-4a51-935f-14c2371e0b3f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.InserirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.InserirTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 159
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c8aa962d-68e8-46eb-b58d-073919d8a2c3" testId="b38a60a2-19c3-6bf0-2921-9bfbb4141b3c" testName="InserirTest" computerName="VITINHO" duration="00:00:00.0099579" startTime="2014-12-19T08:48:22.5329515-03:00" endTime="2014-12-19T08:48:22.5509702-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8aa962d-68e8-46eb-b58d-073919d8a2c3">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.InserirTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorProduto..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorProduto.cs:linha 23
+   em Service.Tests.GerenciadorProdutoTest.InserirTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 159
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4b031ab2-bc18-423d-a048-85c24800afb8" testId="bab09768-4886-305d-3ed3-45c54daee332" testName="GerenciadorProdutoConstructorTest" computerName="VITINHO" duration="00:00:00.0027751" startTime="2014-12-19T08:48:22.5539686-03:00" endTime="2014-12-19T08:48:22.5639876-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b031ab2-bc18-423d-a048-85c24800afb8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. TODO: Implement code to verify target</Message>
+          <StackTrace>   em Service.Tests.GerenciadorProdutoTest.GerenciadorProdutoConstructorTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 80
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7dd70e2a-6fcb-43d0-a21f-48c6bd4822ab" testId="c1657d03-d2ed-cd66-fadb-dad2bf17dc0a" testName="ObterPorNomeTest" computerName="VITINHO" duration="00:00:00.0083317" startTime="2014-12-19T08:48:22.5659735-03:00" endTime="2014-12-19T08:48:22.5819837-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7dd70e2a-6fcb-43d0-a21f-48c6bd4822ab">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorServicoTest.ObterPorNomeTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>    em System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   em System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   em System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   em System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   em Model.missmfotografiaEntities..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Model\ModelMissMFotografia.Designer.cs:linha 53
+   em Data.UnitOfWork..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Data\UnitOfWork.cs:linha 32
+   em Service.GerenciadorServico..ctor() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Service\GerenciadorServico.cs:linha 22
+   em Service.Tests.GerenciadorServicoTest.ObterPorNomeTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorServicoTest.cs:linha 193
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3adf1c1c-bbf3-4577-af25-37fb65197ab5" testId="cc938468-38ce-a080-97b4-cd6adeb2b0a8" testName="Index" computerName="VITINHO" duration="00:00:00.1365455" startTime="2014-12-19T08:48:22.5849868-03:00" endTime="2014-12-19T08:48:22.7290819-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3adf1c1c-bbf3-4577-af25-37fb65197ab5">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ViewController.Tests.Controllers.HomeControllerTest.Index threw exception: 
+System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.</Message>
+          <StackTrace>    em ViewController.Tests.Controllers.HomeControllerTest.Index() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\ViewController.Tests\Controllers\HomeControllerTest.cs:linha 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7749331b-6471-4f83-a66d-c9eef55a714a" testId="d5e92530-d3c6-3c20-47a0-d966671a14f1" testName="GetQueryTest" computerName="VITINHO" duration="00:00:00.0152789" startTime="2014-12-19T08:48:22.7330856-03:00" endTime="2014-12-19T08:48:22.7581018-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7749331b-6471-4f83-a66d-c9eef55a714a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Service.Tests.GerenciadorProdutoTest.GetQueryTest threw exception: 
+System.ArgumentException: A conexão nomeada especificada não foi localizada na configuração, não se destina à utilização com o provedor EntityClient ou não é válida.</Message>
+          <StackTrace>   em Service.GerenciadorProduto_Accessor..ctor()
+   em Service.Tests.GerenciadorProdutoTest.GetQueryTest() na D:\UFS\Engenharia de Software II\MissM\trunk\Codigo\Services.Tests\GerenciadorProdutoTest.cs:linha 145
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
