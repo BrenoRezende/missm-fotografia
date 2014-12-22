@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:56161/" />
+<title>Consultar Serviço</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Consultar Serviço</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Serviço</td>
+	<td>Serviço</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Serviço</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='main']/table/tbody/tr[3]/td[2]</td>
+	<td>Maquiagem</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//a[contains(text(),'Detalhes')])[2]</td>
+	<td>Detalhes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Detalhes')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.display-label</td>
+	<td>Código</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.display-field</td>
+	<td>1115</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[3]</td>
+	<td>Tipo de Serviço</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[4]</td>
+	<td>Maquiagem</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=fieldset</td>
+	<td>Dados do Serviço Código<br /> <br /> 1115 <br /> <br /> Tipo de Serviço<br /> <br /> Maquiagem <br /> <br /> Parceiro<br /> <br /> Daniel Souza <br /> <br /> Telefone do Parceiro<br /> <br /> 9999-1111 <br /> <br /> Valor do Serviço<br /> <br /> 40,00 <br /> <br /> Valor Cobrado ao Cliente<br /> <br /> 60,00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[6]</td>
+	<td>Daniel Souza</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[7]</td>
+	<td>Telefone do Parceiro</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[8]</td>
+	<td>9999-1111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[9]</td>
+	<td>Valor do Serviço</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[10]</td>
+	<td>40,00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[11]</td>
+	<td>Valor Cobrado ao Cliente</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/div[12]</td>
+	<td>60,00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Editar</td>
+	<td>Editar</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Voltar</td>
+	<td>Voltar</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
