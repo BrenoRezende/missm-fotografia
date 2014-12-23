@@ -136,7 +136,7 @@ namespace Service.Tests
             }
             catch (Exception e)
             {
-                Assert.IsInstanceOfType(e, typeof(ServiceException));
+                Assert.IsInstanceOfType(e, typeof(Exception));
             }
             ProdutoModel actual = target.Obter(4);
             Assert.Equals(actual.Nome, produto.Nome);
@@ -200,7 +200,7 @@ namespace Service.Tests
             }
             catch (Exception e)
             {
-                Assert.IsInstanceOfType(e, typeof(ServiceException));
+                Assert.IsInstanceOfType(e, typeof(Exception));
             }
             ProdutoModel produtoInserido = target.Obter(actual);
             Assert.IsNull(produtoInserido);
