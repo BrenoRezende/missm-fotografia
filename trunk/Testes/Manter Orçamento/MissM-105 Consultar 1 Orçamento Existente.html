@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:56161/" />
+<title>TesteConsultarOrçamento</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TesteConsultarOrçamento</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/Pessoa</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Cliente</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Orçamentos</td>
+	<td>Orçamentos</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/table/tbody/tr[2]/td[4]</td>
+	<td>pedro@gmail.com</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/table/tbody/tr[2]/td[2]</td>
+	<td>Pedro</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Orçamentos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Detalhes</td>
+	<td>Detalhes</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset/table/tbody/tr[2]/td[4]</td>
+	<td>Pedro</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td</td>
+	<td>Casamento de Maria e Pedro</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Detalhes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=legend</td>
+	<td>Produtos do Orçamento</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset[2]/legend</td>
+	<td>Serviços do Orçamento</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset[3]/legend</td>
+	<td>Tipos de Evento do Orçamento</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button</td>
+	<td>Voltar</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td</td>
+	<td>Fotolivro</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset[2]/table/tbody/tr[2]/td</td>
+	<td>Maquiagem</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='main']/fieldset[3]/table/tbody/tr[2]/td</td>
+	<td>Casamento</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
