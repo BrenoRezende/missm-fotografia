@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="GerenciadorEventoTest.cs" />
     <Compile Include="GerenciadorPedidoTest.cs" />
+    <Compile Include="GerenciadorProdutoTest.cs" />
+    <Compile Include="GerenciadorServicoTest.cs" />
     <Compile Include="GerenciadorTipoEventoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
