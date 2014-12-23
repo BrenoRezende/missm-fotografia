@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewController", "ViewController\ViewController.csproj", "{CF267EDC-1FEE-4103-ADC1-F6723640FD13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewController.Tests", "ViewController.Tests\ViewController.Tests.csproj", "{31EB997D-B860-478C-9B1D-E62F872220E9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{DFD71717-0871-4511-BB3F-B1FF810A9E39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{3E7DECDA-1631-44CF-8BF9-A22259A615E5}"
@@ -29,10 +27,6 @@ Global
 		{CF267EDC-1FEE-4103-ADC1-F6723640FD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF267EDC-1FEE-4103-ADC1-F6723640FD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF267EDC-1FEE-4103-ADC1-F6723640FD13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31EB997D-B860-478C-9B1D-E62F872220E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31EB997D-B860-478C-9B1D-E62F872220E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31EB997D-B860-478C-9B1D-E62F872220E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31EB997D-B860-478C-9B1D-E62F872220E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFD71717-0871-4511-BB3F-B1FF810A9E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFD71717-0871-4511-BB3F-B1FF810A9E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFD71717-0871-4511-BB3F-B1FF810A9E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
