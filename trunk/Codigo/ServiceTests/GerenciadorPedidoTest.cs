@@ -141,6 +141,18 @@ namespace ServiceTests
             int actual;
             actual = target.Inserir(pedidoModel);
             Assert.IsTrue(actual > 0);
+
+            PedidoModel novoPedidoModel = new PedidoModel();
+            Assert.IsNotNull(novoPedidoModel);
+            Assert.Equals(pedidoModel.IdPedido, novoPedidoModel.IdPedido);
+            Assert.Equals(pedidoModel.IdPessoa, novoPedidoModel.IdPessoa);
+            Assert.Equals(pedidoModel.DataCriacao, novoPedidoModel.DataCriacao);
+            Assert.Equals(pedidoModel.DataEmissao, novoPedidoModel.DataEmissao);
+            Assert.Equals(pedidoModel.NomePedido, novoPedidoModel.NomePedido);
+            Assert.Equals(pedidoModel.NomePessoa, novoPedidoModel.NomePessoa);
+            Assert.Equals(pedidoModel.StatusContrato, novoPedidoModel.StatusContrato);
+            Assert.Equals(pedidoModel.StatusPedido, novoPedidoModel.StatusPedido);
+            Assert.Equals(pedidoModel.Valor, novoPedidoModel.Valor);
         }
 
         /// <summary>
@@ -188,7 +200,6 @@ namespace ServiceTests
 
             PedidoModel novoPedido = target.Obter(1);
             Assert.IsNotNull(novoPedido);
-            Assert.IsInstanceOfType(novoPedido, typeof(PedidoModel));
             Assert.AreNotEqual(pedidoModel.Valor, novoPedido.Valor);
         }
 
@@ -210,7 +221,6 @@ namespace ServiceTests
 
             PedidoModel novoPedido = target.Obter(1);
             Assert.IsNotNull(novoPedido);
-            Assert.IsInstanceOfType(novoPedido, typeof(PedidoModel));
             Assert.AreEqual(pedidoModel.NomePedido, novoPedido.NomePedido);
         }
 
@@ -234,12 +244,15 @@ namespace ServiceTests
         public void ObterTest()
         {
             GerenciadorPedido target = new GerenciadorPedido(); // TODO: Initialize to an appropriate value
-            int idPedido = 0; // TODO: Initialize to an appropriate value
-            PedidoModel expected = null; // TODO: Initialize to an appropriate value
-            PedidoModel actual;
-            actual = target.Obter(idPedido);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            PedidoModel actual = target.Obter(1);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(actual.IdPedido, 1);
+            Assert.AreEqual(actual.IdPessoa, 1);
+            Assert.AreEqual(actual.NomePedido, "Orçamento do Casamento de Pedro");
+            Assert.AreEqual(actual.NomePessoa, "Pedro");
+            Assert.AreEqual(actual.StatusContrato, "Em Debito");
+            Assert.AreEqual(actual.StatusPedido, "Orcamento");
+            Assert.AreEqual(actual.Valor, 1000);
         }
 
         /// <summary>
@@ -249,12 +262,13 @@ namespace ServiceTests
         public void ObterPorClienteTest()
         {
             GerenciadorPedido target = new GerenciadorPedido(); // TODO: Initialize to an appropriate value
-            int idCliente = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> actual;
-            actual = target.ObterPorCliente(idCliente);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            int idCliente = 1; // TODO: Initialize to an appropriate value
+            IEnumerable<PedidoModel> actual = target.ObterPorCliente(idCliente);
+            Assert.Equals(actual.Count(), 1);
+            foreach (var pedido in actual)
+            {
+                Assert.Equals(idCliente, pedido.IdPessoa);
+            }
         }
 
         /// <summary>
@@ -264,12 +278,13 @@ namespace ServiceTests
         public void ObterPorNomeTest()
         {
             GerenciadorPedido target = new GerenciadorPedido(); // TODO: Initialize to an appropriate value
-            string nome = string.Empty; // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> actual;
-            actual = target.ObterPorNome(nome);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            string nome = "Orçamento do Casamento de Pedro";
+            IEnumerable<PedidoModel> actual = target.ObterPorNome(nome);
+            Assert.Equals(actual.Count(), 1);
+            foreach (var pedido in actual)
+            {
+                Assert.Equals(nome, pedido.NomePedido);
+            }
         }
 
         /// <summary>
@@ -279,11 +294,9 @@ namespace ServiceTests
         public void ObterTodosTest()
         {
             GerenciadorPedido target = new GerenciadorPedido(); // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<PedidoModel> actual;
-            actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            IEnumerable<PedidoModel> actual = target.ObterTodos();
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<PedidoModel>));
+            Assert.Equals(actual.Count(), 1);
         }
 
     }

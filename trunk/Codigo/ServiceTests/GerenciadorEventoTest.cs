@@ -137,6 +137,13 @@ namespace ServiceTests
             actual = target.Inserir(eventoModel);
             Assert.IsTrue(actual > 0);
 
+            EventoModel novoEvento = target.Obter(actual);
+            Assert.IsNotNull(novoEvento);
+            Assert.Equals(eventoModel.IdEvento, novoEvento.IdEvento);
+            Assert.Equals(eventoModel.IdTipoEvento, novoEvento.IdTipoEvento);
+            Assert.Equals(eventoModel.Nome, novoEvento.Nome);
+            Assert.Equals(eventoModel.Data, novoEvento.Data);
+            Assert.Equals(eventoModel.NomeTipoEvento, novoEvento.NomeTipoEvento);
         }
 
         /// <summary>
@@ -179,7 +186,6 @@ namespace ServiceTests
 
             EventoModel novoEvento = target.Obter(1);
             Assert.IsNotNull(novoEvento);
-            Assert.IsInstanceOfType(novoEvento, typeof(EventoModel));
             Assert.AreNotEqual(eventoModel.Nome, novoEvento.Nome); 
         }
 
@@ -199,7 +205,6 @@ namespace ServiceTests
 
             EventoModel novoEvento = target.Obter(1);
             Assert.IsNotNull(novoEvento);
-            Assert.IsInstanceOfType(novoEvento, typeof(EventoModel));
             Assert.AreEqual(eventoModel.Nome, novoEvento.Nome);
         }
 
@@ -225,12 +230,12 @@ namespace ServiceTests
         public void ObterTest()
         {
             GerenciadorEvento target = new GerenciadorEvento(); // TODO: Initialize to an appropriate value
-            int idEvento = 0; // TODO: Initialize to an appropriate value
-            EventoModel expected = null; // TODO: Initialize to an appropriate value
-            EventoModel actual;
-            actual = target.Obter(idEvento);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            EventoModel actual = target.Obter(1);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(actual.IdEvento, 1);
+            Assert.AreEqual(actual.IdTipoEvento, 1);
+            Assert.AreEqual(actual.Nome, "Casamento de Maria e Pedro");
+            Assert.AreEqual(actual.NomeTipoEvento, "Casamento");
         }
 
         /// <summary>
@@ -240,14 +245,14 @@ namespace ServiceTests
         public void ObterPorNomeTest()
         {
             GerenciadorEvento target = new GerenciadorEvento(); // TODO: Initialize to an appropriate value
-            string nome = string.Empty; // TODO: Initialize to an appropriate value
-            IEnumerable<EventoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<EventoModel> actual;
-            actual = target.ObterPorNome(nome);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            string nome = "Casamento de Maria e Pedro"; // TODO: Initialize to an appropriate value
+            IEnumerable<EventoModel> actual = target.ObterPorNome(nome);
+            Assert.Equals(actual.Count(), 1);
+            foreach (var evento in actual)
+            {
+                Assert.Equals(nome, evento.Nome);
+            }
         }
-
         /// <summary>
         ///A test for ObterTodos
         ///</summary>
@@ -255,11 +260,9 @@ namespace ServiceTests
         public void ObterTodosTest()
         {
             GerenciadorEvento target = new GerenciadorEvento(); // TODO: Initialize to an appropriate value
-            IEnumerable<EventoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<EventoModel> actual;
-            actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            IEnumerable<EventoModel> actual = target.ObterTodos();
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<EventoModel>));
+            Assert.Equals(actual.Count(), 1);
         }
 
     }
